@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "9l8wAq9jK8w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tjlee\\Desktop\\ksj\\BUR_INS_HMI\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\scottplot\\4.1.69\\scottplot.4.1.69.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\scottplot.winforms\\4.1.69\\scottplot.winforms.4.1.69.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
