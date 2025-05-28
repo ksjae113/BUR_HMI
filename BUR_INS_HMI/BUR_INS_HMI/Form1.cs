@@ -8,20 +8,38 @@ using ScottPlot;
 using System.Drawing.Interop;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.Eventing.Reader;
+using System.IO.Ports;
 
 namespace BUR_INS_HMI
 {
     public partial class Form1 : Form
     {
-        private Form3 f3;
-        
 
+
+        private Form3 f3;
+
+        SerialPort serialPort;
+
+        string str;
         public Form1()
         {
             InitializeComponent();
-            InitChart();
 
+            Init_port();
+
+            InitChart();
         }
+
+        private void Init_port()
+        {
+            //COM PORT
+            foreach (var key in System.IO.Ports.SerialPort.GetPortNames())
+            {
+                str = key.ToString();
+                MessageBox.Show(str);
+            }
+        }
+
 
         private void InitChart()
         {
@@ -39,7 +57,7 @@ namespace BUR_INS_HMI
                 {
                     //    ys[i] = rand.NextDouble() * 100;    //각 y값은 0 ~100 사이의 난수
                     //   ys[i] = 250 + rand.NextDouble(); 250~251
-               //    if (rand.NextDouble()>0.5)
+                    //    if (rand.NextDouble()>0.5)
                     {
                         ys[i] = 250 - (rand.NextDouble() * 10);
                     }
@@ -191,9 +209,39 @@ namespace BUR_INS_HMI
 
         private void record_btn_Click(object sender, EventArgs e)
         {
-           Form5 f5 = new Form5();
+            Form5 f5 = new Form5();
 
             f5.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (str == null)
+            {
+                MessageBox.Show("COM 설정필요");
+                return;
+            }
+
+            if (!serialPort.IsOpen)
+            {
+                serialPort.PortName = str;
+                serialPort.BaudRate = 115200;
+                serialPort.DataBits = 8;
+                serialPort.Parity = System.IO.Ports.Parity.None;
+                serialPort.StopBits = System.IO.Ports.StopBits.One;
+
+                serialPort.Open();
+                MessageBox.Show("연결 성공");
+            }
+            else
+            {
+                MessageBox.Show("이미 연결");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+       
         }
     }
 }

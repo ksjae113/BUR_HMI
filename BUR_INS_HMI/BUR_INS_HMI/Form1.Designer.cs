@@ -76,6 +76,8 @@
             p_info2 = new Label();
             p_info1 = new Label();
             info_panel = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             logout_btn = new PictureBox();
             login_btn = new PictureBox();
             exit_btn = new PictureBox();
@@ -799,6 +801,8 @@
             // info_panel
             // 
             info_panel.BackColor = SystemColors.ActiveCaptionText;
+            info_panel.Controls.Add(button2);
+            info_panel.Controls.Add(button1);
             info_panel.Controls.Add(logout_btn);
             info_panel.Controls.Add(login_btn);
             info_panel.Controls.Add(exit_btn);
@@ -813,6 +817,26 @@
             info_panel.Name = "info_panel";
             info_panel.Size = new Size(903, 491);
             info_panel.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(501, 309);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 10;
+            button2.Text = "끊기";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(501, 247);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 9;
+            button1.Text = "연결";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // logout_btn
             // 
@@ -2226,5 +2250,7 @@
         private Label process_finish;
         private Label process_start;
         private Label label1;
+        private Button button2;
+        private Button button1;
     }
 }

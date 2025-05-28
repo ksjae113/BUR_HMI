@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="ScottPlot" Version="4.1.69" />
     <PackageReference Include="ScottPlot.WinForms" Version="4.1.69" />
+    <PackageReference Include="System.IO.Ports" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
