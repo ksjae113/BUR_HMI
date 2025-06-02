@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
+using System.Net;
 using System.Net.WebSockets;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,10 +20,12 @@ namespace BUR_INS_HMI
         public event FormSendDataHandler FormSendEvent; //event 생성
         int mode = 0;
 
+        private SerialPort serialPort;
 
-        public Form2()
+        public Form2(SerialPort serialPort)
         {
             InitializeComponent();
+          //  this.serialPort = sp; //저장해야 나중에 쓸 수 있음
             mode = 1;
         }
 
@@ -164,6 +169,10 @@ namespace BUR_INS_HMI
                 user_input = "";
                 password_lbl.Text = null;
                 this.FormSendEvent("TRUE"); //MainForm으로 데이터 전송
+                                            //   serialPort.WriteSingleRegister(slaveId, address, value);
+                /*  byte[] data = new byte[] { 0x01, 0x06, 0x00, 0x0A, 0x00, 0x01, 0x84, 0x0A }; // 예: Modbus RTU 요청 패킷
+
+                  serialPort.Write(data, 0, data.Length);*/
                 this.Close();
             }
             else
@@ -175,6 +184,8 @@ namespace BUR_INS_HMI
             }
 
         }
+
+    
 
 
     }

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\Console1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{930E98D0-30A4-42EF-9F58-AABE423254B6}|Console1\\Console1.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\console1\\console1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930E98D0-30A4-42EF-9F58-AABE423254B6}|Console1\\Console1.csproj|solutionrelative:console1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\Console1\\Console1\\Program.cs",
+              "RelativeDocumentMoniker": "Console1\\Program.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\Console1\\Console1\\Program.cs",
+              "RelativeToolTip": "Console1\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T00:36:09.192Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

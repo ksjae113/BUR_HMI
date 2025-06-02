@@ -1,4 +1,6 @@
-﻿using ScottPlot.Drawing.Colormaps;
+﻿using ScottPlot;
+using ScottPlot.Drawing.Colormaps;
+using ScottPlot.Plottable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +21,20 @@ namespace BUR_INS_HMI
         decimal amp = 50;   //초기값
         decimal err = 10;   //초기값
 
+      
+
         public Form3()
         {
             InitializeComponent();
             amp_set.Text = amp.ToString("F1") + " mA";
             err_set.Text = err.ToString("F1") + " %";
             update_amp_err(amp, err);
+
+          
         }
+
+       
+
 
         public void ShowPanel(int panelIndex)
         {
@@ -48,47 +57,8 @@ namespace BUR_INS_HMI
 
                }
             
-        /*    switch (panelIndex)
-            {
-                case 1:
-                    {
-                        temp_panel.Visible = true;
-                        temp_lbl.Visible = true;
-                    }
-                    break;
-                case 2:
-                    {
-                        sensor_panel.Visible = true;
-                        sens_lbl.Visible = true;
-                    }
-                    break;
-
-                case 3:
-                    {
-                        ampare_panel.Visible = true;
-                        ampare_lbl.Visible = true;
-                    }
-                    break;
-                case 4:
-                    {
-                        temp_panel.Visible = false;
-                        temp_lbl.Visible = false;
-                    }
-                    break;
-                case 5:
-                    {
-                        sensor_panel.Visible = false;
-                        sensor_panel.Visible = false;
-                    }
-                    break;
-                case 6:
-                    {
-                        ampare_panel.Visible = false;
-                        ampare_lbl.Visible = false;
-                    }
-                    break;
-            }*/
-
+       
+   
         }
 
 
@@ -150,6 +120,7 @@ namespace BUR_INS_HMI
 
  
     }
+
 
 
 

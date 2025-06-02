@@ -9,6 +9,11 @@ using System.Drawing.Interop;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.Eventing.Reader;
 using System.IO.Ports;
+using ScottPlot;
+using System.Collections.Generic;
+using System.Linq;
+using ScottPlot.WinForms;
+
 
 namespace BUR_INS_HMI
 {
@@ -18,7 +23,11 @@ namespace BUR_INS_HMI
 
         private Form3 f3;
 
-        SerialPort serialPort;
+
+        private System.Windows.Forms.Timer timer;
+        private int pulseCount = 0;
+
+        public SerialPort serialPort;
 
         string str;
         public Form1()
@@ -28,7 +37,14 @@ namespace BUR_INS_HMI
             Init_port();
 
             InitChart();
+
+        
+
         }
+
+      
+
+       
 
         private void Init_port()
         {
@@ -59,7 +75,12 @@ namespace BUR_INS_HMI
                     //   ys[i] = 250 + rand.NextDouble(); 250~251
                     //    if (rand.NextDouble()>0.5)
                     {
-                        ys[i] = 250 - (rand.NextDouble() * 10);
+                        //   ys[i] = 250 - (rand.NextDouble() * 10);
+                        ys[i] = 250;
+                        if (seriesIndex == 17 && i == 5)
+                        {
+                            ys[i] = 245;
+                        }
                     }
 
                 }
@@ -106,7 +127,7 @@ namespace BUR_INS_HMI
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Form2 f2 = new Form2(serialPort);
 
             f2.FormSendEvent += new Form2.FormSendDataHandler(DiseaseUpdateEventMethod);
             //form2에 이벤트 추가
@@ -179,7 +200,9 @@ namespace BUR_INS_HMI
                 f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethod);
             };
 
+
             f3.Show();
+
             f3.BringToFront();  //이미 열려있다면 앞으로
 
             if (f3.sensor_panel.Visible == true)
@@ -224,7 +247,7 @@ namespace BUR_INS_HMI
 
             if (!serialPort.IsOpen)
             {
-                serialPort.PortName = str;
+                serialPort.PortName = "COM103";
                 serialPort.BaudRate = 115200;
                 serialPort.DataBits = 8;
                 serialPort.Parity = System.IO.Ports.Parity.None;
