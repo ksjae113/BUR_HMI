@@ -18,15 +18,10 @@ namespace BUR_INS_HMI
     {
         public delegate void FormSendDataHandler(string s); //delegate 선언
         public event FormSendDataHandler FormSendEvent; //event 생성
-        int mode = 0;
 
-        private SerialPort serialPort;
-
-        public Form2(SerialPort serialPort)
+        public Form2()
         {
             InitializeComponent();
-          //  this.serialPort = sp; //저장해야 나중에 쓸 수 있음
-            mode = 1;
         }
 
         String password = "0000";

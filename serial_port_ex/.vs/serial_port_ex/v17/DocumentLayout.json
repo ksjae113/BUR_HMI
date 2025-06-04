@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{6019B0DE-0DB3-4866-B4F6-AD6EEB2196AE}|serial_port_ex\\serial_port_ex.csproj|solutionrelative:serial_port_ex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6019B0DE-0DB3-4866-B4F6-AD6EEB2196AE}|serial_port_ex\\serial_port_ex.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\serial_port_ex\\serial_port_ex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6019B0DE-0DB3-4866-B4F6-AD6EEB2196AE}|serial_port_ex\\serial_port_ex.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\serial_port_ex\\serial_port_ex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6019B0DE-0DB3-4866-B4F6-AD6EEB2196AE}|serial_port_ex\\serial_port_ex.csproj|solutionrelative:serial_port_ex\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -34,8 +34,7 @@
               "RelativeToolTip": "serial_port_ex\\Form1.Designer.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAApwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T23:56:29.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T23:56:29.907Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "serial_port_ex\\Form1.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\serial_port_ex\\serial_port_ex\\Form1.cs",
               "RelativeToolTip": "serial_port_ex\\Form1.cs",
-              "ViewState": "AgIAAPEAAAAAAAAAAAAAAPkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAAABcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T23:51:31.664Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\serial_port_ex\\serial_port_ex\\Form1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "serial_port_ex\\Form1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T23:46:58.368Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-05-28T23:46:58.368Z"
             }
           ]
         }

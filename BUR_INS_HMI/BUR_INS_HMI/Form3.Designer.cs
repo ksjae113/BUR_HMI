@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             temp_panel = new Panel();
             temp2_10 = new Label();
             temp2_9 = new Label();
@@ -74,6 +75,7 @@
             temp_col1 = new Label();
             temp_lbl = new Label();
             sensor_panel = new Panel();
+            formsPlot = new ScottPlot.FormsPlot();
             sens_lbl = new Label();
             ampare_panel = new Panel();
             err_range10 = new Label();
@@ -139,6 +141,7 @@
             amp_ch_lbl = new Label();
             amp_no_lbl = new Label();
             ampare_lbl = new Label();
+            pulseTime = new System.Windows.Forms.Timer(components);
             temp_panel.SuspendLayout();
             sensor_panel.SuspendLayout();
             ampare_panel.SuspendLayout();
@@ -742,6 +745,7 @@
             // sensor_panel
             // 
             sensor_panel.BackColor = SystemColors.ActiveCaptionText;
+            sensor_panel.Controls.Add(formsPlot);
             sensor_panel.Controls.Add(sens_lbl);
             sensor_panel.Dock = DockStyle.Top;
             sensor_panel.Location = new Point(0, 200);
@@ -750,14 +754,25 @@
             sensor_panel.TabIndex = 1;
             sensor_panel.Visible = false;
             // 
+            // formsPlot
+            // 
+            formsPlot.BackColor = SystemColors.ActiveCaption;
+            formsPlot.Dock = DockStyle.Top;
+            formsPlot.Location = new Point(0, 36);
+            formsPlot.Margin = new Padding(4, 3, 4, 3);
+            formsPlot.Name = "formsPlot";
+            formsPlot.Size = new Size(1264, 204);
+            formsPlot.TabIndex = 2;
+            // 
             // sens_lbl
             // 
             sens_lbl.BorderStyle = BorderStyle.Fixed3D;
+            sens_lbl.Dock = DockStyle.Top;
             sens_lbl.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             sens_lbl.ForeColor = SystemColors.Control;
-            sens_lbl.Location = new Point(2, 2);
+            sens_lbl.Location = new Point(0, 0);
             sens_lbl.Name = "sens_lbl";
-            sens_lbl.Size = new Size(1260, 36);
+            sens_lbl.Size = new Size(1264, 36);
             sens_lbl.TabIndex = 1;
             sens_lbl.Text = "센서 출력 신호 정보";
             sens_lbl.TextAlign = ContentAlignment.TopCenter;
@@ -1588,6 +1603,11 @@
             ampare_lbl.Text = "전류 현황";
             ampare_lbl.TextAlign = ContentAlignment.TopCenter;
             // 
+            // pulseTime
+            // 
+            pulseTime.Interval = 1000;
+            pulseTime.Tick += Timer_Tick;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1613,47 +1633,9 @@
         private Label temp_lbl;
         private Label temp2;
         private Label temp_col2;
-        private Label temp1;
         private Label temp_col1;
-        private Label col1_2;
-        private Label col1_1;
-        private Label temp2_10;
-        private Label temp2_9;
-        private Label temp2_8;
-        private Label temp2_7;
-        private Label temp2_6;
-        private Label temp2_5;
-        private Label temp2_4;
-        private Label temp2_3;
-        private Label temp2_2;
-        private Label temp2_1;
-        private Label col2_10;
-        private Label col2_9;
-        private Label col2_8;
-        private Label col2_7;
-        private Label col2_6;
-        private Label col2_5;
-        private Label col2_4;
-        private Label col2_3;
-        private Label col2_2;
-        private Label col2_1;
-        private Label temp_10;
-        private Label temp_9;
-        private Label temp_8;
         private Label temp_7;
-        private Label temp_6;
-        private Label temp_5;
-        private Label temp_4;
-        private Label temp_3;
-        private Label temp_2;
-        private Label temp_1;
-        private Label col1_10;
-        private Label col1_8;
         private Label col1_7;
-        private Label col1_6;
-        private Label col1_5;
-        private Label col1_4;
-        private Label col1_3;
         private Label sens_lbl;
         private Label ampare_lbl;
         private Label amp_no_lbl;
@@ -1696,7 +1678,6 @@
         private Button amp_set_btn;
         private Button err_set_btn;
         private Label blank_lbl;
-        private Label col1_9;
         private Label target_amp_lbl;
         private Label target_amp10;
         private Label target_amp9;
@@ -1719,5 +1700,46 @@
         private Label err_range2;
         private Label err_range1;
         private Label err_range;
+        internal Label col1_1;
+        internal Label temp2_1;
+        internal Label col2_1;
+        internal Label temp_1;
+        private Label temp1;
+        internal Label col1_2;
+        internal Label temp2_10;
+        internal Label temp2_9;
+        internal Label temp2_8;
+        internal Label temp2_7;
+        internal Label temp2_6;
+        internal Label temp2_5;
+        internal Label temp2_4;
+        internal Label temp2_3;
+        internal Label temp2_2;
+        internal Label col2_10;
+        internal Label col2_9;
+        internal Label col2_8;
+        internal Label col2_7;
+        internal Label col2_6;
+        internal Label col2_5;
+        internal Label col2_4;
+        internal Label col2_3;
+        internal Label col2_2;
+        internal Label temp_10;
+        internal Label temp_9;
+        internal Label temp_8;
+        internal Label temp_6;
+        internal Label temp_5;
+        internal Label temp_4;
+        internal Label temp_3;
+        internal Label temp_2;
+        internal Label col1_10;
+        internal Label col1_8;
+        internal Label col1_6;
+        internal Label col1_5;
+        internal Label col1_4;
+        internal Label col1_3;
+        internal Label col1_9;
+        private ScottPlot.FormsPlot formsPlot;
+        private System.Windows.Forms.Timer pulseTime;
     }
 }

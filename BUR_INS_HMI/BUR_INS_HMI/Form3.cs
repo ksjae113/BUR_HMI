@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScottPlot;
 
 namespace BUR_INS_HMI
 {
@@ -21,7 +22,10 @@ namespace BUR_INS_HMI
         decimal amp = 50;   //초기값
         decimal err = 10;   //초기값
 
-      
+
+        private Queue<double> pulseData = new Queue<double>();
+        public Func<byte> GetDOByte;
+
 
         public Form3()
         {
@@ -30,35 +34,71 @@ namespace BUR_INS_HMI
             err_set.Text = err.ToString("F1") + " %";
             update_amp_err(amp, err);
 
-          
+            Init_pulse();
+            pulseTime.Tick += Timer_Tick;
+            pulseTime.Start();
         }
 
-       
+        private void Init_pulse()
+        {
+            var plt = formsPlot.Plot;
+            plt.SetAxisLimits(yMin: 0, yMax: 1);
+                
+            plt.YAxis.ManualTickPositions(new double[] { 0, 1 }, new string[] { "0", "1" });
+            double[] xs = ScottPlot.DataGen.Consecutive(50);
+            double[] ys = new double[50]; // 모두 0으로 초기화
 
+            plt.AddScatter(xs, ys);
+            formsPlot.Refresh();
+        }
+
+        
+
+       private void Timer_Tick(object sender, EventArgs e)
+        {
+            byte raw = GetDOByte?.Invoke() ?? 0;
+            double val = (raw & 0x01) > 0 ? 1 : 0;
+
+            if (pulseData.Count >= 100)
+                pulseData.Dequeue();
+
+            pulseData.Enqueue(val);
+
+            formsPlot.Plot.Clear();
+            formsPlot.Plot.AddSignal(pulseData.ToArray(), sampleRate: 10);
+            formsPlot.Render();
+        }
+        
 
         public void ShowPanel(int panelIndex)
         {
 
 
-               switch (panelIndex)       //이거 써도 별차이없는듯
-               {
-                   case 1: temp_panel.Visible = true;
-                       break;
-                   case 2: sensor_panel.Visible = true; 
-                       break;
-                   case 3: ampare_panel.Visible = true; 
-                       break;
-                   case 4: temp_panel.Visible = false;
-                       break;
-                   case 5 : sensor_panel.Visible = false;
-                       break;
-                   case 6 : ampare_panel.Visible = false;
-                       break;
+            switch (panelIndex)       //이거 써도 별차이없는듯
+            {
+                case 1:
+                    temp_panel.Visible = true;
+                    break;
+                case 2:
+                    sensor_panel.Visible = true;
+                    break;
+                case 3:
+                    ampare_panel.Visible = true;
+                    break;
+                case 4:
+                    temp_panel.Visible = false;
+                    break;
+                case 5:
+                    sensor_panel.Visible = false;
+                    break;
+                case 6:
+                    ampare_panel.Visible = false;
+                    break;
 
-               }
-            
-       
-   
+            }
+
+
+
         }
 
 
@@ -68,17 +108,17 @@ namespace BUR_INS_HMI
             Label[] trg_amp = new Label[] { target_amp1, target_amp2, target_amp3, target_amp4, target_amp5, target_amp6, target_amp7, target_amp8, target_amp9, target_amp10 };
             Label[] err_ran = new Label[] { err_range1, err_range2, err_range3, err_range4, err_range5, err_range6, err_range7, err_range8, err_range9, err_range10 };
 
-            amp_set.Text = amp.ToString("F1") + " mA"; 
+            amp_set.Text = amp.ToString("F1") + " mA";
             err_set.Text = err.ToString("F1") + " %";
 
 
             for (int i = 0; i < column; i++)
             {
                 decimal ampare = amp * channels[i];
-                decimal min = ampare * ((100.0M - err)/100.0M);
+                decimal min = ampare * ((100.0M - err) / 100.0M);
                 decimal max = ampare * ((100.0M + err) / 100.0M);
                 trg_amp[i].Text = ampare.ToString("F1") + " mA";
-                err_ran[i].Text = min.ToString("F1") + " ~ " + max.ToString("F1") + "\nmA";                
+                err_ran[i].Text = min.ToString("F1") + " ~ " + max.ToString("F1") + "\nmA";
             }
         }
 
@@ -95,7 +135,7 @@ namespace BUR_INS_HMI
                 err = Convert.ToDecimal(sender.ToString());
             }
 
-           if (amp != 0 || err != 0)
+            if (amp != 0 || err != 0)
             {
                 update_amp_err(amp, err);
             }
@@ -118,7 +158,7 @@ namespace BUR_INS_HMI
             f4.Show();
         }
 
- 
+       
     }
 
 

@@ -20,7 +20,7 @@ namespace serial_port_ex
         public Form1()
         {
             InitializeComponent();
-               serialPort = new SerialPort("COM2", 115200, Parity.None, 8, StopBits.One); 
+               serialPort = new SerialPort("COM103", 115200, Parity.None, 8, StopBits.One); 
             serialPort.DataReceived += SerialPort_DataReceived;
             try
             {

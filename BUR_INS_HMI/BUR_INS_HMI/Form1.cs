@@ -13,6 +13,8 @@ using ScottPlot;
 using System.Collections.Generic;
 using System.Linq;
 using ScottPlot.WinForms;
+using System.Text;
+using System.Data.SqlClient;
 
 
 namespace BUR_INS_HMI
@@ -24,12 +26,16 @@ namespace BUR_INS_HMI
         private Form3 f3;
 
 
-        private System.Windows.Forms.Timer timer;
-        private int pulseCount = 0;
+        private byte latestDOByte = 0x00;   //가장 최근의 DO raw 값 저장
 
         public SerialPort serialPort;
 
         string str;
+
+        public Func<byte> GetDOByte;
+        private Queue<double> rpm_data = new Queue<double>();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -37,68 +43,159 @@ namespace BUR_INS_HMI
             Init_port();
 
             InitChart();
-
-        
-
+            RPM_timer.Tick += RPM_Timer;
         }
-
-      
-
-       
 
         private void Init_port()
         {
-            //COM PORT
-            foreach (var key in System.IO.Ports.SerialPort.GetPortNames())
+            serialPort = new SerialPort("COM103", 115200, Parity.None, 8, StopBits.One);
+
+            byte[] command = new byte[] { 0x04, 0x03, 0x01 };
+
+            if (!serialPort.IsOpen)
             {
-                str = key.ToString();
-                MessageBox.Show(str);
+                try
+                {
+                    serialPort.Open();
+                    MessageBox.Show("PORT OPEN");
+                    serialPort.Write(command, 0, command.Length);
+                    serialPort.DataReceived += serialPort_DataReceived;
+                    Thread.Sleep(100);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 
+        private void serialPort_DataReceived(object sender, EventArgs e)
+        {
+            int bytesToRead = serialPort.BytesToRead;
+            byte[] buffer = new byte[bytesToRead];
+            serialPort.Read(buffer, 0, bytesToRead);
+            string hexString = BitConverter.ToString(buffer).Replace("-", " ");
+
+            try
+            {
+                this.BeginInvoke((Action)(() =>
+                {
+                    if (buffer.Length >= 3)
+                    {
+                        latestDOByte = buffer[2];
+                        if (buffer[2] == 0x01)
+                        {
+                            textBox1.Text += "PORT1 LED ON ";
+                            sen_good(sender, e);
+                        }
+                        else if (buffer[2] == 0x00)
+                        {
+                            textBox1.Text += "PORT1 LED OFF ";
+
+                            sen_err(sender, e);
+                        }
+                        else
+                            textBox1.Text += "None ";
+                    }
+                    else
+                    {
+                        textBox1.AppendText("수신 데이터 부족 :" + hexString + "\n");
+                    }
+
+                }));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR" + ex.Message + "\n");
+            }
+
+
+
+            //   MessageBox.Show("None");
+            //   string hexString = BitConverter.ToString(buffer).Replace("-", " ");
+            //   MessageBox.Show($"수신된 데이터: {hexString}");
+        }
+
+        private void sen_good(object sender, EventArgs e)
+        {
+            roll_num1.BackColor = Color.Blue;
+            sen_stat1.Text = "정상";
+            sen_stat1.ForeColor = Color.White;
+            sen_stat1.BackColor = Color.Black;
+            if (f3 != null)
+            {
+                f3.temp_1.BackColor = Color.Black;
+                f3.temp_1.ForeColor = Color.White;
+                f3.col1_1.BackColor = Color.Black;
+                f3.col1_1.ForeColor = Color.White;
+            }
+
+
+        }
+
+        private void sen_err(object sender, EventArgs e)
+        {
+            roll_num1.BackColor = Color.Red;
+            sen_stat1.Text = "ERR";
+            sen_stat1.ForeColor = Color.Red;
+            sen_stat1.BackColor = Color.Maroon;
+            if (f3 != null)
+            {
+                f3.temp_1.BackColor = Color.Red;
+                f3.temp_1.ForeColor = Color.Maroon;
+                f3.col1_1.ForeColor = Color.Maroon;
+                f3.col1_1.BackColor = Color.Red;
+            }
+        }
 
         private void InitChart()
         {
-            var plot = formsPlot1.Plot;
-            var rand = new Random();
+             var plot = formsPlot1.Plot;
+             var rand = new Random();
 
-            int pointCount = 50;
+             int pointCount = 50;
 
-            for (int seriesIndex = 0; seriesIndex < 27; seriesIndex++)
-            {
-                double[] xs = ScottPlot.DataGen.Consecutive(pointCount);    //시간축 (50개)
-                double[] ys = new double[pointCount];
+             for (int seriesIndex = 0; seriesIndex < 27; seriesIndex++)
+             {
+                 double[] xs = ScottPlot.DataGen.Consecutive(pointCount);    //시간축 (50개)
+                 double[] ys = new double[pointCount];
 
-                for (int i = 0; i < pointCount; i++)
-                {
-                    //    ys[i] = rand.NextDouble() * 100;    //각 y값은 0 ~100 사이의 난수
-                    //   ys[i] = 250 + rand.NextDouble(); 250~251
-                    //    if (rand.NextDouble()>0.5)
-                    {
-                        //   ys[i] = 250 - (rand.NextDouble() * 10);
-                        ys[i] = 250;
-                        if (seriesIndex == 17 && i == 5)
-                        {
-                            ys[i] = 245;
-                        }
-                    }
+                 for (int i = 0; i < pointCount; i++)
+                 {
+                     //    ys[i] = rand.NextDouble() * 100;    //각 y값은 0 ~100 사이의 난수
+                     //   ys[i] = 250 + rand.NextDouble(); 250~251
+                     //    if (rand.NextDouble()>0.5)
+                     {
+                         //   ys[i] = 250 - (rand.NextDouble() * 10);
+                         ys[i] = 250;
+                         if (seriesIndex == 17 && i == 5)
+                         {
+                             ys[i] = 245;
+                         }
+                     }
 
-                }
+                 }
 
-                plot.AddScatter(xs, ys, label: $"ROLL {seriesIndex + 1}");  // 각 시리즈(라벨) 범례에 추가
-            }
+                 plot.AddScatter(xs, ys, label: $"ROLL {seriesIndex + 1}");  // 각 시리즈(라벨) 범례에 추가
+             }
 
-            plot.SetAxisLimits(xMin: 0, xMax: 49, yMin: 200, yMax: 300);  //생략시 고정 범위 아니고 자동 범위로 바뀜.
-            //x축은 0~49사이만 표시 , y축 0~100 // 만약 사용자가 마우스로 줌/팬을 하게 하고 싶으면 윗 코드 생략하거나 조건부 실행 
-            plot.Legend(location: ScottPlot.Alignment.UpperRight);  //범례 위치 제어
+             plot.SetAxisLimits(xMin: 0, xMax: 49, yMin: 200, yMax: 300);  //생략시 고정 범위 아니고 자동 범위로 바뀜.
+             //x축은 0~49사이만 표시 , y축 0~100 // 만약 사용자가 마우스로 줌/팬을 하게 하고 싶으면 윗 코드 생략하거나 조건부 실행 
+             plot.Legend(location: ScottPlot.Alignment.UpperRight);  //범례 위치 제어
 
-            // 축 라벨 추가
-            plot.XLabel("시간 (초)");
-            plot.YLabel("RPM");
+             // 축 라벨 추가
+             plot.XLabel("시간 (초)");
+             plot.YLabel("RPM");
 
-            //반영
-            formsPlot1.Refresh();
+             //반영
+             formsPlot1.Refresh();
         }
+
+        private void RPM_Timer(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void pic_stop_btn_Click(object sender, EventArgs e)
         {
@@ -107,8 +204,6 @@ namespace BUR_INS_HMI
             }
             else
             {
-                // AppendLog($"프로그램 비상 정지\t#{+log_cnt}");
-                // log_cnt++;
                 MessageBox.Show("장비를 정지합니다.", "정지 명령");
 
             }
@@ -121,13 +216,24 @@ namespace BUR_INS_HMI
             }
             else
             {
+                if (serialPort.IsOpen)
+                {
+                    byte[] command = new byte[] { 0x04, 0x03, 0x00 };
+                    serialPort.Write(command, 0, command.Length);
+
+                    serialPort.Close();
+                }
+                if (serialPort != null && serialPort.IsOpen)
+                {
+                    serialPort.Close();
+                }
                 Close();
             }
         }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(serialPort);
+            Form2 f2 = new Form2();
 
             f2.FormSendEvent += new Form2.FormSendDataHandler(DiseaseUpdateEventMethod);
             //form2에 이벤트 추가
@@ -198,19 +304,30 @@ namespace BUR_INS_HMI
             {
                 f3 = new Form3();
                 f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethod);
-            };
+                f3.GetDOByte = GetLatestDOByte;
+                f3.Show();
+
+                f3.BringToFront();  //이미 열려있다면 앞으로
+                if (f3.sensor_panel.Visible == true)
+                    f3.ShowPanel(5);
+                else if (f3.sensor_panel.Visible == false)
+                    f3.ShowPanel(2);
+            }
+            else
+                f3.Focus();
 
 
-            f3.Show();
 
-            f3.BringToFront();  //이미 열려있다면 앞으로
 
-            if (f3.sensor_panel.Visible == true)
-                f3.ShowPanel(5);
-            else if (f3.sensor_panel.Visible == false)
-                f3.ShowPanel(2);
+           
 
         }
+
+        private byte GetLatestDOByte()  //f3이 호출할 함수
+        {
+            return latestDOByte;
+        }
+
 
         private void ampare_btn_Click(object sender, EventArgs e)
         {
@@ -236,35 +353,6 @@ namespace BUR_INS_HMI
 
             f5.Show();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (str == null)
-            {
-                MessageBox.Show("COM 설정필요");
-                return;
-            }
-
-            if (!serialPort.IsOpen)
-            {
-                serialPort.PortName = "COM103";
-                serialPort.BaudRate = 115200;
-                serialPort.DataBits = 8;
-                serialPort.Parity = System.IO.Ports.Parity.None;
-                serialPort.StopBits = System.IO.Ports.StopBits.One;
-
-                serialPort.Open();
-                MessageBox.Show("연결 성공");
-            }
-            else
-            {
-                MessageBox.Show("이미 연결");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-       
-        }
+      
     }
 }

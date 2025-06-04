@@ -68,3 +68,9 @@ C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.
 C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\obj\Debug\net8.0-windows\BUR_INS_.CAE60E83.Up2Date
 C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\obj\Debug\net8.0-windows\BUR_INS_HMI.genruntimeconfig.cache
 C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\obj\Debug\net8.0-windows\ref\BUR_INS_HMI.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\tjlee\Desktop\ksj\git-workspace\BUR_INS_HMI\BUR_INS_HMI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
