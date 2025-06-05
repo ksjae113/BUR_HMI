@@ -93,7 +93,6 @@
             sen_num3 = new Label();
             sen_num2 = new Label();
             sen_num1 = new Label();
-            sen_stat = new Label();
             info_name = new Label();
             roll_panel = new Panel();
             label1 = new Label();
@@ -168,6 +167,7 @@
             roll1 = new Panel();
             roll_num1 = new Label();
             roll_name = new Label();
+            sen_stat = new Label();
             RPM_timer = new System.Windows.Forms.Timer(components);
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_stop_btn).BeginInit();
@@ -368,7 +368,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(431, 364);
+            textBox1.Location = new Point(435, 375);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -380,9 +380,9 @@
             // p_info_pic12
             // 
             p_info_pic12.Image = Properties.Resources.blank;
-            p_info_pic12.Location = new Point(827, 389);
+            p_info_pic12.Location = new Point(830, 340);
             p_info_pic12.Name = "p_info_pic12";
-            p_info_pic12.Size = new Size(149, 47);
+            p_info_pic12.Size = new Size(150, 40);
             p_info_pic12.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic12.TabIndex = 31;
             p_info_pic12.TabStop = false;
@@ -390,9 +390,9 @@
             // p_info_pic11
             // 
             p_info_pic11.Image = Properties.Resources.blank;
-            p_info_pic11.Location = new Point(827, 310);
+            p_info_pic11.Location = new Point(830, 280);
             p_info_pic11.Name = "p_info_pic11";
-            p_info_pic11.Size = new Size(149, 47);
+            p_info_pic11.Size = new Size(150, 40);
             p_info_pic11.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic11.TabIndex = 30;
             p_info_pic11.TabStop = false;
@@ -400,9 +400,9 @@
             // p_info_pic10
             // 
             p_info_pic10.Image = Properties.Resources.blank;
-            p_info_pic10.Location = new Point(827, 243);
+            p_info_pic10.Location = new Point(830, 220);
             p_info_pic10.Name = "p_info_pic10";
-            p_info_pic10.Size = new Size(149, 47);
+            p_info_pic10.Size = new Size(150, 40);
             p_info_pic10.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic10.TabIndex = 29;
             p_info_pic10.TabStop = false;
@@ -410,9 +410,9 @@
             // p_info_pic9
             // 
             p_info_pic9.Image = Properties.Resources.blank;
-            p_info_pic9.Location = new Point(827, 184);
+            p_info_pic9.Location = new Point(830, 160);
             p_info_pic9.Name = "p_info_pic9";
-            p_info_pic9.Size = new Size(149, 47);
+            p_info_pic9.Size = new Size(150, 40);
             p_info_pic9.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic9.TabIndex = 28;
             p_info_pic9.TabStop = false;
@@ -420,9 +420,9 @@
             // p_info_pic8
             // 
             p_info_pic8.Image = Properties.Resources.blank;
-            p_info_pic8.Location = new Point(827, 112);
+            p_info_pic8.Location = new Point(830, 100);
             p_info_pic8.Name = "p_info_pic8";
-            p_info_pic8.Size = new Size(149, 47);
+            p_info_pic8.Size = new Size(150, 40);
             p_info_pic8.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic8.TabIndex = 27;
             p_info_pic8.TabStop = false;
@@ -430,9 +430,9 @@
             // p_info_pic7
             // 
             p_info_pic7.Image = Properties.Resources.blank;
-            p_info_pic7.Location = new Point(827, 44);
+            p_info_pic7.Location = new Point(830, 40);
             p_info_pic7.Name = "p_info_pic7";
-            p_info_pic7.Size = new Size(149, 47);
+            p_info_pic7.Size = new Size(150, 40);
             p_info_pic7.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic7.TabIndex = 26;
             p_info_pic7.TabStop = false;
@@ -440,9 +440,9 @@
             // p_info_pic6
             // 
             p_info_pic6.Image = Properties.Resources.blank;
-            p_info_pic6.Location = new Point(244, 396);
+            p_info_pic6.Location = new Point(300, 340);
             p_info_pic6.Name = "p_info_pic6";
-            p_info_pic6.Size = new Size(149, 47);
+            p_info_pic6.Size = new Size(150, 40);
             p_info_pic6.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic6.TabIndex = 25;
             p_info_pic6.TabStop = false;
@@ -450,9 +450,9 @@
             // p_info_pic5
             // 
             p_info_pic5.Image = Properties.Resources.blank;
-            p_info_pic5.Location = new Point(244, 310);
+            p_info_pic5.Location = new Point(300, 280);
             p_info_pic5.Name = "p_info_pic5";
-            p_info_pic5.Size = new Size(149, 47);
+            p_info_pic5.Size = new Size(150, 40);
             p_info_pic5.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic5.TabIndex = 24;
             p_info_pic5.TabStop = false;
@@ -460,9 +460,9 @@
             // p_info_pic4
             // 
             p_info_pic4.Image = Properties.Resources.blank;
-            p_info_pic4.Location = new Point(244, 236);
+            p_info_pic4.Location = new Point(300, 220);
             p_info_pic4.Name = "p_info_pic4";
-            p_info_pic4.Size = new Size(149, 47);
+            p_info_pic4.Size = new Size(150, 40);
             p_info_pic4.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic4.TabIndex = 23;
             p_info_pic4.TabStop = false;
@@ -470,9 +470,9 @@
             // p_info_pic3
             // 
             p_info_pic3.Image = Properties.Resources.blank;
-            p_info_pic3.Location = new Point(244, 171);
+            p_info_pic3.Location = new Point(300, 160);
             p_info_pic3.Name = "p_info_pic3";
-            p_info_pic3.Size = new Size(149, 47);
+            p_info_pic3.Size = new Size(150, 40);
             p_info_pic3.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic3.TabIndex = 22;
             p_info_pic3.TabStop = false;
@@ -480,9 +480,9 @@
             // p_info_pic2
             // 
             p_info_pic2.Image = Properties.Resources.blank;
-            p_info_pic2.Location = new Point(244, 105);
+            p_info_pic2.Location = new Point(300, 100);
             p_info_pic2.Name = "p_info_pic2";
-            p_info_pic2.Size = new Size(149, 47);
+            p_info_pic2.Size = new Size(150, 40);
             p_info_pic2.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic2.TabIndex = 21;
             p_info_pic2.TabStop = false;
@@ -490,20 +490,20 @@
             // p_info_pic1
             // 
             p_info_pic1.Image = Properties.Resources.blank;
-            p_info_pic1.Location = new Point(244, 43);
+            p_info_pic1.Location = new Point(300, 40);
             p_info_pic1.Name = "p_info_pic1";
-            p_info_pic1.Size = new Size(149, 47);
+            p_info_pic1.Size = new Size(150, 40);
             p_info_pic1.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic1.TabIndex = 20;
             p_info_pic1.TabStop = false;
             // 
             // p_info13
             // 
-            p_info13.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info13.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info13.ForeColor = SystemColors.Control;
-            p_info13.Location = new Point(587, 396);
+            p_info13.Location = new Point(530, 340);
             p_info13.Name = "p_info13";
-            p_info13.Size = new Size(142, 40);
+            p_info13.Size = new Size(300, 40);
             p_info13.TabIndex = 12;
             p_info13.Text = "예비용";
             p_info13.TextAlign = ContentAlignment.MiddleCenter;
@@ -523,121 +523,121 @@
             // 
             // p_info11
             // 
-            p_info11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info11.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info11.ForeColor = SystemColors.Control;
-            p_info11.Location = new Point(376, 317);
+            p_info11.Location = new Point(530, 280);
             p_info11.Name = "p_info11";
-            p_info11.Size = new Size(509, 40);
+            p_info11.Size = new Size(300, 40);
             p_info11.TabIndex = 10;
-            p_info11.Text = "열간 교정기 실적(측정치) Gap";
+            p_info11.Text = "열간교정기 실적(측정치) Gap";
             p_info11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info10
             // 
-            p_info10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info10.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info10.ForeColor = SystemColors.Control;
-            p_info10.Location = new Point(422, 243);
+            p_info10.Location = new Point(530, 220);
             p_info10.Name = "p_info10";
-            p_info10.Size = new Size(407, 40);
+            p_info10.Size = new Size(300, 40);
             p_info10.TabIndex = 9;
-            p_info10.Text = "열간교정기 지시 Leveling 속도";
+            p_info10.Text = "열간교정기 지시 Leveling속도";
             p_info10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info9
             // 
-            p_info9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info9.ForeColor = SystemColors.Control;
-            p_info9.Location = new Point(494, 184);
+            p_info9.Location = new Point(530, 160);
             p_info9.Name = "p_info9";
-            p_info9.Size = new Size(275, 40);
+            p_info9.Size = new Size(300, 40);
             p_info9.TabIndex = 8;
             p_info9.Text = "열간교정기 지시 Gap";
             p_info9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info8
             // 
-            p_info8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info8.ForeColor = SystemColors.Control;
-            p_info8.Location = new Point(526, 112);
+            p_info8.Location = new Point(530, 100);
             p_info8.Name = "p_info8";
-            p_info8.Size = new Size(243, 40);
+            p_info8.Size = new Size(300, 40);
             p_info8.TabIndex = 7;
             p_info8.Text = "실적 수신 시점";
             p_info8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info7
             // 
-            p_info7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info7.ForeColor = SystemColors.Control;
-            p_info7.Location = new Point(526, 44);
+            p_info7.Location = new Point(530, 40);
             p_info7.Name = "p_info7";
-            p_info7.Size = new Size(257, 40);
+            p_info7.Size = new Size(300, 40);
             p_info7.TabIndex = 6;
             p_info7.Text = "가속 냉각 종료 온도";
             p_info7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info6
             // 
-            p_info6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info6.ForeColor = SystemColors.Control;
-            p_info6.Location = new Point(12, 396);
+            p_info6.Location = new Point(0, 340);
             p_info6.Name = "p_info6";
-            p_info6.Size = new Size(191, 40);
+            p_info6.Size = new Size(300, 40);
             p_info6.TabIndex = 5;
             p_info6.Text = "압연 종료 온도";
             p_info6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info5
             // 
-            p_info5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info5.ForeColor = SystemColors.Control;
-            p_info5.Location = new Point(12, 311);
+            p_info5.Location = new Point(0, 280);
             p_info5.Name = "p_info5";
-            p_info5.Size = new Size(142, 40);
+            p_info5.Size = new Size(300, 40);
             p_info5.TabIndex = 4;
             p_info5.Text = "판 강종";
             p_info5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info4
             // 
-            p_info4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info4.ForeColor = SystemColors.Control;
-            p_info4.Location = new Point(40, 236);
+            p_info4.Location = new Point(0, 220);
             p_info4.Name = "p_info4";
-            p_info4.Size = new Size(142, 40);
+            p_info4.Size = new Size(300, 40);
             p_info4.TabIndex = 3;
             p_info4.Text = "판 길이";
-            p_info4.TextAlign = ContentAlignment.MiddleLeft;
+            p_info4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info3
             // 
-            p_info3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info3.ForeColor = SystemColors.Control;
-            p_info3.Location = new Point(40, 171);
+            p_info3.Location = new Point(0, 160);
             p_info3.Name = "p_info3";
-            p_info3.Size = new Size(142, 40);
+            p_info3.Size = new Size(300, 40);
             p_info3.TabIndex = 2;
             p_info3.Text = "판 폭";
-            p_info3.TextAlign = ContentAlignment.MiddleLeft;
+            p_info3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info2
             // 
-            p_info2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info2.ForeColor = SystemColors.Control;
-            p_info2.Location = new Point(40, 105);
+            p_info2.Location = new Point(0, 100);
             p_info2.Name = "p_info2";
-            p_info2.Size = new Size(142, 40);
+            p_info2.Size = new Size(300, 40);
             p_info2.TabIndex = 1;
             p_info2.Text = "판 두께";
-            p_info2.TextAlign = ContentAlignment.MiddleLeft;
+            p_info2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p_info1
             // 
-            p_info1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info1.ForeColor = SystemColors.Control;
-            p_info1.Location = new Point(40, 43);
+            p_info1.Location = new Point(0, 40);
             p_info1.Name = "p_info1";
-            p_info1.Size = new Size(142, 40);
+            p_info1.Size = new Size(300, 40);
             p_info1.TabIndex = 0;
             p_info1.Text = "판 식별번호";
             p_info1.TextAlign = ContentAlignment.MiddleCenter;
@@ -766,7 +766,6 @@
             sensor_panel.Controls.Add(sen_num3);
             sensor_panel.Controls.Add(sen_num2);
             sensor_panel.Controls.Add(sen_num1);
-            sensor_panel.Controls.Add(sen_stat);
             sensor_panel.Dock = DockStyle.Top;
             sensor_panel.Location = new Point(0, 40);
             sensor_panel.Name = "sensor_panel";
@@ -1012,19 +1011,6 @@
             sen_num1.TabIndex = 1;
             sen_num1.Text = "1";
             sen_num1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // sen_stat
-            // 
-            sen_stat.BorderStyle = BorderStyle.Fixed3D;
-            sen_stat.Dock = DockStyle.Top;
-            sen_stat.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_stat.ForeColor = SystemColors.Control;
-            sen_stat.Location = new Point(0, 0);
-            sen_stat.Name = "sen_stat";
-            sen_stat.Size = new Size(899, 40);
-            sen_stat.TabIndex = 0;
-            sen_stat.Text = "센서 작동 상태";
-            sen_stat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // info_name
             // 
@@ -1840,10 +1826,22 @@
             roll_name.Text = "구동 상태 현황";
             roll_name.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // sen_stat
+            // 
+            sen_stat.BorderStyle = BorderStyle.Fixed3D;
+            sen_stat.Dock = DockStyle.Top;
+            sen_stat.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_stat.ForeColor = SystemColors.Control;
+            sen_stat.Location = new Point(0, 0);
+            sen_stat.Name = "sen_stat";
+            sen_stat.Size = new Size(899, 40);
+            sen_stat.TabIndex = 0;
+            sen_stat.Text = "센서 작동 상태";
+            sen_stat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // RPM_timer
             // 
             RPM_timer.Interval = 1000;
-            RPM_timer.Tick += RPM_Timer;
             // 
             // Form1
             // 
@@ -1856,6 +1854,7 @@
             Name = "Form1";
             Text = "BUR_INS";
             WindowState = FormWindowState.Maximized;
+            Load += Form1_Load;
             subject_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pic_stop_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).EndInit();
@@ -1978,7 +1977,6 @@
         private PictureBox record_btn;
         private PictureBox login_btn;
         private PictureBox logout_btn;
-        private Panel roll1;
         private Panel roll27;
         private Panel roll26;
         private Panel roll25;
@@ -2060,6 +2058,7 @@
         private Label process_start;
         private Label label1;
         private TextBox textBox1;
-        private System.Windows.Forms.Timer RPM_timer;
+        internal System.Windows.Forms.Timer RPM_timer;
+        private Panel roll1;
     }
 }

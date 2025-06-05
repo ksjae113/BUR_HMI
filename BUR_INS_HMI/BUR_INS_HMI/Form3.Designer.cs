@@ -1606,7 +1606,6 @@
             // pulseTime
             // 
             pulseTime.Interval = 1000;
-            pulseTime.Tick += Timer_Tick;
             // 
             // Form3
             // 

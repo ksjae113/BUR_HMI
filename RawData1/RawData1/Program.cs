@@ -18,11 +18,17 @@ class Program
 
      static void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
      {
-         int bytesToRead = port.BytesToRead;
+        byte[] command = new byte[] { 0x04, 0x03, 0x01 };   //Raw Write 성공  // 0x04(DO) 0x03(PORT NUM) 0x01(LED ON)
+        port.Write(command, 0, command.Length);
+        Console.Write("PORT3 ON 송신");
+
+        int bytesToRead = port.BytesToRead;
          byte[] buffer = new byte[bytesToRead];
          port.Read(buffer, 0, bytesToRead);
 
-         Console.Write("수신 데이터: ");
+      
+
+        Console.Write("수신 데이터: ");
          foreach (byte b in buffer)
          {
              Console.Write($"{b:X2} ");

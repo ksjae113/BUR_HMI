@@ -22,21 +22,30 @@ namespace BUR_INS_HMI
         decimal amp = 50;   //초기값
         decimal err = 10;   //초기값
 
+        public Label[] temp1_arr;
+        public Label[] temp2_arr;
+        public Label[] col1_arr;
+        public Label[] col2_arr;
 
-        private Queue<double> pulseData = new Queue<double>();
+    private Queue<double> pulseData = new Queue<double>();
         public Func<byte> GetDOByte;
-
+        
 
         public Form3()
         {
             InitializeComponent();
+
             amp_set.Text = amp.ToString("F1") + " mA";
             err_set.Text = err.ToString("F1") + " %";
             update_amp_err(amp, err);
 
             Init_pulse();
-            pulseTime.Tick += Timer_Tick;
-            pulseTime.Start();
+            temp1_arr = new Label[]{ temp_1, temp_2, temp_3, temp_4, temp_5, temp_6, 
+                temp_7, temp_8, temp_9, temp_10 };
+            temp2_arr = new Label[]{ temp2_1, temp2_2, temp2_3, temp2_4, temp2_5, temp2_6, 
+                temp2_7, temp2_8, temp2_9, temp2_10 };
+            col1_arr = new Label[] { col1_1, col1_2, col1_3, col1_4, col1_5, col1_6, col1_7, col1_8, col1_9, col1_10 };
+            col2_arr = new Label[] { col2_1, col2_2, col2_3, col2_4, col2_5, col2_6, col2_7, col2_8, col2_9, col2_10 };
         }
 
         private void Init_pulse()
@@ -54,9 +63,10 @@ namespace BUR_INS_HMI
 
         
 
-       private void Timer_Tick(object sender, EventArgs e)
+
+        
+        public void SharedTimerCallback(byte raw)
         {
-            byte raw = GetDOByte?.Invoke() ?? 0;
             double val = (raw & 0x01) > 0 ? 1 : 0;
 
             if (pulseData.Count >= 100)
@@ -68,7 +78,6 @@ namespace BUR_INS_HMI
             formsPlot.Plot.AddSignal(pulseData.ToArray(), sampleRate: 10);
             formsPlot.Render();
         }
-        
 
         public void ShowPanel(int panelIndex)
         {
