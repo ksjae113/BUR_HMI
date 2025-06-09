@@ -169,6 +169,7 @@
             roll_name = new Label();
             sen_stat = new Label();
             RPM_timer = new System.Windows.Forms.Timer(components);
+            pic_re_con_btn = new PictureBox();
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_stop_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).BeginInit();
@@ -228,6 +229,7 @@
             roll3.SuspendLayout();
             roll2.SuspendLayout();
             roll1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).BeginInit();
             SuspendLayout();
             // 
             // project_name_lbl
@@ -244,6 +246,7 @@
             // 
             // subject_panel
             // 
+            subject_panel.Controls.Add(pic_re_con_btn);
             subject_panel.Controls.Add(pic_stop_btn);
             subject_panel.Controls.Add(rist_logo_pic);
             subject_panel.Controls.Add(project_name_lbl);
@@ -1843,6 +1846,17 @@
             // 
             RPM_timer.Interval = 1000;
             // 
+            // pic_re_con_btn
+            // 
+            pic_re_con_btn.Image = Properties.Resources.reconnect;
+            pic_re_con_btn.Location = new Point(1659, 1);
+            pic_re_con_btn.Name = "pic_re_con_btn";
+            pic_re_con_btn.Size = new Size(193, 94);
+            pic_re_con_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_re_con_btn.TabIndex = 9;
+            pic_re_con_btn.TabStop = false;
+            pic_re_con_btn.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -1915,6 +1929,7 @@
             roll3.ResumeLayout(false);
             roll2.ResumeLayout(false);
             roll1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).EndInit();
             ResumeLayout(false);
         }
 
@@ -2060,5 +2075,6 @@
         private TextBox textBox1;
         internal System.Windows.Forms.Timer RPM_timer;
         private Panel roll1;
+        private PictureBox pic_re_con_btn;
     }
 }

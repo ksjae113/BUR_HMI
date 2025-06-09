@@ -143,6 +143,16 @@ namespace BUR_INS_HMI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap reconnect {
+            get {
+                object obj = ResourceManager.GetObject("reconnect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap record_btn {
             get {
                 object obj = ResourceManager.GetObject("record_btn", resourceCulture);

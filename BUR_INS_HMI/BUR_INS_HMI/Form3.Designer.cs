@@ -1308,7 +1308,7 @@
             amp_ch10.BorderStyle = BorderStyle.Fixed3D;
             amp_ch10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch10.ForeColor = SystemColors.Control;
-            amp_ch10.Location = new Point(1150, 80);
+            amp_ch10.Location = new Point(1150, 40);
             amp_ch10.Name = "amp_ch10";
             amp_ch10.Size = new Size(115, 35);
             amp_ch10.TabIndex = 26;
@@ -1320,7 +1320,7 @@
             amp_ch9.BorderStyle = BorderStyle.Fixed3D;
             amp_ch9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch9.ForeColor = SystemColors.Control;
-            amp_ch9.Location = new Point(1035, 80);
+            amp_ch9.Location = new Point(1035, 40);
             amp_ch9.Name = "amp_ch9";
             amp_ch9.Size = new Size(115, 35);
             amp_ch9.TabIndex = 25;
@@ -1332,7 +1332,7 @@
             amp_ch8.BorderStyle = BorderStyle.Fixed3D;
             amp_ch8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch8.ForeColor = SystemColors.Control;
-            amp_ch8.Location = new Point(920, 80);
+            amp_ch8.Location = new Point(920, 40);
             amp_ch8.Name = "amp_ch8";
             amp_ch8.Size = new Size(115, 35);
             amp_ch8.TabIndex = 24;
@@ -1344,7 +1344,7 @@
             amp_ch7.BorderStyle = BorderStyle.Fixed3D;
             amp_ch7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch7.ForeColor = SystemColors.Control;
-            amp_ch7.Location = new Point(805, 80);
+            amp_ch7.Location = new Point(805, 40);
             amp_ch7.Name = "amp_ch7";
             amp_ch7.Size = new Size(115, 35);
             amp_ch7.TabIndex = 23;
@@ -1356,7 +1356,7 @@
             amp_ch6.BorderStyle = BorderStyle.Fixed3D;
             amp_ch6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch6.ForeColor = SystemColors.Control;
-            amp_ch6.Location = new Point(690, 80);
+            amp_ch6.Location = new Point(690, 40);
             amp_ch6.Name = "amp_ch6";
             amp_ch6.Size = new Size(115, 35);
             amp_ch6.TabIndex = 22;
@@ -1368,7 +1368,7 @@
             amp_ch5.BorderStyle = BorderStyle.Fixed3D;
             amp_ch5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch5.ForeColor = SystemColors.Control;
-            amp_ch5.Location = new Point(575, 80);
+            amp_ch5.Location = new Point(575, 40);
             amp_ch5.Name = "amp_ch5";
             amp_ch5.Size = new Size(115, 35);
             amp_ch5.TabIndex = 21;
@@ -1380,7 +1380,7 @@
             amp_ch4.BorderStyle = BorderStyle.Fixed3D;
             amp_ch4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch4.ForeColor = SystemColors.Control;
-            amp_ch4.Location = new Point(460, 80);
+            amp_ch4.Location = new Point(460, 40);
             amp_ch4.Name = "amp_ch4";
             amp_ch4.Size = new Size(115, 35);
             amp_ch4.TabIndex = 20;
@@ -1392,7 +1392,7 @@
             amp_ch3.BorderStyle = BorderStyle.Fixed3D;
             amp_ch3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch3.ForeColor = SystemColors.Control;
-            amp_ch3.Location = new Point(345, 80);
+            amp_ch3.Location = new Point(345, 40);
             amp_ch3.Name = "amp_ch3";
             amp_ch3.Size = new Size(115, 35);
             amp_ch3.TabIndex = 19;
@@ -1404,7 +1404,7 @@
             amp_ch2.BorderStyle = BorderStyle.Fixed3D;
             amp_ch2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch2.ForeColor = SystemColors.Control;
-            amp_ch2.Location = new Point(230, 80);
+            amp_ch2.Location = new Point(230, 40);
             amp_ch2.Name = "amp_ch2";
             amp_ch2.Size = new Size(115, 35);
             amp_ch2.TabIndex = 18;
@@ -1416,7 +1416,7 @@
             amp_ch1.BorderStyle = BorderStyle.Fixed3D;
             amp_ch1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch1.ForeColor = SystemColors.Control;
-            amp_ch1.Location = new Point(115, 80);
+            amp_ch1.Location = new Point(115, 40);
             amp_ch1.Name = "amp_ch1";
             amp_ch1.Size = new Size(115, 35);
             amp_ch1.TabIndex = 17;
@@ -1428,7 +1428,7 @@
             amp_no10.BorderStyle = BorderStyle.Fixed3D;
             amp_no10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no10.ForeColor = SystemColors.Control;
-            amp_no10.Location = new Point(1150, 40);
+            amp_no10.Location = new Point(1150, 80);
             amp_no10.Name = "amp_no10";
             amp_no10.Size = new Size(115, 35);
             amp_no10.TabIndex = 16;
@@ -1440,7 +1440,7 @@
             amp_no9.BorderStyle = BorderStyle.Fixed3D;
             amp_no9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no9.ForeColor = SystemColors.Control;
-            amp_no9.Location = new Point(1035, 40);
+            amp_no9.Location = new Point(1035, 80);
             amp_no9.Name = "amp_no9";
             amp_no9.Size = new Size(115, 35);
             amp_no9.TabIndex = 15;
@@ -1452,7 +1452,7 @@
             amp_no8.BorderStyle = BorderStyle.Fixed3D;
             amp_no8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no8.ForeColor = SystemColors.Control;
-            amp_no8.Location = new Point(920, 40);
+            amp_no8.Location = new Point(920, 80);
             amp_no8.Name = "amp_no8";
             amp_no8.Size = new Size(115, 35);
             amp_no8.TabIndex = 14;
@@ -1464,7 +1464,7 @@
             amp_no7.BorderStyle = BorderStyle.Fixed3D;
             amp_no7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no7.ForeColor = SystemColors.Control;
-            amp_no7.Location = new Point(805, 40);
+            amp_no7.Location = new Point(805, 80);
             amp_no7.Name = "amp_no7";
             amp_no7.Size = new Size(115, 35);
             amp_no7.TabIndex = 13;
@@ -1476,7 +1476,7 @@
             amp_no6.BorderStyle = BorderStyle.Fixed3D;
             amp_no6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no6.ForeColor = SystemColors.Control;
-            amp_no6.Location = new Point(690, 40);
+            amp_no6.Location = new Point(690, 80);
             amp_no6.Name = "amp_no6";
             amp_no6.Size = new Size(115, 35);
             amp_no6.TabIndex = 12;
@@ -1488,7 +1488,7 @@
             amp_no5.BorderStyle = BorderStyle.Fixed3D;
             amp_no5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no5.ForeColor = SystemColors.Control;
-            amp_no5.Location = new Point(575, 40);
+            amp_no5.Location = new Point(575, 80);
             amp_no5.Name = "amp_no5";
             amp_no5.Size = new Size(115, 35);
             amp_no5.TabIndex = 11;
@@ -1500,7 +1500,7 @@
             amp_no4.BorderStyle = BorderStyle.Fixed3D;
             amp_no4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no4.ForeColor = SystemColors.Control;
-            amp_no4.Location = new Point(460, 40);
+            amp_no4.Location = new Point(460, 80);
             amp_no4.Name = "amp_no4";
             amp_no4.Size = new Size(115, 35);
             amp_no4.TabIndex = 10;
@@ -1512,7 +1512,7 @@
             amp_no3.BorderStyle = BorderStyle.Fixed3D;
             amp_no3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no3.ForeColor = SystemColors.Control;
-            amp_no3.Location = new Point(345, 40);
+            amp_no3.Location = new Point(345, 80);
             amp_no3.Name = "amp_no3";
             amp_no3.Size = new Size(115, 35);
             amp_no3.TabIndex = 9;
@@ -1524,7 +1524,7 @@
             amp_no2.BorderStyle = BorderStyle.Fixed3D;
             amp_no2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no2.ForeColor = SystemColors.Control;
-            amp_no2.Location = new Point(230, 40);
+            amp_no2.Location = new Point(230, 80);
             amp_no2.Name = "amp_no2";
             amp_no2.Size = new Size(115, 35);
             amp_no2.TabIndex = 8;
@@ -1536,7 +1536,7 @@
             amp_no1.BorderStyle = BorderStyle.Fixed3D;
             amp_no1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no1.ForeColor = SystemColors.Control;
-            amp_no1.Location = new Point(115, 40);
+            amp_no1.Location = new Point(115, 80);
             amp_no1.Name = "amp_no1";
             amp_no1.Size = new Size(115, 35);
             amp_no1.TabIndex = 7;
@@ -1572,7 +1572,7 @@
             amp_ch_lbl.BorderStyle = BorderStyle.Fixed3D;
             amp_ch_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_ch_lbl.ForeColor = SystemColors.Control;
-            amp_ch_lbl.Location = new Point(0, 80);
+            amp_ch_lbl.Location = new Point(0, 40);
             amp_ch_lbl.Name = "amp_ch_lbl";
             amp_ch_lbl.Size = new Size(115, 35);
             amp_ch_lbl.TabIndex = 4;
@@ -1584,7 +1584,7 @@
             amp_no_lbl.BorderStyle = BorderStyle.Fixed3D;
             amp_no_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_no_lbl.ForeColor = SystemColors.Control;
-            amp_no_lbl.Location = new Point(0, 40);
+            amp_no_lbl.Location = new Point(0, 80);
             amp_no_lbl.Name = "amp_no_lbl";
             amp_no_lbl.Size = new Size(115, 35);
             amp_no_lbl.TabIndex = 3;
@@ -1651,16 +1651,6 @@
         private Label amp_set_lbl;
         private Label amp_lbl;
         private Label amp_ch_lbl;
-        private Label amp10;
-        private Label amp9;
-        private Label amp8;
-        private Label amp7;
-        private Label amp6;
-        private Label amp5;
-        private Label amp4;
-        private Label amp3;
-        private Label amp2;
-        private Label amp1;
         private Label amp_ch10;
         private Label amp_ch9;
         private Label amp_ch8;
@@ -1740,5 +1730,15 @@
         internal Label col1_9;
         private ScottPlot.FormsPlot formsPlot;
         private System.Windows.Forms.Timer pulseTime;
+        internal Label amp10;
+        internal Label amp9;
+        internal Label amp8;
+        internal Label amp7;
+        internal Label amp6;
+        internal Label amp5;
+        internal Label amp4;
+        internal Label amp3;
+        internal Label amp2;
+        internal Label amp1;
     }
 }

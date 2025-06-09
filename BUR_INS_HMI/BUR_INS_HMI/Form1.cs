@@ -15,6 +15,7 @@ using System.Linq;
 using ScottPlot.WinForms;
 using System.Text;
 using System.Data.SqlClient;
+using ScottPlot.Drawing.Colormaps;
 
 
 namespace BUR_INS_HMI
@@ -32,6 +33,7 @@ namespace BUR_INS_HMI
 
         public SerialPort serialPort;
         public Func<byte> GetDOByte;
+
 
         private List<Queue<double>> rpmHistory = new List<Queue<double>>();
         private const int maxPoints = 100;  //최대 100포인트만 저장
@@ -181,6 +183,8 @@ namespace BUR_INS_HMI
             }
         }
 
+
+
         private void serialPort_DataReceived(object sender, EventArgs e)
         {
             int bytesToRead = serialPort.BytesToRead;
@@ -200,13 +204,23 @@ namespace BUR_INS_HMI
                         if (buffer[2] == 0x01)
                         {
                             textBox1.Text += "PORT1 LED ON ";
-                            sen_good(roll[0], 0);
+                            //   sen_good(roll[0], 0);
+                            sens_check(buffer[2]);
+                            roll_check(buffer[2]);
+                            if (f3 == null || f3.IsDisposed)
+                                f3 = new Form3();
+                            f3.updateAmpare(buffer[2]);
                         }
                         else if (buffer[2] == 0x00)
                         {
                             textBox1.Text += "PORT1 LED OFF ";
 
-                            sen_err(roll[0], 0);
+                            //    sen_err(roll[0], 0);
+                            sens_check(buffer[2]);
+                            roll_check(buffer[2]);
+                            if (f3 == null || f3.IsDisposed)
+                                f3 = new Form3();
+                            f3.updateAmpare(buffer[2]);
                         }
                         else
                             textBox1.Text += "None ";
@@ -224,67 +238,79 @@ namespace BUR_INS_HMI
             }
         }
 
-        private void sen_good(Label r, int col)
+
+        private void roll_check(byte data)
         {
-          /*  roll_num1.BackColor = Color.Blue;
-            sen_stat1.Text = "정상";
-            sen_stat1.ForeColor = Color.White;
-            sen_stat1.BackColor = Color.Black;
-            if (f3 != null)
+            for (int i = 0; i < 27; i++)
             {
-                f3.temp_1.BackColor = Color.Black;
-                f3.temp_1.ForeColor = Color.White;
-                f3.col1_1.BackColor = Color.Black;
-                f3.col1_1.ForeColor = Color.White;
-            }*/
 
-            roll[col].BackColor = Color.Blue;
-            sen_stat_arr[col].Text = "정상";
-            sen_stat_arr[col].ForeColor = Color.White;
-            sen_stat_arr[col].BackColor = Color.Black;
+                if (data == 0x01)
+                {
 
-            if (f3 != null)
-            {
-                f3.temp1_arr[col].BackColor = Color.Black;
-                f3.temp1_arr[col].ForeColor = Color.White;
-                f3.col1_arr[col].BackColor = Color.Black;
-                f3.col1_arr[col].ForeColor = Color.White;
+                    roll[i].BackColor = Color.Blue;
+
+
+                    if (f3 != null)
+                    {
+
+                    }
+                }
+                else
+                {
+                    if (i == 0)
+                    {
+                        roll[i].BackColor = Color.Red;
+
+
+                        if (f3 != null)
+                        {
+
+                        }
+                    }
+                }
             }
         }
+        
 
-      
-
-        private void sen_err(Label r, int col)
+        private void sens_check(byte data)
         {
-            //  roll_num1.BackColor = Color.Red;
-            //  sen_stat1.Text = "ERR";
-            //  sen_stat1.ForeColor = Color.Red;
-            //  sen_stat1.BackColor = Color.Maroon;
 
-
-
-            roll[col].BackColor = Color.Red;
-            sen_stat_arr[col].Text = "ERR";
-            sen_stat_arr[col].ForeColor = Color.Red;
-            sen_stat_arr[col].BackColor = Color.Maroon;
-
-            if (f3!=null)
+            for (int i =0; i < 10; i++)
             {
-                f3.temp1_arr[col].BackColor = Color.Red;
-                f3.temp1_arr[col].ForeColor = Color.Maroon;
-                f3.col1_arr[col].BackColor = Color.Red;
-                f3.col1_arr[col].ForeColor = Color.Maroon;
+                
+                if (data == 0x01)
+                {
+                   
+                    sen_stat_arr[i].Text = "정상";
+                    sen_stat_arr[i].ForeColor = Color.White;
+                    sen_stat_arr[i].BackColor = Color.Black;
+
+                    if (f3 != null)
+                    {
+                        f3.temp1_arr[i].BackColor = Color.Black;
+                        f3.temp1_arr[i].ForeColor = Color.White;
+                        f3.col1_arr[i].BackColor = Color.Black;
+                        f3.col1_arr[i].ForeColor = Color.White;
+                    }
+                }
+                else
+                {
+                    if (i == 0 )
+                    {
+                          sen_stat_arr[i].Text = "ERR";
+                        sen_stat_arr[i].ForeColor = Color.Red;
+                        sen_stat_arr[i].BackColor = Color.Maroon;
+
+                        if (f3 != null)
+                        {
+                            f3.temp1_arr[i].BackColor = Color.Red;
+                            f3.temp1_arr[i].ForeColor = Color.Maroon;
+                            f3.col1_arr[i].BackColor = Color.Red;
+                            f3.col1_arr[i].ForeColor = Color.Maroon;
+                        }
+                    }
+                }
             }
-
-            /* if (f3 != null)
-             {
-                 f3.temp_1.BackColor = Color.Red;
-                 f3.temp_1.ForeColor = Color.Maroon;
-                 f3.col1_1.ForeColor = Color.Maroon;
-                 f3.col1_1.BackColor = Color.Red;
-             }*/
-
-
         }
 
         private void InitChart()
@@ -344,13 +370,24 @@ namespace BUR_INS_HMI
 
         private void pic_stop_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("장비를 정지하시겠습니까?", "정지 확인", MessageBoxButtons.YesNo) != DialogResult.Yes)
-            {
-            }
-            else
-            {
-                MessageBox.Show("장비를 정지합니다.", "정지 명령");
 
+            if (serialPort.IsOpen)
+            {
+                if (MessageBox.Show("장비를 정지하시겠습니까?", "정지 확인", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                {
+                  
+                }
+                else
+                {
+                    MessageBox.Show("장비를 정지합니다.", "정지 명령");
+                    serialPort.Close();
+                    pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.reconnect;
+                }
+            }
+            else //  !serialPort.IsOpen
+            {
+                pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_on2;
+                Init_port();
             }
         }
 
@@ -380,10 +417,11 @@ namespace BUR_INS_HMI
         {
             Form2 f2 = new Form2();
 
-            f2.FormSendEvent += new Form2.FormSendDataHandler(DiseaseUpdateEventMethod);
+            f2.FormSendEvent += new Form2.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
             //form2에 이벤트 추가
 
             f2.ShowDialog();
+
             //Show(), ShowDialog() 차이 
             //Show: form2 호출후에도 form1 제어가능 , ShowDialog(): form2 호출후에는 form1 제어불가
         }
@@ -408,7 +446,7 @@ namespace BUR_INS_HMI
             }
         }
 
-        private void DiseaseUpdateEventMethod(object sender)
+        private void DiseaseUpdateEventMethodF2toF1(object sender)
         {
             if ("TRUE".Equals(sender.ToString()))
             {
@@ -416,18 +454,22 @@ namespace BUR_INS_HMI
                 sen_btn.Visible = true;
                 ampare_btn.Visible = true;
                 record_btn.Visible = true;
-                login_btn.Visible = false;
+
+                login_btn.Visible = false;  //기능도 변경 되어야 하므로 2개를 Visible로 변경
                 logout_btn.Visible = true;
+            //    login_btn.Image = BUR_INS_HMI.Properties.Resources.admin_logout_btn; //이미지만 변경되는 것이므로 X.
             }
 
         }
+
+        
 
         private void temp_btn_Click(object sender, EventArgs e)
         {
             if (f3 == null || f3.IsDisposed)  //Ver1
             {
                 f3 = new Form3();
-                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethod);
+                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
             }
 
             f3.Show();
@@ -439,7 +481,6 @@ namespace BUR_INS_HMI
                 f3.ShowPanel(1);
 
 
-
         }
 
         private void sen_btn_Click(object sender, EventArgs e)
@@ -448,7 +489,7 @@ namespace BUR_INS_HMI
             if (f3 == null || f3.IsDisposed)   //Ver1
             {
                 f3 = new Form3();
-                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethod);
+                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
 
             }
 
@@ -460,11 +501,6 @@ namespace BUR_INS_HMI
                 f3.ShowPanel(5);
             else if (f3.sensor_panel.Visible == false)
                 f3.ShowPanel(2);
-
-
-
-
-
         }
 
         private byte GetLatestDOByte()  //f3이 호출할 함수
@@ -478,8 +514,9 @@ namespace BUR_INS_HMI
             if (f3 == null || f3.IsDisposed)    //Ver1
             {
                 f3 = new Form3();
-                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethod);
+                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
             }
+
             f3.Show();
             f3.BringToFront();  //이미 열려있다면 앞으로
 
@@ -487,9 +524,9 @@ namespace BUR_INS_HMI
                 f3.ShowPanel(6);
             else if (f3.ampare_panel.Visible == false)
                 f3.ShowPanel(3);
-
-
         }
+
+       
 
         private void record_btn_Click(object sender, EventArgs e)
         {
