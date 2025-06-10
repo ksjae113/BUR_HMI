@@ -61,8 +61,9 @@ namespace modbus_gpt        //Turn on 하면 0받아서 켜지고 off하면 1받아서 꺼지기
             ushort[] inputData = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
 
             // 예시 출력
-            lblDI1.Text = inputData[0].ToString(); // DI1 상태
-            lblDI2.Text = inputData[1].ToString(); // DI2 상태
+            //   lblDI1.Text = inputData[0].ToString(); // DI1 상태
+            //   lblDI2.Text = inputData[1].ToString(); // DI2 상태
+            lblDI1.Text = string.Join(", ", inputData);  // 예: "1, 0, 1, 1"
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -71,7 +72,7 @@ namespace modbus_gpt        //Turn on 하면 0받아서 켜지고 off하면 1받아서 꺼지기
 
         private void btnTurnOn_Click(object sender, EventArgs e)
         {
-                  WritePort3Led(2); // 0 → LED 켜짐
+                  WritePort3Led(2); // 0 → LED 켜짐   //1꺼짐
            /* byte slaveId = Convert.ToByte(1);
             ushort startAddress = Convert.ToUInt16(0);
             ushort quantity = Convert.ToUInt16(17);

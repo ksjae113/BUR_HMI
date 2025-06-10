@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("modbus_gpt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05eeb5a11f304f072ac01e730508d60254cd51ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ea82f98fab890bf69d42b5442fd5e7a8eac40d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("modbus_gpt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("modbus_gpt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
