@@ -152,8 +152,8 @@ namespace BUR_INS_HMI
                     password_lbl.Text += '*';
                 }
             }
-
         }
+
         private void numpad_check_Click(object sender, EventArgs e)
         {
 

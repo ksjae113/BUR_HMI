@@ -118,46 +118,97 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="close_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estop_on2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estop_on2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sen_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sen_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ampare_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ampare_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rist_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rist_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="temp_sen_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\temp_sen_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="admin_logout_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin_logout_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sen_stat_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sen_stat_none.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_img.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ampare_btn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ampare_btn3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rist_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rist_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sensor_btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor_btn1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="temp_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\temp_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blank_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank_black.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="record_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\record_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sensor_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="admin_login_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin_login_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ampare_btn21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ampare_btn21.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ampare_btn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ampare_btn2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_info.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="run_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\run_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="record_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\record_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="temp_btn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\temp_btn2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="runstop_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\runstop_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ampare_btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ampare_btn1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="temp_btn3PNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\temp_btn3PNG.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_img.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sen_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sen_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="screencapture_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\screencapture_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estop_on2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estop_on2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p_info1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_info1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_login_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin_login_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ampare_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ampare_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="temp_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\temp_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="record_btn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\record_btn2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_logout_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin_logout_btn.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="reconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reconnect.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sen_stat_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sen_stat_green.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

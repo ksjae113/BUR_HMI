@@ -127,10 +127,13 @@ namespace BUR_INS_HMI
         private void editer_btn_del_Click(object sender, EventArgs e)
         {
             string str = editer_show.Text;
-            if (editer_show.Text != null && editer_show.Text.Length != 0)
+            if (editer_show.Text.Length == 1)
+                str = "0";
+            if (editer_show.Text != null && editer_show.Text.Length != 0 && editer_show.Text.Length != 1)
             {
                 str = str.Substring(0, str.Length - 1);
             }
+            
             editer_show.Text = str;
         }
 

@@ -31,7 +31,7 @@ namespace BUR_INS_HMI
 
         private Label[] roll;
         private Label[] sen_num_arr;
-        private Label[] sen_stat_arr;
+        private PictureBox[] sen_stat_arr;
         private byte latestDOByte = 0x00;   //가장 최근의 DO raw 값 저장
 
         public SerialPort serialPort;
@@ -67,15 +67,14 @@ namespace BUR_INS_HMI
                 roll_num26,roll_num27};
             sen_num_arr = new Label[]{ sen_num1, sen_num2, sen_num3, sen_num4, sen_num5, sen_num6,
                 sen_num7, sen_num8, sen_num9, sen_num10 };
-            sen_stat_arr = new Label[]{ sen_stat1, sen_stat2, sen_stat3, sen_stat4, sen_stat5, sen_stat6,
-                sen_stat7, sen_stat8, sen_stat9, sen_stat10 };
+           
             Init_port();
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-                ReadModbusData();
+            ReadModbusData();
         }
 
         private void InitRPMHistory()
@@ -84,7 +83,7 @@ namespace BUR_INS_HMI
                 rpmHistory.Add(new Queue<double>());
         }
 
-      
+
 
         private void Init_port()
         {
@@ -103,7 +102,7 @@ namespace BUR_INS_HMI
                     _modbusMaster.Transport.WriteTimeout = 200;
                     MessageBox.Show("PORT OPEN");
                     //   serialPort.Write(command, 0, command.Length);
-                //    serialPort.DataReceived += serialPort_DataReceived;
+                    //    serialPort.DataReceived += serialPort_DataReceived;
                     //   MessageBox.Show("Received");
                 }
                 catch (Exception ex)
@@ -178,7 +177,7 @@ namespace BUR_INS_HMI
         private volatile bool dataReceivedFlag = false;
 
         private void serialPort_DataReceived(object sender, EventArgs e)
-        { 
+        {
 
             dataReceivedFlag = true;
 
@@ -190,7 +189,7 @@ namespace BUR_INS_HMI
 
 
 
-            
+
         }
 
         private void ReadModbusData()
@@ -200,8 +199,10 @@ namespace BUR_INS_HMI
                 ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
 
                 roll_check(data);
-                
-              
+                sens_check(data);
+
+
+
             }
             catch (Exception ex)
             {
@@ -209,29 +210,12 @@ namespace BUR_INS_HMI
             }
         }
 
-       
+
 
 
         private void roll_check(ushort[] data)
         {
-            /* if (data[0] == 1)
-             {
-                 roll_num1.BackColor = Color.Red;
-                 roll_num2.BackColor = Color.Blue;
-             }
-             else
-                 roll_num1.BackColor = Color.Blue;
-
-             if (data[1] == 1)
-             {
-                 roll_num1.BackColor = Color.Blue;
-                 roll_num2.BackColor = Color.Red;
-             }
-             else
-                 roll_num2.BackColor = Color.Blue;
-            */
-
-            for (int i = 0; i < data.Length && i < 27 ;  i++)
+            for (int i = 0; i < data.Length && i < 27; i++)
             {
                 if (data[i] == 1)
                 {
@@ -244,94 +228,32 @@ namespace BUR_INS_HMI
             Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
         }
 
-
-        private void sens_check(byte data, int index)
+        private void sens_check(ushort[] data)
         {
-
-            /*   for (int i = 0; i < 10; i++)
-               {
-                   if (index == 7)
-                   {
-                       sen_stat_arr[1].Text = "ERR";
-                       sen_stat_arr[1].ForeColor = Color.YellowGreen;
-                       sen_stat_arr[1].BackColor = Color.Yellow;
-                       if (f3 != null)
-                       {
-                           f3.temp1_arr[i].BackColor = Color.Red;
-                           f3.temp1_arr[i].ForeColor = Color.Maroon;
-                           f3.col1_arr[i].BackColor = Color.Red;
-                           f3.col1_arr[i].ForeColor = Color.Maroon;
-                       }
-                   }
-                   else if (index == 2)
-                   {
-                       sen_stat_arr[0].Text = "ERR";
-                       sen_stat_arr[0].ForeColor = Color.Red;
-                       sen_stat_arr[0].BackColor = Color.Maroon;
-                       if (f3 != null)
-                       {
-                           f3.temp1_arr[i].BackColor = Color.Red;
-                           f3.temp1_arr[i].ForeColor = Color.Maroon;
-                           f3.col1_arr[i].BackColor = Color.Red;
-                           f3.col1_arr[i].ForeColor = Color.Maroon;
-                       }
-                   }
-                   else
-                   {
-                       sen_stat_arr[i].Text = "정상";
-                       sen_stat_arr[i].ForeColor = Color.White;
-                       sen_stat_arr[i].BackColor = Color.Black;
-
-                       if (f3 != null)
-                       {
-                           f3.temp1_arr[i].BackColor = Color.Black;
-                           f3.temp1_arr[i].ForeColor = Color.White;
-                           f3.col1_arr[i].BackColor = Color.Black;
-                           f3.col1_arr[i].ForeColor = Color.White;
-                       }
-                   }*/
-
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < data.Length && i < 10; i++)
             {
-                sen_stat_arr[i].Text = "정상";
-                sen_stat_arr[i].ForeColor = Color.White;
-                sen_stat_arr[i].BackColor = Color.Black;
-
-                if (f3 != null)
+                if (data[i] == 1)
                 {
-                    f3.temp1_arr[i].BackColor = Color.Black;
-                    f3.temp1_arr[i].ForeColor = Color.White;
-                    f3.col1_arr[i].BackColor = Color.Black;
-                    f3.col1_arr[i].ForeColor = Color.White;
+                    sen_stat_arr[i].Text = "ERR";
+                    sen_stat_arr[i].ForeColor = Color.Maroon;
+                    sen_stat_arr[i].BackColor = Color.Red;
                 }
+                else
+                {
+                    sen_stat_arr[i].Text = "정상";
+                    sen_stat_arr[i].ForeColor = Color.White;
+                    sen_stat_arr[i].BackColor = Color.Black;
+                }
+
+                /* if (f3 != null)
+                 {
+                     f3.temp1_arr[i].BackColor = Color.Black;
+                     f3.temp1_arr[i].ForeColor = Color.White;
+                     f3.col1_arr[i].BackColor = Color.Black;
+                     f3.col1_arr[i].ForeColor = Color.White;
+                 }*/
             }
 
-            if (index == 7)
-            {
-                sen_stat_arr[1].Text = "ERR";
-                sen_stat_arr[1].ForeColor = Color.YellowGreen;
-                sen_stat_arr[1].BackColor = Color.Yellow;
-                if (f3 != null)
-                {
-                    f3.temp1_arr[1].BackColor = Color.Red;
-                    f3.temp1_arr[1].ForeColor = Color.Maroon;
-                    f3.col1_arr[1].BackColor = Color.Red;
-                    f3.col1_arr[1].ForeColor = Color.Maroon;
-                }
-            }
-            else if (index == 2)
-            {
-                sen_stat_arr[0].Text = "ERR";
-                sen_stat_arr[0].ForeColor = Color.Red;
-                sen_stat_arr[0].BackColor = Color.Maroon;
-                if (f3 != null)
-                {
-                    f3.temp1_arr[0].BackColor = Color.Red;
-                    f3.temp1_arr[0].ForeColor = Color.Maroon;
-                    f3.col1_arr[0].BackColor = Color.Red;
-                    f3.col1_arr[0].ForeColor = Color.Maroon;
-                }
-            }
 
         }
 
