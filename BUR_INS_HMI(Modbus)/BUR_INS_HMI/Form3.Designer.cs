@@ -27,7 +27,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             temp_panel = new Panel();
             temp2_10 = new Label();
             temp2_9 = new Label();
@@ -39,16 +38,6 @@
             temp2_3 = new Label();
             temp2_2 = new Label();
             temp2_1 = new Label();
-            col2_10 = new Label();
-            col2_9 = new Label();
-            col2_8 = new Label();
-            col2_7 = new Label();
-            col2_6 = new Label();
-            col2_5 = new Label();
-            col2_4 = new Label();
-            col2_3 = new Label();
-            col2_2 = new Label();
-            col2_1 = new Label();
             temp_10 = new Label();
             temp_9 = new Label();
             temp_8 = new Label();
@@ -59,53 +48,29 @@
             temp_3 = new Label();
             temp_2 = new Label();
             temp_1 = new Label();
-            col1_10 = new Label();
-            col1_9 = new Label();
-            col1_8 = new Label();
-            col1_7 = new Label();
-            col1_6 = new Label();
-            col1_5 = new Label();
-            col1_4 = new Label();
-            col1_3 = new Label();
-            col1_2 = new Label();
-            col1_1 = new Label();
             temp2 = new Label();
-            temp_col2 = new Label();
             temp1 = new Label();
-            temp_col1 = new Label();
-            temp_lbl = new Label();
-            sensor_panel = new Panel();
-            formsPlot = new ScottPlot.FormsPlot();
-            sens_lbl = new Label();
             ampare_panel = new Panel();
-            err_range10 = new Label();
-            err_range9 = new Label();
-            err_range8 = new Label();
-            err_range7 = new Label();
-            err_range6 = new Label();
-            err_range5 = new Label();
-            err_range4 = new Label();
-            err_range3 = new Label();
-            err_range2 = new Label();
-            err_range1 = new Label();
-            err_range = new Label();
-            target_amp10 = new Label();
-            target_amp9 = new Label();
-            target_amp8 = new Label();
-            target_amp7 = new Label();
-            target_amp6 = new Label();
-            target_amp5 = new Label();
-            target_amp4 = new Label();
-            target_amp3 = new Label();
-            target_amp2 = new Label();
-            target_amp1 = new Label();
-            target_amp_lbl = new Label();
-            blank_lbl = new Label();
-            err_set_btn = new Button();
-            amp_set_btn = new Button();
-            err_set = new Label();
+            button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             amp_set = new Label();
-            err_set_lbl = new Label();
+            label1 = new Label();
+            amp_set_btn1 = new Button();
             amp10 = new Label();
             amp9 = new Label();
             amp8 = new Label();
@@ -116,35 +81,39 @@
             amp3 = new Label();
             amp2 = new Label();
             amp1 = new Label();
-            amp_ch10 = new Label();
-            amp_ch9 = new Label();
-            amp_ch8 = new Label();
-            amp_ch7 = new Label();
-            amp_ch6 = new Label();
-            amp_ch5 = new Label();
-            amp_ch4 = new Label();
-            amp_ch3 = new Label();
-            amp_ch2 = new Label();
-            amp_ch1 = new Label();
-            amp_no10 = new Label();
-            amp_no9 = new Label();
-            amp_no8 = new Label();
-            amp_no7 = new Label();
-            amp_no6 = new Label();
-            amp_no5 = new Label();
-            amp_no4 = new Label();
-            amp_no3 = new Label();
-            amp_no2 = new Label();
-            amp_no1 = new Label();
             amp_set_lbl = new Label();
             amp_lbl = new Label();
-            amp_ch_lbl = new Label();
-            amp_no_lbl = new Label();
-            ampare_lbl = new Label();
-            pulseTime = new System.Windows.Forms.Timer(components);
+            err_set_btn = new Button();
+            err_set = new Label();
+            err_set_lbl = new Label();
+            edit_pan = new Panel();
+            line_pan = new Panel();
+            sen_num_lbl10 = new Label();
+            sen_num_lbl9 = new Label();
+            sen_num_lbl8 = new Label();
+            sen_num_lbl7 = new Label();
+            sen_num_lbl6 = new Label();
+            sen_num_lbl5 = new Label();
+            sen_num_lbl4 = new Label();
+            sen_num_lbl3 = new Label();
+            sen_num_lbl2 = new Label();
+            sen_num_lbl1 = new Label();
+            line_lbl = new Label();
+            ch_lbl = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
             temp_panel.SuspendLayout();
-            sensor_panel.SuspendLayout();
             ampare_panel.SuspendLayout();
+            edit_pan.SuspendLayout();
+            line_pan.SuspendLayout();
             SuspendLayout();
             // 
             // temp_panel
@@ -160,16 +129,6 @@
             temp_panel.Controls.Add(temp2_3);
             temp_panel.Controls.Add(temp2_2);
             temp_panel.Controls.Add(temp2_1);
-            temp_panel.Controls.Add(col2_10);
-            temp_panel.Controls.Add(col2_9);
-            temp_panel.Controls.Add(col2_8);
-            temp_panel.Controls.Add(col2_7);
-            temp_panel.Controls.Add(col2_6);
-            temp_panel.Controls.Add(col2_5);
-            temp_panel.Controls.Add(col2_4);
-            temp_panel.Controls.Add(col2_3);
-            temp_panel.Controls.Add(col2_2);
-            temp_panel.Controls.Add(col2_1);
             temp_panel.Controls.Add(temp_10);
             temp_panel.Controls.Add(temp_9);
             temp_panel.Controls.Add(temp_8);
@@ -180,634 +139,291 @@
             temp_panel.Controls.Add(temp_3);
             temp_panel.Controls.Add(temp_2);
             temp_panel.Controls.Add(temp_1);
-            temp_panel.Controls.Add(col1_10);
-            temp_panel.Controls.Add(col1_9);
-            temp_panel.Controls.Add(col1_8);
-            temp_panel.Controls.Add(col1_7);
-            temp_panel.Controls.Add(col1_6);
-            temp_panel.Controls.Add(col1_5);
-            temp_panel.Controls.Add(col1_4);
-            temp_panel.Controls.Add(col1_3);
-            temp_panel.Controls.Add(col1_2);
-            temp_panel.Controls.Add(col1_1);
             temp_panel.Controls.Add(temp2);
-            temp_panel.Controls.Add(temp_col2);
             temp_panel.Controls.Add(temp1);
-            temp_panel.Controls.Add(temp_col1);
-            temp_panel.Controls.Add(temp_lbl);
-            temp_panel.Dock = DockStyle.Top;
-            temp_panel.Location = new Point(0, 0);
+            temp_panel.Dock = DockStyle.Left;
+            temp_panel.Location = new Point(70, 0);
             temp_panel.Name = "temp_panel";
-            temp_panel.Size = new Size(1264, 200);
+            temp_panel.Size = new Size(240, 746);
             temp_panel.TabIndex = 0;
             temp_panel.Visible = false;
             // 
             // temp2_10
             // 
-            temp2_10.BorderStyle = BorderStyle.Fixed3D;
             temp2_10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_10.ForeColor = SystemColors.Control;
-            temp2_10.Location = new Point(1150, 160);
+            temp2_10.ForeColor = Color.Blue;
+            temp2_10.Location = new Point(115, 645);
             temp2_10.Name = "temp2_10";
             temp2_10.Size = new Size(115, 40);
             temp2_10.TabIndex = 55;
-            temp2_10.Text = "30.5 'C";
+            temp2_10.Text = "30.5";
             temp2_10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_9
             // 
-            temp2_9.BorderStyle = BorderStyle.Fixed3D;
             temp2_9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_9.ForeColor = SystemColors.Control;
-            temp2_9.Location = new Point(1035, 160);
+            temp2_9.ForeColor = Color.Blue;
+            temp2_9.Location = new Point(115, 580);
             temp2_9.Name = "temp2_9";
             temp2_9.Size = new Size(115, 40);
             temp2_9.TabIndex = 54;
-            temp2_9.Text = "30.5 'C";
+            temp2_9.Text = "30.5";
             temp2_9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_8
             // 
-            temp2_8.BorderStyle = BorderStyle.Fixed3D;
             temp2_8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_8.ForeColor = SystemColors.Control;
-            temp2_8.Location = new Point(920, 160);
+            temp2_8.ForeColor = Color.Blue;
+            temp2_8.Location = new Point(115, 515);
             temp2_8.Name = "temp2_8";
             temp2_8.Size = new Size(115, 40);
             temp2_8.TabIndex = 53;
-            temp2_8.Text = "30.5 'C";
+            temp2_8.Text = "30.5";
             temp2_8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_7
             // 
-            temp2_7.BorderStyle = BorderStyle.Fixed3D;
             temp2_7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_7.ForeColor = SystemColors.Control;
-            temp2_7.Location = new Point(805, 160);
+            temp2_7.ForeColor = Color.Blue;
+            temp2_7.Location = new Point(115, 450);
             temp2_7.Name = "temp2_7";
             temp2_7.Size = new Size(115, 40);
             temp2_7.TabIndex = 52;
-            temp2_7.Text = "30.5 'C";
+            temp2_7.Text = "30.5";
             temp2_7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_6
             // 
-            temp2_6.BorderStyle = BorderStyle.Fixed3D;
             temp2_6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_6.ForeColor = SystemColors.Control;
-            temp2_6.Location = new Point(690, 160);
+            temp2_6.ForeColor = Color.Blue;
+            temp2_6.Location = new Point(115, 385);
             temp2_6.Name = "temp2_6";
             temp2_6.Size = new Size(115, 40);
             temp2_6.TabIndex = 51;
-            temp2_6.Text = "30.5 'C";
+            temp2_6.Text = "30.5";
             temp2_6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_5
             // 
-            temp2_5.BorderStyle = BorderStyle.Fixed3D;
             temp2_5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_5.ForeColor = SystemColors.Control;
-            temp2_5.Location = new Point(575, 160);
+            temp2_5.ForeColor = Color.Blue;
+            temp2_5.Location = new Point(115, 320);
             temp2_5.Name = "temp2_5";
             temp2_5.Size = new Size(115, 40);
             temp2_5.TabIndex = 50;
-            temp2_5.Text = "30.5 'C";
+            temp2_5.Text = "30.5";
             temp2_5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_4
             // 
-            temp2_4.BorderStyle = BorderStyle.Fixed3D;
             temp2_4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_4.ForeColor = SystemColors.Control;
-            temp2_4.Location = new Point(460, 160);
+            temp2_4.ForeColor = Color.Blue;
+            temp2_4.Location = new Point(115, 255);
             temp2_4.Name = "temp2_4";
             temp2_4.Size = new Size(115, 40);
             temp2_4.TabIndex = 49;
-            temp2_4.Text = "30.5 'C";
+            temp2_4.Text = "30.5";
             temp2_4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_3
             // 
-            temp2_3.BorderStyle = BorderStyle.Fixed3D;
             temp2_3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_3.ForeColor = SystemColors.Control;
-            temp2_3.Location = new Point(345, 160);
+            temp2_3.ForeColor = Color.Blue;
+            temp2_3.Location = new Point(115, 190);
             temp2_3.Name = "temp2_3";
             temp2_3.Size = new Size(115, 40);
             temp2_3.TabIndex = 48;
-            temp2_3.Text = "30.5 'C";
+            temp2_3.Text = "30.5";
             temp2_3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_2
             // 
-            temp2_2.BorderStyle = BorderStyle.Fixed3D;
             temp2_2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_2.ForeColor = SystemColors.Control;
-            temp2_2.Location = new Point(230, 160);
+            temp2_2.ForeColor = Color.Blue;
+            temp2_2.Location = new Point(115, 125);
             temp2_2.Name = "temp2_2";
             temp2_2.Size = new Size(115, 40);
             temp2_2.TabIndex = 47;
-            temp2_2.Text = "30.5 'C";
+            temp2_2.Text = "30.5";
             temp2_2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2_1
             // 
-            temp2_1.BorderStyle = BorderStyle.Fixed3D;
             temp2_1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2_1.ForeColor = SystemColors.Control;
-            temp2_1.Location = new Point(115, 160);
+            temp2_1.ForeColor = Color.Blue;
+            temp2_1.Location = new Point(115, 60);
             temp2_1.Name = "temp2_1";
             temp2_1.Size = new Size(115, 40);
             temp2_1.TabIndex = 46;
-            temp2_1.Text = "30.5 'C";
+            temp2_1.Text = "30.5";
             temp2_1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_10
-            // 
-            col2_10.BorderStyle = BorderStyle.Fixed3D;
-            col2_10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_10.ForeColor = SystemColors.Control;
-            col2_10.Location = new Point(1150, 125);
-            col2_10.Name = "col2_10";
-            col2_10.Size = new Size(115, 35);
-            col2_10.TabIndex = 45;
-            col2_10.Text = "10-2";
-            col2_10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_9
-            // 
-            col2_9.BorderStyle = BorderStyle.Fixed3D;
-            col2_9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_9.ForeColor = SystemColors.Control;
-            col2_9.Location = new Point(1035, 125);
-            col2_9.Name = "col2_9";
-            col2_9.Size = new Size(115, 35);
-            col2_9.TabIndex = 44;
-            col2_9.Text = "9-2";
-            col2_9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_8
-            // 
-            col2_8.BorderStyle = BorderStyle.Fixed3D;
-            col2_8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_8.ForeColor = SystemColors.Control;
-            col2_8.Location = new Point(920, 125);
-            col2_8.Name = "col2_8";
-            col2_8.Size = new Size(115, 35);
-            col2_8.TabIndex = 43;
-            col2_8.Text = "8-2";
-            col2_8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_7
-            // 
-            col2_7.BorderStyle = BorderStyle.Fixed3D;
-            col2_7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_7.ForeColor = SystemColors.Control;
-            col2_7.Location = new Point(805, 125);
-            col2_7.Name = "col2_7";
-            col2_7.Size = new Size(115, 35);
-            col2_7.TabIndex = 42;
-            col2_7.Text = "7-2";
-            col2_7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_6
-            // 
-            col2_6.BorderStyle = BorderStyle.Fixed3D;
-            col2_6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_6.ForeColor = SystemColors.Control;
-            col2_6.Location = new Point(690, 125);
-            col2_6.Name = "col2_6";
-            col2_6.Size = new Size(115, 35);
-            col2_6.TabIndex = 41;
-            col2_6.Text = "6-2";
-            col2_6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_5
-            // 
-            col2_5.BorderStyle = BorderStyle.Fixed3D;
-            col2_5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_5.ForeColor = SystemColors.Control;
-            col2_5.Location = new Point(575, 125);
-            col2_5.Name = "col2_5";
-            col2_5.Size = new Size(115, 35);
-            col2_5.TabIndex = 40;
-            col2_5.Text = "5-2";
-            col2_5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_4
-            // 
-            col2_4.BorderStyle = BorderStyle.Fixed3D;
-            col2_4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_4.ForeColor = SystemColors.Control;
-            col2_4.Location = new Point(460, 125);
-            col2_4.Name = "col2_4";
-            col2_4.Size = new Size(115, 35);
-            col2_4.TabIndex = 39;
-            col2_4.Text = "4-2";
-            col2_4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_3
-            // 
-            col2_3.BorderStyle = BorderStyle.Fixed3D;
-            col2_3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_3.ForeColor = SystemColors.Control;
-            col2_3.Location = new Point(345, 125);
-            col2_3.Name = "col2_3";
-            col2_3.Size = new Size(115, 35);
-            col2_3.TabIndex = 38;
-            col2_3.Text = "3-2";
-            col2_3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_2
-            // 
-            col2_2.BorderStyle = BorderStyle.Fixed3D;
-            col2_2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_2.ForeColor = SystemColors.Control;
-            col2_2.Location = new Point(230, 125);
-            col2_2.Name = "col2_2";
-            col2_2.Size = new Size(115, 35);
-            col2_2.TabIndex = 37;
-            col2_2.Text = "2-2";
-            col2_2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col2_1
-            // 
-            col2_1.BorderStyle = BorderStyle.Fixed3D;
-            col2_1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col2_1.ForeColor = SystemColors.Control;
-            col2_1.Location = new Point(115, 125);
-            col2_1.Name = "col2_1";
-            col2_1.Size = new Size(115, 35);
-            col2_1.TabIndex = 36;
-            col2_1.Text = "1-2";
-            col2_1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_10
             // 
-            temp_10.BorderStyle = BorderStyle.Fixed3D;
             temp_10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_10.ForeColor = SystemColors.Control;
-            temp_10.Location = new Point(1150, 80);
+            temp_10.ForeColor = Color.Blue;
+            temp_10.Location = new Point(1, 645);
             temp_10.Name = "temp_10";
             temp_10.Size = new Size(115, 40);
             temp_10.TabIndex = 35;
-            temp_10.Text = "30.5 'C";
+            temp_10.Text = "30.5";
             temp_10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_9
             // 
-            temp_9.BorderStyle = BorderStyle.Fixed3D;
             temp_9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_9.ForeColor = SystemColors.Control;
-            temp_9.Location = new Point(1035, 80);
+            temp_9.ForeColor = Color.Blue;
+            temp_9.Location = new Point(1, 580);
             temp_9.Name = "temp_9";
             temp_9.Size = new Size(115, 40);
             temp_9.TabIndex = 34;
-            temp_9.Text = "30.5 'C";
+            temp_9.Text = "30.5";
             temp_9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_8
             // 
-            temp_8.BorderStyle = BorderStyle.Fixed3D;
             temp_8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_8.ForeColor = SystemColors.Control;
-            temp_8.Location = new Point(920, 80);
+            temp_8.ForeColor = Color.Blue;
+            temp_8.Location = new Point(1, 515);
             temp_8.Name = "temp_8";
             temp_8.Size = new Size(115, 40);
             temp_8.TabIndex = 33;
-            temp_8.Text = "30.5 'C";
+            temp_8.Text = "30.5";
             temp_8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_7
             // 
-            temp_7.BorderStyle = BorderStyle.Fixed3D;
             temp_7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_7.ForeColor = SystemColors.Control;
-            temp_7.Location = new Point(805, 80);
+            temp_7.ForeColor = Color.Blue;
+            temp_7.Location = new Point(1, 450);
             temp_7.Name = "temp_7";
             temp_7.Size = new Size(115, 40);
             temp_7.TabIndex = 32;
-            temp_7.Text = "30.5 'C";
+            temp_7.Text = "30.5";
             temp_7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_6
             // 
-            temp_6.BorderStyle = BorderStyle.Fixed3D;
             temp_6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_6.ForeColor = SystemColors.Control;
-            temp_6.Location = new Point(690, 80);
+            temp_6.ForeColor = Color.Blue;
+            temp_6.Location = new Point(1, 385);
             temp_6.Name = "temp_6";
             temp_6.Size = new Size(115, 40);
             temp_6.TabIndex = 31;
-            temp_6.Text = "30.5 'C";
+            temp_6.Text = "30.5";
             temp_6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_5
             // 
-            temp_5.BorderStyle = BorderStyle.Fixed3D;
             temp_5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_5.ForeColor = SystemColors.Control;
-            temp_5.Location = new Point(575, 80);
+            temp_5.ForeColor = Color.Blue;
+            temp_5.Location = new Point(1, 320);
             temp_5.Name = "temp_5";
             temp_5.Size = new Size(115, 40);
             temp_5.TabIndex = 30;
-            temp_5.Text = "30.5 'C";
+            temp_5.Text = "30.5";
             temp_5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_4
             // 
-            temp_4.BorderStyle = BorderStyle.Fixed3D;
             temp_4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_4.ForeColor = SystemColors.Control;
-            temp_4.Location = new Point(460, 80);
+            temp_4.ForeColor = Color.Blue;
+            temp_4.Location = new Point(1, 255);
             temp_4.Name = "temp_4";
             temp_4.Size = new Size(115, 40);
             temp_4.TabIndex = 29;
-            temp_4.Text = "30.5 'C";
+            temp_4.Text = "30.5";
             temp_4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_3
             // 
-            temp_3.BorderStyle = BorderStyle.Fixed3D;
             temp_3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_3.ForeColor = SystemColors.Control;
-            temp_3.Location = new Point(345, 80);
+            temp_3.ForeColor = Color.Blue;
+            temp_3.Location = new Point(1, 190);
             temp_3.Name = "temp_3";
             temp_3.Size = new Size(115, 40);
             temp_3.TabIndex = 28;
-            temp_3.Text = "30.5 'C";
+            temp_3.Text = "30.5";
             temp_3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_2
             // 
-            temp_2.BorderStyle = BorderStyle.Fixed3D;
             temp_2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_2.ForeColor = SystemColors.Control;
-            temp_2.Location = new Point(230, 80);
+            temp_2.ForeColor = Color.Blue;
+            temp_2.Location = new Point(1, 125);
             temp_2.Name = "temp_2";
             temp_2.Size = new Size(115, 40);
             temp_2.TabIndex = 27;
-            temp_2.Text = "30.5 'C";
+            temp_2.Text = "30.5";
             temp_2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp_1
             // 
-            temp_1.BorderStyle = BorderStyle.Fixed3D;
             temp_1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_1.ForeColor = SystemColors.Control;
-            temp_1.Location = new Point(115, 80);
+            temp_1.ForeColor = Color.Blue;
+            temp_1.Location = new Point(1, 60);
             temp_1.Name = "temp_1";
             temp_1.Size = new Size(115, 40);
             temp_1.TabIndex = 26;
-            temp_1.Text = "30.5 'C";
+            temp_1.Text = "30.5";
             temp_1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_10
-            // 
-            col1_10.BorderStyle = BorderStyle.Fixed3D;
-            col1_10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_10.ForeColor = SystemColors.Control;
-            col1_10.Location = new Point(1150, 45);
-            col1_10.Name = "col1_10";
-            col1_10.Size = new Size(115, 35);
-            col1_10.TabIndex = 25;
-            col1_10.Text = "10-1";
-            col1_10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_9
-            // 
-            col1_9.BorderStyle = BorderStyle.Fixed3D;
-            col1_9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_9.ForeColor = SystemColors.Control;
-            col1_9.Location = new Point(1035, 45);
-            col1_9.Name = "col1_9";
-            col1_9.Size = new Size(115, 35);
-            col1_9.TabIndex = 24;
-            col1_9.Text = "9-1";
-            col1_9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_8
-            // 
-            col1_8.BorderStyle = BorderStyle.Fixed3D;
-            col1_8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_8.ForeColor = SystemColors.Control;
-            col1_8.Location = new Point(920, 45);
-            col1_8.Name = "col1_8";
-            col1_8.Size = new Size(115, 35);
-            col1_8.TabIndex = 23;
-            col1_8.Text = "8-1";
-            col1_8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_7
-            // 
-            col1_7.BorderStyle = BorderStyle.Fixed3D;
-            col1_7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_7.ForeColor = SystemColors.Control;
-            col1_7.Location = new Point(805, 45);
-            col1_7.Name = "col1_7";
-            col1_7.Size = new Size(115, 35);
-            col1_7.TabIndex = 22;
-            col1_7.Text = "7-1";
-            col1_7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_6
-            // 
-            col1_6.BorderStyle = BorderStyle.Fixed3D;
-            col1_6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_6.ForeColor = SystemColors.Control;
-            col1_6.Location = new Point(690, 45);
-            col1_6.Name = "col1_6";
-            col1_6.Size = new Size(115, 35);
-            col1_6.TabIndex = 21;
-            col1_6.Text = "6-1";
-            col1_6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_5
-            // 
-            col1_5.BorderStyle = BorderStyle.Fixed3D;
-            col1_5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_5.ForeColor = SystemColors.Control;
-            col1_5.Location = new Point(575, 45);
-            col1_5.Name = "col1_5";
-            col1_5.Size = new Size(115, 35);
-            col1_5.TabIndex = 20;
-            col1_5.Text = "5-1";
-            col1_5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_4
-            // 
-            col1_4.BorderStyle = BorderStyle.Fixed3D;
-            col1_4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_4.ForeColor = SystemColors.Control;
-            col1_4.Location = new Point(460, 45);
-            col1_4.Name = "col1_4";
-            col1_4.Size = new Size(115, 35);
-            col1_4.TabIndex = 19;
-            col1_4.Text = "4-1";
-            col1_4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_3
-            // 
-            col1_3.BorderStyle = BorderStyle.Fixed3D;
-            col1_3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_3.ForeColor = SystemColors.Control;
-            col1_3.Location = new Point(345, 45);
-            col1_3.Name = "col1_3";
-            col1_3.Size = new Size(115, 35);
-            col1_3.TabIndex = 18;
-            col1_3.Text = "3-1";
-            col1_3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_2
-            // 
-            col1_2.BorderStyle = BorderStyle.Fixed3D;
-            col1_2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_2.ForeColor = SystemColors.Control;
-            col1_2.Location = new Point(230, 45);
-            col1_2.Name = "col1_2";
-            col1_2.Size = new Size(115, 35);
-            col1_2.TabIndex = 17;
-            col1_2.Text = "2-1";
-            col1_2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // col1_1
-            // 
-            col1_1.BorderStyle = BorderStyle.Fixed3D;
-            col1_1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            col1_1.ForeColor = SystemColors.Control;
-            col1_1.Location = new Point(115, 45);
-            col1_1.Name = "col1_1";
-            col1_1.Size = new Size(115, 35);
-            col1_1.TabIndex = 16;
-            col1_1.Text = "1-1";
-            col1_1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp2
             // 
-            temp2.BorderStyle = BorderStyle.Fixed3D;
-            temp2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp2.ForeColor = SystemColors.Control;
-            temp2.Location = new Point(0, 160);
+            temp2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            temp2.ForeColor = Color.Blue;
+            temp2.Location = new Point(115, 1);
             temp2.Name = "temp2";
-            temp2.Size = new Size(115, 40);
+            temp2.Size = new Size(115, 60);
             temp2.TabIndex = 5;
-            temp2.Text = "온도";
+            temp2.Text = "온도2\r\n(ºC)";
             temp2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // temp_col2
-            // 
-            temp_col2.BorderStyle = BorderStyle.Fixed3D;
-            temp_col2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_col2.ForeColor = SystemColors.Control;
-            temp_col2.Location = new Point(0, 125);
-            temp_col2.Name = "temp_col2";
-            temp_col2.Size = new Size(115, 35);
-            temp_col2.TabIndex = 4;
-            temp_col2.Text = "No.";
-            temp_col2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // temp1
             // 
-            temp1.BorderStyle = BorderStyle.Fixed3D;
-            temp1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp1.ForeColor = SystemColors.Control;
-            temp1.Location = new Point(0, 80);
+            temp1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            temp1.ForeColor = Color.Blue;
+            temp1.Location = new Point(1, 1);
             temp1.Name = "temp1";
-            temp1.Size = new Size(115, 40);
+            temp1.Size = new Size(115, 60);
             temp1.TabIndex = 3;
-            temp1.Text = "온도";
+            temp1.Text = "온도1\r\n(ºC)";
             temp1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // temp_col1
-            // 
-            temp_col1.BorderStyle = BorderStyle.Fixed3D;
-            temp_col1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_col1.ForeColor = SystemColors.Control;
-            temp_col1.Location = new Point(0, 45);
-            temp_col1.Name = "temp_col1";
-            temp_col1.Size = new Size(115, 35);
-            temp_col1.TabIndex = 2;
-            temp_col1.Text = "No.";
-            temp_col1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // temp_lbl
-            // 
-            temp_lbl.BorderStyle = BorderStyle.Fixed3D;
-            temp_lbl.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            temp_lbl.ForeColor = SystemColors.Control;
-            temp_lbl.Location = new Point(2, 2);
-            temp_lbl.Name = "temp_lbl";
-            temp_lbl.Size = new Size(1260, 36);
-            temp_lbl.TabIndex = 0;
-            temp_lbl.Text = "온도 정보";
-            temp_lbl.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // sensor_panel
-            // 
-            sensor_panel.BackColor = SystemColors.ActiveCaptionText;
-            sensor_panel.Controls.Add(formsPlot);
-            sensor_panel.Controls.Add(sens_lbl);
-            sensor_panel.Dock = DockStyle.Top;
-            sensor_panel.Location = new Point(0, 200);
-            sensor_panel.Name = "sensor_panel";
-            sensor_panel.Size = new Size(1264, 240);
-            sensor_panel.TabIndex = 1;
-            sensor_panel.Visible = false;
-            // 
-            // formsPlot
-            // 
-            formsPlot.BackColor = SystemColors.ActiveCaption;
-            formsPlot.Dock = DockStyle.Top;
-            formsPlot.Location = new Point(0, 36);
-            formsPlot.Margin = new Padding(4, 3, 4, 3);
-            formsPlot.Name = "formsPlot";
-            formsPlot.Size = new Size(1264, 204);
-            formsPlot.TabIndex = 2;
-            // 
-            // sens_lbl
-            // 
-            sens_lbl.BorderStyle = BorderStyle.Fixed3D;
-            sens_lbl.Dock = DockStyle.Top;
-            sens_lbl.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sens_lbl.ForeColor = SystemColors.Control;
-            sens_lbl.Location = new Point(0, 0);
-            sens_lbl.Name = "sens_lbl";
-            sens_lbl.Size = new Size(1264, 36);
-            sens_lbl.TabIndex = 1;
-            sens_lbl.Text = "센서 출력 신호 정보";
-            sens_lbl.TextAlign = ContentAlignment.TopCenter;
             // 
             // ampare_panel
             // 
             ampare_panel.BackColor = SystemColors.ActiveCaptionText;
-            ampare_panel.Controls.Add(err_range10);
-            ampare_panel.Controls.Add(err_range9);
-            ampare_panel.Controls.Add(err_range8);
-            ampare_panel.Controls.Add(err_range7);
-            ampare_panel.Controls.Add(err_range6);
-            ampare_panel.Controls.Add(err_range5);
-            ampare_panel.Controls.Add(err_range4);
-            ampare_panel.Controls.Add(err_range3);
-            ampare_panel.Controls.Add(err_range2);
-            ampare_panel.Controls.Add(err_range1);
-            ampare_panel.Controls.Add(err_range);
-            ampare_panel.Controls.Add(target_amp10);
-            ampare_panel.Controls.Add(target_amp9);
-            ampare_panel.Controls.Add(target_amp8);
-            ampare_panel.Controls.Add(target_amp7);
-            ampare_panel.Controls.Add(target_amp6);
-            ampare_panel.Controls.Add(target_amp5);
-            ampare_panel.Controls.Add(target_amp4);
-            ampare_panel.Controls.Add(target_amp3);
-            ampare_panel.Controls.Add(target_amp2);
-            ampare_panel.Controls.Add(target_amp1);
-            ampare_panel.Controls.Add(target_amp_lbl);
-            ampare_panel.Controls.Add(blank_lbl);
-            ampare_panel.Controls.Add(err_set_btn);
-            ampare_panel.Controls.Add(amp_set_btn);
-            ampare_panel.Controls.Add(err_set);
+            ampare_panel.Controls.Add(label19);
+            ampare_panel.Controls.Add(label18);
+            ampare_panel.Controls.Add(label17);
+            ampare_panel.Controls.Add(label16);
+            ampare_panel.Controls.Add(label15);
+            ampare_panel.Controls.Add(label14);
+            ampare_panel.Controls.Add(label13);
+            ampare_panel.Controls.Add(label12);
+            ampare_panel.Controls.Add(label11);
+            ampare_panel.Controls.Add(label10);
+            ampare_panel.Controls.Add(ch_lbl);
+            ampare_panel.Controls.Add(button9);
+            ampare_panel.Controls.Add(button8);
+            ampare_panel.Controls.Add(button7);
+            ampare_panel.Controls.Add(button6);
+            ampare_panel.Controls.Add(button5);
+            ampare_panel.Controls.Add(button4);
+            ampare_panel.Controls.Add(button3);
+            ampare_panel.Controls.Add(button2);
+            ampare_panel.Controls.Add(button1);
+            ampare_panel.Controls.Add(label9);
+            ampare_panel.Controls.Add(label8);
+            ampare_panel.Controls.Add(label7);
+            ampare_panel.Controls.Add(label6);
+            ampare_panel.Controls.Add(label5);
+            ampare_panel.Controls.Add(label4);
+            ampare_panel.Controls.Add(label3);
+            ampare_panel.Controls.Add(label2);
             ampare_panel.Controls.Add(amp_set);
-            ampare_panel.Controls.Add(err_set_lbl);
+            ampare_panel.Controls.Add(label1);
+            ampare_panel.Controls.Add(amp_set_btn1);
             ampare_panel.Controls.Add(amp10);
             ampare_panel.Controls.Add(amp9);
             ampare_panel.Controls.Add(amp8);
@@ -818,381 +434,246 @@
             ampare_panel.Controls.Add(amp3);
             ampare_panel.Controls.Add(amp2);
             ampare_panel.Controls.Add(amp1);
-            ampare_panel.Controls.Add(amp_ch10);
-            ampare_panel.Controls.Add(amp_ch9);
-            ampare_panel.Controls.Add(amp_ch8);
-            ampare_panel.Controls.Add(amp_ch7);
-            ampare_panel.Controls.Add(amp_ch6);
-            ampare_panel.Controls.Add(amp_ch5);
-            ampare_panel.Controls.Add(amp_ch4);
-            ampare_panel.Controls.Add(amp_ch3);
-            ampare_panel.Controls.Add(amp_ch2);
-            ampare_panel.Controls.Add(amp_ch1);
-            ampare_panel.Controls.Add(amp_no10);
-            ampare_panel.Controls.Add(amp_no9);
-            ampare_panel.Controls.Add(amp_no8);
-            ampare_panel.Controls.Add(amp_no7);
-            ampare_panel.Controls.Add(amp_no6);
-            ampare_panel.Controls.Add(amp_no5);
-            ampare_panel.Controls.Add(amp_no4);
-            ampare_panel.Controls.Add(amp_no3);
-            ampare_panel.Controls.Add(amp_no2);
-            ampare_panel.Controls.Add(amp_no1);
             ampare_panel.Controls.Add(amp_set_lbl);
             ampare_panel.Controls.Add(amp_lbl);
-            ampare_panel.Controls.Add(amp_ch_lbl);
-            ampare_panel.Controls.Add(amp_no_lbl);
-            ampare_panel.Controls.Add(ampare_lbl);
-            ampare_panel.Dock = DockStyle.Top;
-            ampare_panel.Location = new Point(0, 440);
+            ampare_panel.Dock = DockStyle.Left;
+            ampare_panel.Location = new Point(310, 0);
             ampare_panel.Name = "ampare_panel";
-            ampare_panel.Size = new Size(1264, 280);
+            ampare_panel.Size = new Size(330, 746);
             ampare_panel.TabIndex = 2;
             ampare_panel.Visible = false;
             // 
-            // err_range10
+            // button9
             // 
-            err_range10.BorderStyle = BorderStyle.Fixed3D;
-            err_range10.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range10.ForeColor = SystemColors.Control;
-            err_range10.Location = new Point(1150, 160);
-            err_range10.Name = "err_range10";
-            err_range10.Size = new Size(115, 40);
-            err_range10.TabIndex = 64;
-            err_range10.Text = "100.0 ~ 100.0";
-            err_range10.TextAlign = ContentAlignment.MiddleCenter;
+            button9.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button9.Location = new Point(230, 645);
+            button9.Name = "button9";
+            button9.Size = new Size(60, 40);
+            button9.TabIndex = 62;
+            button9.Text = "설정";
+            button9.UseVisualStyleBackColor = true;
             // 
-            // err_range9
+            // button8
             // 
-            err_range9.BorderStyle = BorderStyle.Fixed3D;
-            err_range9.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range9.ForeColor = SystemColors.Control;
-            err_range9.Location = new Point(1035, 160);
-            err_range9.Name = "err_range9";
-            err_range9.Size = new Size(115, 40);
-            err_range9.TabIndex = 63;
-            err_range9.Text = "100.0 ~ 100.0";
-            err_range9.TextAlign = ContentAlignment.MiddleCenter;
+            button8.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button8.Location = new Point(230, 580);
+            button8.Name = "button8";
+            button8.Size = new Size(60, 40);
+            button8.TabIndex = 61;
+            button8.Text = "설정";
+            button8.UseVisualStyleBackColor = true;
             // 
-            // err_range8
+            // button7
             // 
-            err_range8.BorderStyle = BorderStyle.Fixed3D;
-            err_range8.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range8.ForeColor = SystemColors.Control;
-            err_range8.Location = new Point(920, 160);
-            err_range8.Name = "err_range8";
-            err_range8.Size = new Size(115, 40);
-            err_range8.TabIndex = 62;
-            err_range8.Text = "100.0 ~ 100.0";
-            err_range8.TextAlign = ContentAlignment.MiddleCenter;
+            button7.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button7.Location = new Point(230, 515);
+            button7.Name = "button7";
+            button7.Size = new Size(60, 40);
+            button7.TabIndex = 60;
+            button7.Text = "설정";
+            button7.UseVisualStyleBackColor = true;
             // 
-            // err_range7
+            // button6
             // 
-            err_range7.BorderStyle = BorderStyle.Fixed3D;
-            err_range7.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range7.ForeColor = SystemColors.Control;
-            err_range7.Location = new Point(805, 160);
-            err_range7.Name = "err_range7";
-            err_range7.Size = new Size(115, 40);
-            err_range7.TabIndex = 61;
-            err_range7.Text = "100.0 ~ 100.0";
-            err_range7.TextAlign = ContentAlignment.MiddleCenter;
+            button6.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button6.Location = new Point(230, 450);
+            button6.Name = "button6";
+            button6.Size = new Size(60, 40);
+            button6.TabIndex = 59;
+            button6.Text = "설정";
+            button6.UseVisualStyleBackColor = true;
             // 
-            // err_range6
+            // button5
             // 
-            err_range6.BorderStyle = BorderStyle.Fixed3D;
-            err_range6.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range6.ForeColor = SystemColors.Control;
-            err_range6.Location = new Point(690, 160);
-            err_range6.Name = "err_range6";
-            err_range6.Size = new Size(115, 40);
-            err_range6.TabIndex = 60;
-            err_range6.Text = "100.0 ~ 100.0";
-            err_range6.TextAlign = ContentAlignment.MiddleCenter;
+            button5.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button5.Location = new Point(230, 387);
+            button5.Name = "button5";
+            button5.Size = new Size(60, 40);
+            button5.TabIndex = 58;
+            button5.Text = "설정";
+            button5.UseVisualStyleBackColor = true;
             // 
-            // err_range5
+            // button4
             // 
-            err_range5.BorderStyle = BorderStyle.Fixed3D;
-            err_range5.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range5.ForeColor = SystemColors.Control;
-            err_range5.Location = new Point(575, 160);
-            err_range5.Name = "err_range5";
-            err_range5.Size = new Size(115, 40);
-            err_range5.TabIndex = 59;
-            err_range5.Text = "100.0 ~ 100.0";
-            err_range5.TextAlign = ContentAlignment.MiddleCenter;
+            button4.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button4.Location = new Point(230, 320);
+            button4.Name = "button4";
+            button4.Size = new Size(60, 40);
+            button4.TabIndex = 57;
+            button4.Text = "설정";
+            button4.UseVisualStyleBackColor = true;
             // 
-            // err_range4
+            // button3
             // 
-            err_range4.BorderStyle = BorderStyle.Fixed3D;
-            err_range4.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range4.ForeColor = SystemColors.Control;
-            err_range4.Location = new Point(460, 160);
-            err_range4.Name = "err_range4";
-            err_range4.Size = new Size(115, 40);
-            err_range4.TabIndex = 58;
-            err_range4.Text = "100.0 ~ 100.0";
-            err_range4.TextAlign = ContentAlignment.MiddleCenter;
+            button3.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button3.Location = new Point(230, 257);
+            button3.Name = "button3";
+            button3.Size = new Size(60, 40);
+            button3.TabIndex = 56;
+            button3.Text = "설정";
+            button3.UseVisualStyleBackColor = true;
             // 
-            // err_range3
+            // button2
             // 
-            err_range3.BorderStyle = BorderStyle.Fixed3D;
-            err_range3.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range3.ForeColor = SystemColors.Control;
-            err_range3.Location = new Point(345, 160);
-            err_range3.Name = "err_range3";
-            err_range3.Size = new Size(115, 40);
-            err_range3.TabIndex = 57;
-            err_range3.Text = "100.0 ~ 100.0";
-            err_range3.TextAlign = ContentAlignment.MiddleCenter;
+            button2.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button2.Location = new Point(230, 190);
+            button2.Name = "button2";
+            button2.Size = new Size(60, 40);
+            button2.TabIndex = 55;
+            button2.Text = "설정";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // err_range2
+            // button1
             // 
-            err_range2.BorderStyle = BorderStyle.Fixed3D;
-            err_range2.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range2.ForeColor = SystemColors.Control;
-            err_range2.Location = new Point(230, 160);
-            err_range2.Name = "err_range2";
-            err_range2.Size = new Size(115, 40);
-            err_range2.TabIndex = 56;
-            err_range2.Text = "100.0 ~ 100.0";
-            err_range2.TextAlign = ContentAlignment.MiddleCenter;
+            button1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button1.Location = new Point(230, 127);
+            button1.Name = "button1";
+            button1.Size = new Size(60, 40);
+            button1.TabIndex = 54;
+            button1.Text = "설정";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // err_range1
+            // label9
             // 
-            err_range1.BorderStyle = BorderStyle.Fixed3D;
-            err_range1.Font = new Font("맑은 고딕", 11.25F, FontStyle.Bold);
-            err_range1.ForeColor = SystemColors.Control;
-            err_range1.Location = new Point(115, 160);
-            err_range1.Name = "err_range1";
-            err_range1.Size = new Size(115, 40);
-            err_range1.TabIndex = 55;
-            err_range1.Text = "100.0 ~ 100.0\r\nmA";
-            err_range1.TextAlign = ContentAlignment.MiddleCenter;
+            label9.BorderStyle = BorderStyle.Fixed3D;
+            label9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(115, 645);
+            label9.Name = "label9";
+            label9.Size = new Size(115, 40);
+            label9.TabIndex = 53;
+            label9.Text = "20.0";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // err_range
+            // label8
             // 
-            err_range.BorderStyle = BorderStyle.Fixed3D;
-            err_range.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            err_range.ForeColor = SystemColors.Control;
-            err_range.Location = new Point(0, 160);
-            err_range.Name = "err_range";
-            err_range.Size = new Size(115, 40);
-            err_range.TabIndex = 54;
-            err_range.Text = "정상 범위";
-            err_range.TextAlign = ContentAlignment.MiddleCenter;
+            label8.BorderStyle = BorderStyle.Fixed3D;
+            label8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label8.ForeColor = SystemColors.Control;
+            label8.Location = new Point(115, 580);
+            label8.Name = "label8";
+            label8.Size = new Size(115, 40);
+            label8.TabIndex = 52;
+            label8.Text = "20.0";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp10
+            // label7
             // 
-            target_amp10.BorderStyle = BorderStyle.Fixed3D;
-            target_amp10.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp10.ForeColor = SystemColors.Control;
-            target_amp10.Location = new Point(1150, 205);
-            target_amp10.Name = "target_amp10";
-            target_amp10.Size = new Size(115, 35);
-            target_amp10.TabIndex = 53;
-            target_amp10.Text = "100.0 mA";
-            target_amp10.TextAlign = ContentAlignment.MiddleCenter;
+            label7.BorderStyle = BorderStyle.Fixed3D;
+            label7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(115, 515);
+            label7.Name = "label7";
+            label7.Size = new Size(115, 40);
+            label7.TabIndex = 51;
+            label7.Text = "20.0";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp9
+            // label6
             // 
-            target_amp9.BorderStyle = BorderStyle.Fixed3D;
-            target_amp9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp9.ForeColor = SystemColors.Control;
-            target_amp9.Location = new Point(1035, 205);
-            target_amp9.Name = "target_amp9";
-            target_amp9.Size = new Size(115, 35);
-            target_amp9.TabIndex = 52;
-            target_amp9.Text = "100.0 mA";
-            target_amp9.TextAlign = ContentAlignment.MiddleCenter;
+            label6.BorderStyle = BorderStyle.Fixed3D;
+            label6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(115, 450);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 40);
+            label6.TabIndex = 50;
+            label6.Text = "20.0";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp8
+            // label5
             // 
-            target_amp8.BorderStyle = BorderStyle.Fixed3D;
-            target_amp8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp8.ForeColor = SystemColors.Control;
-            target_amp8.Location = new Point(920, 205);
-            target_amp8.Name = "target_amp8";
-            target_amp8.Size = new Size(115, 35);
-            target_amp8.TabIndex = 51;
-            target_amp8.Text = "100.0 mA";
-            target_amp8.TextAlign = ContentAlignment.MiddleCenter;
+            label5.BorderStyle = BorderStyle.Fixed3D;
+            label5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label5.ForeColor = SystemColors.Control;
+            label5.Location = new Point(115, 385);
+            label5.Name = "label5";
+            label5.Size = new Size(115, 40);
+            label5.TabIndex = 49;
+            label5.Text = "20.0";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp7
+            // label4
             // 
-            target_amp7.BorderStyle = BorderStyle.Fixed3D;
-            target_amp7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp7.ForeColor = SystemColors.Control;
-            target_amp7.Location = new Point(805, 205);
-            target_amp7.Name = "target_amp7";
-            target_amp7.Size = new Size(115, 35);
-            target_amp7.TabIndex = 50;
-            target_amp7.Text = "100.0 mA";
-            target_amp7.TextAlign = ContentAlignment.MiddleCenter;
+            label4.BorderStyle = BorderStyle.Fixed3D;
+            label4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(115, 320);
+            label4.Name = "label4";
+            label4.Size = new Size(115, 40);
+            label4.TabIndex = 48;
+            label4.Text = "20.0";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp6
+            // label3
             // 
-            target_amp6.BorderStyle = BorderStyle.Fixed3D;
-            target_amp6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp6.ForeColor = SystemColors.Control;
-            target_amp6.Location = new Point(690, 205);
-            target_amp6.Name = "target_amp6";
-            target_amp6.Size = new Size(115, 35);
-            target_amp6.TabIndex = 49;
-            target_amp6.Text = "100.0 mA";
-            target_amp6.TextAlign = ContentAlignment.MiddleCenter;
+            label3.BorderStyle = BorderStyle.Fixed3D;
+            label3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(115, 255);
+            label3.Name = "label3";
+            label3.Size = new Size(115, 40);
+            label3.TabIndex = 47;
+            label3.Text = "20.0";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // target_amp5
+            // label2
             // 
-            target_amp5.BorderStyle = BorderStyle.Fixed3D;
-            target_amp5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp5.ForeColor = SystemColors.Control;
-            target_amp5.Location = new Point(575, 205);
-            target_amp5.Name = "target_amp5";
-            target_amp5.Size = new Size(115, 35);
-            target_amp5.TabIndex = 48;
-            target_amp5.Text = "100.0 mA";
-            target_amp5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // target_amp4
-            // 
-            target_amp4.BorderStyle = BorderStyle.Fixed3D;
-            target_amp4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp4.ForeColor = SystemColors.Control;
-            target_amp4.Location = new Point(460, 205);
-            target_amp4.Name = "target_amp4";
-            target_amp4.Size = new Size(115, 35);
-            target_amp4.TabIndex = 47;
-            target_amp4.Text = "100.0 mA";
-            target_amp4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // target_amp3
-            // 
-            target_amp3.BorderStyle = BorderStyle.Fixed3D;
-            target_amp3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp3.ForeColor = SystemColors.Control;
-            target_amp3.Location = new Point(345, 205);
-            target_amp3.Name = "target_amp3";
-            target_amp3.Size = new Size(115, 35);
-            target_amp3.TabIndex = 46;
-            target_amp3.Text = "100.0 mA";
-            target_amp3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // target_amp2
-            // 
-            target_amp2.BorderStyle = BorderStyle.Fixed3D;
-            target_amp2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp2.ForeColor = SystemColors.Control;
-            target_amp2.Location = new Point(230, 205);
-            target_amp2.Name = "target_amp2";
-            target_amp2.Size = new Size(115, 35);
-            target_amp2.TabIndex = 45;
-            target_amp2.Text = "100.0 mA";
-            target_amp2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // target_amp1
-            // 
-            target_amp1.BorderStyle = BorderStyle.Fixed3D;
-            target_amp1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
-            target_amp1.ForeColor = SystemColors.Control;
-            target_amp1.Location = new Point(115, 205);
-            target_amp1.Name = "target_amp1";
-            target_amp1.Size = new Size(115, 35);
-            target_amp1.TabIndex = 44;
-            target_amp1.Text = "100.0 mA";
-            target_amp1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // target_amp_lbl
-            // 
-            target_amp_lbl.BorderStyle = BorderStyle.Fixed3D;
-            target_amp_lbl.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            target_amp_lbl.ForeColor = SystemColors.Control;
-            target_amp_lbl.Location = new Point(0, 206);
-            target_amp_lbl.Name = "target_amp_lbl";
-            target_amp_lbl.Size = new Size(115, 35);
-            target_amp_lbl.TabIndex = 43;
-            target_amp_lbl.Text = "목표 전류";
-            target_amp_lbl.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // blank_lbl
-            // 
-            blank_lbl.BorderStyle = BorderStyle.Fixed3D;
-            blank_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            blank_lbl.ForeColor = SystemColors.Control;
-            blank_lbl.Location = new Point(574, 240);
-            blank_lbl.Name = "blank_lbl";
-            blank_lbl.Size = new Size(116, 35);
-            blank_lbl.TabIndex = 42;
-            blank_lbl.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // err_set_btn
-            // 
-            err_set_btn.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            err_set_btn.Location = new Point(1150, 240);
-            err_set_btn.Name = "err_set_btn";
-            err_set_btn.Size = new Size(115, 36);
-            err_set_btn.TabIndex = 41;
-            err_set_btn.Text = "오차 설정";
-            err_set_btn.UseVisualStyleBackColor = true;
-            err_set_btn.Click += err_set_btn_Click;
-            // 
-            // amp_set_btn
-            // 
-            amp_set_btn.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn.Location = new Point(460, 240);
-            amp_set_btn.Name = "amp_set_btn";
-            amp_set_btn.Size = new Size(115, 36);
-            amp_set_btn.TabIndex = 40;
-            amp_set_btn.Text = "전류 설정";
-            amp_set_btn.UseVisualStyleBackColor = true;
-            amp_set_btn.Click += amp_set_btn_Click;
-            // 
-            // err_set
-            // 
-            err_set.BorderStyle = BorderStyle.Fixed3D;
-            err_set.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            err_set.ForeColor = SystemColors.Control;
-            err_set.Location = new Point(920, 240);
-            err_set.Name = "err_set";
-            err_set.Size = new Size(230, 35);
-            err_set.TabIndex = 39;
-            err_set.Text = "10.0 %";
-            err_set.TextAlign = ContentAlignment.MiddleCenter;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(115, 190);
+            label2.Name = "label2";
+            label2.Size = new Size(115, 40);
+            label2.TabIndex = 46;
+            label2.Text = "20.0";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp_set
             // 
             amp_set.BorderStyle = BorderStyle.Fixed3D;
             amp_set.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_set.ForeColor = SystemColors.Control;
-            amp_set.Location = new Point(230, 240);
+            amp_set.Location = new Point(115, 125);
             amp_set.Name = "amp_set";
-            amp_set.Size = new Size(230, 35);
-            amp_set.TabIndex = 38;
-            amp_set.Text = "20.0 mA";
+            amp_set.Size = new Size(115, 40);
+            amp_set.TabIndex = 45;
+            amp_set.Text = "20.0";
             amp_set.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // err_set_lbl
+            // label1
             // 
-            err_set_lbl.BorderStyle = BorderStyle.Fixed3D;
-            err_set_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            err_set_lbl.ForeColor = SystemColors.Control;
-            err_set_lbl.Location = new Point(690, 240);
-            err_set_lbl.Name = "err_set_lbl";
-            err_set_lbl.Size = new Size(230, 35);
-            err_set_lbl.TabIndex = 37;
-            err_set_lbl.Text = "오차 범위";
-            err_set_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(115, 60);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 40);
+            label1.TabIndex = 44;
+            label1.Text = "20.0";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // amp_set_btn1
+            // 
+            amp_set_btn1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp_set_btn1.Location = new Point(230, 60);
+            amp_set_btn1.Name = "amp_set_btn1";
+            amp_set_btn1.Size = new Size(60, 40);
+            amp_set_btn1.TabIndex = 40;
+            amp_set_btn1.Text = "설정";
+            amp_set_btn1.UseVisualStyleBackColor = true;
+            amp_set_btn1.Click += amp_set_btn_Click;
             // 
             // amp10
             // 
             amp10.BorderStyle = BorderStyle.Fixed3D;
             amp10.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp10.ForeColor = SystemColors.Control;
-            amp10.Location = new Point(1150, 120);
+            amp10.Location = new Point(1, 645);
             amp10.Name = "amp10";
-            amp10.Size = new Size(115, 35);
+            amp10.Size = new Size(115, 40);
             amp10.TabIndex = 36;
-            amp10.Text = "60.0 mA";
+            amp10.Text = "60.0";
             amp10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp9
@@ -1200,11 +681,11 @@
             amp9.BorderStyle = BorderStyle.Fixed3D;
             amp9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp9.ForeColor = SystemColors.Control;
-            amp9.Location = new Point(1035, 120);
+            amp9.Location = new Point(1, 580);
             amp9.Name = "amp9";
-            amp9.Size = new Size(115, 35);
+            amp9.Size = new Size(115, 40);
             amp9.TabIndex = 35;
-            amp9.Text = "60.0 mA";
+            amp9.Text = "60.0";
             amp9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp8
@@ -1212,11 +693,11 @@
             amp8.BorderStyle = BorderStyle.Fixed3D;
             amp8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp8.ForeColor = SystemColors.Control;
-            amp8.Location = new Point(920, 120);
+            amp8.Location = new Point(1, 515);
             amp8.Name = "amp8";
-            amp8.Size = new Size(115, 35);
+            amp8.Size = new Size(115, 40);
             amp8.TabIndex = 34;
-            amp8.Text = "40.0 mA";
+            amp8.Text = "40.0";
             amp8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp7
@@ -1224,11 +705,11 @@
             amp7.BorderStyle = BorderStyle.Fixed3D;
             amp7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp7.ForeColor = SystemColors.Control;
-            amp7.Location = new Point(805, 120);
+            amp7.Location = new Point(1, 450);
             amp7.Name = "amp7";
-            amp7.Size = new Size(115, 35);
+            amp7.Size = new Size(115, 40);
             amp7.TabIndex = 33;
-            amp7.Text = "60.0 mA";
+            amp7.Text = "60.0";
             amp7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp6
@@ -1236,11 +717,11 @@
             amp6.BorderStyle = BorderStyle.Fixed3D;
             amp6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp6.ForeColor = SystemColors.Control;
-            amp6.Location = new Point(690, 120);
+            amp6.Location = new Point(1, 385);
             amp6.Name = "amp6";
-            amp6.Size = new Size(115, 35);
+            amp6.Size = new Size(115, 40);
             amp6.TabIndex = 32;
-            amp6.Text = "60.0 mA";
+            amp6.Text = "60.0";
             amp6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp5
@@ -1248,11 +729,11 @@
             amp5.BorderStyle = BorderStyle.Fixed3D;
             amp5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp5.ForeColor = SystemColors.Control;
-            amp5.Location = new Point(575, 120);
+            amp5.Location = new Point(1, 320);
             amp5.Name = "amp5";
-            amp5.Size = new Size(115, 35);
+            amp5.Size = new Size(115, 40);
             amp5.TabIndex = 31;
-            amp5.Text = "1.0 mA";
+            amp5.Text = "1.0";
             amp5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp4
@@ -1260,11 +741,11 @@
             amp4.BorderStyle = BorderStyle.Fixed3D;
             amp4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
             amp4.ForeColor = SystemColors.Control;
-            amp4.Location = new Point(460, 120);
+            amp4.Location = new Point(1, 255);
             amp4.Name = "amp4";
-            amp4.Size = new Size(115, 35);
+            amp4.Size = new Size(115, 40);
             amp4.TabIndex = 30;
-            amp4.Text = "0.0 mA";
+            amp4.Text = "0.0";
             amp4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp3
@@ -1272,11 +753,11 @@
             amp3.BorderStyle = BorderStyle.Fixed3D;
             amp3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp3.ForeColor = SystemColors.Control;
-            amp3.Location = new Point(345, 120);
+            amp3.Location = new Point(1, 190);
             amp3.Name = "amp3";
-            amp3.Size = new Size(115, 35);
+            amp3.Size = new Size(115, 40);
             amp3.TabIndex = 29;
-            amp3.Text = "0.0 mA";
+            amp3.Text = "0.0";
             amp3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp2
@@ -1284,11 +765,11 @@
             amp2.BorderStyle = BorderStyle.Fixed3D;
             amp2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp2.ForeColor = SystemColors.Control;
-            amp2.Location = new Point(230, 120);
+            amp2.Location = new Point(1, 125);
             amp2.Name = "amp2";
-            amp2.Size = new Size(115, 35);
+            amp2.Size = new Size(115, 40);
             amp2.TabIndex = 28;
-            amp2.Text = "1.0 mA";
+            amp2.Text = "1.0";
             amp2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp1
@@ -1296,263 +777,23 @@
             amp1.BorderStyle = BorderStyle.Fixed3D;
             amp1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp1.ForeColor = SystemColors.Control;
-            amp1.Location = new Point(115, 120);
+            amp1.Location = new Point(1, 60);
             amp1.Name = "amp1";
-            amp1.Size = new Size(115, 35);
+            amp1.Size = new Size(115, 40);
             amp1.TabIndex = 27;
-            amp1.Text = "0.0 mA";
+            amp1.Text = "0.0";
             amp1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch10
-            // 
-            amp_ch10.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch10.ForeColor = SystemColors.Control;
-            amp_ch10.Location = new Point(1150, 40);
-            amp_ch10.Name = "amp_ch10";
-            amp_ch10.Size = new Size(115, 35);
-            amp_ch10.TabIndex = 26;
-            amp_ch10.Text = "3 ch";
-            amp_ch10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch9
-            // 
-            amp_ch9.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch9.ForeColor = SystemColors.Control;
-            amp_ch9.Location = new Point(1035, 40);
-            amp_ch9.Name = "amp_ch9";
-            amp_ch9.Size = new Size(115, 35);
-            amp_ch9.TabIndex = 25;
-            amp_ch9.Text = "3 ch";
-            amp_ch9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch8
-            // 
-            amp_ch8.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch8.ForeColor = SystemColors.Control;
-            amp_ch8.Location = new Point(920, 40);
-            amp_ch8.Name = "amp_ch8";
-            amp_ch8.Size = new Size(115, 35);
-            amp_ch8.TabIndex = 24;
-            amp_ch8.Text = "2 ch";
-            amp_ch8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch7
-            // 
-            amp_ch7.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch7.ForeColor = SystemColors.Control;
-            amp_ch7.Location = new Point(805, 40);
-            amp_ch7.Name = "amp_ch7";
-            amp_ch7.Size = new Size(115, 35);
-            amp_ch7.TabIndex = 23;
-            amp_ch7.Text = "3 ch";
-            amp_ch7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch6
-            // 
-            amp_ch6.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch6.ForeColor = SystemColors.Control;
-            amp_ch6.Location = new Point(690, 40);
-            amp_ch6.Name = "amp_ch6";
-            amp_ch6.Size = new Size(115, 35);
-            amp_ch6.TabIndex = 22;
-            amp_ch6.Text = "3 ch";
-            amp_ch6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch5
-            // 
-            amp_ch5.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch5.ForeColor = SystemColors.Control;
-            amp_ch5.Location = new Point(575, 40);
-            amp_ch5.Name = "amp_ch5";
-            amp_ch5.Size = new Size(115, 35);
-            amp_ch5.TabIndex = 21;
-            amp_ch5.Text = "2 ch";
-            amp_ch5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch4
-            // 
-            amp_ch4.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch4.ForeColor = SystemColors.Control;
-            amp_ch4.Location = new Point(460, 40);
-            amp_ch4.Name = "amp_ch4";
-            amp_ch4.Size = new Size(115, 35);
-            amp_ch4.TabIndex = 20;
-            amp_ch4.Text = "3 ch";
-            amp_ch4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch3
-            // 
-            amp_ch3.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch3.ForeColor = SystemColors.Control;
-            amp_ch3.Location = new Point(345, 40);
-            amp_ch3.Name = "amp_ch3";
-            amp_ch3.Size = new Size(115, 35);
-            amp_ch3.TabIndex = 19;
-            amp_ch3.Text = "3 ch";
-            amp_ch3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch2
-            // 
-            amp_ch2.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch2.ForeColor = SystemColors.Control;
-            amp_ch2.Location = new Point(230, 40);
-            amp_ch2.Name = "amp_ch2";
-            amp_ch2.Size = new Size(115, 35);
-            amp_ch2.TabIndex = 18;
-            amp_ch2.Text = "2 ch";
-            amp_ch2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_ch1
-            // 
-            amp_ch1.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch1.ForeColor = SystemColors.Control;
-            amp_ch1.Location = new Point(115, 40);
-            amp_ch1.Name = "amp_ch1";
-            amp_ch1.Size = new Size(115, 35);
-            amp_ch1.TabIndex = 17;
-            amp_ch1.Text = "3 ch";
-            amp_ch1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no10
-            // 
-            amp_no10.BorderStyle = BorderStyle.Fixed3D;
-            amp_no10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no10.ForeColor = SystemColors.Control;
-            amp_no10.Location = new Point(1150, 80);
-            amp_no10.Name = "amp_no10";
-            amp_no10.Size = new Size(115, 35);
-            amp_no10.TabIndex = 16;
-            amp_no10.Text = "10";
-            amp_no10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no9
-            // 
-            amp_no9.BorderStyle = BorderStyle.Fixed3D;
-            amp_no9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no9.ForeColor = SystemColors.Control;
-            amp_no9.Location = new Point(1035, 80);
-            amp_no9.Name = "amp_no9";
-            amp_no9.Size = new Size(115, 35);
-            amp_no9.TabIndex = 15;
-            amp_no9.Text = "9";
-            amp_no9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no8
-            // 
-            amp_no8.BorderStyle = BorderStyle.Fixed3D;
-            amp_no8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no8.ForeColor = SystemColors.Control;
-            amp_no8.Location = new Point(920, 80);
-            amp_no8.Name = "amp_no8";
-            amp_no8.Size = new Size(115, 35);
-            amp_no8.TabIndex = 14;
-            amp_no8.Text = "8";
-            amp_no8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no7
-            // 
-            amp_no7.BorderStyle = BorderStyle.Fixed3D;
-            amp_no7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no7.ForeColor = SystemColors.Control;
-            amp_no7.Location = new Point(805, 80);
-            amp_no7.Name = "amp_no7";
-            amp_no7.Size = new Size(115, 35);
-            amp_no7.TabIndex = 13;
-            amp_no7.Text = "7";
-            amp_no7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no6
-            // 
-            amp_no6.BorderStyle = BorderStyle.Fixed3D;
-            amp_no6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no6.ForeColor = SystemColors.Control;
-            amp_no6.Location = new Point(690, 80);
-            amp_no6.Name = "amp_no6";
-            amp_no6.Size = new Size(115, 35);
-            amp_no6.TabIndex = 12;
-            amp_no6.Text = "6";
-            amp_no6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no5
-            // 
-            amp_no5.BorderStyle = BorderStyle.Fixed3D;
-            amp_no5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no5.ForeColor = SystemColors.Control;
-            amp_no5.Location = new Point(575, 80);
-            amp_no5.Name = "amp_no5";
-            amp_no5.Size = new Size(115, 35);
-            amp_no5.TabIndex = 11;
-            amp_no5.Text = "5";
-            amp_no5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no4
-            // 
-            amp_no4.BorderStyle = BorderStyle.Fixed3D;
-            amp_no4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no4.ForeColor = SystemColors.Control;
-            amp_no4.Location = new Point(460, 80);
-            amp_no4.Name = "amp_no4";
-            amp_no4.Size = new Size(115, 35);
-            amp_no4.TabIndex = 10;
-            amp_no4.Text = "4";
-            amp_no4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no3
-            // 
-            amp_no3.BorderStyle = BorderStyle.Fixed3D;
-            amp_no3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no3.ForeColor = SystemColors.Control;
-            amp_no3.Location = new Point(345, 80);
-            amp_no3.Name = "amp_no3";
-            amp_no3.Size = new Size(115, 35);
-            amp_no3.TabIndex = 9;
-            amp_no3.Text = "3";
-            amp_no3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no2
-            // 
-            amp_no2.BorderStyle = BorderStyle.Fixed3D;
-            amp_no2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no2.ForeColor = SystemColors.Control;
-            amp_no2.Location = new Point(230, 80);
-            amp_no2.Name = "amp_no2";
-            amp_no2.Size = new Size(115, 35);
-            amp_no2.TabIndex = 8;
-            amp_no2.Text = "2";
-            amp_no2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // amp_no1
-            // 
-            amp_no1.BorderStyle = BorderStyle.Fixed3D;
-            amp_no1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no1.ForeColor = SystemColors.Control;
-            amp_no1.Location = new Point(115, 80);
-            amp_no1.Name = "amp_no1";
-            amp_no1.Size = new Size(115, 35);
-            amp_no1.TabIndex = 7;
-            amp_no1.Text = "1";
-            amp_no1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp_set_lbl
             // 
             amp_set_lbl.BorderStyle = BorderStyle.Fixed3D;
-            amp_set_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp_set_lbl.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_set_lbl.ForeColor = SystemColors.Control;
-            amp_set_lbl.Location = new Point(0, 240);
+            amp_set_lbl.Location = new Point(115, 1);
             amp_set_lbl.Name = "amp_set_lbl";
-            amp_set_lbl.Size = new Size(230, 35);
+            amp_set_lbl.Size = new Size(115, 60);
             amp_set_lbl.TabIndex = 6;
-            amp_set_lbl.Text = "지정 전류";
+            amp_set_lbl.Text = "지정 전류\r\n(mA)";
             amp_set_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amp_lbl
@@ -1560,141 +801,366 @@
             amp_lbl.BorderStyle = BorderStyle.Fixed3D;
             amp_lbl.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp_lbl.ForeColor = SystemColors.Control;
-            amp_lbl.Location = new Point(0, 120);
+            amp_lbl.Location = new Point(1, 1);
             amp_lbl.Name = "amp_lbl";
-            amp_lbl.Size = new Size(115, 35);
+            amp_lbl.Size = new Size(115, 60);
             amp_lbl.TabIndex = 5;
-            amp_lbl.Text = "측정 전류";
+            amp_lbl.Text = "측정 전류\r\n(mA)";
             amp_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // amp_ch_lbl
+            // err_set_btn
             // 
-            amp_ch_lbl.BorderStyle = BorderStyle.Fixed3D;
-            amp_ch_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_ch_lbl.ForeColor = SystemColors.Control;
-            amp_ch_lbl.Location = new Point(0, 40);
-            amp_ch_lbl.Name = "amp_ch_lbl";
-            amp_ch_lbl.Size = new Size(115, 35);
-            amp_ch_lbl.TabIndex = 4;
-            amp_ch_lbl.Text = "채널 수";
-            amp_ch_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            err_set_btn.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            err_set_btn.Location = new Point(473, 38);
+            err_set_btn.Name = "err_set_btn";
+            err_set_btn.Size = new Size(115, 36);
+            err_set_btn.TabIndex = 41;
+            err_set_btn.Text = "오차 설정";
+            err_set_btn.UseVisualStyleBackColor = true;
+            err_set_btn.Click += err_set_btn_Click;
             // 
-            // amp_no_lbl
+            // err_set
             // 
-            amp_no_lbl.BorderStyle = BorderStyle.Fixed3D;
-            amp_no_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_no_lbl.ForeColor = SystemColors.Control;
-            amp_no_lbl.Location = new Point(0, 80);
-            amp_no_lbl.Name = "amp_no_lbl";
-            amp_no_lbl.Size = new Size(115, 35);
-            amp_no_lbl.TabIndex = 3;
-            amp_no_lbl.Text = "No.";
-            amp_no_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            err_set.BorderStyle = BorderStyle.Fixed3D;
+            err_set.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            err_set.ForeColor = SystemColors.Control;
+            err_set.Location = new Point(237, 37);
+            err_set.Name = "err_set";
+            err_set.Size = new Size(230, 35);
+            err_set.TabIndex = 39;
+            err_set.Text = "10.0 %";
+            err_set.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // ampare_lbl
+            // err_set_lbl
             // 
-            ampare_lbl.BorderStyle = BorderStyle.Fixed3D;
-            ampare_lbl.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            ampare_lbl.ForeColor = SystemColors.Control;
-            ampare_lbl.Location = new Point(2, 2);
-            ampare_lbl.Name = "ampare_lbl";
-            ampare_lbl.Size = new Size(1260, 36);
-            ampare_lbl.TabIndex = 2;
-            ampare_lbl.Text = "전류 현황";
-            ampare_lbl.TextAlign = ContentAlignment.TopCenter;
+            err_set_lbl.BorderStyle = BorderStyle.Fixed3D;
+            err_set_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            err_set_lbl.ForeColor = SystemColors.Control;
+            err_set_lbl.Location = new Point(1, 37);
+            err_set_lbl.Name = "err_set_lbl";
+            err_set_lbl.Size = new Size(230, 35);
+            err_set_lbl.TabIndex = 37;
+            err_set_lbl.Text = "오차 범위";
+            err_set_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pulseTime
+            // edit_pan
             // 
-            pulseTime.Interval = 1000;
+            edit_pan.BackColor = SystemColors.ActiveCaptionText;
+            edit_pan.Controls.Add(err_set_btn);
+            edit_pan.Controls.Add(err_set);
+            edit_pan.Controls.Add(err_set_lbl);
+            edit_pan.Dock = DockStyle.Bottom;
+            edit_pan.Location = new Point(0, 746);
+            edit_pan.Name = "edit_pan";
+            edit_pan.Size = new Size(1264, 115);
+            edit_pan.TabIndex = 3;
+            // 
+            // line_pan
+            // 
+            line_pan.BackColor = SystemColors.ActiveCaptionText;
+            line_pan.Controls.Add(sen_num_lbl10);
+            line_pan.Controls.Add(sen_num_lbl9);
+            line_pan.Controls.Add(sen_num_lbl8);
+            line_pan.Controls.Add(sen_num_lbl7);
+            line_pan.Controls.Add(sen_num_lbl6);
+            line_pan.Controls.Add(sen_num_lbl5);
+            line_pan.Controls.Add(sen_num_lbl4);
+            line_pan.Controls.Add(sen_num_lbl3);
+            line_pan.Controls.Add(sen_num_lbl2);
+            line_pan.Controls.Add(sen_num_lbl1);
+            line_pan.Controls.Add(line_lbl);
+            line_pan.Dock = DockStyle.Left;
+            line_pan.Location = new Point(0, 0);
+            line_pan.Name = "line_pan";
+            line_pan.Size = new Size(70, 746);
+            line_pan.TabIndex = 4;
+            // 
+            // sen_num_lbl10
+            // 
+            sen_num_lbl10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl10.ForeColor = SystemColors.Control;
+            sen_num_lbl10.Location = new Point(3, 645);
+            sen_num_lbl10.Name = "sen_num_lbl10";
+            sen_num_lbl10.Size = new Size(60, 40);
+            sen_num_lbl10.TabIndex = 32;
+            sen_num_lbl10.Text = "10";
+            sen_num_lbl10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl9
+            // 
+            sen_num_lbl9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl9.ForeColor = SystemColors.Control;
+            sen_num_lbl9.Location = new Point(3, 580);
+            sen_num_lbl9.Name = "sen_num_lbl9";
+            sen_num_lbl9.Size = new Size(60, 40);
+            sen_num_lbl9.TabIndex = 31;
+            sen_num_lbl9.Text = "9";
+            sen_num_lbl9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl8
+            // 
+            sen_num_lbl8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl8.ForeColor = SystemColors.Control;
+            sen_num_lbl8.Location = new Point(3, 515);
+            sen_num_lbl8.Name = "sen_num_lbl8";
+            sen_num_lbl8.Size = new Size(60, 40);
+            sen_num_lbl8.TabIndex = 30;
+            sen_num_lbl8.Text = "8";
+            sen_num_lbl8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl7
+            // 
+            sen_num_lbl7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl7.ForeColor = SystemColors.Control;
+            sen_num_lbl7.Location = new Point(3, 450);
+            sen_num_lbl7.Name = "sen_num_lbl7";
+            sen_num_lbl7.Size = new Size(60, 40);
+            sen_num_lbl7.TabIndex = 29;
+            sen_num_lbl7.Text = "7";
+            sen_num_lbl7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl6
+            // 
+            sen_num_lbl6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl6.ForeColor = SystemColors.Control;
+            sen_num_lbl6.Location = new Point(3, 385);
+            sen_num_lbl6.Name = "sen_num_lbl6";
+            sen_num_lbl6.Size = new Size(60, 40);
+            sen_num_lbl6.TabIndex = 28;
+            sen_num_lbl6.Text = "6";
+            sen_num_lbl6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl5
+            // 
+            sen_num_lbl5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl5.ForeColor = SystemColors.Control;
+            sen_num_lbl5.Location = new Point(3, 320);
+            sen_num_lbl5.Name = "sen_num_lbl5";
+            sen_num_lbl5.Size = new Size(60, 40);
+            sen_num_lbl5.TabIndex = 27;
+            sen_num_lbl5.Text = "5";
+            sen_num_lbl5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl4
+            // 
+            sen_num_lbl4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl4.ForeColor = SystemColors.Control;
+            sen_num_lbl4.Location = new Point(3, 255);
+            sen_num_lbl4.Name = "sen_num_lbl4";
+            sen_num_lbl4.Size = new Size(60, 40);
+            sen_num_lbl4.TabIndex = 26;
+            sen_num_lbl4.Text = "4";
+            sen_num_lbl4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl3
+            // 
+            sen_num_lbl3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl3.ForeColor = SystemColors.Control;
+            sen_num_lbl3.Location = new Point(3, 190);
+            sen_num_lbl3.Name = "sen_num_lbl3";
+            sen_num_lbl3.Size = new Size(60, 40);
+            sen_num_lbl3.TabIndex = 25;
+            sen_num_lbl3.Text = "3";
+            sen_num_lbl3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl2
+            // 
+            sen_num_lbl2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl2.ForeColor = SystemColors.Control;
+            sen_num_lbl2.Location = new Point(3, 125);
+            sen_num_lbl2.Name = "sen_num_lbl2";
+            sen_num_lbl2.Size = new Size(60, 40);
+            sen_num_lbl2.TabIndex = 24;
+            sen_num_lbl2.Text = "2";
+            sen_num_lbl2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sen_num_lbl1
+            // 
+            sen_num_lbl1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl1.ForeColor = SystemColors.Control;
+            sen_num_lbl1.Location = new Point(3, 60);
+            sen_num_lbl1.Name = "sen_num_lbl1";
+            sen_num_lbl1.Size = new Size(60, 40);
+            sen_num_lbl1.TabIndex = 23;
+            sen_num_lbl1.Text = "1";
+            sen_num_lbl1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // line_lbl
+            // 
+            line_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            line_lbl.ForeColor = SystemColors.Control;
+            line_lbl.Location = new Point(1, 4);
+            line_lbl.Name = "line_lbl";
+            line_lbl.Size = new Size(65, 35);
+            line_lbl.TabIndex = 22;
+            line_lbl.Text = "Line";
+            line_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // ch_lbl
+            // 
+            ch_lbl.BorderStyle = BorderStyle.Fixed3D;
+            ch_lbl.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            ch_lbl.ForeColor = SystemColors.Control;
+            ch_lbl.Location = new Point(286, 1);
+            ch_lbl.Name = "ch_lbl";
+            ch_lbl.Size = new Size(40, 60);
+            ch_lbl.TabIndex = 63;
+            ch_lbl.Text = "ch";
+            ch_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.BorderStyle = BorderStyle.Fixed3D;
+            label10.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(286, 61);
+            label10.Name = "label10";
+            label10.Size = new Size(40, 40);
+            label10.TabIndex = 64;
+            label10.Text = "3";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.BorderStyle = BorderStyle.Fixed3D;
+            label11.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label11.ForeColor = SystemColors.Control;
+            label11.Location = new Point(286, 125);
+            label11.Name = "label11";
+            label11.Size = new Size(40, 40);
+            label11.TabIndex = 65;
+            label11.Text = "2";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.BorderStyle = BorderStyle.Fixed3D;
+            label12.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label12.ForeColor = SystemColors.Control;
+            label12.Location = new Point(286, 190);
+            label12.Name = "label12";
+            label12.Size = new Size(40, 40);
+            label12.TabIndex = 66;
+            label12.Text = "3";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            label13.BorderStyle = BorderStyle.Fixed3D;
+            label13.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label13.ForeColor = SystemColors.Control;
+            label13.Location = new Point(286, 257);
+            label13.Name = "label13";
+            label13.Size = new Size(40, 40);
+            label13.TabIndex = 67;
+            label13.Text = "3";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            label14.BorderStyle = BorderStyle.Fixed3D;
+            label14.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label14.ForeColor = SystemColors.Control;
+            label14.Location = new Point(286, 320);
+            label14.Name = "label14";
+            label14.Size = new Size(40, 40);
+            label14.TabIndex = 68;
+            label14.Text = "2";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            label15.BorderStyle = BorderStyle.Fixed3D;
+            label15.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label15.ForeColor = SystemColors.Control;
+            label15.Location = new Point(286, 387);
+            label15.Name = "label15";
+            label15.Size = new Size(40, 40);
+            label15.TabIndex = 69;
+            label15.Text = "3";
+            label15.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            label16.BorderStyle = BorderStyle.Fixed3D;
+            label16.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label16.ForeColor = SystemColors.Control;
+            label16.Location = new Point(286, 450);
+            label16.Name = "label16";
+            label16.Size = new Size(40, 40);
+            label16.TabIndex = 70;
+            label16.Text = "3";
+            label16.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            label17.BorderStyle = BorderStyle.Fixed3D;
+            label17.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label17.ForeColor = SystemColors.Control;
+            label17.Location = new Point(286, 515);
+            label17.Name = "label17";
+            label17.Size = new Size(40, 40);
+            label17.TabIndex = 71;
+            label17.Text = "2";
+            label17.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            label18.BorderStyle = BorderStyle.Fixed3D;
+            label18.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label18.ForeColor = SystemColors.Control;
+            label18.Location = new Point(286, 578);
+            label18.Name = "label18";
+            label18.Size = new Size(40, 40);
+            label18.TabIndex = 72;
+            label18.Text = "3";
+            label18.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            label19.BorderStyle = BorderStyle.Fixed3D;
+            label19.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label19.ForeColor = SystemColors.Control;
+            label19.Location = new Point(286, 645);
+            label19.Name = "label19";
+            label19.Size = new Size(40, 40);
+            label19.TabIndex = 73;
+            label19.Text = "3";
+            label19.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1264, 721);
+            ClientSize = new Size(1264, 861);
             Controls.Add(ampare_panel);
-            Controls.Add(sensor_panel);
             Controls.Add(temp_panel);
+            Controls.Add(line_pan);
+            Controls.Add(edit_pan);
             Name = "Form3";
             Text = "MORE_INFO";
             temp_panel.ResumeLayout(false);
-            sensor_panel.ResumeLayout(false);
             ampare_panel.ResumeLayout(false);
+            edit_pan.ResumeLayout(false);
+            line_pan.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         internal Panel temp_panel;
-        internal Panel sensor_panel;
         internal Panel ampare_panel;
-        private Label temp_lbl;
         private Label temp2;
-        private Label temp_col2;
-        private Label temp_col1;
         private Label temp_7;
-        private Label col1_7;
-        private Label sens_lbl;
-        private Label ampare_lbl;
-        private Label amp_no_lbl;
-        private Label amp_no10;
-        private Label amp_no9;
-        private Label amp_no8;
-        private Label amp_no7;
-        private Label amp_no6;
-        private Label amp_no5;
-        private Label amp_no4;
-        private Label amp_no3;
-        private Label amp_no2;
-        private Label amp_no1;
-        private Label amp_set_lbl;
         private Label amp_lbl;
-        private Label amp_ch_lbl;
-        private Label amp_ch10;
-        private Label amp_ch9;
-        private Label amp_ch8;
-        private Label amp_ch7;
-        private Label amp_ch6;
-        private Label amp_ch5;
-        private Label amp_ch4;
-        private Label amp_ch3;
-        private Label amp_ch2;
-        private Label amp_ch1;
         private Label err_set_lbl;
         private Label err_set;
-        private Label amp_set;
-        private Button amp_set_btn;
+        private Button amp_set_btn1;
         private Button err_set_btn;
-        private Label blank_lbl;
-        private Label target_amp_lbl;
-        private Label target_amp10;
-        private Label target_amp9;
-        private Label target_amp8;
-        private Label target_amp7;
-        private Label target_amp6;
-        private Label target_amp5;
-        private Label target_amp4;
-        private Label target_amp3;
-        private Label target_amp2;
-        private Label target_amp1;
-        private Label err_range10;
-        private Label err_range9;
-        private Label err_range8;
-        private Label err_range7;
-        private Label err_range6;
-        private Label err_range5;
-        private Label err_range4;
-        private Label err_range3;
-        private Label err_range2;
-        private Label err_range1;
-        private Label err_range;
-        internal Label col1_1;
         internal Label temp2_1;
-        internal Label col2_1;
         internal Label temp_1;
         private Label temp1;
-        internal Label col1_2;
         internal Label temp2_10;
         internal Label temp2_9;
         internal Label temp2_8;
@@ -1704,15 +1170,6 @@
         internal Label temp2_4;
         internal Label temp2_3;
         internal Label temp2_2;
-        internal Label col2_10;
-        internal Label col2_9;
-        internal Label col2_8;
-        internal Label col2_7;
-        internal Label col2_6;
-        internal Label col2_5;
-        internal Label col2_4;
-        internal Label col2_3;
-        internal Label col2_2;
         internal Label temp_10;
         internal Label temp_9;
         internal Label temp_8;
@@ -1721,15 +1178,6 @@
         internal Label temp_4;
         internal Label temp_3;
         internal Label temp_2;
-        internal Label col1_10;
-        internal Label col1_8;
-        internal Label col1_6;
-        internal Label col1_5;
-        internal Label col1_4;
-        internal Label col1_3;
-        internal Label col1_9;
-        private ScottPlot.FormsPlot formsPlot;
-        private System.Windows.Forms.Timer pulseTime;
         internal Label amp10;
         internal Label amp9;
         internal Label amp8;
@@ -1740,5 +1188,49 @@
         internal Label amp3;
         internal Label amp2;
         internal Label amp1;
+        private Panel edit_pan;
+        private Panel line_pan;
+        private Label sen_num_lbl10;
+        private Label sen_num_lbl9;
+        private Label sen_num_lbl8;
+        private Label sen_num_lbl7;
+        private Label sen_num_lbl6;
+        private Label sen_num_lbl5;
+        private Label sen_num_lbl4;
+        private Label sen_num_lbl3;
+        private Label sen_num_lbl2;
+        private Label sen_num_lbl1;
+        private Label line_lbl;
+        private Label amp_set_lbl;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label amp_set;
+        private Label label1;
+        private Button button9;
+        private Button button8;
+        private Button button7;
+        private Button button6;
+        private Button button5;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Label label10;
+        private Label ch_lbl;
+        private Label label19;
+        private Label label18;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private Label label11;
     }
 }

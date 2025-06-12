@@ -73,9 +73,29 @@ namespace BUR_INS_HMI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap admin_login_btn1 {
+            get {
+                object obj = ResourceManager.GetObject("admin_login_btn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap admin_logout_btn {
             get {
                 object obj = ResourceManager.GetObject("admin_logout_btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap admin_logout_btn1 {
+            get {
+                object obj = ResourceManager.GetObject("admin_logout_btn1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,36 @@ namespace BUR_INS_HMI.Properties {
         internal static System.Drawing.Bitmap sen_stat_none {
             get {
                 object obj = ResourceManager.GetObject("sen_stat_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap sen_stat_none1 {
+            get {
+                object obj = ResourceManager.GetObject("sen_stat_none1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap sen_stat_red {
+            get {
+                object obj = ResourceManager.GetObject("sen_stat_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap sen_stat_yellow {
+            get {
+                object obj = ResourceManager.GetObject("sen_stat_yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

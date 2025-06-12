@@ -29,45 +29,29 @@
         private void InitializeComponent()
         {
             DB_panel = new Panel();
-            dataGridView1 = new DataGridView();
-            DB_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // DB_panel
             // 
             DB_panel.BackColor = SystemColors.ActiveCaptionText;
-            DB_panel.Controls.Add(dataGridView1);
-            DB_panel.Dock = DockStyle.Fill;
-            DB_panel.Location = new Point(0, 0);
+            DB_panel.Location = new Point(1034, 12);
             DB_panel.Name = "DB_panel";
-            DB_panel.Size = new Size(1123, 610);
+            DB_panel.Size = new Size(77, 97);
             DB_panel.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1099, 586);
-            dataGridView1.TabIndex = 0;
             // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1123, 610);
+            ClientSize = new Size(1124, 672);
             Controls.Add(DB_panel);
             Name = "Form5";
             Text = "Form5";
-            DB_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel DB_panel;
-        private DataGridView dataGridView1;
     }
 }

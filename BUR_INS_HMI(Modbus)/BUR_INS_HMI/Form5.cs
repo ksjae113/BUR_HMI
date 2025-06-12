@@ -11,13 +11,26 @@ using System.Windows.Forms;
 
 namespace BUR_INS_HMI
 {
+    
+
     public partial class Form5 : Form
     {
+        /// <summary>
+        /// </summary>
+        /// 
         public Form5()
         {
             InitializeComponent();
-            LoadDataFromDatabase();
+            /////
+     
+
+           // infoPanel.BringToFront();
+            ///
+            
+       //     LoadDataFromDatabase();
         }
+
+        
 
         private void LoadDataFromDatabase()
         {
@@ -32,7 +45,7 @@ namespace BUR_INS_HMI
                 DataTable table = new DataTable();
                 adapter.Fill(table);
 
-                dataGridView1.DataSource = table; // dataGridView1은 폼에 배치된 DataGridView
+            //    dataGridView1.DataSource = table; // dataGridView1은 폼에 배치된 DataGridView
             }
         }
 

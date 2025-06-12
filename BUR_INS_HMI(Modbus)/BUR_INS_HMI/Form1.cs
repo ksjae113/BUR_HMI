@@ -28,10 +28,10 @@ namespace BUR_INS_HMI
 
 
         private Form3 f3;
+        internal InfoPanel roll_pan;
 
         private Label[] roll;
-        private Label[] sen_num_arr;
-        private PictureBox[] sen_stat_arr;
+        private PictureBox[] sensor;
         private byte latestDOByte = 0x00;   //가장 최근의 DO raw 값 저장
 
         public SerialPort serialPort;
@@ -61,15 +61,26 @@ namespace BUR_INS_HMI
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            roll = new Label[] {roll_num1,roll_num2,roll_num3, roll_num4,roll_num5,roll_num6,roll_num7,roll_num8,
-                roll_num9,roll_num10,roll_num11, roll_num12,roll_num13,roll_num14,roll_num15,roll_num16,roll_num17,
-                roll_num18,roll_num19,roll_num20,roll_num21,roll_num22, roll_num23,roll_num24,roll_num25,
-                roll_num26,roll_num27};
-            sen_num_arr = new Label[]{ sen_num1, sen_num2, sen_num3, sen_num4, sen_num5, sen_num6,
-                sen_num7, sen_num8, sen_num9, sen_num10 };
+            
            
+
             Init_port();
             timer1.Start();
+
+            roll_pan = new InfoPanel();
+            roll_pan.Dock = DockStyle.Fill;
+            this.info_panel.Controls.Add(roll_pan);
+
+            roll = new Label[] {roll_pan.roll_num1,roll_pan.roll_num2,roll_pan.roll_num3, roll_pan.roll_num4,
+                roll_pan.roll_num5,roll_pan.roll_num6,
+                roll_pan.roll_num7,roll_pan.roll_num8, roll_pan.roll_num9,roll_pan.roll_num10,
+                roll_pan.roll_num11, roll_pan.roll_num12,
+                roll_pan.roll_num13,roll_pan.roll_num14,roll_pan.roll_num15, roll_pan.roll_num16,roll_pan.roll_num17,
+                roll_pan.roll_num18, roll_pan.roll_num19,roll_pan.roll_num20,roll_pan.roll_num21,roll_pan.roll_num22,
+                roll_pan.roll_num23,roll_pan.roll_num24, roll_pan.roll_num25, roll_pan.roll_num26,roll_pan.roll_num27};
+
+            sensor = new PictureBox[] { pic_sen1, pic_sen2, pic_sen3, pic_sen4, pic_sen5, pic_sen6,
+             pic_sen7, pic_sen8, pic_sen9, pic_sen10 };
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -168,10 +179,10 @@ namespace BUR_INS_HMI
             formsPlot1.Render();
 
             // Form3에 데이터 전달
-            if (f3 != null && !f3.IsDisposed)
+         /*   if (f3 != null && !f3.IsDisposed)
             {
                 f3.SharedTimerCallback(latestDOByte);
-            }
+            }*/
         }
 
         private volatile bool dataReceivedFlag = false;
@@ -198,11 +209,9 @@ namespace BUR_INS_HMI
             {
                 ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
 
-                roll_check(data);
                 sens_check(data);
-
-
-
+                roll_check(data);
+                copyroll(roll_pan);
             }
             catch (Exception ex)
             {
@@ -210,7 +219,14 @@ namespace BUR_INS_HMI
             }
         }
 
-
+        private void copyroll(InfoPanel p)
+        {
+            for (int i =0; i< 27; i++)
+            {
+                f3.infoCopy.roll[i].BackColor = roll[i].BackColor;
+              //  roll_pan.roll[i].BackColor
+            }
+        }
 
 
         private void roll_check(ushort[] data)
@@ -222,39 +238,33 @@ namespace BUR_INS_HMI
                     roll[i].BackColor = Color.Red;
                 }
                 else
-                    roll[i].BackColor = Color.Blue;
+                    roll[i].BackColor = Color.ForestGreen;
             }
 
-            Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
+        //    Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
         }
 
         private void sens_check(ushort[] data)
         {
-            for (int i = 0; i < data.Length && i < 10; i++)
+            for (int i = 0; i < data.Length && i < 27; i++)
             {
                 if (data[i] == 1)
                 {
-                    sen_stat_arr[i].Text = "ERR";
-                    sen_stat_arr[i].ForeColor = Color.Maroon;
-                    sen_stat_arr[i].BackColor = Color.Red;
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
                 }
                 else
                 {
-                    sen_stat_arr[i].Text = "정상";
-                    sen_stat_arr[i].ForeColor = Color.White;
-                    sen_stat_arr[i].BackColor = Color.Black;
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
                 }
-
-                /* if (f3 != null)
-                 {
-                     f3.temp1_arr[i].BackColor = Color.Black;
-                     f3.temp1_arr[i].ForeColor = Color.White;
-                     f3.col1_arr[i].BackColor = Color.Black;
-                     f3.col1_arr[i].ForeColor = Color.White;
-                 }*/
             }
 
-
+            /* if (f3 != null)
+             {
+                 f3.temp1_arr[i].BackColor = Color.Black;
+                 f3.temp1_arr[i].ForeColor = Color.White;
+                 f3.col1_arr[i].BackColor = Color.Black;
+                 f3.col1_arr[i].ForeColor = Color.White;
+             }*/
         }
 
 
@@ -382,10 +392,6 @@ namespace BUR_INS_HMI
             else
             {
                 MessageBox.Show("관리자 모드를 종료합니다.", "관리자 로그아웃");
-                sen_btn.Visible = false;
-                temp_btn.Visible = false;
-                ampare_btn.Visible = false;
-                record_btn.Visible = false;
                 logout_btn.Visible = false;
                 login_btn.Visible = true;
             }
@@ -396,7 +402,6 @@ namespace BUR_INS_HMI
             if ("TRUE".Equals(sender.ToString()))
             {
                 temp_btn.Visible = true;
-                sen_btn.Visible = true;
                 ampare_btn.Visible = true;
                 record_btn.Visible = true;
 
@@ -428,25 +433,7 @@ namespace BUR_INS_HMI
 
         }
 
-        private void sen_btn_Click(object sender, EventArgs e)
-        {
-
-            if (f3 == null || f3.IsDisposed)   //Ver1
-            {
-                f3 = new Form3();
-                f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
-
-            }
-
-            f3.GetDOByte = GetLatestDOByte;
-            f3.Show();
-
-            f3.BringToFront();  //이미 열려있다면 앞으로
-            if (f3.sensor_panel.Visible == true)
-                f3.ShowPanel(5);
-            else if (f3.sensor_panel.Visible == false)
-                f3.ShowPanel(2);
-        }
+       
 
         private byte GetLatestDOByte()  //f3이 호출할 함수
         {
@@ -475,9 +462,11 @@ namespace BUR_INS_HMI
 
         private void record_btn_Click(object sender, EventArgs e)
         {
-            Form5 f5 = new Form5();
+              Form5 f5 = new Form5();
 
-            f5.Show();
+              f5.Show();
+
+          //  info_panel.Show();
         }
 
         int count = 0;
@@ -533,6 +522,5 @@ namespace BUR_INS_HMI
             }
         }
 
-        
     }
 }
