@@ -34,10 +34,10 @@
             subject_panel = new Panel();
             exit_btn = new PictureBox();
             logout_btn = new PictureBox();
+            pic_re_con_btn = new PictureBox();
             login_btn = new PictureBox();
             pic_stop_btn = new PictureBox();
             rist_logo_pic = new PictureBox();
-            pic_re_con_btn = new PictureBox();
             sen_stat = new Label();
             RPM_timer = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
@@ -107,10 +107,10 @@
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)exit_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logout_btn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_stop_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).BeginInit();
             roll_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_position3).BeginInit();
@@ -203,6 +203,17 @@
             logout_btn.Visible = false;
             logout_btn.Click += logout_btn_Click;
             // 
+            // pic_re_con_btn
+            // 
+            pic_re_con_btn.Image = Properties.Resources.reconnect;
+            pic_re_con_btn.Location = new Point(1659, 3);
+            pic_re_con_btn.Name = "pic_re_con_btn";
+            pic_re_con_btn.Size = new Size(193, 94);
+            pic_re_con_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_re_con_btn.TabIndex = 9;
+            pic_re_con_btn.TabStop = false;
+            pic_re_con_btn.Visible = false;
+            // 
             // login_btn
             // 
             login_btn.BackColor = SystemColors.ActiveCaptionText;
@@ -237,17 +248,6 @@
             rist_logo_pic.SizeMode = PictureBoxSizeMode.StretchImage;
             rist_logo_pic.TabIndex = 4;
             rist_logo_pic.TabStop = false;
-            // 
-            // pic_re_con_btn
-            // 
-            pic_re_con_btn.Image = Properties.Resources.reconnect;
-            pic_re_con_btn.Location = new Point(1659, 3);
-            pic_re_con_btn.Name = "pic_re_con_btn";
-            pic_re_con_btn.Size = new Size(193, 94);
-            pic_re_con_btn.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_re_con_btn.TabIndex = 9;
-            pic_re_con_btn.TabStop = false;
-            pic_re_con_btn.Visible = false;
             // 
             // sen_stat
             // 
@@ -286,14 +286,13 @@
             // 
             // numericUpDown1
             // 
+            numericUpDown1.Increment = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDown1.Location = new Point(106, 145);
             numericUpDown1.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(59, 23);
             numericUpDown1.TabIndex = 35;
             numericUpDown1.TextAlign = HorizontalAlignment.Center;
-            numericUpDown1.Value = new decimal(new int[] { 20, 0, 0, 0 });
             // 
             // pic_position3
             // 
@@ -372,19 +371,20 @@
             // screencap_btn
             // 
             screencap_btn.Image = Properties.Resources.screencapture_btn;
-            screencap_btn.Location = new Point(224, 3);
+            screencap_btn.Location = new Point(281, 3);
             screencap_btn.Name = "screencap_btn";
-            screencap_btn.Size = new Size(110, 70);
+            screencap_btn.Size = new Size(135, 70);
             screencap_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             screencap_btn.TabIndex = 3;
             screencap_btn.TabStop = false;
+            screencap_btn.Click += screencap_btn_Click;
             // 
             // run_btn
             // 
             run_btn.Image = Properties.Resources.run_btn;
             run_btn.Location = new Point(0, 3);
             run_btn.Name = "run_btn";
-            run_btn.Size = new Size(110, 70);
+            run_btn.Size = new Size(135, 70);
             run_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             run_btn.TabIndex = 2;
             run_btn.TabStop = false;
@@ -393,9 +393,9 @@
             // runstop_btn
             // 
             runstop_btn.Image = Properties.Resources.runstop_btn;
-            runstop_btn.Location = new Point(112, 6);
+            runstop_btn.Location = new Point(140, 3);
             runstop_btn.Name = "runstop_btn";
-            runstop_btn.Size = new Size(110, 70);
+            runstop_btn.Size = new Size(135, 70);
             runstop_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             runstop_btn.TabIndex = 1;
             runstop_btn.TabStop = false;
@@ -404,9 +404,9 @@
             // p_info_pic9
             // 
             p_info_pic9.Image = Properties.Resources.blank;
-            p_info_pic9.Location = new Point(1358, 3);
+            p_info_pic9.Location = new Point(1244, 6);
             p_info_pic9.Name = "p_info_pic9";
-            p_info_pic9.Size = new Size(122, 40);
+            p_info_pic9.Size = new Size(156, 40);
             p_info_pic9.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic9.TabIndex = 31;
             p_info_pic9.TabStop = false;
@@ -415,7 +415,7 @@
             // 
             p_info9.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info9.ForeColor = SystemColors.Control;
-            p_info9.Location = new Point(1112, 3);
+            p_info9.Location = new Point(989, 6);
             p_info9.Name = "p_info9";
             p_info9.Size = new Size(249, 40);
             p_info9.TabIndex = 30;
@@ -456,7 +456,7 @@
             // pic_pt_info
             // 
             pic_pt_info.Image = Properties.Resources.p_info1;
-            pic_pt_info.Location = new Point(3, 1);
+            pic_pt_info.Location = new Point(708, 3);
             pic_pt_info.Name = "pic_pt_info";
             pic_pt_info.Size = new Size(220, 70);
             pic_pt_info.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -466,7 +466,7 @@
             // record_btn
             // 
             record_btn.Image = (Image)resources.GetObject("record_btn.Image");
-            record_btn.Location = new Point(715, 1);
+            record_btn.Location = new Point(455, 3);
             record_btn.Name = "record_btn";
             record_btn.Size = new Size(220, 70);
             record_btn.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -487,7 +487,7 @@
             // ampare_btn
             // 
             ampare_btn.Image = Properties.Resources.ampare_btn3;
-            ampare_btn.Location = new Point(473, 0);
+            ampare_btn.Location = new Point(229, 3);
             ampare_btn.Name = "ampare_btn";
             ampare_btn.Size = new Size(220, 70);
             ampare_btn.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -518,7 +518,7 @@
             // temp_btn
             // 
             temp_btn.Image = Properties.Resources.temp_btn3PNG;
-            temp_btn.Location = new Point(230, 0);
+            temp_btn.Location = new Point(3, 3);
             temp_btn.Name = "temp_btn";
             temp_btn.Size = new Size(220, 70);
             temp_btn.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -959,7 +959,7 @@
             formsPlot1.Location = new Point(0, 40);
             formsPlot1.Margin = new Padding(4, 3, 4, 3);
             formsPlot1.Name = "formsPlot1";
-            formsPlot1.Size = new Size(1218, 611);
+            formsPlot1.Size = new Size(1218, 648);
             formsPlot1.TabIndex = 8;
             // 
             // splitContainer1
@@ -1006,10 +1006,10 @@
             subject_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)exit_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)logout_btn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_stop_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_re_con_btn).EndInit();
             roll_panel.ResumeLayout(false);
             roll_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

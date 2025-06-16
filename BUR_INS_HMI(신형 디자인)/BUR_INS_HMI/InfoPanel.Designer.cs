@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             info_panel = new Panel();
+            roll11 = new Panel();
             lbl_ws = new Label();
             lbl_ds = new Label();
             pan_roll_left = new Panel();
@@ -114,10 +115,10 @@
             roll10 = new Panel();
             roll_rpm10 = new Label();
             roll_num10 = new Label();
-            roll11 = new Panel();
-            roll_rpm11 = new Label();
             roll_num11 = new Label();
+            roll_rpm11 = new Label();
             info_panel.SuspendLayout();
+            roll11.SuspendLayout();
             roll27.SuspendLayout();
             roll26.SuspendLayout();
             roll25.SuspendLayout();
@@ -144,12 +145,12 @@
             roll9.SuspendLayout();
             roll12.SuspendLayout();
             roll10.SuspendLayout();
-            roll11.SuspendLayout();
             SuspendLayout();
             // 
             // info_panel
             // 
             info_panel.BackColor = SystemColors.ActiveCaptionText;
+            info_panel.Controls.Add(roll11);
             info_panel.Controls.Add(lbl_ws);
             info_panel.Controls.Add(lbl_ds);
             info_panel.Controls.Add(pan_roll_left);
@@ -183,12 +184,22 @@
             info_panel.Controls.Add(roll9);
             info_panel.Controls.Add(roll12);
             info_panel.Controls.Add(roll10);
-            info_panel.Controls.Add(roll11);
             info_panel.Dock = DockStyle.Fill;
             info_panel.Location = new Point(0, 0);
             info_panel.Name = "info_panel";
             info_panel.Size = new Size(435, 737);
             info_panel.TabIndex = 2;
+            // 
+            // roll11
+            // 
+            roll11.BackColor = Color.ForestGreen;
+            roll11.BorderStyle = BorderStyle.FixedSingle;
+            roll11.Controls.Add(roll_rpm11);
+            roll11.Controls.Add(roll_num11);
+            roll11.Location = new Point(287, 235);
+            roll11.Name = "roll11";
+            roll11.Size = new Size(100, 60);
+            roll11.TabIndex = 28;
             // 
             // lbl_ws
             // 
@@ -280,8 +291,9 @@
             roll_rpm27.Name = "roll_rpm27";
             roll_rpm27.Size = new Size(98, 30);
             roll_rpm27.TabIndex = 22;
-            roll_rpm27.Text = "20";
+            roll_rpm27.Text = "---";
             roll_rpm27.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm27.Visible = false;
             // 
             // roll_num27
             // 
@@ -314,8 +326,9 @@
             roll_rpm26.Name = "roll_rpm26";
             roll_rpm26.Size = new Size(98, 30);
             roll_rpm26.TabIndex = 22;
-            roll_rpm26.Text = "20";
+            roll_rpm26.Text = "---";
             roll_rpm26.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm26.Visible = false;
             // 
             // roll_num26
             // 
@@ -348,8 +361,9 @@
             roll_rpm25.Name = "roll_rpm25";
             roll_rpm25.Size = new Size(98, 30);
             roll_rpm25.TabIndex = 22;
-            roll_rpm25.Text = "20";
+            roll_rpm25.Text = "---";
             roll_rpm25.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm25.Visible = false;
             // 
             // roll_num25
             // 
@@ -382,8 +396,9 @@
             roll_rpm24.Name = "roll_rpm24";
             roll_rpm24.Size = new Size(98, 30);
             roll_rpm24.TabIndex = 22;
-            roll_rpm24.Text = "20";
+            roll_rpm24.Text = "---";
             roll_rpm24.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm24.Visible = false;
             // 
             // roll_num24
             // 
@@ -416,8 +431,9 @@
             roll_rpm23.Name = "roll_rpm23";
             roll_rpm23.Size = new Size(98, 30);
             roll_rpm23.TabIndex = 22;
-            roll_rpm23.Text = "20";
+            roll_rpm23.Text = "---";
             roll_rpm23.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm23.Visible = false;
             // 
             // roll_num23
             // 
@@ -450,8 +466,9 @@
             roll_rpm22.Name = "roll_rpm22";
             roll_rpm22.Size = new Size(98, 30);
             roll_rpm22.TabIndex = 22;
-            roll_rpm22.Text = "20";
+            roll_rpm22.Text = "---";
             roll_rpm22.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm22.Visible = false;
             // 
             // roll_num22
             // 
@@ -484,8 +501,9 @@
             roll_rpm21.Name = "roll_rpm21";
             roll_rpm21.Size = new Size(98, 30);
             roll_rpm21.TabIndex = 22;
-            roll_rpm21.Text = "20";
+            roll_rpm21.Text = "---";
             roll_rpm21.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm21.Visible = false;
             // 
             // roll_num21
             // 
@@ -517,8 +535,9 @@
             roll_rpm3.Name = "roll_rpm3";
             roll_rpm3.Size = new Size(100, 30);
             roll_rpm3.TabIndex = 22;
-            roll_rpm3.Text = "20";
+            roll_rpm3.Text = "---";
             roll_rpm3.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm3.Visible = false;
             // 
             // roll_num3
             // 
@@ -551,8 +570,9 @@
             roll_rpm20.Name = "roll_rpm20";
             roll_rpm20.Size = new Size(98, 30);
             roll_rpm20.TabIndex = 22;
-            roll_rpm20.Text = "20";
+            roll_rpm20.Text = "---";
             roll_rpm20.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm20.Visible = false;
             // 
             // roll_num20
             // 
@@ -585,8 +605,9 @@
             roll_rpm1.Name = "roll_rpm1";
             roll_rpm1.Size = new Size(98, 30);
             roll_rpm1.TabIndex = 21;
-            roll_rpm1.Text = "20";
+            roll_rpm1.Text = "---";
             roll_rpm1.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm1.Visible = false;
             // 
             // roll_num1
             // 
@@ -619,8 +640,9 @@
             roll_rpm19.Name = "roll_rpm19";
             roll_rpm19.Size = new Size(98, 30);
             roll_rpm19.TabIndex = 22;
-            roll_rpm19.Text = "20";
+            roll_rpm19.Text = "---";
             roll_rpm19.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm19.Visible = false;
             // 
             // roll_num19
             // 
@@ -653,8 +675,9 @@
             roll_rpm2.Name = "roll_rpm2";
             roll_rpm2.Size = new Size(98, 30);
             roll_rpm2.TabIndex = 22;
-            roll_rpm2.Text = "20";
+            roll_rpm2.Text = "---";
             roll_rpm2.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm2.Visible = false;
             // 
             // roll_num2
             // 
@@ -687,8 +710,9 @@
             roll_rpm18.Name = "roll_rpm18";
             roll_rpm18.Size = new Size(98, 30);
             roll_rpm18.TabIndex = 22;
-            roll_rpm18.Text = "20";
+            roll_rpm18.Text = "---";
             roll_rpm18.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm18.Visible = false;
             // 
             // roll_num18
             // 
@@ -721,8 +745,9 @@
             roll_rpm5.Name = "roll_rpm5";
             roll_rpm5.Size = new Size(98, 30);
             roll_rpm5.TabIndex = 22;
-            roll_rpm5.Text = "20";
+            roll_rpm5.Text = "---";
             roll_rpm5.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm5.Visible = false;
             // 
             // roll_num5
             // 
@@ -755,8 +780,9 @@
             roll_rpm17.Name = "roll_rpm17";
             roll_rpm17.Size = new Size(98, 30);
             roll_rpm17.TabIndex = 22;
-            roll_rpm17.Text = "20";
+            roll_rpm17.Text = "---";
             roll_rpm17.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm17.Visible = false;
             // 
             // roll_num17
             // 
@@ -789,8 +815,9 @@
             roll_rpm4.Name = "roll_rpm4";
             roll_rpm4.Size = new Size(98, 30);
             roll_rpm4.TabIndex = 22;
-            roll_rpm4.Text = "20";
+            roll_rpm4.Text = "---";
             roll_rpm4.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm4.Visible = false;
             // 
             // roll_num4
             // 
@@ -823,8 +850,9 @@
             roll_rpm16.Name = "roll_rpm16";
             roll_rpm16.Size = new Size(98, 30);
             roll_rpm16.TabIndex = 22;
-            roll_rpm16.Text = "20";
+            roll_rpm16.Text = "---";
             roll_rpm16.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm16.Visible = false;
             // 
             // roll_num16
             // 
@@ -857,8 +885,9 @@
             roll_rpm6.Name = "roll_rpm6";
             roll_rpm6.Size = new Size(98, 30);
             roll_rpm6.TabIndex = 22;
-            roll_rpm6.Text = "20";
+            roll_rpm6.Text = "---";
             roll_rpm6.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm6.Visible = false;
             // 
             // roll_num6
             // 
@@ -891,8 +920,9 @@
             roll_rpm15.Name = "roll_rpm15";
             roll_rpm15.Size = new Size(98, 30);
             roll_rpm15.TabIndex = 22;
-            roll_rpm15.Text = "20";
+            roll_rpm15.Text = "---";
             roll_rpm15.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm15.Visible = false;
             // 
             // roll_num15
             // 
@@ -925,8 +955,9 @@
             roll_rpm7.Name = "roll_rpm7";
             roll_rpm7.Size = new Size(98, 30);
             roll_rpm7.TabIndex = 22;
-            roll_rpm7.Text = "20";
+            roll_rpm7.Text = "---";
             roll_rpm7.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm7.Visible = false;
             // 
             // roll_num7
             // 
@@ -959,8 +990,9 @@
             roll_rpm14.Name = "roll_rpm14";
             roll_rpm14.Size = new Size(98, 30);
             roll_rpm14.TabIndex = 22;
-            roll_rpm14.Text = "20";
+            roll_rpm14.Text = "---";
             roll_rpm14.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm14.Visible = false;
             // 
             // roll_num14
             // 
@@ -993,8 +1025,9 @@
             roll_rpm8.Name = "roll_rpm8";
             roll_rpm8.Size = new Size(98, 30);
             roll_rpm8.TabIndex = 22;
-            roll_rpm8.Text = "20";
+            roll_rpm8.Text = "---";
             roll_rpm8.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm8.Visible = false;
             // 
             // roll_num8
             // 
@@ -1027,8 +1060,9 @@
             roll_rpm13.Name = "roll_rpm13";
             roll_rpm13.Size = new Size(98, 30);
             roll_rpm13.TabIndex = 22;
-            roll_rpm13.Text = "20";
+            roll_rpm13.Text = "---";
             roll_rpm13.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm13.Visible = false;
             // 
             // roll_num13
             // 
@@ -1061,8 +1095,9 @@
             roll_rpm9.Name = "roll_rpm9";
             roll_rpm9.Size = new Size(98, 30);
             roll_rpm9.TabIndex = 22;
-            roll_rpm9.Text = "20";
+            roll_rpm9.Text = "---";
             roll_rpm9.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm9.Visible = false;
             // 
             // roll_num9
             // 
@@ -1095,8 +1130,9 @@
             roll_rpm12.Name = "roll_rpm12";
             roll_rpm12.Size = new Size(98, 30);
             roll_rpm12.TabIndex = 22;
-            roll_rpm12.Text = "20";
+            roll_rpm12.Text = "---";
             roll_rpm12.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm12.Visible = false;
             // 
             // roll_num12
             // 
@@ -1129,8 +1165,9 @@
             roll_rpm10.Name = "roll_rpm10";
             roll_rpm10.Size = new Size(98, 30);
             roll_rpm10.TabIndex = 22;
-            roll_rpm10.Text = "20";
+            roll_rpm10.Text = "---";
             roll_rpm10.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm10.Visible = false;
             // 
             // roll_num10
             // 
@@ -1143,16 +1180,16 @@
             roll_num10.Text = "4-2";
             roll_num10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // roll11
+            // roll_num11
             // 
-            roll11.BackColor = Color.ForestGreen;
-            roll11.BorderStyle = BorderStyle.FixedSingle;
-            roll11.Controls.Add(roll_rpm11);
-            roll11.Controls.Add(roll_num11);
-            roll11.Location = new Point(287, 235);
-            roll11.Name = "roll11";
-            roll11.Size = new Size(100, 60);
-            roll11.TabIndex = 9;
+            roll_num11.Dock = DockStyle.Top;
+            roll_num11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            roll_num11.Location = new Point(0, 0);
+            roll_num11.Name = "roll_num11";
+            roll_num11.Size = new Size(98, 29);
+            roll_num11.TabIndex = 22;
+            roll_num11.Text = "4-3";
+            roll_num11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // roll_rpm11
             // 
@@ -1162,20 +1199,10 @@
             roll_rpm11.Location = new Point(0, 29);
             roll_rpm11.Name = "roll_rpm11";
             roll_rpm11.Size = new Size(98, 30);
-            roll_rpm11.TabIndex = 22;
-            roll_rpm11.Text = "20";
+            roll_rpm11.TabIndex = 23;
+            roll_rpm11.Text = "---";
             roll_rpm11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // roll_num11
-            // 
-            roll_num11.Dock = DockStyle.Top;
-            roll_num11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            roll_num11.Location = new Point(0, 0);
-            roll_num11.Name = "roll_num11";
-            roll_num11.Size = new Size(98, 29);
-            roll_num11.TabIndex = 21;
-            roll_num11.Text = "4-3";
-            roll_num11.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm11.Visible = false;
             // 
             // InfoPanel
             // 
@@ -1185,6 +1212,7 @@
             Name = "InfoPanel";
             Size = new Size(435, 737);
             info_panel.ResumeLayout(false);
+            roll11.ResumeLayout(false);
             roll27.ResumeLayout(false);
             roll26.ResumeLayout(false);
             roll25.ResumeLayout(false);
@@ -1211,7 +1239,6 @@
             roll9.ResumeLayout(false);
             roll12.ResumeLayout(false);
             roll10.ResumeLayout(false);
-            roll11.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1223,33 +1250,6 @@
         private Button button2;
         private Button button1;
         private Label info_name;
-        private Label roll_rpm27;
-        private Label roll_rpm26;
-        private Label roll_rpm25;
-        private Label roll_rpm24;
-        private Label roll_rpm23;
-        private Label roll_rpm22;
-        private Label roll_rpm21;
-        private Label roll_rpm3;
-        private Label roll_rpm20;
-        private Label roll_rpm1;
-        private Label roll_rpm19;
-        private Label roll_rpm2;
-        private Label roll_rpm18;
-        private Label roll_rpm5;
-        private Label roll_rpm17;
-        private Label roll_rpm4;
-        private Label roll_rpm16;
-        private Label roll_rpm6;
-        private Label roll_rpm15;
-        private Label roll_rpm7;
-        private Label roll_rpm14;
-        private Label roll_rpm8;
-        private Label roll_rpm13;
-        private Label roll_rpm9;
-        private Label roll_rpm12;
-        private Label roll_rpm10;
-        private Label roll_rpm11;
         internal Label roll_num1;
         internal Panel roll27;
         internal Panel roll26;
@@ -1286,8 +1286,6 @@
         internal Panel roll12;
         internal Panel roll10;
         internal Label roll_num10;
-        internal Panel roll11;
-        internal Label roll_num11;
         internal Label roll_num27;
         internal Label roll_num26;
         internal Label roll_num25;
@@ -1306,5 +1304,34 @@
         internal Label roll_num12;
         private Label lbl_ws;
         private Label lbl_ds;
+        internal Label roll_rpm27;
+        internal Label roll_rpm26;
+        internal Label roll_rpm25;
+        internal Label roll_rpm24;
+        internal Label roll_rpm23;
+        internal Label roll_rpm22;
+        internal Label roll_rpm21;
+        internal Label roll_rpm3;
+        internal Label roll_rpm20;
+        internal Label roll_rpm1;
+        internal Label roll_rpm19;
+        internal Label roll_rpm2;
+        internal Label roll_rpm18;
+        internal Label roll_rpm5;
+        internal Label roll_rpm17;
+        internal Label roll_rpm4;
+        internal Label roll_rpm16;
+        internal Label roll_rpm6;
+        internal Label roll_rpm15;
+        internal Label roll_rpm7;
+        internal Label roll_rpm14;
+        internal Label roll_rpm8;
+        internal Label roll_rpm13;
+        internal Label roll_rpm9;
+        internal Label roll_rpm12;
+        internal Label roll_rpm10;
+        internal Panel roll11;
+        internal Label roll_num11;
+        internal Label roll_rpm11;
     }
 }

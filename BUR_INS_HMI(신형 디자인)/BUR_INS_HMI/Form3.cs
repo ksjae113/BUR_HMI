@@ -83,7 +83,7 @@ namespace BUR_INS_HMI
             {
                 amp_set[i].Text = amp[i].ToString("F1");
                 tar_amp[i].Text = (amp[i] * channels[i]).ToString("F1");
-                MessageBox.Show($"amp[{i}] = {amp_set[i].Text} mA\ntar_amp[{i}] = {tar_amp[i].Text}");
+            //    MessageBox.Show($"amp[{i}] = {amp_set[i].Text} mA\ntar_amp[{i}] = {tar_amp[i].Text}");
             }
             update_err_all();
         }
