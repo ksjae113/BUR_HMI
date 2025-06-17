@@ -19,6 +19,7 @@ namespace BUR_INS_HMI
     {
         public delegate void FormSendDataHandler(string s);
         public event FormSendDataHandler FormSendEvent;
+
         int column = 10;
 
         int index = -1;
@@ -29,9 +30,12 @@ namespace BUR_INS_HMI
         public Label[] col2_arr;
         public Label[] amp_set;
         public Label[] tar_amp;
+        public Label[] real_amp;
         public decimal[] channels = new decimal[] { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
         public decimal[] min = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public decimal[] max = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+        public int[] sensor = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 
         internal Button[] set_btn;
 
@@ -69,8 +73,10 @@ namespace BUR_INS_HMI
             tar_amp = new Label[]{tar_amp1,tar_amp2,tar_amp3,tar_amp4,tar_amp5,tar_amp6,
             tar_amp7,tar_amp8,tar_amp9,tar_amp10};
 
-            set_btn = new Button[] { amp_set_btn1,amp_set_btn2, amp_set_btn3, amp_set_btn4, 
+            set_btn = new Button[] { amp_set_btn1,amp_set_btn2, amp_set_btn3, amp_set_btn4,
                 amp_set_btn5,amp_set_btn6,amp_set_btn7,amp_set_btn8,amp_set_btn9,amp_set_btn10 };
+
+            real_amp = new Label[] { amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10 };
 
             init_amp();
         }
@@ -78,12 +84,13 @@ namespace BUR_INS_HMI
         private void init_amp()
         {
             err_set.Text = amp[10].ToString("F1") + " %";
-        //    MessageBox.Show("ERR_RANGE : " + err_set.Text);
+            //    MessageBox.Show("ERR_RANGE : " + err_set.Text);
             for (int i = 0; i < 10; i++)
             {
-                amp_set[i].Text = amp[i].ToString("F1");
+                amp_set[i].Text = "---";
                 tar_amp[i].Text = (amp[i] * channels[i]).ToString("F1");
-            //    MessageBox.Show($"amp[{i}] = {amp_set[i].Text} mA\ntar_amp[{i}] = {tar_amp[i].Text}");
+                real_amp[i].Text = amp[i].ToString("F1");
+                //    MessageBox.Show($"amp[{i}] = {amp_set[i].Text} mA\ntar_amp[{i}] = {tar_amp[i].Text}");
             }
             update_err_all();
         }
@@ -103,8 +110,22 @@ namespace BUR_INS_HMI
             Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
         }
 
+        internal void update_Realamp(decimal[] a)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                real_amp[i].Text = a[i].ToString("F1");
+            }
+        }
 
-  
+        internal void update_temp(decimal[] t)  //온도는 2개임. 추후 수정
+        {
+            for (int i = 0;i<10;i++)
+            {
+                temp1_arr[i].Text = t[i].ToString("F1");
+                temp2_arr[i].Text = t[i].ToString("F1");
+            }
+        }
 
 
         public void ShowPanel(int panelIndex)
@@ -152,7 +173,7 @@ namespace BUR_INS_HMI
                 min[i] = ampare * ((100.0M - amp[10]) / 100.0M);
                 max[i] = ampare * ((100.0M + amp[10]) / 100.0M);
             }
-                MessageBox.Show($"Min : [{min[0]}] / Max : [{max[0]}]");
+            MessageBox.Show($"Min : [{min[0]}] / Max : [{max[0]}]");
         }
 
         private void update_err_index(int index)
@@ -184,7 +205,7 @@ namespace BUR_INS_HMI
                 update_err_all();
             }
 
-            
+
         }
 
         private void err_set_btn_Click(object sender, EventArgs e)
@@ -304,9 +325,30 @@ namespace BUR_INS_HMI
             f4.FormSendEvent2 += new Form4.FormSendDataHandler2(DiseaseUpdateEventMethodF4toF3);
             f4.Show();
         }
+
+        private void screencap_btn_Click(object sender, EventArgs e)
+        {
+            Rectangle bounds = System.Windows.Forms.Screen.GetBounds(Point.Empty);
+            using (Bitmap bmp = new Bitmap(bounds.Width, bounds.Height))
+            {
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    g.CopyFromScreen(Point.Empty, Point.Empty, bounds.Size);
+                }
+
+                //바탕화면 경로 얻기
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                //저장 파일명 지정
+                string fileName = $"FulllScreen_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+                string filePath = Path.Combine(desktopPath, fileName);
+
+
+                //이미지 저장
+                bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+                MessageBox.Show("Screen Captured");
+            }
+        }
     }
-
-
-
 
 }

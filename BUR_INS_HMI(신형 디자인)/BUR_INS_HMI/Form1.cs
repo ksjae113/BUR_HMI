@@ -51,6 +51,8 @@ namespace BUR_INS_HMI
         public decimal[] temp = new decimal[] { 30.5M, 30.5M, 30.5M, 30.5M, 30.5M, 30.5M,
             30.5M, 30.5M, 30.5M, 30.5M };
 
+        public int[] sen = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+
         
 
         private ushort[] prevDI = new ushort[4]; // 이전 DI1, DI2 값 저장
@@ -129,7 +131,7 @@ namespace BUR_INS_HMI
                 {
                     serialPort.Open();
                     _modbusMaster = ModbusSerialMaster.CreateRtu(serialPort);
-                    _modbusMaster.Transport.ReadTimeout = 200;
+                    _modbusMaster.Transport.ReadTimeout = 200;    //200
                     _modbusMaster.Transport.WriteTimeout = 200;
                     MessageBox.Show("PORT OPEN");
                     timer1.Start();
@@ -206,12 +208,9 @@ namespace BUR_INS_HMI
                }*/
         }
 
-        private volatile bool dataReceivedFlag = false;
 
         private void serialPort_DataReceived(object sender, EventArgs e)
         {
-
-            dataReceivedFlag = true;
 
             /* this.BeginInvoke(new Action(() =>
              {
@@ -231,30 +230,46 @@ namespace BUR_INS_HMI
             {
                 ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
 
+                
+
                 Random rand = new Random();
                 int randnum = rand.Next(4, numInputs);
-                if (randnum != 8 && randnum != 11 && randnum != 14)
+              /*  if (randnum != 8 && randnum != 11 && randnum != 14)
                 {
+
                     for (int i = 4; i < numInputs; i++)
                     {
                         data[i] = 0x15;
                         data[randnum] = 0x0B;
 
                     }
+                }*/
+
+                for (int i = 4; i < numInputs;i++)
+                {
+                    data[i] = 0x15;
+                }
 
                     rpm_check(data);
+                    roll_check(data);
+                    copyroll(roll_pan);
+                    set_amp_temp(data);
+                    sens_check(data);
+                    f3.update_Realamp(amp);
+                f3.update_temp(temp);
+                    getPosition(data);
+
+                   
+
+                 /*   rpm_check(data);
                     sens_check(data);
                     roll_check(data);
                     copyroll(roll_pan);
                     set_amp(data);
-                    getPosition(data);
-                }
 
-           /*     rpm_check(data);
-                sens_check(data);
-                roll_check(data);
-                copyroll(roll_pan);
-                getPosition(data);*/
+                    getPosition(data);*/
+
+                
 
                 // 정상 통신이 이루어졌으므로 오류 플래그 해제
                 _hasShownDisconnectMessage = false;
@@ -291,11 +306,12 @@ namespace BUR_INS_HMI
             }
         }
 
-        private void set_amp(ushort[] data)
+        private void set_amp_temp(ushort[] data)
         {
-            for (int i = 4; i < 14;i++)
+            for (int i = 0; i < 10;i++)
             {
-                amp[i - 4] = Convert.ToInt32(data[i]);
+                amp[i] = Convert.ToInt32(data[i]);
+                temp[i] = Convert.ToInt32(data[i]);
             }
         }
 
@@ -481,6 +497,32 @@ namespace BUR_INS_HMI
 
         private void sens_check(ushort[] data)
         {
+            if (!serialPort.IsOpen)   //센서는 전류따라니까 필요 x
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 10; i ++)
+                {
+                    if (amp[i] >= 20)
+                    {
+                        sen[i] = 0;
+                    }
+                    else if (amp[i] < 20 && amp[i] > 10)
+                        sen[i] = 1;
+                    else if (amp[i] < 10)
+                        sen[i] = 2;
+                    else
+                        sen[i] = -1;
+                }
+
+                sen_img(sen);
+            }
+
            /* if (!serialPort.IsOpen)   //센서는 전류따라니까 필요 x
             {
                 for (int i = 0; i < 10; i++)
@@ -504,30 +546,59 @@ namespace BUR_INS_HMI
             }*/
         }
 
-  /*      private void devideIndex(int min, int max, int sen_num)   센서는 전류따라니까 필요x
+        private void sen_img(int[] stat)    //Red,Yellow,Green 기준은 추후 수정
         {
-               int stat = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                if (stat[i] == 0)
+                {
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
+                    f3.real_amp[i].ForeColor = Color.Blue;
+                }
+                else if (stat[i] == 1)
+                {
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_yellow;
+                    f3.real_amp[i].ForeColor = Color.Blue;
 
-               for (int i = min; i <= max; i++)
-               {
-                   if (roll[i].BackColor == Color.Red)
-                   {
-                       sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                       stat = -1;
-                       break;
-                   }
-                   else if (roll[i].BackColor == Color.Yellow && (stat != -1))
-                   {
-                       stat = 1;
-                   }
+                }
+                else if (stat[i] == 2)
+                {
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                    f3.real_amp[i].ForeColor = Color.Red;
+                }
+                else if (stat[i] == -1)
+                {
+                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                    f3.real_amp[i].ForeColor = Color.Blue;
 
-                   if (stat == 0)
-                       sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
-                   else
-                       sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_yellow;
-               }
+                }
+            }
+        }
 
-        }*/
+        /*      private void devideIndex(int min, int max, int sen_num)   센서는 전류따라니까 필요x
+              {
+                     int stat = 0;
+
+                     for (int i = min; i <= max; i++)
+                     {
+                         if (roll[i].BackColor == Color.Red)
+                         {
+                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                             stat = -1;
+                             break;
+                         }
+                         else if (roll[i].BackColor == Color.Yellow && (stat != -1))
+                         {
+                             stat = 1;
+                         }
+
+                         if (stat == 0)
+                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
+                         else
+                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_yellow;
+                     }
+
+              }*/
 
 
         private void InitChart()
@@ -689,7 +760,6 @@ namespace BUR_INS_HMI
         }
 
 
-
         private void temp_btn_Click(object sender, EventArgs e)
         {
             if (f3 == null || f3.IsDisposed)  //Ver1
@@ -745,81 +815,9 @@ namespace BUR_INS_HMI
             //  info_panel.Show();
         }
 
-        int count = 0;
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (serialPort.IsOpen)
-            {
-                if (count % 2 == 0)
-                {
-                    byte[] command = new byte[] { 0x04, 0x03, 0x00 };   //3P off
-                    serialPort.Write(command, 0, command.Length);
-                    serialPort.DataReceived += serialPort_DataReceived;
-                    Thread.Sleep(500);
-                    count++;
-                }
-                else
-                {
-                    byte[] command = new byte[] { 0x04, 0x03, 0x01 };   //3P on
-                    serialPort.Write(command, 0, command.Length);
-                    serialPort.DataReceived += serialPort_DataReceived;
-                    Thread.Sleep(500);
-                    count++;
-                }
-
-
-            }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (serialPort.IsOpen)
-            {
-                if (count % 2 == 0)
-                {
-                    byte[] command = new byte[] { 0x04, 0x04, 0x00 };   //3P off
-                    serialPort.Write(command, 0, command.Length);
-                    serialPort.DataReceived += serialPort_DataReceived;
-                    Thread.Sleep(500);
-                    count++;
-                }
-                else
-                {
-                    byte[] command = new byte[] { 0x04, 0x04, 0x01 };   //3P on
-                    serialPort.Write(command, 0, command.Length);
-                    serialPort.DataReceived += serialPort_DataReceived;
-                    Thread.Sleep(500);
-                    count++;
-                }
-
-
-            }
-        }
 
         private void runstop_btn_Click(object sender, EventArgs e)
         {
-            /*  if (serialPort.IsOpen)
-              {
-                  if (MessageBox.Show("장비를 정지하시겠습니까?", "정지 확인", MessageBoxButtons.YesNo) != DialogResult.Yes)
-                  {
-
-                  }
-                  else
-                  {
-                      MessageBox.Show("장비를 정지합니다.", "정지 명령");
-                      serialPort.Close();
-                      sens_check(null);
-                  //    pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.reconnect;
-                  }
-              }
-              else //  !serialPort.IsOpen
-              {
-               //   pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_on2;
-                  Init_port();
-              }*/
-
             try
             {
                 if (serialPort != null && serialPort.IsOpen)
@@ -868,5 +866,7 @@ namespace BUR_INS_HMI
                 MessageBox.Show("Screen Captured");
             }
         }
+
+        
     }
 }

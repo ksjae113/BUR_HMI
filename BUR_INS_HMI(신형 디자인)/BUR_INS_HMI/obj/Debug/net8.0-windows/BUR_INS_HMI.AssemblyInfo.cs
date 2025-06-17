@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BUR_INS_HMI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c1dca356a581f0f11c0f560f13d6baa0d82e93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+697d3e5aef4aecbda62d44282c1671b243fb1c29")]
 [assembly: System.Reflection.AssemblyProductAttribute("BUR_INS_HMI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BUR_INS_HMI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

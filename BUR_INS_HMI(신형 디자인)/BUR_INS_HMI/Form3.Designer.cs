@@ -108,6 +108,7 @@
             err_set = new Label();
             err_set_lbl = new Label();
             edit_pan = new Panel();
+            screencap_btn = new PictureBox();
             line_pan = new Panel();
             sen_num_lbl10 = new Label();
             sen_num_lbl9 = new Label();
@@ -123,6 +124,7 @@
             temp_panel.SuspendLayout();
             ampare_panel.SuspendLayout();
             edit_pan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)screencap_btn).BeginInit();
             line_pan.SuspendLayout();
             SuspendLayout();
             // 
@@ -1068,7 +1070,7 @@
             // err_set_btn
             // 
             err_set_btn.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            err_set_btn.Location = new Point(473, 38);
+            err_set_btn.Location = new Point(475, 4);
             err_set_btn.Name = "err_set_btn";
             err_set_btn.Size = new Size(115, 36);
             err_set_btn.TabIndex = 41;
@@ -1082,7 +1084,7 @@
             err_set.BorderStyle = BorderStyle.Fixed3D;
             err_set.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             err_set.ForeColor = SystemColors.Control;
-            err_set.Location = new Point(237, 37);
+            err_set.Location = new Point(239, 3);
             err_set.Name = "err_set";
             err_set.Size = new Size(230, 35);
             err_set.TabIndex = 39;
@@ -1094,7 +1096,7 @@
             err_set_lbl.BorderStyle = BorderStyle.Fixed3D;
             err_set_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             err_set_lbl.ForeColor = SystemColors.Control;
-            err_set_lbl.Location = new Point(1, 37);
+            err_set_lbl.Location = new Point(3, 3);
             err_set_lbl.Name = "err_set_lbl";
             err_set_lbl.Size = new Size(230, 35);
             err_set_lbl.TabIndex = 37;
@@ -1104,6 +1106,7 @@
             // edit_pan
             // 
             edit_pan.BackColor = SystemColors.ActiveCaptionText;
+            edit_pan.Controls.Add(screencap_btn);
             edit_pan.Controls.Add(err_set_btn);
             edit_pan.Controls.Add(err_set);
             edit_pan.Controls.Add(err_set_lbl);
@@ -1112,6 +1115,17 @@
             edit_pan.Name = "edit_pan";
             edit_pan.Size = new Size(1264, 115);
             edit_pan.TabIndex = 3;
+            // 
+            // screencap_btn
+            // 
+            screencap_btn.Image = Properties.Resources.screencapture_btn;
+            screencap_btn.Location = new Point(3, 41);
+            screencap_btn.Name = "screencap_btn";
+            screencap_btn.Size = new Size(135, 70);
+            screencap_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            screencap_btn.TabIndex = 42;
+            screencap_btn.TabStop = false;
+            screencap_btn.Click += screencap_btn_Click;
             // 
             // line_pan
             // 
@@ -1269,6 +1283,7 @@
             temp_panel.ResumeLayout(false);
             ampare_panel.ResumeLayout(false);
             edit_pan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)screencap_btn).EndInit();
             line_pan.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -1368,5 +1383,6 @@
         internal Button amp_set_btn3;
         internal Button amp_set_btn2;
         internal Button amp_set_btn1;
+        private PictureBox screencap_btn;
     }
 }
