@@ -76,34 +76,34 @@
             p_info3 = new Label();
             p_info2 = new Label();
             p_info1 = new Label();
-            chart_panel = new Panel();
-            rpm_chart_lbl = new Label();
-            sen_stat_pan = new Panel();
-            sen_num_lbl10 = new Label();
-            sen_num_lbl9 = new Label();
-            sen_num_lbl8 = new Label();
-            sen_num_lbl7 = new Label();
-            sen_num_lbl6 = new Label();
-            sen_num_lbl5 = new Label();
-            sen_num_lbl4 = new Label();
-            sen_num_lbl3 = new Label();
-            sen_num_lbl2 = new Label();
-            sen_num_lbl1 = new Label();
-            line_lbl = new Label();
-            sen_lbl = new Label();
-            pic_sen10 = new PictureBox();
-            pic_sen9 = new PictureBox();
-            pic_sen8 = new PictureBox();
-            pic_sen7 = new PictureBox();
-            pic_sen6 = new PictureBox();
-            pic_sen5 = new PictureBox();
-            pic_sen4 = new PictureBox();
-            pic_sen3 = new PictureBox();
-            pic_sen2 = new PictureBox();
-            pic_sen1 = new PictureBox();
-            formsPlot1 = new ScottPlot.FormsPlot();
             splitContainer1 = new SplitContainer();
             info_panel = new Panel();
+            sen_stat_pan = new Panel();
+            pic_sen1 = new PictureBox();
+            pic_sen2 = new PictureBox();
+            pic_sen3 = new PictureBox();
+            pic_sen4 = new PictureBox();
+            pic_sen5 = new PictureBox();
+            pic_sen6 = new PictureBox();
+            pic_sen7 = new PictureBox();
+            pic_sen8 = new PictureBox();
+            pic_sen9 = new PictureBox();
+            pic_sen10 = new PictureBox();
+            sen_lbl = new Label();
+            line_lbl = new Label();
+            sen_num_lbl1 = new Label();
+            sen_num_lbl2 = new Label();
+            sen_num_lbl3 = new Label();
+            sen_num_lbl4 = new Label();
+            sen_num_lbl5 = new Label();
+            sen_num_lbl6 = new Label();
+            sen_num_lbl7 = new Label();
+            sen_num_lbl8 = new Label();
+            sen_num_lbl9 = new Label();
+            sen_num_lbl10 = new Label();
+            rpm_chart_lbl = new Label();
+            chart_panel = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)exit_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logout_btn).BeginInit();
@@ -134,22 +134,22 @@
             ((System.ComponentModel.ISupportInitialize)p_info_pic3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic1).BeginInit();
-            chart_panel.SuspendLayout();
-            sen_stat_pan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_sen10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            sen_stat_pan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pic_sen1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen10).BeginInit();
+            chart_panel.SuspendLayout();
             SuspendLayout();
             // 
             // project_name_lbl
@@ -664,31 +664,34 @@
             p_info1.Text = "판 식별번호";
             p_info1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // chart_panel
+            // splitContainer1
             // 
-            chart_panel.BackColor = SystemColors.ActiveCaption;
-            chart_panel.Controls.Add(rpm_chart_lbl);
-            chart_panel.Controls.Add(sen_stat_pan);
-            chart_panel.Controls.Add(formsPlot1);
-            chart_panel.Dock = DockStyle.Fill;
-            chart_panel.Location = new Point(0, 250);
-            chart_panel.Name = "chart_panel";
-            chart_panel.Size = new Size(1481, 691);
-            chart_panel.TabIndex = 1;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 100);
+            splitContainer1.Name = "splitContainer1";
             // 
-            // rpm_chart_lbl
+            // splitContainer1.Panel1
             // 
-            rpm_chart_lbl.BackColor = SystemColors.ActiveCaptionText;
-            rpm_chart_lbl.BorderStyle = BorderStyle.Fixed3D;
-            rpm_chart_lbl.Dock = DockStyle.Top;
-            rpm_chart_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            rpm_chart_lbl.ForeColor = SystemColors.Control;
-            rpm_chart_lbl.Location = new Point(0, 0);
-            rpm_chart_lbl.Name = "rpm_chart_lbl";
-            rpm_chart_lbl.Size = new Size(1314, 40);
-            rpm_chart_lbl.TabIndex = 0;
-            rpm_chart_lbl.Text = "RPM 변화";
-            rpm_chart_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            splitContainer1.Panel1.Controls.Add(chart_panel);
+            splitContainer1.Panel1.Controls.Add(plate_panel);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.BackColor = SystemColors.Control;
+            splitContainer1.Panel2.Controls.Add(info_panel);
+            splitContainer1.Panel2.Controls.Add(roll_panel);
+            splitContainer1.Size = new Size(1904, 941);
+            splitContainer1.SplitterDistance = 1481;
+            splitContainer1.TabIndex = 5;
+            // 
+            // info_panel
+            // 
+            info_panel.BackColor = SystemColors.ActiveCaptionText;
+            info_panel.Dock = DockStyle.Fill;
+            info_panel.Location = new Point(0, 250);
+            info_panel.Name = "info_panel";
+            info_panel.Size = new Size(419, 691);
+            info_panel.TabIndex = 1;
             // 
             // sen_stat_pan
             // 
@@ -722,126 +725,105 @@
             sen_stat_pan.Size = new Size(167, 691);
             sen_stat_pan.TabIndex = 11;
             // 
-            // sen_num_lbl10
+            // pic_sen1
             // 
-            sen_num_lbl10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl10.ForeColor = SystemColors.Control;
-            sen_num_lbl10.Location = new Point(3, 635);
-            sen_num_lbl10.Name = "sen_num_lbl10";
-            sen_num_lbl10.Size = new Size(65, 40);
-            sen_num_lbl10.TabIndex = 21;
-            sen_num_lbl10.Text = "10";
-            sen_num_lbl10.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen1.Image = Properties.Resources.sen_stat_none;
+            pic_sen1.Location = new Point(113, 50);
+            pic_sen1.Name = "pic_sen1";
+            pic_sen1.Size = new Size(40, 40);
+            pic_sen1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen1.TabIndex = 0;
+            pic_sen1.TabStop = false;
             // 
-            // sen_num_lbl9
+            // pic_sen2
             // 
-            sen_num_lbl9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl9.ForeColor = SystemColors.Control;
-            sen_num_lbl9.Location = new Point(3, 570);
-            sen_num_lbl9.Name = "sen_num_lbl9";
-            sen_num_lbl9.Size = new Size(65, 40);
-            sen_num_lbl9.TabIndex = 20;
-            sen_num_lbl9.Text = "9";
-            sen_num_lbl9.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen2.Image = Properties.Resources.sen_stat_none;
+            pic_sen2.Location = new Point(113, 115);
+            pic_sen2.Name = "pic_sen2";
+            pic_sen2.Size = new Size(40, 40);
+            pic_sen2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen2.TabIndex = 1;
+            pic_sen2.TabStop = false;
             // 
-            // sen_num_lbl8
+            // pic_sen3
             // 
-            sen_num_lbl8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl8.ForeColor = SystemColors.Control;
-            sen_num_lbl8.Location = new Point(3, 505);
-            sen_num_lbl8.Name = "sen_num_lbl8";
-            sen_num_lbl8.Size = new Size(65, 40);
-            sen_num_lbl8.TabIndex = 19;
-            sen_num_lbl8.Text = "8";
-            sen_num_lbl8.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen3.Image = Properties.Resources.sen_stat_none;
+            pic_sen3.Location = new Point(113, 180);
+            pic_sen3.Name = "pic_sen3";
+            pic_sen3.Size = new Size(40, 40);
+            pic_sen3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen3.TabIndex = 2;
+            pic_sen3.TabStop = false;
             // 
-            // sen_num_lbl7
+            // pic_sen4
             // 
-            sen_num_lbl7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl7.ForeColor = SystemColors.Control;
-            sen_num_lbl7.Location = new Point(3, 440);
-            sen_num_lbl7.Name = "sen_num_lbl7";
-            sen_num_lbl7.Size = new Size(65, 40);
-            sen_num_lbl7.TabIndex = 18;
-            sen_num_lbl7.Text = "7";
-            sen_num_lbl7.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen4.Image = Properties.Resources.sen_stat_none;
+            pic_sen4.Location = new Point(113, 245);
+            pic_sen4.Name = "pic_sen4";
+            pic_sen4.Size = new Size(40, 40);
+            pic_sen4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen4.TabIndex = 3;
+            pic_sen4.TabStop = false;
             // 
-            // sen_num_lbl6
+            // pic_sen5
             // 
-            sen_num_lbl6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl6.ForeColor = SystemColors.Control;
-            sen_num_lbl6.Location = new Point(3, 375);
-            sen_num_lbl6.Name = "sen_num_lbl6";
-            sen_num_lbl6.Size = new Size(65, 40);
-            sen_num_lbl6.TabIndex = 17;
-            sen_num_lbl6.Text = "6";
-            sen_num_lbl6.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen5.Image = Properties.Resources.sen_stat_none;
+            pic_sen5.Location = new Point(113, 310);
+            pic_sen5.Name = "pic_sen5";
+            pic_sen5.Size = new Size(40, 40);
+            pic_sen5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen5.TabIndex = 4;
+            pic_sen5.TabStop = false;
             // 
-            // sen_num_lbl5
+            // pic_sen6
             // 
-            sen_num_lbl5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl5.ForeColor = SystemColors.Control;
-            sen_num_lbl5.Location = new Point(3, 310);
-            sen_num_lbl5.Name = "sen_num_lbl5";
-            sen_num_lbl5.Size = new Size(65, 40);
-            sen_num_lbl5.TabIndex = 16;
-            sen_num_lbl5.Text = "5";
-            sen_num_lbl5.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen6.Image = Properties.Resources.sen_stat_none;
+            pic_sen6.Location = new Point(113, 375);
+            pic_sen6.Name = "pic_sen6";
+            pic_sen6.Size = new Size(40, 40);
+            pic_sen6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen6.TabIndex = 5;
+            pic_sen6.TabStop = false;
             // 
-            // sen_num_lbl4
+            // pic_sen7
             // 
-            sen_num_lbl4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl4.ForeColor = SystemColors.Control;
-            sen_num_lbl4.Location = new Point(3, 245);
-            sen_num_lbl4.Name = "sen_num_lbl4";
-            sen_num_lbl4.Size = new Size(65, 40);
-            sen_num_lbl4.TabIndex = 15;
-            sen_num_lbl4.Text = "4";
-            sen_num_lbl4.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen7.Image = Properties.Resources.sen_stat_none;
+            pic_sen7.Location = new Point(113, 440);
+            pic_sen7.Name = "pic_sen7";
+            pic_sen7.Size = new Size(40, 40);
+            pic_sen7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen7.TabIndex = 6;
+            pic_sen7.TabStop = false;
             // 
-            // sen_num_lbl3
+            // pic_sen8
             // 
-            sen_num_lbl3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl3.ForeColor = SystemColors.Control;
-            sen_num_lbl3.Location = new Point(3, 180);
-            sen_num_lbl3.Name = "sen_num_lbl3";
-            sen_num_lbl3.Size = new Size(65, 40);
-            sen_num_lbl3.TabIndex = 14;
-            sen_num_lbl3.Text = "3";
-            sen_num_lbl3.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen8.Image = Properties.Resources.sen_stat_none;
+            pic_sen8.Location = new Point(113, 505);
+            pic_sen8.Name = "pic_sen8";
+            pic_sen8.Size = new Size(40, 40);
+            pic_sen8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen8.TabIndex = 7;
+            pic_sen8.TabStop = false;
             // 
-            // sen_num_lbl2
+            // pic_sen9
             // 
-            sen_num_lbl2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl2.ForeColor = SystemColors.Control;
-            sen_num_lbl2.Location = new Point(3, 115);
-            sen_num_lbl2.Name = "sen_num_lbl2";
-            sen_num_lbl2.Size = new Size(65, 40);
-            sen_num_lbl2.TabIndex = 13;
-            sen_num_lbl2.Text = "2";
-            sen_num_lbl2.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen9.Image = Properties.Resources.sen_stat_none;
+            pic_sen9.Location = new Point(113, 570);
+            pic_sen9.Name = "pic_sen9";
+            pic_sen9.Size = new Size(40, 40);
+            pic_sen9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen9.TabIndex = 8;
+            pic_sen9.TabStop = false;
             // 
-            // sen_num_lbl1
+            // pic_sen10
             // 
-            sen_num_lbl1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sen_num_lbl1.ForeColor = SystemColors.Control;
-            sen_num_lbl1.Location = new Point(3, 50);
-            sen_num_lbl1.Name = "sen_num_lbl1";
-            sen_num_lbl1.Size = new Size(65, 40);
-            sen_num_lbl1.TabIndex = 12;
-            sen_num_lbl1.Text = "1";
-            sen_num_lbl1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // line_lbl
-            // 
-            line_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            line_lbl.ForeColor = SystemColors.Control;
-            line_lbl.Location = new Point(-2, -1);
-            line_lbl.Name = "line_lbl";
-            line_lbl.Size = new Size(65, 35);
-            line_lbl.TabIndex = 11;
-            line_lbl.Text = "Line";
-            line_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            pic_sen10.Image = Properties.Resources.sen_stat_yellow;
+            pic_sen10.Location = new Point(113, 635);
+            pic_sen10.Name = "pic_sen10";
+            pic_sen10.Size = new Size(40, 40);
+            pic_sen10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_sen10.TabIndex = 9;
+            pic_sen10.TabStop = false;
             // 
             // sen_lbl
             // 
@@ -854,142 +836,166 @@
             sen_lbl.Text = "센서\r\n상태";
             sen_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen10
+            // line_lbl
             // 
-            pic_sen10.Image = Properties.Resources.sen_stat_yellow;
-            pic_sen10.Location = new Point(113, 635);
-            pic_sen10.Name = "pic_sen10";
-            pic_sen10.Size = new Size(40, 40);
-            pic_sen10.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen10.TabIndex = 9;
-            pic_sen10.TabStop = false;
+            line_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            line_lbl.ForeColor = SystemColors.Control;
+            line_lbl.Location = new Point(-2, -1);
+            line_lbl.Name = "line_lbl";
+            line_lbl.Size = new Size(65, 35);
+            line_lbl.TabIndex = 11;
+            line_lbl.Text = "Line";
+            line_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen9
+            // sen_num_lbl1
             // 
-            pic_sen9.Image = Properties.Resources.sen_stat_none;
-            pic_sen9.Location = new Point(113, 570);
-            pic_sen9.Name = "pic_sen9";
-            pic_sen9.Size = new Size(40, 40);
-            pic_sen9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen9.TabIndex = 8;
-            pic_sen9.TabStop = false;
+            sen_num_lbl1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl1.ForeColor = SystemColors.Control;
+            sen_num_lbl1.Location = new Point(3, 50);
+            sen_num_lbl1.Name = "sen_num_lbl1";
+            sen_num_lbl1.Size = new Size(65, 40);
+            sen_num_lbl1.TabIndex = 12;
+            sen_num_lbl1.Text = "1";
+            sen_num_lbl1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen8
+            // sen_num_lbl2
             // 
-            pic_sen8.Image = Properties.Resources.sen_stat_none;
-            pic_sen8.Location = new Point(113, 505);
-            pic_sen8.Name = "pic_sen8";
-            pic_sen8.Size = new Size(40, 40);
-            pic_sen8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen8.TabIndex = 7;
-            pic_sen8.TabStop = false;
+            sen_num_lbl2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl2.ForeColor = SystemColors.Control;
+            sen_num_lbl2.Location = new Point(3, 115);
+            sen_num_lbl2.Name = "sen_num_lbl2";
+            sen_num_lbl2.Size = new Size(65, 40);
+            sen_num_lbl2.TabIndex = 13;
+            sen_num_lbl2.Text = "2";
+            sen_num_lbl2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen7
+            // sen_num_lbl3
             // 
-            pic_sen7.Image = Properties.Resources.sen_stat_none;
-            pic_sen7.Location = new Point(113, 440);
-            pic_sen7.Name = "pic_sen7";
-            pic_sen7.Size = new Size(40, 40);
-            pic_sen7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen7.TabIndex = 6;
-            pic_sen7.TabStop = false;
+            sen_num_lbl3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl3.ForeColor = SystemColors.Control;
+            sen_num_lbl3.Location = new Point(3, 180);
+            sen_num_lbl3.Name = "sen_num_lbl3";
+            sen_num_lbl3.Size = new Size(65, 40);
+            sen_num_lbl3.TabIndex = 14;
+            sen_num_lbl3.Text = "3";
+            sen_num_lbl3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen6
+            // sen_num_lbl4
             // 
-            pic_sen6.Image = Properties.Resources.sen_stat_none;
-            pic_sen6.Location = new Point(113, 375);
-            pic_sen6.Name = "pic_sen6";
-            pic_sen6.Size = new Size(40, 40);
-            pic_sen6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen6.TabIndex = 5;
-            pic_sen6.TabStop = false;
+            sen_num_lbl4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl4.ForeColor = SystemColors.Control;
+            sen_num_lbl4.Location = new Point(3, 245);
+            sen_num_lbl4.Name = "sen_num_lbl4";
+            sen_num_lbl4.Size = new Size(65, 40);
+            sen_num_lbl4.TabIndex = 15;
+            sen_num_lbl4.Text = "4";
+            sen_num_lbl4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen5
+            // sen_num_lbl5
             // 
-            pic_sen5.Image = Properties.Resources.sen_stat_none;
-            pic_sen5.Location = new Point(113, 310);
-            pic_sen5.Name = "pic_sen5";
-            pic_sen5.Size = new Size(40, 40);
-            pic_sen5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen5.TabIndex = 4;
-            pic_sen5.TabStop = false;
+            sen_num_lbl5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl5.ForeColor = SystemColors.Control;
+            sen_num_lbl5.Location = new Point(3, 310);
+            sen_num_lbl5.Name = "sen_num_lbl5";
+            sen_num_lbl5.Size = new Size(65, 40);
+            sen_num_lbl5.TabIndex = 16;
+            sen_num_lbl5.Text = "5";
+            sen_num_lbl5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen4
+            // sen_num_lbl6
             // 
-            pic_sen4.Image = Properties.Resources.sen_stat_none;
-            pic_sen4.Location = new Point(113, 245);
-            pic_sen4.Name = "pic_sen4";
-            pic_sen4.Size = new Size(40, 40);
-            pic_sen4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen4.TabIndex = 3;
-            pic_sen4.TabStop = false;
+            sen_num_lbl6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl6.ForeColor = SystemColors.Control;
+            sen_num_lbl6.Location = new Point(3, 375);
+            sen_num_lbl6.Name = "sen_num_lbl6";
+            sen_num_lbl6.Size = new Size(65, 40);
+            sen_num_lbl6.TabIndex = 17;
+            sen_num_lbl6.Text = "6";
+            sen_num_lbl6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen3
+            // sen_num_lbl7
             // 
-            pic_sen3.Image = Properties.Resources.sen_stat_none;
-            pic_sen3.Location = new Point(113, 180);
-            pic_sen3.Name = "pic_sen3";
-            pic_sen3.Size = new Size(40, 40);
-            pic_sen3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen3.TabIndex = 2;
-            pic_sen3.TabStop = false;
+            sen_num_lbl7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl7.ForeColor = SystemColors.Control;
+            sen_num_lbl7.Location = new Point(3, 440);
+            sen_num_lbl7.Name = "sen_num_lbl7";
+            sen_num_lbl7.Size = new Size(65, 40);
+            sen_num_lbl7.TabIndex = 18;
+            sen_num_lbl7.Text = "7";
+            sen_num_lbl7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen2
+            // sen_num_lbl8
             // 
-            pic_sen2.Image = Properties.Resources.sen_stat_none;
-            pic_sen2.Location = new Point(113, 115);
-            pic_sen2.Name = "pic_sen2";
-            pic_sen2.Size = new Size(40, 40);
-            pic_sen2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen2.TabIndex = 1;
-            pic_sen2.TabStop = false;
+            sen_num_lbl8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl8.ForeColor = SystemColors.Control;
+            sen_num_lbl8.Location = new Point(3, 505);
+            sen_num_lbl8.Name = "sen_num_lbl8";
+            sen_num_lbl8.Size = new Size(65, 40);
+            sen_num_lbl8.TabIndex = 19;
+            sen_num_lbl8.Text = "8";
+            sen_num_lbl8.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_sen1
+            // sen_num_lbl9
             // 
-            pic_sen1.Image = Properties.Resources.sen_stat_none;
-            pic_sen1.Location = new Point(113, 50);
-            pic_sen1.Name = "pic_sen1";
-            pic_sen1.Size = new Size(40, 40);
-            pic_sen1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_sen1.TabIndex = 0;
-            pic_sen1.TabStop = false;
+            sen_num_lbl9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl9.ForeColor = SystemColors.Control;
+            sen_num_lbl9.Location = new Point(3, 570);
+            sen_num_lbl9.Name = "sen_num_lbl9";
+            sen_num_lbl9.Size = new Size(65, 40);
+            sen_num_lbl9.TabIndex = 20;
+            sen_num_lbl9.Text = "9";
+            sen_num_lbl9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // formsPlot1
+            // sen_num_lbl10
             // 
-            formsPlot1.Location = new Point(0, 40);
-            formsPlot1.Margin = new Padding(4, 3, 4, 3);
-            formsPlot1.Name = "formsPlot1";
-            formsPlot1.Size = new Size(1218, 648);
-            formsPlot1.TabIndex = 8;
+            sen_num_lbl10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sen_num_lbl10.ForeColor = SystemColors.Control;
+            sen_num_lbl10.Location = new Point(3, 635);
+            sen_num_lbl10.Name = "sen_num_lbl10";
+            sen_num_lbl10.Size = new Size(65, 40);
+            sen_num_lbl10.TabIndex = 21;
+            sen_num_lbl10.Text = "10";
+            sen_num_lbl10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // splitContainer1
+            // rpm_chart_lbl
             // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 100);
-            splitContainer1.Name = "splitContainer1";
+            rpm_chart_lbl.BackColor = SystemColors.ActiveCaptionText;
+            rpm_chart_lbl.BorderStyle = BorderStyle.Fixed3D;
+            rpm_chart_lbl.Dock = DockStyle.Top;
+            rpm_chart_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            rpm_chart_lbl.ForeColor = SystemColors.Control;
+            rpm_chart_lbl.Location = new Point(0, 0);
+            rpm_chart_lbl.Name = "rpm_chart_lbl";
+            rpm_chart_lbl.Size = new Size(1314, 40);
+            rpm_chart_lbl.TabIndex = 0;
+            rpm_chart_lbl.Text = "RPM 변화";
+            rpm_chart_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // splitContainer1.Panel1
+            // chart_panel
             // 
-            splitContainer1.Panel1.Controls.Add(chart_panel);
-            splitContainer1.Panel1.Controls.Add(plate_panel);
+            chart_panel.BackColor = SystemColors.ActiveCaption;
+            chart_panel.Controls.Add(tableLayoutPanel1);
+            chart_panel.Controls.Add(rpm_chart_lbl);
+            chart_panel.Controls.Add(sen_stat_pan);
+            chart_panel.Dock = DockStyle.Fill;
+            chart_panel.Location = new Point(0, 250);
+            chart_panel.Name = "chart_panel";
+            chart_panel.Size = new Size(1481, 691);
+            chart_panel.TabIndex = 1;
             // 
-            // splitContainer1.Panel2
+            // tableLayoutPanel1
             // 
-            splitContainer1.Panel2.BackColor = SystemColors.Control;
-            splitContainer1.Panel2.Controls.Add(info_panel);
-            splitContainer1.Panel2.Controls.Add(roll_panel);
-            splitContainer1.Size = new Size(1904, 941);
-            splitContainer1.SplitterDistance = 1481;
-            splitContainer1.TabIndex = 5;
-            // 
-            // info_panel
-            // 
-            info_panel.BackColor = SystemColors.ActiveCaptionText;
-            info_panel.Dock = DockStyle.Fill;
-            info_panel.Location = new Point(0, 250);
-            info_panel.Name = "info_panel";
-            info_panel.Size = new Size(419, 691);
-            info_panel.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 40);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(1314, 651);
+            tableLayoutPanel1.TabIndex = 12;
             // 
             // Form1
             // 
@@ -1034,22 +1040,22 @@
             ((System.ComponentModel.ISupportInitialize)p_info_pic3).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic2).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic1).EndInit();
-            chart_panel.ResumeLayout(false);
-            sen_stat_pan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pic_sen10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_sen1).EndInit();
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            sen_stat_pan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pic_sen1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_sen10).EndInit();
+            chart_panel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1075,9 +1081,6 @@
         private PictureBox pic_re_con_btn;
         private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBox13;
-        private PictureBox pic_sen9;
-        private PictureBox pic_sen8;
-        private PictureBox pic_sen2;
         private PictureBox logout_btn;
         private PictureBox login_btn;
         private PictureBox exit_btn;
@@ -1115,22 +1118,13 @@
         private Label p_info3;
         private Label p_info2;
         private Label p_info1;
-        private Panel chart_panel;
-        private ScottPlot.FormsPlot formsPlot1;
-        private Label rpm_chart_lbl;
         private SplitContainer splitContainer1;
         private Panel info_panel;
+        private NumericUpDown numericUpDown1;
+        private Panel chart_panel;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label rpm_chart_lbl;
         private Panel sen_stat_pan;
-        private PictureBox pic_sen1;
-        private PictureBox pic_sen10;
-        private PictureBox pic_sen7;
-        private PictureBox pic_sen6;
-        private PictureBox pic_sen5;
-        private PictureBox pic_sen4;
-        private PictureBox pic_sen3;
-        private Label sen_lbl;
-        private Label line_lbl;
-        private Label sen_num_lbl1;
         private Label sen_num_lbl10;
         private Label sen_num_lbl9;
         private Label sen_num_lbl8;
@@ -1140,6 +1134,18 @@
         private Label sen_num_lbl4;
         private Label sen_num_lbl3;
         private Label sen_num_lbl2;
-        private NumericUpDown numericUpDown1;
+        private Label sen_num_lbl1;
+        private Label line_lbl;
+        private Label sen_lbl;
+        private PictureBox pic_sen10;
+        private PictureBox pic_sen9;
+        private PictureBox pic_sen8;
+        private PictureBox pic_sen7;
+        private PictureBox pic_sen6;
+        private PictureBox pic_sen5;
+        private PictureBox pic_sen4;
+        private PictureBox pic_sen3;
+        private PictureBox pic_sen2;
+        private PictureBox pic_sen1;
     }
 }

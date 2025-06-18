@@ -121,6 +121,7 @@
             sen_num_lbl2 = new Label();
             sen_num_lbl1 = new Label();
             line_lbl = new Label();
+            amp_set_btn = new Button();
             temp_panel.SuspendLayout();
             ampare_panel.SuspendLayout();
             edit_pan.SuspendLayout();
@@ -405,6 +406,7 @@
             // ampare_panel
             // 
             ampare_panel.BackColor = SystemColors.ActiveCaptionText;
+            ampare_panel.Controls.Add(amp_set_btn);
             ampare_panel.Controls.Add(tar_amp10);
             ampare_panel.Controls.Add(tar_amp9);
             ampare_panel.Controls.Add(tar_amp8);
@@ -473,6 +475,7 @@
             tar_amp10.Name = "tar_amp10";
             tar_amp10.Size = new Size(105, 40);
             tar_amp10.TabIndex = 85;
+            tar_amp10.Text = "20.0";
             tar_amp10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tar_amp9
@@ -588,7 +591,7 @@
             // amp_set_btn1
             // 
             amp_set_btn1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn1.Location = new Point(209, 63);
+            amp_set_btn1.Location = new Point(217, 63);
             amp_set_btn1.Name = "amp_set_btn1";
             amp_set_btn1.Size = new Size(60, 40);
             amp_set_btn1.TabIndex = 74;
@@ -711,7 +714,7 @@
             // amp_set_btn10
             // 
             amp_set_btn10.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn10.Location = new Point(209, 648);
+            amp_set_btn10.Location = new Point(217, 648);
             amp_set_btn10.Name = "amp_set_btn10";
             amp_set_btn10.Size = new Size(60, 40);
             amp_set_btn10.TabIndex = 62;
@@ -724,7 +727,7 @@
             // amp_set_btn9
             // 
             amp_set_btn9.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn9.Location = new Point(209, 583);
+            amp_set_btn9.Location = new Point(217, 583);
             amp_set_btn9.Name = "amp_set_btn9";
             amp_set_btn9.Size = new Size(60, 40);
             amp_set_btn9.TabIndex = 61;
@@ -737,7 +740,7 @@
             // amp_set_btn8
             // 
             amp_set_btn8.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn8.Location = new Point(209, 518);
+            amp_set_btn8.Location = new Point(217, 518);
             amp_set_btn8.Name = "amp_set_btn8";
             amp_set_btn8.Size = new Size(60, 40);
             amp_set_btn8.TabIndex = 60;
@@ -750,7 +753,7 @@
             // amp_set_btn7
             // 
             amp_set_btn7.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn7.Location = new Point(209, 453);
+            amp_set_btn7.Location = new Point(217, 453);
             amp_set_btn7.Name = "amp_set_btn7";
             amp_set_btn7.Size = new Size(60, 40);
             amp_set_btn7.TabIndex = 59;
@@ -763,7 +766,7 @@
             // amp_set_btn6
             // 
             amp_set_btn6.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn6.Location = new Point(209, 390);
+            amp_set_btn6.Location = new Point(217, 390);
             amp_set_btn6.Name = "amp_set_btn6";
             amp_set_btn6.Size = new Size(60, 40);
             amp_set_btn6.TabIndex = 58;
@@ -776,7 +779,7 @@
             // amp_set_btn5
             // 
             amp_set_btn5.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn5.Location = new Point(209, 323);
+            amp_set_btn5.Location = new Point(217, 323);
             amp_set_btn5.Name = "amp_set_btn5";
             amp_set_btn5.Size = new Size(60, 40);
             amp_set_btn5.TabIndex = 57;
@@ -789,7 +792,7 @@
             // amp_set_btn4
             // 
             amp_set_btn4.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn4.Location = new Point(209, 260);
+            amp_set_btn4.Location = new Point(217, 260);
             amp_set_btn4.Name = "amp_set_btn4";
             amp_set_btn4.Size = new Size(60, 40);
             amp_set_btn4.TabIndex = 56;
@@ -802,7 +805,7 @@
             // amp_set_btn3
             // 
             amp_set_btn3.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn3.Location = new Point(209, 193);
+            amp_set_btn3.Location = new Point(217, 193);
             amp_set_btn3.Name = "amp_set_btn3";
             amp_set_btn3.Size = new Size(60, 40);
             amp_set_btn3.TabIndex = 55;
@@ -815,7 +818,7 @@
             // amp_set_btn2
             // 
             amp_set_btn2.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            amp_set_btn2.Location = new Point(209, 130);
+            amp_set_btn2.Location = new Point(217, 130);
             amp_set_btn2.Name = "amp_set_btn2";
             amp_set_btn2.Size = new Size(60, 40);
             amp_set_btn2.TabIndex = 54;
@@ -937,7 +940,7 @@
             // 
             // amp10
             // 
-            amp10.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp10.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp10.ForeColor = Color.Blue;
             amp10.Location = new Point(1, 645);
             amp10.Name = "amp10";
@@ -948,7 +951,7 @@
             // 
             // amp9
             // 
-            amp9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp9.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp9.ForeColor = Color.Blue;
             amp9.Location = new Point(1, 580);
             amp9.Name = "amp9";
@@ -959,7 +962,7 @@
             // 
             // amp8
             // 
-            amp8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp8.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp8.ForeColor = Color.Blue;
             amp8.Location = new Point(1, 515);
             amp8.Name = "amp8";
@@ -970,7 +973,7 @@
             // 
             // amp7
             // 
-            amp7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp7.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp7.ForeColor = Color.Blue;
             amp7.Location = new Point(1, 450);
             amp7.Name = "amp7";
@@ -981,7 +984,7 @@
             // 
             // amp6
             // 
-            amp6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp6.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp6.ForeColor = Color.Blue;
             amp6.Location = new Point(1, 385);
             amp6.Name = "amp6";
@@ -992,7 +995,7 @@
             // 
             // amp5
             // 
-            amp5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp5.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp5.ForeColor = Color.Blue;
             amp5.Location = new Point(1, 320);
             amp5.Name = "amp5";
@@ -1003,7 +1006,7 @@
             // 
             // amp4
             // 
-            amp4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold);
+            amp4.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp4.ForeColor = Color.Blue;
             amp4.Location = new Point(1, 255);
             amp4.Name = "amp4";
@@ -1014,7 +1017,7 @@
             // 
             // amp3
             // 
-            amp3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp3.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp3.ForeColor = Color.Blue;
             amp3.Location = new Point(1, 190);
             amp3.Name = "amp3";
@@ -1025,7 +1028,7 @@
             // 
             // amp2
             // 
-            amp2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp2.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp2.ForeColor = Color.Blue;
             amp2.Location = new Point(1, 125);
             amp2.Name = "amp2";
@@ -1036,7 +1039,7 @@
             // 
             // amp1
             // 
-            amp1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
             amp1.ForeColor = Color.Blue;
             amp1.Location = new Point(1, 60);
             amp1.Name = "amp1";
@@ -1268,6 +1271,19 @@
             line_lbl.Text = "Line";
             line_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // amp_set_btn
+            // 
+            amp_set_btn.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            amp_set_btn.Location = new Point(217, 0);
+            amp_set_btn.Name = "amp_set_btn";
+            amp_set_btn.Size = new Size(60, 50);
+            amp_set_btn.TabIndex = 86;
+            amp_set_btn.Tag = "1";
+            amp_set_btn.Text = "일괄\r\n설정";
+            amp_set_btn.UseVisualStyleBackColor = true;
+            amp_set_btn.Visible = false;
+            amp_set_btn.Click += amp_set_btn_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1384,5 +1400,6 @@
         internal Button amp_set_btn2;
         internal Button amp_set_btn1;
         private PictureBox screencap_btn;
+        internal Button amp_set_btn;
     }
 }

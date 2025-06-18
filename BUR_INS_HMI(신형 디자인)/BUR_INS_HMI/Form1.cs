@@ -57,19 +57,19 @@ namespace BUR_INS_HMI
 
         private ushort[] prevDI = new ushort[4]; // 이전 DI1, DI2 값 저장
 
-
-        private List<Queue<double>> rpmHistory = new List<Queue<double>>();
-        private const int maxPoints = 100;  //최대 100포인트만 저장
+        private List<FormsPlot> plots = new List<FormsPlot>();
+        private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
 
         public Form1()
         {
             InitializeComponent();
 
-            InitRPMHistory();
+            InitializeGraphs();
 
-            InitChart();
-
+            f3 = new Form3(amp,temp);
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -110,12 +110,48 @@ namespace BUR_INS_HMI
             }
         }
 
-        private void InitRPMHistory()
+        private void InitializeGraphs()
         {
-            for (int i = 0; i < 27; i++)
-                rpmHistory.Add(new Queue<double>());
-        }
+            tableLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.RowCount = 5;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.RowStyles.Clear();
+            plots.Clear();
 
+            for (int i = 0; i < 5; i++)
+                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
+
+            for (int i = 0; i < 10; i++)
+            {
+                var fp = new FormsPlot();
+                fp.Dock = DockStyle.Fill;
+                fp.Plot.SetAxisLimitsY(0, 100);
+                fp.Plot.Title($"Group {i + 1}");
+                plots.Add(fp);
+
+                int row = i / 2;
+                int col = i % 2;
+                tableLayoutPanel1.Controls.Add(fp, col, row);
+            }
+        }
+        private void UpdateGraphs(ushort[] data)
+        {
+            int dataIndex = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int count = layout[i];
+                double[] ys = data.Skip(dataIndex).Take(count).Select(v => (double)v).ToArray();
+                double[] xs = Enumerable.Range(0, count).Select(x => (double)x).ToArray();
+
+                var fp = plots[i];
+                fp.Plot.Clear(); // 기존 그래프 지우고
+                fp.Plot.AddScatter(xs, ys, color: System.Drawing.Color.Blue, markerSize: 5);
+                fp.Render();     // 화면 갱신
+
+                dataIndex += count;
+            }
+        }
 
 
         private void Init_port()
@@ -146,68 +182,6 @@ namespace BUR_INS_HMI
             }
         }
 
-        private void UpdateRPM(byte doByte)
-        {
-            int[] rpmValues = new int[27];
-
-            // 간단한 예시로 DO 바이트 값 기준으로 RPM 계산
-            /*   for (int i = 0; i < rpmValues.Length; i++)    
-               {
-                   // 실제 센서 로직에 맞춰 계산식 바꾸기
-                   bool isOn = ((doByte >> (i % 8)) & 0x01) == 1;
-                   rpmValues[i] = isOn ? 245 : 250;
-                   //   rpmValues[i] = ((doByte >> (i % 8)) & 0x01) == 1 ? 245 : 250; 위 2줄 한줄로
-               }*/
-
-            if (doByte == 1)
-            {
-                // 랜덤하게 하나의 인덱스만 245로 설정
-                Random rand = new Random();
-                int selectedIndex = rand.Next(27);
-                for (int i = 0; i < rpmValues.Length; i++)
-                {
-                    rpmValues[i] = (i == selectedIndex) ? 245 : 250;
-                }
-            }
-            else
-            {
-                // 기존 방식대로 bit 기준 설정
-                for (int i = 0; i < rpmValues.Length; i++)
-                {
-                    rpmValues[i] = ((doByte >> (i % 8)) & 0x01) == 1 ? 245 : 250;
-                }
-            }
-
-            // 각 채널에 새 데이터 추가
-            for (int i = 0; i < 27; i++)
-            {
-                if (rpmHistory[i].Count >= maxPoints)
-                    rpmHistory[i].Dequeue();
-
-                rpmHistory[i].Enqueue(rpmValues[i]);
-            }
-
-            // 그래프 업데이트
-            formsPlot1.Plot.Clear();
-
-            for (int i = 0; i < 27; i++)
-            {
-                double[] ys = rpmHistory[i].ToArray();
-                double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
-                formsPlot1.Plot.AddScatter(xs, ys, label: $"ROLL {i + 1}", lineWidth: 1);
-            }
-
-            formsPlot1.Plot.Legend();
-            formsPlot1.Plot.SetAxisLimits(yMin: 230, yMax: 270);
-            formsPlot1.Render();
-
-            // Form3에 데이터 전달
-            /*   if (f3 != null && !f3.IsDisposed)
-               {
-                   f3.SharedTimerCallback(latestDOByte);
-               }*/
-        }
-
 
         private void serialPort_DataReceived(object sender, EventArgs e)
         {
@@ -234,21 +208,24 @@ namespace BUR_INS_HMI
 
                 Random rand = new Random();
                 int randnum = rand.Next(4, numInputs);
-              /*  if (randnum != 8 && randnum != 11 && randnum != 14)
-                {
+                /*  if (randnum != 8 && randnum != 11 && randnum != 14)
+                  {
 
-                    for (int i = 4; i < numInputs; i++)
-                    {
-                        data[i] = 0x15;
-                        data[randnum] = 0x0B;
+                      for (int i = 4; i < numInputs; i++)
+                      {
+                          data[i] = 0x15;
+                          data[randnum] = 0x0B;
 
-                    }
-                }*/
+                      }
+                  }*/
 
                 for (int i = 4; i < numInputs;i++)
                 {
                     data[i] = 0x15;
+                    if (data[0] == 1)
+                        data[i] = 0x0B;
                 }
+
 
                     rpm_check(data);
                     roll_check(data);
@@ -258,18 +235,18 @@ namespace BUR_INS_HMI
                     f3.update_Realamp(amp);
                 f3.update_temp(temp);
                     getPosition(data);
+                UpdateGraphs(data);
 
-                   
 
-                 /*   rpm_check(data);
-                    sens_check(data);
-                    roll_check(data);
-                    copyroll(roll_pan);
-                    set_amp(data);
+                /*   rpm_check(data);
+                   sens_check(data);
+                   roll_check(data);
+                   copyroll(roll_pan);
+                   set_amp(data);
 
-                    getPosition(data);*/
+                   getPosition(data);*/
 
-                
+
 
                 // 정상 통신이 이루어졌으므로 오류 플래그 해제
                 _hasShownDisconnectMessage = false;
@@ -460,7 +437,7 @@ namespace BUR_INS_HMI
                 for (int i = 0; i < 27; i++)
                 {
                     f3.infoCopy.roll[i].BackColor = roll[i].BackColor;
-                    f3.infoCopy.roll_rpm[i].Visible = roll[i].Visible;
+                    f3.infoCopy.roll_rpm[i].Visible = roll_rpm[i].Visible;
                     f3.infoCopy.roll_rpm[i].Text = roll_rpm[i].Text;
                 }
             }
@@ -494,7 +471,7 @@ namespace BUR_INS_HMI
 
             //    Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
         }
-
+        
         private void sens_check(ushort[] data)
         {
             if (!serialPort.IsOpen)   //센서는 전류따라니까 필요 x
@@ -506,21 +483,22 @@ namespace BUR_INS_HMI
             }
             else
             {
-                for (int i = 0; i < 10; i ++)
-                {
-                    if (amp[i] >= 20)
-                    {
-                        sen[i] = 0;
-                    }
-                    else if (amp[i] < 20 && amp[i] > 10)
-                        sen[i] = 1;
-                    else if (amp[i] < 10)
-                        sen[i] = 2;
-                    else
-                        sen[i] = -1;
-                }
+                  for (int i = 0; i < 10; i ++)
+                  {
+                      if (amp[i] >= 20)
+                      {
+                          sen[i] = 0;
+                      }
+                      else if (amp[i] < 20 && amp[i] > 10)
+                          sen[i] = 1;
+                      else if (amp[i] < 10)
+                          sen[i] = 2;
+                      else
+                          sen[i] = -1;
+                  }
 
-                sen_img(sen);
+                  sen_img(sen);
+
             }
 
            /* if (!serialPort.IsOpen)   //센서는 전류따라니까 필요 x
@@ -599,62 +577,6 @@ namespace BUR_INS_HMI
                      }
 
               }*/
-
-
-        private void InitChart()
-        {
-            var plt = formsPlot1.Plot;
-            plt.SetAxisLimits(yMin: 0, yMax: 1);
-
-            plt.YAxis.ManualTickPositions(new double[] { 225, 250, 275 }, new string[] { "225", "250", "275" });
-            double[] xs = ScottPlot.DataGen.Consecutive(50);
-            double[] ys = new double[50]; // 모두 0으로 초기화
-
-            plt.AddScatter(xs, ys);
-            formsPlot1.Refresh();
-
-            /* var plot = formsPlot1.Plot;
-             var rand = new Random();
-
-             int pointCount = 50;
-
-             for (int seriesIndex = 0; seriesIndex < 27; seriesIndex++)
-             {
-                 double[] xs = ScottPlot.DataGen.Consecutive(pointCount);    //시간축 (50개)
-                 double[] ys = new double[pointCount];
-
-                 for (int i = 0; i < pointCount; i++)
-                 {
-                     //    ys[i] = rand.NextDouble() * 100;    //각 y값은 0 ~100 사이의 난수
-                     //   ys[i] = 250 + rand.NextDouble(); 250~251
-                     //    if (rand.NextDouble()>0.5)
-                     {
-                         //   ys[i] = 250 - (rand.NextDouble() * 10);
-                         ys[i] = 250;
-                         if (seriesIndex == 17 && i == 5)
-                         {
-                             ys[i] = 245;
-                         }
-                     }
-
-                 }
-
-                 plot.AddScatter(xs, ys, label: $"ROLL {seriesIndex + 1}");  // 각 시리즈(라벨) 범례에 추가
-             }
-
-             plot.SetAxisLimits(xMin: 0, xMax: 49, yMin: 200, yMax: 300);  //생략시 고정 범위 아니고 자동 범위로 바뀜.
-             //x축은 0~49사이만 표시 , y축 0~100 // 만약 사용자가 마우스로 줌/팬을 하게 하고 싶으면 윗 코드 생략하거나 조건부 실행 
-             plot.Legend(location: ScottPlot.Alignment.UpperRight);  //범례 위치 제어
-
-             // 축 라벨 추가
-             plot.XLabel("시간 (초)");
-             plot.YLabel("RPM");
-
-             //반영
-             formsPlot1.Refresh();*/
-        }
-
-
 
         private void pic_stop_btn_Click(object sender, EventArgs e)
         {
@@ -750,6 +672,7 @@ namespace BUR_INS_HMI
                     {
                         f3.set_btn[i].Visible = true;
                     }
+                    f3.amp_set_btn.Visible = true;
                 }
 
                 login_btn.Visible = false;  //기능도 변경 되어야 하므로 2개를 Visible로 변경

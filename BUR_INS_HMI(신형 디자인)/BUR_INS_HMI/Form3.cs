@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScottPlot;
 using System.Diagnostics;
+using System.Runtime.InteropServices.Marshalling;
 
 namespace BUR_INS_HMI
 {
@@ -120,7 +121,7 @@ namespace BUR_INS_HMI
 
         internal void update_temp(decimal[] t)  //온도는 2개임. 추후 수정
         {
-            for (int i = 0;i<10;i++)
+            for (int i = 0; i < 10; i++)
             {
                 temp1_arr[i].Text = t[i].ToString("F1");
                 temp2_arr[i].Text = t[i].ToString("F1");
@@ -182,7 +183,7 @@ namespace BUR_INS_HMI
             tar_amp[index].Text = ampare.ToString("F1");
             min[index] = ampare * ((100.0M - amp[10]) / 100.0M);
             max[index] = ampare * ((100.0M + amp[10]) / 100.0M);
-            MessageBox.Show($"Min : [{min[index]}] / Max : [{max[index]}]");
+        //    MessageBox.Show($"Min : [{min[index]}] / Max : [{max[index]}]");
 
         }
 
@@ -193,10 +194,11 @@ namespace BUR_INS_HMI
             if ("mA".Equals(unit.ToString()))
             {
                 new_amp = Convert.ToDecimal(sender.ToString());
-                amp[index] = new_amp;
-                amp_set[index].Text = amp[index].ToString("F1");
-                update_err_index(index);
-                index = -1;
+                
+                    amp[index] = new_amp;
+                    amp_set[index].Text = amp[index].ToString("F1");
+                    update_err_index(index);
+                    index = -1;
             }
             else if ("%".Equals(unit.ToString()))
             {
@@ -206,6 +208,21 @@ namespace BUR_INS_HMI
             }
 
 
+        }
+
+        private void DiseaseUpdateEventMethodF4toF3allamp(object sender, object unit)
+        {
+            decimal new_amp;
+
+            new_amp = Convert.ToDecimal(sender.ToString());
+
+            for (int i =0;i<10;i++)
+            {
+                amp[i] = new_amp;
+                amp_set[i].Text = amp[i].ToString("F1");
+                update_err_index(i);
+            }
+            index = -1;
         }
 
         private void err_set_btn_Click(object sender, EventArgs e)
@@ -348,6 +365,15 @@ namespace BUR_INS_HMI
                 bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
                 MessageBox.Show("Screen Captured");
             }
+        }
+
+        private void amp_set_btn_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.unit_lbl.Text = "mA";
+
+            f4.FormSendEvent2 += new Form4.FormSendDataHandler2(DiseaseUpdateEventMethodF4toF3allamp);
+            f4.Show();
         }
     }
 
