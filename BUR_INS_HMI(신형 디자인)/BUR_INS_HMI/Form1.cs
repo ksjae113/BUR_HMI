@@ -53,11 +53,33 @@ namespace BUR_INS_HMI
 
         public int[] sen = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 
-        
+
+        /*   DateTime measureStartTime;
+           List<double> elapsedTimeList = new List<double>();*/
+
+        /*    List<List<double>> valueLists = new();     // Y값들 (10개)
+           List<List<double>> indexLists = new();     // X값들 (10개)
+         List<List<List<double>>> valueGroups = new();  // [group][plot][values]
+         List<FormsPlot> plots = new();             // 10개의 그래프*/
+
+        List<List<List<double>>> valueGroups = new(); // [group][plot][values]
+        List<List<List<double>>> indexGroups = new(); // [group][plot][indices]
+        List<List<List<double>>> ys = new();           // [그룹][라인][y값]
+        List<List<List<double>>> xs = new();           // [그룹][라인][x값]
+
+        List<FormsPlot> plots = new();
+
+      //  List<List<FormsPlot>> plots = new();
+
+
+        bool isMeasuring = false;
+        int sampleCounter = 0;
+
+
+
 
         private ushort[] prevDI = new ushort[4]; // 이전 DI1, DI2 값 저장
 
-        private List<FormsPlot> plots = new List<FormsPlot>();
         private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
 
         public Form1()
@@ -112,47 +134,286 @@ namespace BUR_INS_HMI
 
         private void InitializeGraphs()
         {
+            ys.Clear();
+            xs.Clear();
+            plots.Clear();
             tableLayoutPanel1.Controls.Clear();
+
             tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.RowStyles.Clear();
-            plots.Clear();
-
+            tableLayoutPanel1.ColumnStyles.Clear();
             for (int i = 0; i < 5; i++)
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
+            for (int i = 0; i < 2; i++)
+                tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < layout.Length; i++)
             {
+                ys.Add(new List<List<double>>());
+                xs.Add(new List<List<double>>());
+
                 var fp = new FormsPlot();
                 fp.Dock = DockStyle.Fill;
-                fp.Plot.SetAxisLimitsY(0, 100);
-                fp.Plot.Title($"Group {i + 1}");
-                plots.Add(fp);
+                fp.Plot.SetAxisLimits(yMin: 0, yMax: 25);
+                fp.Plot.Title($"Group {i + 1}", size: 12);
 
+                for (int j = 0; j < layout[i]; j++)
+                {
+                    ys[i].Add(new List<double>());
+                    xs[i].Add(new List<double>());
+                }
+
+                plots.Add(fp);
                 int row = i / 2;
                 int col = i % 2;
                 tableLayoutPanel1.Controls.Add(fp, col, row);
             }
+
+    
+
+            /*       valueLists.Clear();
+                 indexLists.Clear();
+                 plots.Clear();
+                 tableLayoutPanel1.Controls.Clear();
+
+                 tableLayoutPanel1.RowCount = 5;
+                 tableLayoutPanel1.ColumnCount = 2;
+                 tableLayoutPanel1.RowStyles.Clear();
+                 for (int i = 0; i < 5; i++)
+                     tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
+
+                 for (int i = 0; i < 10; i++)
+                 {
+                     var fp = new FormsPlot();
+                     fp.Dock = DockStyle.Fill;
+
+                     plots.Add(fp);
+                     valueLists.Add(new List<double>());
+                     indexLists.Add(new List<double>());
+
+                     int row = i / 2;
+                     int col = i % 2;
+                     tableLayoutPanel1.Controls.Add(fp, col, row);
+                 }*/
+
         }
-        private void UpdateGraphs(ushort[] data)
+
+        private void OnNewData(ushort[] data)
         {
-            int dataIndex = 0;
+            if (data == null || data.Length < 27) return;
 
-            for (int i = 0; i < 10; i++)
+            if (data[0] == 1)  // 측정 중일 때
             {
-                int count = layout[i];
-                double[] ys = data.Skip(dataIndex).Take(count).Select(v => (double)v).ToArray();
-                double[] xs = Enumerable.Range(0, count).Select(x => (double)x).ToArray();
+                if (!isMeasuring)
+                {
+                    isMeasuring = true;
+                    sampleCounter = 0;
 
-                var fp = plots[i];
-                fp.Plot.Clear(); // 기존 그래프 지우고
-                fp.Plot.AddScatter(xs, ys, color: System.Drawing.Color.Blue, markerSize: 5);
-                fp.Render();     // 화면 갱신
+                    foreach (var group in ys)
+                        foreach (var line in group)
+                            line.Clear();
 
-                dataIndex += count;
+                    foreach (var group in xs)
+                        foreach (var line in group)
+                            line.Clear();
+                }
+
+                int dataIndex = 0;
+                for (int i = 0; i < layout.Length; i++)
+                {
+                    for (int j = 0; j < layout[i]; j++)
+                    {
+                        if (dataIndex >= data.Length) break;
+
+                        ys[i][j].Add(data[dataIndex]);
+                        xs[i][j].Add(sampleCounter);
+                        dataIndex++;
+                    }
+                }
+                sampleCounter++;
+
+                UpdateAllPlots();
             }
+            else if (data[0] == 0 && isMeasuring)
+            {
+                isMeasuring = false;
+                // 측정 종료 시 추가 처리 가능
+            }
+
+            /*  if (data[0] == 1)
+              {
+                  if (!isMeasuring)
+                  {
+                      isMeasuring = true;
+                      sampleCounter = 0;
+
+                      foreach (var group in ys)
+                          foreach (var line in group)
+                              line.Clear();
+                      foreach (var group in xs)
+                          foreach (var line in group)
+                              line.Clear();
+                  }
+
+                  int dataIndex = 0;
+
+                  for (int i = 0; i < layout.Length; i++)
+                  {
+                      for (int j = 0; j < layout[i]; j++)
+                      {
+                          if (dataIndex >= data.Length) break;
+
+                          ys[i][j].Add(data[dataIndex]);
+                          xs[i][j].Add(sampleCounter);
+                          dataIndex++;
+                      }
+                  }
+
+                  sampleCounter++;
+                  UpdateAllPlots();
+              }
+              else if (isMeasuring && data[0] == 0)
+              {
+                  isMeasuring = false;
+              }*/
+
+            /*    int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };  //10개로 나누어 값 출력 되지만 그룹별 그래프 개수 1개
+
+                 if (data[0] == 1)
+                 {
+                     if (!isMeasuring)
+                     {
+                         isMeasuring = true;
+                         sampleCounter = 0;
+
+                         for (int i = 0; i < 10; i++)
+                         {
+                             valueLists[i].Clear();
+                             indexLists[i].Clear();
+                         }
+                     }
+
+                     int dataIndex = 0;
+
+                     for (int i = 0; i < 10; i++)
+                     {
+                         int count = layout[i];
+                         for (int j = 0; j < count; j++)
+                         {
+                             valueLists[i].Add(data[dataIndex]);
+                             indexLists[i].Add(sampleCounter);
+                             dataIndex++;
+                         }
+                     }
+
+                     sampleCounter++;
+
+                     UpdateAllPlots(); // 측정 중 실시간 업데이트
+                 }
+                 else if (isMeasuring && data[0] == 0)
+                 {
+                     isMeasuring = false;
+                     // 측정 종료 후 그래프는 고정됨
+                 }*/
         }
 
+        private void UpdateAllPlots()
+        {
+            for (int i = 0; i < plots.Count; i++)
+            {
+                var plot = plots[i];
+                plot.Plot.Clear();
+
+                for (int j = 0; j < ys[i].Count; j++)
+                {
+                    var x = xs[i][j].ToArray();
+                    var y = ys[i][j].ToArray();
+                    var color = GetColor(j);
+
+                    plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"L{j + 1}");
+                }
+
+                plot.Plot.Title($"Group {i + 1}");
+                plot.Plot.XLabel("Time (s)");
+                plot.Plot.YLabel("Value");
+                plot.Plot.SetAxisLimits(yMin: 0, yMax: 25);
+                plot.Plot.XAxis.ManualTickSpacing(1);  // X축 눈금 간격 1초
+
+             //   plot.Plot.Legend.IsVisible = true;
+             //   plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
+
+                plot.Render();
+            }
+
+            /*  for (int i = 0; i < plots.Count; i++) //버전차이없이 일단 되는거
+              {
+                  var plot = plots[i];
+                  plot.Plot.Clear();
+
+                  for (int j = 0; j < ys[i].Count; j++)
+                  {
+                      var x = xs[i][j].ToArray();
+                      var y = ys[i][j].ToArray();
+                      var color = GetColor(j); // 구분용 색상
+
+                      plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label : $"L{j + 1}");
+                  }
+
+                  var scatter = plot.Plot.Add.Scatter(xs, ys);
+                  scatter.Label = "센서 A";
+
+                  plot.Plot.Legend.IsVisible = true;
+                  plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
+
+                  plot.Render();
+              } */
+
+            /*    for (int i = 0; i < plots.Count; i++)  //크기,Label,Legend 문제빼고는 ok인거 2222
+                {
+                    var plot = plots[i];
+                    plot.Plot.Clear();
+
+                    for (int j = 0; j < ys[i].Count; j++)
+                    {
+                        var x = xs[i][j].ToArray();
+                        var y = ys[i][j].ToArray();
+                        var color = GetColor(j);
+
+                        plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"L{j + 1}");
+                    }
+
+                    plot.Plot.Title($"Group {i + 1}");
+                    plot.Plot.XLabel("Frame");
+                    plot.Plot.YLabel("Value");
+                    plot.Plot.Layout(left: 30, bottom: 20);
+                    plot.Plot.SetAxisLimitsY(0, 25); // 필요 시 조절
+
+                    plot.Render();
+                }*/
+
+            /*  for (int i = 0; i < 10; i++)
+           {
+               var xs = indexLists[i].ToArray();
+               var ys = valueLists[i].ToArray();
+
+               plots[i].Plot.Clear();
+               plots[i].Plot.AddScatter(xs, ys, color: Color.Blue);
+               plots[i].Plot.Title($"Group {i + 1}");
+               plots[i].Plot.XLabel("Frame");
+               plots[i].Plot.SetAxisLimitsY(0, 25); // 필요 시 조절
+               plots[i].Render();
+           }*/
+        }
+            private Color GetColor(int index)
+        {
+            Color[] colors = { Color.Blue, Color.Red, Color.Green, Color.Orange, Color.Purple };
+            return colors[index % colors.Length];
+        }
+
+
+           
+        
 
         private void Init_port()
         {
@@ -235,7 +496,8 @@ namespace BUR_INS_HMI
                     f3.update_Realamp(amp);
                 f3.update_temp(temp);
                     getPosition(data);
-                UpdateGraphs(data);
+                OnNewData(data);
+            //    UpdateGraphs(data);
 
 
                 /*   rpm_check(data);

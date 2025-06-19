@@ -83,15 +83,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs [Design]",
+              "RelativeToolTip": "BUR_INS_HMI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T08:04:45.479Z",
               "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -101,7 +101,7 @@
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form1.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAAAO0AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAKwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T04:39:08.012Z",
               "IsPinned": true,
@@ -115,11 +115,10 @@
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form1.Designer.cs",
-              "ViewState": "AgIAAG8BAAAAAAAAAAASwHsBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAASwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T08:08:09.079Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -131,8 +130,7 @@
               "RelativeToolTip": "BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T00:03:25.081Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -145,8 +143,7 @@
               "ViewState": "AgIAAKUAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T07:38:57.103Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T08:04:24.622Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T07:41:43.066Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -186,8 +181,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T07:43:01.761Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -200,8 +194,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T04:33:31.74Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -213,8 +206,7 @@
               "RelativeToolTip": "BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T08:16:47.643Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -227,8 +219,7 @@
               "ViewState": "AgIAADIAAAAAAAAAAAAjwCAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T23:43:23.84Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -241,8 +232,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T04:42:31.476Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -254,8 +244,7 @@
               "RelativeToolTip": "BUR_INS_HMI\\Form5.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T04:54:30.919Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -295,8 +284,7 @@
               "ViewState": "AgIAAJQEAAAAAAAAAAAmwJ4EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T01:47:05.128Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -307,8 +295,7 @@
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "BUR_INS_HMI\\InfoPanel.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T01:46:52.071Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-06-12T01:46:52.071Z"
             }
           ]
         }
