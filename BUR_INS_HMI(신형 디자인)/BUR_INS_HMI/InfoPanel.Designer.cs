@@ -30,12 +30,12 @@
         {
             info_panel = new Panel();
             roll11 = new Panel();
+            roll_rpm11 = new Label();
+            roll_num11 = new Label();
             lbl_ws = new Label();
             lbl_ds = new Label();
             pan_roll_left = new Panel();
             pan_roll_right = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             info_name = new Label();
             roll27 = new Panel();
             roll_rpm27 = new Label();
@@ -115,8 +115,6 @@
             roll10 = new Panel();
             roll_rpm10 = new Label();
             roll_num10 = new Label();
-            roll_num11 = new Label();
-            roll_rpm11 = new Label();
             info_panel.SuspendLayout();
             roll11.SuspendLayout();
             roll27.SuspendLayout();
@@ -155,8 +153,6 @@
             info_panel.Controls.Add(lbl_ds);
             info_panel.Controls.Add(pan_roll_left);
             info_panel.Controls.Add(pan_roll_right);
-            info_panel.Controls.Add(button2);
-            info_panel.Controls.Add(button1);
             info_panel.Controls.Add(info_name);
             info_panel.Controls.Add(roll27);
             info_panel.Controls.Add(roll26);
@@ -201,6 +197,30 @@
             roll11.Size = new Size(100, 60);
             roll11.TabIndex = 28;
             // 
+            // roll_rpm11
+            // 
+            roll_rpm11.Dock = DockStyle.Top;
+            roll_rpm11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            roll_rpm11.ForeColor = Color.FromArgb(0, 0, 192);
+            roll_rpm11.Location = new Point(0, 29);
+            roll_rpm11.Name = "roll_rpm11";
+            roll_rpm11.Size = new Size(98, 30);
+            roll_rpm11.TabIndex = 23;
+            roll_rpm11.Text = "---";
+            roll_rpm11.TextAlign = ContentAlignment.MiddleCenter;
+            roll_rpm11.Visible = false;
+            // 
+            // roll_num11
+            // 
+            roll_num11.Dock = DockStyle.Top;
+            roll_num11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            roll_num11.Location = new Point(0, 0);
+            roll_num11.Name = "roll_num11";
+            roll_num11.Size = new Size(98, 29);
+            roll_num11.TabIndex = 22;
+            roll_num11.Text = "4-3";
+            roll_num11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // lbl_ws
             // 
             lbl_ws.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
@@ -238,24 +258,6 @@
             pan_roll_right.Name = "pan_roll_right";
             pan_roll_right.Size = new Size(20, 644);
             pan_roll_right.TabIndex = 24;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(363, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 33);
-            button2.TabIndex = 23;
-            button2.Text = "4";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(27, 1);
-            button1.Name = "button1";
-            button1.Size = new Size(56, 34);
-            button1.TabIndex = 22;
-            button1.Text = "3";
-            button1.UseVisualStyleBackColor = true;
             // 
             // info_name
             // 
@@ -1180,30 +1182,6 @@
             roll_num10.Text = "4-2";
             roll_num10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // roll_num11
-            // 
-            roll_num11.Dock = DockStyle.Top;
-            roll_num11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            roll_num11.Location = new Point(0, 0);
-            roll_num11.Name = "roll_num11";
-            roll_num11.Size = new Size(98, 29);
-            roll_num11.TabIndex = 22;
-            roll_num11.Text = "4-3";
-            roll_num11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // roll_rpm11
-            // 
-            roll_rpm11.Dock = DockStyle.Top;
-            roll_rpm11.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            roll_rpm11.ForeColor = Color.FromArgb(0, 0, 192);
-            roll_rpm11.Location = new Point(0, 29);
-            roll_rpm11.Name = "roll_rpm11";
-            roll_rpm11.Size = new Size(98, 30);
-            roll_rpm11.TabIndex = 23;
-            roll_rpm11.Text = "---";
-            roll_rpm11.TextAlign = ContentAlignment.MiddleCenter;
-            roll_rpm11.Visible = false;
-            // 
             // InfoPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1247,8 +1225,6 @@
         private Panel info_panel;
         private Panel pan_roll_left;
         private Panel pan_roll_right;
-        private Button button2;
-        private Button button1;
         private Label info_name;
         internal Label roll_num1;
         internal Panel roll27;

@@ -125,6 +125,14 @@ namespace BUR_INS_HMI
             {
                 temp1_arr[i].Text = t[i].ToString("F1");
                 temp2_arr[i].Text = t[i].ToString("F1");
+                if (Convert.ToDecimal(temp1_arr[i].Text) < 20)
+                    temp1_arr[i].ForeColor = Color.Red;
+                else
+                    temp1_arr[i].ForeColor = Color.Blue;
+                if (Convert.ToDecimal(temp2_arr[i].Text) < 20)
+                    temp2_arr[i].ForeColor = Color.Red;
+                else
+                    temp2_arr[i].ForeColor = Color.Blue;
             }
         }
 
@@ -174,7 +182,7 @@ namespace BUR_INS_HMI
                 min[i] = ampare * ((100.0M - amp[10]) / 100.0M);
                 max[i] = ampare * ((100.0M + amp[10]) / 100.0M);
             }
-            MessageBox.Show($"Min : [{min[0]}] / Max : [{max[0]}]");
+       //     MessageBox.Show($"Min : [{min[0]}] / Max : [{max[0]}]");
         }
 
         private void update_err_index(int index)

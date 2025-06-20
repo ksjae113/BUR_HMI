@@ -168,6 +168,8 @@ namespace BUR_INS_HMI
                 /*  byte[] data = new byte[] { 0x01, 0x06, 0x00, 0x0A, 0x00, 0x01, 0x84, 0x0A }; // 예: Modbus RTU 요청 패킷
 
                   serialPort.Write(data, 0, data.Length);*/
+
+
                 this.Close();
             }
             else

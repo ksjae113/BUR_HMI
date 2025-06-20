@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Data;
 using System.Reflection;
 using System.Windows.Forms;
@@ -10,9 +10,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.Eventing.Reader;
 using System.IO.Ports;
 using ScottPlot;
+using ScottPlot.WinForms;
 using System.Collections.Generic;
 using System.Linq;
-using ScottPlot.WinForms;
 using System.Text;
 using System.Data.SqlClient;
 using ScottPlot.Drawing.Colormaps;
@@ -20,6 +20,7 @@ using Modbus.Device;
 using Microsoft.Win32;
 using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.VisualBasic.Logging;
 
 
 namespace BUR_INS_HMI
@@ -35,7 +36,9 @@ namespace BUR_INS_HMI
         private Panel[] roll;
         private Label[] roll_rpm;
         private PictureBox[] sensor;
-        private byte latestDOByte = 0x00;   //°¡Àå ÃÖ±ÙÀÇ DO raw °ª ÀúÀå
+        private byte latestDOByte = 0x00;   //ê°€ì¥ ìµœê·¼ì˜ DO raw ê°’ ì €ì¥
+
+        private int login = 0;
 
         public SerialPort serialPort;
         private IModbusSerialMaster _modbusMaster;
@@ -57,30 +60,23 @@ namespace BUR_INS_HMI
         /*   DateTime measureStartTime;
            List<double> elapsedTimeList = new List<double>();*/
 
-        /*    List<List<double>> valueLists = new();     // Y°ªµé (10°³)
-           List<List<double>> indexLists = new();     // X°ªµé (10°³)
+        /*    List<List<double>> valueLists = new();     // Yê°’ë“¤ (10ê°œ)
+           List<List<double>> indexLists = new();     // Xê°’ë“¤ (10ê°œ)
          List<List<List<double>>> valueGroups = new();  // [group][plot][values]
-         List<FormsPlot> plots = new();             // 10°³ÀÇ ±×·¡ÇÁ*/
+         List<FormsPlot> plots = new();             // 10ê°œì˜ ê·¸ë˜í”„*/
 
-        List<List<List<double>>> valueGroups = new(); // [group][plot][values]
-        List<List<List<double>>> indexGroups = new(); // [group][plot][indices]
-        List<List<List<double>>> ys = new();           // [±×·ì][¶óÀÎ][y°ª]
-        List<List<List<double>>> xs = new();           // [±×·ì][¶óÀÎ][x°ª]
-
+        List<List<List<double>>> ys = new();  // [plot][line][values]
+        List<List<List<double>>> xs = new();  // [plot][line][indices]
         List<FormsPlot> plots = new();
-
-      //  List<List<FormsPlot>> plots = new();
-
-
-        bool isMeasuring = false;
         int sampleCounter = 0;
-
-
-
-
-        private ushort[] prevDI = new ushort[4]; // ÀÌÀü DI1, DI2 °ª ÀúÀå
-
+        bool isMeasuring = false;
         private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
+
+
+
+
+        private ushort[] prevDI = new ushort[4]; // ì´ì „ DI1, DI2 ê°’ ì €ì¥
+
 
         public Form1()
         {
@@ -88,22 +84,25 @@ namespace BUR_INS_HMI
 
             InitializeGraphs();
 
-            f3 = new Form3(amp,temp);
+            f3 = new Form3(amp, temp);
         }
 
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ÀüÃ¼È­¸é ÀÛ¾÷Ç¥½ÃÁÙÀº Á¸Àç
-         /*   this.FormBorderStyle = FormBorderStyle.None;    //Å×µÎ¸®x
-            this.WindowState = FormWindowState.Maximized;   //È­¸é °¡µæ Ã¤¿ì±â*/
+            //ì „ì²´í™”ë©´ ì‘ì—…í‘œì‹œì¤„ì€ ì¡´ì¬
+            /*   this.FormBorderStyle = FormBorderStyle.None;    //í…Œë‘ë¦¬x
+               this.WindowState = FormWindowState.Maximized;   //í™”ë©´ ê°€ë“ ì±„ìš°ê¸°*/
 
-            //ÀüÃ¼È­¸é ÀÛ¾÷Ç¥½ÃÁÙ ¾øµµ·Ï
-           /* this.FormBorderStyle = FormBorderStyle.None;
+            //ì „ì²´í™”ë©´ ì‘ì—…í‘œì‹œì¤„ ì—†ë„ë¡
+            this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Normal;
             this.Bounds = Screen.PrimaryScreen.Bounds;
-            this.StartPosition = FormStartPosition.Manual;*/
+            this.StartPosition = FormStartPosition.Manual;
+
+
+
 
             roll_pan = new InfoPanel();
             roll_pan.Dock = DockStyle.Fill;
@@ -134,29 +133,28 @@ namespace BUR_INS_HMI
 
         private void InitializeGraphs()
         {
+
             ys.Clear();
             xs.Clear();
             plots.Clear();
-            tableLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
 
-            tableLayoutPanel1.RowCount = 5;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.RowStyles.Clear();
-            tableLayoutPanel1.ColumnStyles.Clear();
-            for (int i = 0; i < 5; i++)
-                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            for (int i = 0; i < 2; i++)
-                tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
 
-            for (int i = 0; i < layout.Length; i++)
+
+            for (int i = 0; i < 10; i++)
             {
                 ys.Add(new List<List<double>>());
                 xs.Add(new List<List<double>>());
 
                 var fp = new FormsPlot();
-                fp.Dock = DockStyle.Fill;
+                fp.Height = 100;
+                fp.Dock = DockStyle.Top;
+                fp.Margin = new Padding(2);
                 fp.Plot.SetAxisLimits(yMin: 0, yMax: 25);
-                fp.Plot.Title($"Group {i + 1}", size: 12);
+                fp.Plot.Title($"Line {i + 1}", size: 12);
+                fp.Plot.Layout(left: 20, right: 5, top: 5, bottom: 20);
+                fp.Plot.XAxis.TickLabelStyle(fontSize: 10);
+                fp.Plot.YAxis.TickLabelStyle(fontSize: 10);
 
                 for (int j = 0; j < layout[i]; j++)
                 {
@@ -165,12 +163,8 @@ namespace BUR_INS_HMI
                 }
 
                 plots.Add(fp);
-                int row = i / 2;
-                int col = i % 2;
-                tableLayoutPanel1.Controls.Add(fp, col, row);
+                flowLayoutPanel1.Controls.Add(fp);
             }
-
-    
 
             /*       valueLists.Clear();
                  indexLists.Clear();
@@ -203,7 +197,7 @@ namespace BUR_INS_HMI
         {
             if (data == null || data.Length < 27) return;
 
-            if (data[0] == 1)  // ÃøÁ¤ ÁßÀÏ ¶§
+            if (data[0] == 1 || data[1] == 1)  // ì¸¡ì • ì¤‘ì¼ ë•Œ
             {
                 if (!isMeasuring)
                 {
@@ -238,7 +232,7 @@ namespace BUR_INS_HMI
             else if (data[0] == 0 && isMeasuring)
             {
                 isMeasuring = false;
-                // ÃøÁ¤ Á¾·á ½Ã Ãß°¡ Ã³¸® °¡´É
+                // ì¸¡ì • ì¢…ë£Œ ì‹œ ì¶”ê°€ ì²˜ë¦¬ ê°€ëŠ¥
             }
 
             /*  if (data[0] == 1)
@@ -278,7 +272,7 @@ namespace BUR_INS_HMI
                   isMeasuring = false;
               }*/
 
-            /*    int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };  //10°³·Î ³ª´©¾î °ª Ãâ·Â µÇÁö¸¸ ±×·ìº° ±×·¡ÇÁ °³¼ö 1°³
+            /*    int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };  //10ê°œë¡œ ë‚˜ëˆ„ì–´ ê°’ ì¶œë ¥ ë˜ì§€ë§Œ ê·¸ë£¹ë³„ ê·¸ë˜í”„ ê°œìˆ˜ 1ê°œ
 
                  if (data[0] == 1)
                  {
@@ -309,12 +303,12 @@ namespace BUR_INS_HMI
 
                      sampleCounter++;
 
-                     UpdateAllPlots(); // ÃøÁ¤ Áß ½Ç½Ã°£ ¾÷µ¥ÀÌÆ®
+                     UpdateAllPlots(); // ì¸¡ì • ì¤‘ ì‹¤ì‹œê°„ ì—…ë°ì´íŠ¸
                  }
                  else if (isMeasuring && data[0] == 0)
                  {
                      isMeasuring = false;
-                     // ÃøÁ¤ Á¾·á ÈÄ ±×·¡ÇÁ´Â °íÁ¤µÊ
+                     // ì¸¡ì • ì¢…ë£Œ í›„ ê·¸ë˜í”„ëŠ” ê³ ì •ë¨
                  }*/
         }
 
@@ -334,19 +328,19 @@ namespace BUR_INS_HMI
                     plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"L{j + 1}");
                 }
 
-                plot.Plot.Title($"Group {i + 1}");
-                plot.Plot.XLabel("Time (s)");
-                plot.Plot.YLabel("Value");
-                plot.Plot.SetAxisLimits(yMin: 0, yMax: 25);
-                plot.Plot.XAxis.ManualTickSpacing(1);  // XÃà ´«±İ °£°İ 1ÃÊ
+                plot.Plot.Title($"Line {i + 1}");
+                //   plot.Plot.XLabel("Time (s)");
+                //   plot.Plot.YLabel("RPM");
+                plot.Plot.SetAxisLimits(xMin: 0, yMin: 0, yMax: 25);
+                plot.Plot.XAxis.ManualTickSpacing(1);  // Xì¶• ëˆˆê¸ˆ ê°„ê²© 1ì´ˆ
 
-             //   plot.Plot.Legend.IsVisible = true;
-             //   plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
+                //   plot.Plot.Legend.IsVisible = true;
+                //   plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
 
                 plot.Render();
             }
 
-            /*  for (int i = 0; i < plots.Count; i++) //¹öÀüÂ÷ÀÌ¾øÀÌ ÀÏ´Ü µÇ´Â°Å
+            /*  for (int i = 0; i < plots.Count; i++) //ë²„ì „ì°¨ì´ì—†ì´ ì¼ë‹¨ ë˜ëŠ”ê±°
               {
                   var plot = plots[i];
                   plot.Plot.Clear();
@@ -355,13 +349,13 @@ namespace BUR_INS_HMI
                   {
                       var x = xs[i][j].ToArray();
                       var y = ys[i][j].ToArray();
-                      var color = GetColor(j); // ±¸ºĞ¿ë »ö»ó
+                      var color = GetColor(j); // êµ¬ë¶„ìš© ìƒ‰ìƒ
 
                       plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label : $"L{j + 1}");
                   }
 
                   var scatter = plot.Plot.Add.Scatter(xs, ys);
-                  scatter.Label = "¼¾¼­ A";
+                  scatter.Label = "ì„¼ì„œ A";
 
                   plot.Plot.Legend.IsVisible = true;
                   plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
@@ -369,7 +363,7 @@ namespace BUR_INS_HMI
                   plot.Render();
               } */
 
-            /*    for (int i = 0; i < plots.Count; i++)  //Å©±â,Label,Legend ¹®Á¦»©°í´Â okÀÎ°Å 2222
+            /*    for (int i = 0; i < plots.Count; i++)  //í¬ê¸°,Label,Legend ë¬¸ì œë¹¼ê³ ëŠ” okì¸ê±° 2222
                 {
                     var plot = plots[i];
                     plot.Plot.Clear();
@@ -387,7 +381,7 @@ namespace BUR_INS_HMI
                     plot.Plot.XLabel("Frame");
                     plot.Plot.YLabel("Value");
                     plot.Plot.Layout(left: 30, bottom: 20);
-                    plot.Plot.SetAxisLimitsY(0, 25); // ÇÊ¿ä ½Ã Á¶Àı
+                    plot.Plot.SetAxisLimitsY(0, 25); // í•„ìš” ì‹œ ì¡°ì ˆ
 
                     plot.Render();
                 }*/
@@ -401,19 +395,19 @@ namespace BUR_INS_HMI
                plots[i].Plot.AddScatter(xs, ys, color: Color.Blue);
                plots[i].Plot.Title($"Group {i + 1}");
                plots[i].Plot.XLabel("Frame");
-               plots[i].Plot.SetAxisLimitsY(0, 25); // ÇÊ¿ä ½Ã Á¶Àı
+               plots[i].Plot.SetAxisLimitsY(0, 25); // í•„ìš” ì‹œ ì¡°ì ˆ
                plots[i].Render();
            }*/
         }
-            private Color GetColor(int index)
+        private Color GetColor(int index)
         {
             Color[] colors = { Color.Blue, Color.Red, Color.Green, Color.Orange, Color.Purple };
             return colors[index % colors.Length];
         }
 
 
-           
-        
+
+
 
         private void Init_port()
         {
@@ -454,7 +448,7 @@ namespace BUR_INS_HMI
 
 
 
-            
+
 
         }
 
@@ -465,7 +459,7 @@ namespace BUR_INS_HMI
             {
                 ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
 
-                
+
 
                 Random rand = new Random();
                 int randnum = rand.Next(4, numInputs);
@@ -480,24 +474,32 @@ namespace BUR_INS_HMI
                       }
                   }*/
 
-                for (int i = 4; i < numInputs;i++)
+                for (int i = 4; i < numInputs; i++)
                 {
                     data[i] = 0x15;
                     if (data[0] == 1)
                         data[i] = 0x0B;
                 }
 
+                if (data[1] == 1)
+                {
+                    for (int i = 2; i < numInputs; i++)
+                    {
+                        data[i] = (ushort)i;
+                    }
+                }
 
-                    rpm_check(data);
-                    roll_check(data);
-                    copyroll(roll_pan);
-                    set_amp_temp(data);
-                    sens_check(data);
-                    f3.update_Realamp(amp);
+
+                rpm_check(data);
+                roll_check(data);
+                copyroll(roll_pan);
+                set_amp_temp(data);
+                sens_check(data);
+                f3.update_Realamp(amp);
                 f3.update_temp(temp);
-                    getPosition(data);
+                getPosition(data);
                 OnNewData(data);
-            //    UpdateGraphs(data);
+                //    UpdateGraphs(data);
 
 
                 /*   rpm_check(data);
@@ -510,7 +512,7 @@ namespace BUR_INS_HMI
 
 
 
-                // Á¤»ó Åë½ÅÀÌ ÀÌ·ç¾îÁ³À¸¹Ç·Î ¿À·ù ÇÃ·¡±× ÇØÁ¦
+                // ì •ìƒ í†µì‹ ì´ ì´ë£¨ì–´ì¡Œìœ¼ë¯€ë¡œ ì˜¤ë¥˜ í”Œë˜ê·¸ í•´ì œ
                 _hasShownDisconnectMessage = false;
             }
             catch (TimeoutException)
@@ -518,24 +520,24 @@ namespace BUR_INS_HMI
                 if (!_hasShownDisconnectMessage)
                 {
                     _hasShownDisconnectMessage = true;
-                    MessageBox.Show("Åë½ÅÀÌ ÀÓÀÇ·Î ²÷°å½À´Ï´Ù.");
+                    MessageBox.Show("í†µì‹ ì´ ì„ì˜ë¡œ ëŠê²¼ìŠµë‹ˆë‹¤.");
                     try
                     {
                         if (serialPort != null && serialPort.IsOpen)
                         {
                             serialPort.Close();
-                            MessageBox.Show("Åë½Å Á¾·áµÊ");
+                            MessageBox.Show("í†µì‹  ì¢…ë£Œë¨");
                             sens_check(null);
 
                         }
                         else
                         {
-                            MessageBox.Show("Åë½ÅÀÌ ½ÃÀÛµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                            MessageBox.Show("í†µì‹ ì´ ì‹œì‘ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("¿¡·¯: " + ex.Message);
+                        MessageBox.Show("ì—ëŸ¬: " + ex.Message);
                     }
                 }
             }
@@ -547,7 +549,7 @@ namespace BUR_INS_HMI
 
         private void set_amp_temp(ushort[] data)
         {
-            for (int i = 0; i < 10;i++)
+            for (int i = 0; i < 10; i++)
             {
                 amp[i] = Convert.ToInt32(data[i]);
                 temp[i] = Convert.ToInt32(data[i]);
@@ -560,12 +562,12 @@ namespace BUR_INS_HMI
 
             target_rpm = (int)numericUpDown1.Value;
 
-            avg = (Convert.ToInt32(data[8]) + Convert.ToInt32(data[11]) + Convert.ToInt32(data[14]))/3;
+            avg = (Convert.ToInt32(data[8]) + Convert.ToInt32(data[11]) + Convert.ToInt32(data[14])) / 3;
 
             for (int i = 0; i < numInputs; i++)
             {
                 roll_pan.roll_rpm[i].Text = data[i].ToString();
-                roll_pan.roll_rpm[i].Visible = (avg >= target_rpm);  // Á¶°Ç¿¡ µû¶ó true ¶Ç´Â false
+                roll_pan.roll_rpm[i].Visible = (avg >= target_rpm);  // ì¡°ê±´ì— ë”°ë¼ true ë˜ëŠ” false
             }
             if (roll_pan.roll_rpm[0].Visible == true)
                 pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
@@ -645,51 +647,51 @@ namespace BUR_INS_HMI
         private void getPosition(ushort[] data)
         {
 
-         /*   target_rpm = (int)numericUpDown1.Value;
+            /*   target_rpm = (int)numericUpDown1.Value;
 
-            if (data[0] == 0 && data[1] == 0 && data[2] == 0 && data[3] == 0)
-            {
-                pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-                pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-                pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               if (data[0] == 0 && data[1] == 0 && data[2] == 0 && data[3] == 0)
+               {
+                   pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                   pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                   pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
 
-            }
-            
-            if (data[0] >= 0x01)
-            {
-                pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                isPosition1Red = true;
-                pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               }
 
-                pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-            }
-            int rpm8 = int.TryParse(roll_pan.roll_rpm[8].Text, out var r8) ? r8 : 0;
-            int rpm11 = int.TryParse(roll_pan.roll_rpm[11].Text, out var r11) ? r11 : 0;
-            int rpm14 = int.TryParse(roll_pan.roll_rpm[14].Text, out var r14) ? r14 : 0;
-            if (rpm8 >= target_rpm && rpm11 >= target_rpm && rpm14 >= target_rpm && isPosition1Red)
-            //data[1]ÀÌ 0x01
-            {
-                pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               if (data[0] >= 0x01)
+               {
+                   pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                   isPosition1Red = true;
+                   pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
 
-            }
+                   pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               }
+               int rpm8 = int.TryParse(roll_pan.roll_rpm[8].Text, out var r8) ? r8 : 0;
+               int rpm11 = int.TryParse(roll_pan.roll_rpm[11].Text, out var r11) ? r11 : 0;
+               int rpm14 = int.TryParse(roll_pan.roll_rpm[14].Text, out var r14) ? r14 : 0;
+               if (rpm8 >= target_rpm && rpm11 >= target_rpm && rpm14 >= target_rpm && isPosition1Red)
+               //data[1]ì´ 0x01
+               {
+                   pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                   pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                   pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
 
-            else if (data[2] >= 0x01)
-            {
-                pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-                pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               }
 
-                isPosition1Red = false;
-            }
+               else if (data[2] >= 0x01)
+               {
+                   pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                   pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                   pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
 
-            else if (data[3] >= 0x01)
-            {
-                pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-                pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
-            }*/
+                   isPosition1Red = false;
+               }
+
+               else if (data[3] >= 0x01)
+               {
+                   pic_position3.Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
+                   pic_position1.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                   pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+               }*/
         }
 
         private void copyroll(InfoPanel p)
@@ -710,33 +712,32 @@ namespace BUR_INS_HMI
         {
             int green_min = target_rpm - (int)(target_rpm * 0.1);
             int green_max = target_rpm + (int)(target_rpm * 0.1);
-            int yellow_min = target_rpm - (int)(target_rpm * 0.5);
-            int yellow_max = target_rpm + (int)(target_rpm * 0.5);
-            for (int i = 0; i < data.Length && i < 27 ; i++)
+            int yellow = 15;
+            for (int i = 0; i < data.Length && i < 27; i++)
             {
 
 
-                   if (data[i] >= green_min && data[i] <= green_max)   //RollColor´Â ¾îÂ÷ÇÇ db¿¡¼­ ¹Ş¾Æ¿À¹Ç·Î ÈÄ¿¡ ¼öÁ¤
-                   {
-                       roll[i].BackColor = Color.ForestGreen;
-                   }
-                   else if (data[i] >= yellow_min && data[i] <= yellow_max)
-                   {
-                       roll[i].BackColor = Color.Yellow;
-                   }
-                   else
-                   {
-                       roll[i].BackColor = Color.Red;
-                   }
+                if (data[i] >= green_min && data[i] <= green_max)   //RollColorëŠ” ì–´ì°¨í”¼ dbì—ì„œ ë°›ì•„ì˜¤ë¯€ë¡œ í›„ì— ìˆ˜ì •
+                {
+                    roll[i].BackColor = Color.ForestGreen;
+                }
+                else if (data[i] >= yellow && data[i] <= yellow)
+                {
+                    roll[i].BackColor = Color.Yellow;
+                }
+                else
+                {
+                    roll[i].BackColor = Color.Red;
+                }
 
             }
 
             //    Debug.WriteLine("Modbus data received: " + string.Join(", ", data));
         }
-        
+
         private void sens_check(ushort[] data)
         {
-            if (!serialPort.IsOpen)   //¼¾¼­´Â Àü·ùµû¶ó´Ï±î ÇÊ¿ä x
+            if (!serialPort.IsOpen)   //ì„¼ì„œëŠ” ì „ë¥˜ë”°ë¼ë‹ˆê¹Œ í•„ìš” x
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -745,48 +746,46 @@ namespace BUR_INS_HMI
             }
             else
             {
-                  for (int i = 0; i < 10; i ++)
-                  {
-                      if (amp[i] >= 20)
-                      {
-                          sen[i] = 0;
-                      }
-                      else if (amp[i] < 20 && amp[i] > 10)
-                          sen[i] = 1;
-                      else if (amp[i] < 10)
-                          sen[i] = 2;
-                      else
-                          sen[i] = -1;
-                  }
-
-                  sen_img(sen);
-
-            }
-
-           /* if (!serialPort.IsOpen)   //¼¾¼­´Â Àü·ùµû¶ó´Ï±î ÇÊ¿ä x
-            {
                 for (int i = 0; i < 10; i++)
                 {
-                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                    if (amp[i] >= 20)
+                    {
+                        sen[i] = 0;
+                    }
+                    else
+                        sen[i] = 2;
+                    //    else
+                    //        sen[i] = -1;
                 }
-            }
-            else
-            {
-                devideIndex(0,2,0);
-                devideIndex(3, 4, 1);
-                devideIndex(5, 7, 2);
-                devideIndex(8, 10, 3);
-                devideIndex(11, 12, 4);
-                devideIndex(13, 15, 5);
-                devideIndex(16, 18, 6);
-                devideIndex(19, 20, 7);
-                devideIndex(21, 23, 8);
-                devideIndex(24, 26, 9);
 
-            }*/
+                sen_img(sen);
+
+            }
+
+            /* if (!serialPort.IsOpen)   //ì„¼ì„œëŠ” ì „ë¥˜ë”°ë¼ë‹ˆê¹Œ í•„ìš” x
+             {
+                 for (int i = 0; i < 10; i++)
+                 {
+                     sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_none;
+                 }
+             }
+             else
+             {
+                 devideIndex(0,2,0);
+                 devideIndex(3, 4, 1);
+                 devideIndex(5, 7, 2);
+                 devideIndex(8, 10, 3);
+                 devideIndex(11, 12, 4);
+                 devideIndex(13, 15, 5);
+                 devideIndex(16, 18, 6);
+                 devideIndex(19, 20, 7);
+                 devideIndex(21, 23, 8);
+                 devideIndex(24, 26, 9);
+
+             }*/
         }
 
-        private void sen_img(int[] stat)    //Red,Yellow,Green ±âÁØÀº ÃßÈÄ ¼öÁ¤
+        private void sen_img(int[] stat)    //Red,Yellow,Green ê¸°ì¤€ì€ ì¶”í›„ ìˆ˜ì •
         {
             for (int i = 0; i < 10; i++)
             {
@@ -794,12 +793,6 @@ namespace BUR_INS_HMI
                 {
                     sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
                     f3.real_amp[i].ForeColor = Color.Blue;
-                }
-                else if (stat[i] == 1)
-                {
-                    sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_yellow;
-                    f3.real_amp[i].ForeColor = Color.Blue;
-
                 }
                 else if (stat[i] == 2)
                 {
@@ -815,30 +808,7 @@ namespace BUR_INS_HMI
             }
         }
 
-        /*      private void devideIndex(int min, int max, int sen_num)   ¼¾¼­´Â Àü·ùµû¶ó´Ï±î ÇÊ¿äx
-              {
-                     int stat = 0;
 
-                     for (int i = min; i <= max; i++)
-                     {
-                         if (roll[i].BackColor == Color.Red)
-                         {
-                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_red;
-                             stat = -1;
-                             break;
-                         }
-                         else if (roll[i].BackColor == Color.Yellow && (stat != -1))
-                         {
-                             stat = 1;
-                         }
-
-                         if (stat == 0)
-                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_green;
-                         else
-                             sensor[sen_num].Image = BUR_INS_HMI.Properties.Resources.sen_stat_yellow;
-                     }
-
-              }*/
 
         private void pic_stop_btn_Click(object sender, EventArgs e)
         {
@@ -847,16 +817,16 @@ namespace BUR_INS_HMI
                 if (serialPort != null && serialPort.IsOpen)
                 {
                     serialPort.Close();
-                    MessageBox.Show("Åë½Å Á¾·áµÊ");
+                    MessageBox.Show("í†µì‹  ì¢…ë£Œë¨");
                 }
                 else
                 {
-                    MessageBox.Show("Åë½ÅÀÌ ½ÃÀÛµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                    MessageBox.Show("í†µì‹ ì´ ì‹œì‘ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("¿¡·¯: " + ex.Message);
+                MessageBox.Show("ì—ëŸ¬: " + ex.Message);
             }
         }
 
@@ -867,18 +837,18 @@ namespace BUR_INS_HMI
                 if (serialPort != null && serialPort.IsOpen)
                 {
                     serialPort.Close();
-                    MessageBox.Show("Åë½Å Á¾·áµÊ");
+                    MessageBox.Show("í†µì‹  ì¢…ë£Œë¨");
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Åë½ÅÀÌ ½ÃÀÛµÇÁö ¾Ê¾Ò½À´Ï´Ù. Á¾·á");
+                    MessageBox.Show("í†µì‹ ì´ ì‹œì‘ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤. ì¢…ë£Œ");
                     Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("¿¡·¯: " + ex.Message);
+                MessageBox.Show("ì—ëŸ¬: " + ex.Message);
             }
         }
 
@@ -887,34 +857,36 @@ namespace BUR_INS_HMI
             Form2 f2 = new Form2();
 
             f2.FormSendEvent += new Form2.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
-            //form2¿¡ ÀÌº¥Æ® Ãß°¡
+            //form2ì— ì´ë²¤íŠ¸ ì¶”ê°€
 
             f2.ShowDialog();
 
-            //Show(), ShowDialog() Â÷ÀÌ 
-            //Show: form2 È£ÃâÈÄ¿¡µµ form1 Á¦¾î°¡´É , ShowDialog(): form2 È£ÃâÈÄ¿¡´Â form1 Á¦¾îºÒ°¡
+            //Show(), ShowDialog() ì°¨ì´ 
+            //Show: form2 í˜¸ì¶œí›„ì—ë„ form1 ì œì–´ê°€ëŠ¥ , ShowDialog(): form2 í˜¸ì¶œí›„ì—ëŠ” form1 ì œì–´ë¶ˆê°€
         }
 
 
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("°ü¸®ÀÚ ¸ğµå¸¦ Á¾·áÇÏ½Ã°Ú½À´Ï±î?", "Á¾·á È®ÀÎ", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (MessageBox.Show("ê´€ë¦¬ì ëª¨ë“œë¥¼ ì¢…ë£Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì¢…ë£Œ í™•ì¸", MessageBoxButtons.YesNo) != DialogResult.Yes)
             {
 
             }
             else
             {
-                MessageBox.Show("°ü¸®ÀÚ ¸ğµå¸¦ Á¾·áÇÕ´Ï´Ù.", "°ü¸®ÀÚ ·Î±×¾Æ¿ô");
+                MessageBox.Show("ê´€ë¦¬ì ëª¨ë“œë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.", "ê´€ë¦¬ì ë¡œê·¸ì•„ì›ƒ");
                 logout_btn.Visible = false;
                 login_btn.Visible = true;
+                login = -1;
                 if (f3 != null)
                 {
-                    f3.err_set_btn.Visible = false;
                     for (int i = 0; i < 10; i++)
                     {
                         f3.set_btn[i].Visible = false;
                     }
+                    f3.err_set_btn.Visible = false;
+                    f3.amp_set_btn.Visible = false;
                 }
             }
         }
@@ -923,23 +895,28 @@ namespace BUR_INS_HMI
         {
             if ("TRUE".Equals(sender.ToString()))
             {
-                /*   temp_btn.Visible = true;
-                   ampare_btn.Visible = true;
-                   record_btn.Visible = true;*/
 
-                if (f3 != null)
+                /*  if (f3 != null)
+                  {
+                      f3.err_set_btn.Visible = true;
+                      for (int i = 0; i < 10; i++)
+                      {
+                          f3.set_btn[i].Visible = true;
+                      }
+                      f3.amp_set_btn.Visible = true;
+                  }*/
+
+                /* ì—¬ê¸°ë§Œ ì ê¶ˆë³´ë©´?
+                for (int i = 0; i < 10; i ++)
                 {
-                    f3.err_set_btn.Visible = true;
-                    for (int i = 0; i < 10; i++)
-                    {
-                        f3.set_btn[i].Visible = true;
-                    }
-                    f3.amp_set_btn.Visible = true;
+                    f3.set_btn[i].Visible = true;
                 }
-
-                login_btn.Visible = false;  //±â´Éµµ º¯°æ µÇ¾î¾ß ÇÏ¹Ç·Î 2°³¸¦ Visible·Î º¯°æ
+                f3.err_set_btn.Visible = true;
+                f3.amp_set_btn.Visible = true;*/
+                login_btn.Visible = false;  //ê¸°ëŠ¥ë„ ë³€ê²½ ë˜ì–´ì•¼ í•˜ë¯€ë¡œ 2ê°œë¥¼ Visibleë¡œ ë³€ê²½
                 logout_btn.Visible = true;
-                //    login_btn.Image = BUR_INS_HMI.Properties.Resources.admin_logout_btn; //ÀÌ¹ÌÁö¸¸ º¯°æµÇ´Â °ÍÀÌ¹Ç·Î X.
+                login = 1;
+                //    login_btn.Image = BUR_INS_HMI.Properties.Resources.admin_logout_btn; //ì´ë¯¸ì§€ë§Œ ë³€ê²½ë˜ëŠ” ê²ƒì´ë¯€ë¡œ X.
             }
 
         }
@@ -954,7 +931,7 @@ namespace BUR_INS_HMI
             }
 
             f3.Show();
-            f3.BringToFront();  //ÀÌ¹Ì ¿­·ÁÀÖ´Ù¸é ¾ÕÀ¸·Î
+            f3.BringToFront();  //ì´ë¯¸ ì—´ë ¤ìˆë‹¤ë©´ ì•ìœ¼ë¡œ
 
             if (f3.temp_panel.Visible == true)
                 f3.ShowPanel(4);
@@ -966,7 +943,7 @@ namespace BUR_INS_HMI
 
 
 
-        private byte GetLatestDOByte()  //f3ÀÌ È£ÃâÇÒ ÇÔ¼ö
+        private byte GetLatestDOByte()  //f3ì´ í˜¸ì¶œí•  í•¨ìˆ˜
         {
             return latestDOByte;
         }
@@ -980,8 +957,22 @@ namespace BUR_INS_HMI
                 f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
             }
 
+            if (login == 1)
+            {
+
+                for (int i = 0; i < 10; i++)
+                {
+                    f3.set_btn[i].Visible = true;
+                }
+                f3.err_set_btn.Visible = true;
+                f3.amp_set_btn.Visible = true;
+                login_btn.Visible = false;  //ê¸°ëŠ¥ë„ ë³€ê²½ ë˜ì–´ì•¼ í•˜ë¯€ë¡œ 2ê°œë¥¼ Visibleë¡œ ë³€ê²½
+                logout_btn.Visible = true;
+
+            }
+
             f3.Show();
-            f3.BringToFront();  //ÀÌ¹Ì ¿­·ÁÀÖ´Ù¸é ¾ÕÀ¸·Î
+            f3.BringToFront();  //ì´ë¯¸ ì—´ë ¤ìˆë‹¤ë©´ ì•ìœ¼ë¡œ
 
             if (f3.ampare_panel.Visible == true)
                 f3.ShowPanel(6);
@@ -1008,18 +999,18 @@ namespace BUR_INS_HMI
                 if (serialPort != null && serialPort.IsOpen)
                 {
                     serialPort.Close();
-                    MessageBox.Show("Åë½Å Á¾·áµÊ");
+                    MessageBox.Show("í†µì‹  ì¢…ë£Œë¨");
                     sens_check(null);
 
                 }
                 else
                 {
-                    MessageBox.Show("Åë½ÅÀÌ ½ÃÀÛµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                    MessageBox.Show("í†µì‹ ì´ ì‹œì‘ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("¿¡·¯: " + ex.Message);
+                MessageBox.Show("ì—ëŸ¬: " + ex.Message);
             }
         }
 
@@ -1038,20 +1029,19 @@ namespace BUR_INS_HMI
                     g.CopyFromScreen(Point.Empty, Point.Empty, bounds.Size);
                 }
 
-                //¹ÙÅÁÈ­¸é °æ·Î ¾ò±â
+                //ë°”íƒ•í™”ë©´ ê²½ë¡œ ì–»ê¸°
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-                //ÀúÀå ÆÄÀÏ¸í ÁöÁ¤
+                //ì €ì¥ íŒŒì¼ëª… ì§€ì •
                 string fileName = $"FulllScreen_{DateTime.Now:yyyyMMdd_HHmmss}.png";
                 string filePath = Path.Combine(desktopPath, fileName);
 
 
-                //ÀÌ¹ÌÁö ÀúÀå
+                //ì´ë¯¸ì§€ ì €ì¥
                 bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
                 MessageBox.Show("Screen Captured");
             }
         }
 
-        
     }
 }
