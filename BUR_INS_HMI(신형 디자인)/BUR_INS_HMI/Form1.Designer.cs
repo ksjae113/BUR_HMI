@@ -36,6 +36,7 @@
             logout_btn = new PictureBox();
             login_btn = new PictureBox();
             rist_logo_pic = new PictureBox();
+            pic_pt_info = new PictureBox();
             sen_stat = new Label();
             RPM_timer = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
@@ -51,11 +52,14 @@
             screencap_btn = new PictureBox();
             run_btn = new PictureBox();
             runstop_btn = new PictureBox();
+            ampare_btn = new PictureBox();
+            temp_btn = new PictureBox();
+            record_btn = new PictureBox();
             p_info_pic9 = new PictureBox();
-            info_lbl9 = new Label();
+            p_info9 = new Label();
             plate_panel = new Panel();
-            avg_plot = new ScottPlot.FormsPlot();
-            label8 = new Label();
+            panel2 = new Panel();
+            info_lbl9 = new Label();
             info_lbl7 = new Label();
             info_lbl6 = new Label();
             info_lbl5 = new Label();
@@ -64,13 +68,9 @@
             info_lbl8 = new Label();
             info_lbl2 = new Label();
             info_lbl1 = new Label();
-            pic_pt_info = new PictureBox();
-            record_btn = new PictureBox();
             p_info_pic8 = new PictureBox();
-            ampare_btn = new PictureBox();
             p_info_pic7 = new PictureBox();
             p_info_pic6 = new PictureBox();
-            temp_btn = new PictureBox();
             p_info_pic5 = new PictureBox();
             p_info_pic4 = new PictureBox();
             p_info_pic3 = new PictureBox();
@@ -84,10 +84,12 @@
             p_info3 = new Label();
             p_info2 = new Label();
             p_info1 = new Label();
+            comboBox1 = new ComboBox();
             splitContainer1 = new SplitContainer();
             chart_panel = new Panel();
-            panel1 = new Panel();
-            rpm_chart_lbl = new Label();
+            numericUpDown2 = new NumericUpDown();
+            dog_lbl = new Label();
+            label1 = new Label();
             sen_stat_pan = new Panel();
             sen_num_lbl10 = new Label();
             sen_num_lbl9 = new Label();
@@ -111,13 +113,16 @@
             pic_sen3 = new PictureBox();
             pic_sen2 = new PictureBox();
             pic_sen1 = new PictureBox();
-            info_panel = new Panel();
+            panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            rpm_chart_lbl = new Label();
+            info_panel = new Panel();
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)exit_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logout_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_pt_info).BeginInit();
             roll_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_position3).BeginInit();
@@ -127,15 +132,14 @@
             ((System.ComponentModel.ISupportInitialize)screencap_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)run_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)runstop_btn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ampare_btn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)temp_btn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)record_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic9).BeginInit();
             plate_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic_pt_info).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)record_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ampare_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)temp_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic3).BeginInit();
@@ -146,7 +150,7 @@
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             chart_panel.SuspendLayout();
-            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             sen_stat_pan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_sen10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen9).BeginInit();
@@ -158,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)pic_sen3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // project_name_lbl
@@ -167,7 +172,7 @@
             project_name_lbl.ForeColor = Color.Red;
             project_name_lbl.Location = new Point(0, 0);
             project_name_lbl.Name = "project_name_lbl";
-            project_name_lbl.Size = new Size(1920, 97);
+            project_name_lbl.Size = new Size(1920, 82);
             project_name_lbl.TabIndex = 2;
             project_name_lbl.Text = "열간교정기 BUR 구동상태 감시 시스템";
             project_name_lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -182,14 +187,14 @@
             subject_panel.Dock = DockStyle.Top;
             subject_panel.Location = new Point(0, 0);
             subject_panel.Name = "subject_panel";
-            subject_panel.Size = new Size(1904, 100);
+            subject_panel.Size = new Size(1904, 82);
             subject_panel.TabIndex = 4;
             // 
             // exit_btn
             // 
             exit_btn.BackColor = SystemColors.ActiveCaptionText;
             exit_btn.Image = Properties.Resources.exit_btn;
-            exit_btn.Location = new Point(1813, 7);
+            exit_btn.Location = new Point(1813, 1);
             exit_btn.Name = "exit_btn";
             exit_btn.Size = new Size(79, 79);
             exit_btn.SizeMode = PictureBoxSizeMode.Zoom;
@@ -201,9 +206,9 @@
             // 
             logout_btn.BackColor = SystemColors.ActiveCaptionText;
             logout_btn.Image = Properties.Resources.admin_logout_btn1;
-            logout_btn.Location = new Point(1580, 3);
+            logout_btn.Location = new Point(1580, 0);
             logout_btn.Name = "logout_btn";
-            logout_btn.Size = new Size(70, 90);
+            logout_btn.Size = new Size(70, 80);
             logout_btn.SizeMode = PictureBoxSizeMode.Zoom;
             logout_btn.TabIndex = 23;
             logout_btn.TabStop = false;
@@ -214,9 +219,9 @@
             // 
             login_btn.BackColor = SystemColors.ActiveCaptionText;
             login_btn.Image = Properties.Resources.admin_login_btn1;
-            login_btn.Location = new Point(1580, 3);
+            login_btn.Location = new Point(1580, 0);
             login_btn.Name = "login_btn";
-            login_btn.Size = new Size(70, 90);
+            login_btn.Size = new Size(70, 80);
             login_btn.SizeMode = PictureBoxSizeMode.Zoom;
             login_btn.TabIndex = 22;
             login_btn.TabStop = false;
@@ -226,12 +231,22 @@
             // 
             rist_logo_pic.BackColor = SystemColors.Desktop;
             rist_logo_pic.Image = Properties.Resources.rist_logo;
-            rist_logo_pic.Location = new Point(212, 7);
+            rist_logo_pic.Location = new Point(212, 0);
             rist_logo_pic.Name = "rist_logo_pic";
-            rist_logo_pic.Size = new Size(168, 90);
+            rist_logo_pic.Size = new Size(168, 80);
             rist_logo_pic.SizeMode = PictureBoxSizeMode.StretchImage;
             rist_logo_pic.TabIndex = 4;
             rist_logo_pic.TabStop = false;
+            // 
+            // pic_pt_info
+            // 
+            pic_pt_info.Image = Properties.Resources.p_info1;
+            pic_pt_info.Location = new Point(3, 3);
+            pic_pt_info.Name = "pic_pt_info";
+            pic_pt_info.Size = new Size(175, 50);
+            pic_pt_info.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_pt_info.TabIndex = 39;
+            pic_pt_info.TabStop = false;
             // 
             // sen_stat
             // 
@@ -385,49 +400,82 @@
             runstop_btn.TabStop = false;
             runstop_btn.Click += runstop_btn_Click;
             // 
+            // ampare_btn
+            // 
+            ampare_btn.Image = Properties.Resources.ampare_btn3;
+            ampare_btn.Location = new Point(183, 3);
+            ampare_btn.Name = "ampare_btn";
+            ampare_btn.Size = new Size(175, 50);
+            ampare_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            ampare_btn.TabIndex = 4;
+            ampare_btn.TabStop = false;
+            ampare_btn.Click += ampare_btn_Click;
+            // 
+            // temp_btn
+            // 
+            temp_btn.Image = Properties.Resources.temp_btn3PNG;
+            temp_btn.Location = new Point(364, 3);
+            temp_btn.Name = "temp_btn";
+            temp_btn.Size = new Size(175, 50);
+            temp_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            temp_btn.TabIndex = 2;
+            temp_btn.TabStop = false;
+            temp_btn.Click += temp_btn_Click;
+            // 
+            // record_btn
+            // 
+            record_btn.Image = (Image)resources.GetObject("record_btn.Image");
+            record_btn.Location = new Point(545, 3);
+            record_btn.Name = "record_btn";
+            record_btn.Size = new Size(175, 50);
+            record_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            record_btn.TabIndex = 5;
+            record_btn.TabStop = false;
+            record_btn.Click += record_btn_Click;
+            // 
             // p_info_pic9
             // 
             p_info_pic9.Image = Properties.Resources.blank;
-            p_info_pic9.Location = new Point(836, 178);
+            p_info_pic9.Location = new Point(837, 159);
             p_info_pic9.Name = "p_info_pic9";
             p_info_pic9.Size = new Size(150, 40);
             p_info_pic9.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic9.TabIndex = 31;
             p_info_pic9.TabStop = false;
             // 
-            // info_lbl9
+            // p_info9
             // 
-            info_lbl9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl9.ForeColor = SystemColors.Control;
-            info_lbl9.Location = new Point(627, 178);
-            info_lbl9.Name = "info_lbl9";
-            info_lbl9.Size = new Size(203, 40);
-            info_lbl9.TabIndex = 30;
-            info_lbl9.Text = "지시 Leveling 속도";
-            info_lbl9.TextAlign = ContentAlignment.MiddleCenter;
+            p_info9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            p_info9.ForeColor = SystemColors.Control;
+            p_info9.Location = new Point(628, 159);
+            p_info9.Name = "p_info9";
+            p_info9.Size = new Size(203, 40);
+            p_info9.TabIndex = 30;
+            p_info9.Text = "지시 Leveling 속도";
+            p_info9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // plate_panel
             // 
             plate_panel.BackColor = SystemColors.ActiveCaptionText;
-            plate_panel.Controls.Add(avg_plot);
-            plate_panel.Controls.Add(label8);
+            plate_panel.Controls.Add(ampare_btn);
+            plate_panel.Controls.Add(pic_pt_info);
+            plate_panel.Controls.Add(panel2);
+            plate_panel.Controls.Add(info_lbl9);
             plate_panel.Controls.Add(info_lbl7);
             plate_panel.Controls.Add(info_lbl6);
             plate_panel.Controls.Add(info_lbl5);
             plate_panel.Controls.Add(info_lbl4);
+            plate_panel.Controls.Add(record_btn);
+            plate_panel.Controls.Add(temp_btn);
             plate_panel.Controls.Add(info_lbl3);
             plate_panel.Controls.Add(info_lbl8);
             plate_panel.Controls.Add(info_lbl2);
             plate_panel.Controls.Add(info_lbl1);
-            plate_panel.Controls.Add(pic_pt_info);
-            plate_panel.Controls.Add(record_btn);
             plate_panel.Controls.Add(p_info_pic8);
             plate_panel.Controls.Add(p_info_pic9);
-            plate_panel.Controls.Add(ampare_btn);
-            plate_panel.Controls.Add(info_lbl9);
+            plate_panel.Controls.Add(p_info9);
             plate_panel.Controls.Add(p_info_pic7);
             plate_panel.Controls.Add(p_info_pic6);
-            plate_panel.Controls.Add(temp_btn);
             plate_panel.Controls.Add(p_info_pic5);
             plate_panel.Controls.Add(p_info_pic4);
             plate_panel.Controls.Add(p_info_pic3);
@@ -442,38 +490,38 @@
             plate_panel.Controls.Add(p_info2);
             plate_panel.Controls.Add(p_info1);
             plate_panel.Dock = DockStyle.Top;
+            plate_panel.ForeColor = SystemColors.ControlText;
             plate_panel.Location = new Point(0, 0);
             plate_panel.Name = "plate_panel";
-            plate_panel.Size = new Size(1481, 250);
+            plate_panel.Size = new Size(1481, 206);
             plate_panel.TabIndex = 0;
             // 
-            // avg_plot
+            // panel2
             // 
-            avg_plot.BackColor = SystemColors.ControlDarkDark;
-            avg_plot.Dock = DockStyle.Right;
-            avg_plot.ForeColor = SystemColors.ControlText;
-            avg_plot.Location = new Point(993, 0);
-            avg_plot.Margin = new Padding(4, 3, 4, 3);
-            avg_plot.Name = "avg_plot";
-            avg_plot.Size = new Size(488, 250);
-            avg_plot.TabIndex = 49;
+            panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.ForeColor = SystemColors.ActiveCaptionText;
+            panel2.Location = new Point(994, 61);
+            panel2.Margin = new Padding(0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(484, 138);
+            panel2.TabIndex = 49;
             // 
-            // label8
+            // info_lbl9
             // 
-            label8.BackColor = Color.White;
-            label8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label8.Location = new Point(841, 180);
-            label8.Name = "label8";
-            label8.Size = new Size(140, 35);
-            label8.TabIndex = 48;
-            label8.Text = "Test";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
+            info_lbl9.BackColor = Color.White;
+            info_lbl9.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            info_lbl9.Location = new Point(842, 161);
+            info_lbl9.Name = "info_lbl9";
+            info_lbl9.Size = new Size(140, 35);
+            info_lbl9.TabIndex = 48;
+            info_lbl9.Text = "20.5";
+            info_lbl9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // info_lbl7
             // 
             info_lbl7.BackColor = Color.White;
             info_lbl7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl7.Location = new Point(840, 130);
+            info_lbl7.Location = new Point(841, 111);
             info_lbl7.Name = "info_lbl7";
             info_lbl7.Size = new Size(140, 35);
             info_lbl7.TabIndex = 47;
@@ -484,7 +532,7 @@
             // 
             info_lbl6.BackColor = Color.White;
             info_lbl6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl6.Location = new Point(840, 81);
+            info_lbl6.Location = new Point(841, 62);
             info_lbl6.Name = "info_lbl6";
             info_lbl6.Size = new Size(140, 35);
             info_lbl6.TabIndex = 46;
@@ -495,7 +543,7 @@
             // 
             info_lbl5.BackColor = Color.White;
             info_lbl5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl5.Location = new Point(472, 181);
+            info_lbl5.Location = new Point(473, 162);
             info_lbl5.Name = "info_lbl5";
             info_lbl5.Size = new Size(140, 35);
             info_lbl5.TabIndex = 45;
@@ -506,7 +554,7 @@
             // 
             info_lbl4.BackColor = Color.White;
             info_lbl4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl4.Location = new Point(472, 131);
+            info_lbl4.Location = new Point(473, 112);
             info_lbl4.Name = "info_lbl4";
             info_lbl4.Size = new Size(140, 35);
             info_lbl4.TabIndex = 44;
@@ -517,7 +565,7 @@
             // 
             info_lbl3.BackColor = Color.White;
             info_lbl3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl3.Location = new Point(472, 82);
+            info_lbl3.Location = new Point(473, 63);
             info_lbl3.Name = "info_lbl3";
             info_lbl3.Size = new Size(140, 35);
             info_lbl3.TabIndex = 43;
@@ -528,7 +576,7 @@
             // 
             info_lbl8.BackColor = Color.White;
             info_lbl8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl8.Location = new Point(159, 181);
+            info_lbl8.Location = new Point(160, 162);
             info_lbl8.Name = "info_lbl8";
             info_lbl8.Size = new Size(140, 35);
             info_lbl8.TabIndex = 42;
@@ -539,7 +587,7 @@
             // 
             info_lbl2.BackColor = Color.White;
             info_lbl2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl2.Location = new Point(159, 131);
+            info_lbl2.Location = new Point(160, 112);
             info_lbl2.Name = "info_lbl2";
             info_lbl2.Size = new Size(140, 35);
             info_lbl2.TabIndex = 41;
@@ -550,59 +598,27 @@
             // 
             info_lbl1.BackColor = Color.White;
             info_lbl1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            info_lbl1.Location = new Point(159, 81);
+            info_lbl1.Location = new Point(160, 62);
             info_lbl1.Name = "info_lbl1";
             info_lbl1.Size = new Size(140, 35);
             info_lbl1.TabIndex = 40;
             info_lbl1.Text = "Test";
             info_lbl1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pic_pt_info
-            // 
-            pic_pt_info.Image = Properties.Resources.p_info1;
-            pic_pt_info.Location = new Point(3, 3);
-            pic_pt_info.Name = "pic_pt_info";
-            pic_pt_info.Size = new Size(220, 70);
-            pic_pt_info.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_pt_info.TabIndex = 39;
-            pic_pt_info.TabStop = false;
-            // 
-            // record_btn
-            // 
-            record_btn.Image = (Image)resources.GetObject("record_btn.Image");
-            record_btn.Location = new Point(681, 3);
-            record_btn.Name = "record_btn";
-            record_btn.Size = new Size(220, 70);
-            record_btn.SizeMode = PictureBoxSizeMode.StretchImage;
-            record_btn.TabIndex = 5;
-            record_btn.TabStop = false;
-            record_btn.Click += record_btn_Click;
-            // 
             // p_info_pic8
             // 
             p_info_pic8.Image = Properties.Resources.blank;
-            p_info_pic8.Location = new Point(154, 178);
+            p_info_pic8.Location = new Point(155, 159);
             p_info_pic8.Name = "p_info_pic8";
             p_info_pic8.Size = new Size(150, 40);
             p_info_pic8.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic8.TabIndex = 27;
             p_info_pic8.TabStop = false;
             // 
-            // ampare_btn
-            // 
-            ampare_btn.Image = Properties.Resources.ampare_btn3;
-            ampare_btn.Location = new Point(229, 3);
-            ampare_btn.Name = "ampare_btn";
-            ampare_btn.Size = new Size(220, 70);
-            ampare_btn.SizeMode = PictureBoxSizeMode.StretchImage;
-            ampare_btn.TabIndex = 4;
-            ampare_btn.TabStop = false;
-            ampare_btn.Click += ampare_btn_Click;
-            // 
             // p_info_pic7
             // 
             p_info_pic7.Image = Properties.Resources.blank;
-            p_info_pic7.Location = new Point(836, 128);
+            p_info_pic7.Location = new Point(837, 109);
             p_info_pic7.Name = "p_info_pic7";
             p_info_pic7.Size = new Size(150, 40);
             p_info_pic7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -612,28 +628,17 @@
             // p_info_pic6
             // 
             p_info_pic6.Image = Properties.Resources.blank;
-            p_info_pic6.Location = new Point(836, 79);
+            p_info_pic6.Location = new Point(837, 60);
             p_info_pic6.Name = "p_info_pic6";
             p_info_pic6.Size = new Size(150, 40);
             p_info_pic6.SizeMode = PictureBoxSizeMode.StretchImage;
             p_info_pic6.TabIndex = 25;
             p_info_pic6.TabStop = false;
             // 
-            // temp_btn
-            // 
-            temp_btn.Image = Properties.Resources.temp_btn3PNG;
-            temp_btn.Location = new Point(455, 3);
-            temp_btn.Name = "temp_btn";
-            temp_btn.Size = new Size(220, 70);
-            temp_btn.SizeMode = PictureBoxSizeMode.StretchImage;
-            temp_btn.TabIndex = 2;
-            temp_btn.TabStop = false;
-            temp_btn.Click += temp_btn_Click;
-            // 
             // p_info_pic5
             // 
             p_info_pic5.Image = Properties.Resources.blank;
-            p_info_pic5.Location = new Point(467, 178);
+            p_info_pic5.Location = new Point(468, 159);
             p_info_pic5.Name = "p_info_pic5";
             p_info_pic5.Size = new Size(150, 40);
             p_info_pic5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -643,7 +648,7 @@
             // p_info_pic4
             // 
             p_info_pic4.Image = Properties.Resources.blank;
-            p_info_pic4.Location = new Point(467, 128);
+            p_info_pic4.Location = new Point(468, 109);
             p_info_pic4.Name = "p_info_pic4";
             p_info_pic4.Size = new Size(150, 40);
             p_info_pic4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -653,7 +658,7 @@
             // p_info_pic3
             // 
             p_info_pic3.Image = Properties.Resources.blank;
-            p_info_pic3.Location = new Point(467, 79);
+            p_info_pic3.Location = new Point(468, 60);
             p_info_pic3.Name = "p_info_pic3";
             p_info_pic3.Size = new Size(150, 40);
             p_info_pic3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -663,7 +668,7 @@
             // p_info_pic2
             // 
             p_info_pic2.Image = Properties.Resources.blank;
-            p_info_pic2.Location = new Point(154, 128);
+            p_info_pic2.Location = new Point(155, 109);
             p_info_pic2.Name = "p_info_pic2";
             p_info_pic2.Size = new Size(150, 40);
             p_info_pic2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -673,7 +678,7 @@
             // p_info_pic1
             // 
             p_info_pic1.Image = Properties.Resources.blank;
-            p_info_pic1.Location = new Point(154, 79);
+            p_info_pic1.Location = new Point(155, 60);
             p_info_pic1.Name = "p_info_pic1";
             p_info_pic1.Size = new Size(150, 40);
             p_info_pic1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -684,7 +689,7 @@
             // 
             p_info8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info8.ForeColor = SystemColors.Control;
-            p_info8.Location = new Point(3, 178);
+            p_info8.Location = new Point(4, 159);
             p_info8.Name = "p_info8";
             p_info8.Size = new Size(155, 40);
             p_info8.TabIndex = 7;
@@ -695,7 +700,7 @@
             // 
             p_info7.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info7.ForeColor = SystemColors.Control;
-            p_info7.Location = new Point(627, 128);
+            p_info7.Location = new Point(628, 109);
             p_info7.Name = "p_info7";
             p_info7.Size = new Size(203, 40);
             p_info7.TabIndex = 6;
@@ -706,7 +711,7 @@
             // 
             p_info6.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info6.ForeColor = SystemColors.Control;
-            p_info6.Location = new Point(675, 76);
+            p_info6.Location = new Point(676, 57);
             p_info6.Name = "p_info6";
             p_info6.Size = new Size(155, 40);
             p_info6.TabIndex = 5;
@@ -717,7 +722,7 @@
             // 
             p_info5.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info5.ForeColor = SystemColors.Control;
-            p_info5.Location = new Point(321, 178);
+            p_info5.Location = new Point(322, 159);
             p_info5.Name = "p_info5";
             p_info5.Size = new Size(139, 40);
             p_info5.TabIndex = 4;
@@ -728,7 +733,7 @@
             // 
             p_info4.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info4.ForeColor = SystemColors.Control;
-            p_info4.Location = new Point(321, 128);
+            p_info4.Location = new Point(322, 109);
             p_info4.Name = "p_info4";
             p_info4.Size = new Size(140, 40);
             p_info4.TabIndex = 3;
@@ -739,7 +744,7 @@
             // 
             p_info3.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info3.ForeColor = SystemColors.Control;
-            p_info3.Location = new Point(344, 80);
+            p_info3.Location = new Point(345, 61);
             p_info3.Name = "p_info3";
             p_info3.Size = new Size(116, 40);
             p_info3.TabIndex = 2;
@@ -750,7 +755,7 @@
             // 
             p_info2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info2.ForeColor = SystemColors.Control;
-            p_info2.Location = new Point(12, 128);
+            p_info2.Location = new Point(13, 109);
             p_info2.Name = "p_info2";
             p_info2.Size = new Size(128, 40);
             p_info2.TabIndex = 1;
@@ -761,17 +766,28 @@
             // 
             p_info1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             p_info1.ForeColor = SystemColors.Control;
-            p_info1.Location = new Point(12, 79);
+            p_info1.Location = new Point(13, 60);
             p_info1.Name = "p_info1";
             p_info1.Size = new Size(128, 40);
             p_info1.TabIndex = 0;
             p_info1.Text = "판 식별번호";
             p_info1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "1", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60" });
+            comboBox1.Location = new Point(134, 9);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(40, 23);
+            comboBox1.TabIndex = 50;
+            comboBox1.Text = "30";
+            comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+            // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 100);
+            splitContainer1.Location = new Point(0, 82);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -784,45 +800,62 @@
             splitContainer1.Panel2.BackColor = SystemColors.Control;
             splitContainer1.Panel2.Controls.Add(info_panel);
             splitContainer1.Panel2.Controls.Add(roll_panel);
-            splitContainer1.Size = new Size(1904, 941);
+            splitContainer1.Size = new Size(1904, 959);
             splitContainer1.SplitterDistance = 1481;
             splitContainer1.TabIndex = 5;
             // 
             // chart_panel
             // 
             chart_panel.BackColor = SystemColors.ActiveCaption;
+            chart_panel.Controls.Add(numericUpDown2);
+            chart_panel.Controls.Add(dog_lbl);
+            chart_panel.Controls.Add(label1);
+            chart_panel.Controls.Add(comboBox1);
+            chart_panel.Controls.Add(sen_stat_pan);
             chart_panel.Controls.Add(panel1);
             chart_panel.Controls.Add(rpm_chart_lbl);
-            chart_panel.Controls.Add(sen_stat_pan);
             chart_panel.Dock = DockStyle.Fill;
-            chart_panel.Location = new Point(0, 250);
+            chart_panel.Location = new Point(0, 206);
             chart_panel.Name = "chart_panel";
-            chart_panel.Size = new Size(1481, 691);
+            chart_panel.Size = new Size(1481, 753);
             chart_panel.TabIndex = 1;
             // 
-            // panel1
+            // numericUpDown2
             // 
-            panel1.BackColor = SystemColors.ButtonFace;
-            panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 40);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1373, 651);
-            panel1.TabIndex = 12;
+            numericUpDown2.Location = new Point(1414, 10);
+            numericUpDown2.Maximum = new decimal(new int[] { 16, 0, 0, 0 });
+            numericUpDown2.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(59, 23);
+            numericUpDown2.TabIndex = 36;
+            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            numericUpDown2.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            numericUpDown2.Visible = false;
             // 
-            // rpm_chart_lbl
+            // dog_lbl
             // 
-            rpm_chart_lbl.BackColor = SystemColors.ActiveCaptionText;
-            rpm_chart_lbl.BorderStyle = BorderStyle.Fixed3D;
-            rpm_chart_lbl.Dock = DockStyle.Top;
-            rpm_chart_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            rpm_chart_lbl.ForeColor = SystemColors.Control;
-            rpm_chart_lbl.Location = new Point(0, 0);
-            rpm_chart_lbl.Name = "rpm_chart_lbl";
-            rpm_chart_lbl.Size = new Size(1373, 40);
-            rpm_chart_lbl.TabIndex = 0;
-            rpm_chart_lbl.Text = "RPM 변화";
-            rpm_chart_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            dog_lbl.AutoSize = true;
+            dog_lbl.BackColor = SystemColors.ActiveCaptionText;
+            dog_lbl.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            dog_lbl.ForeColor = SystemColors.Control;
+            dog_lbl.Location = new Point(1299, 5);
+            dog_lbl.Name = "dog_lbl";
+            dog_lbl.Size = new Size(109, 30);
+            dog_lbl.TabIndex = 1;
+            dog_lbl.Text = "DOG 변경";
+            dog_lbl.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ActiveCaptionText;
+            label1.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(3, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(125, 30);
+            label1.TabIndex = 0;
+            label1.Text = "시간축 변경";
             // 
             // sen_stat_pan
             // 
@@ -851,9 +884,9 @@
             sen_stat_pan.Controls.Add(pic_sen2);
             sen_stat_pan.Controls.Add(pic_sen1);
             sen_stat_pan.Dock = DockStyle.Right;
-            sen_stat_pan.Location = new Point(1373, 0);
+            sen_stat_pan.Location = new Point(1362, 41);
             sen_stat_pan.Name = "sen_stat_pan";
-            sen_stat_pan.Size = new Size(108, 691);
+            sen_stat_pan.Size = new Size(119, 712);
             sen_stat_pan.TabIndex = 11;
             // 
             // sen_num_lbl10
@@ -1088,25 +1121,48 @@
             pic_sen1.TabIndex = 0;
             pic_sen1.TabStop = false;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ButtonFace;
+            panel1.Controls.Add(flowLayoutPanel1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 41);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1481, 712);
+            panel1.TabIndex = 12;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = SystemColors.ControlDarkDark;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.RightToLeft = RightToLeft.No;
+            flowLayoutPanel1.Size = new Size(1481, 712);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // rpm_chart_lbl
+            // 
+            rpm_chart_lbl.BackColor = SystemColors.ActiveCaptionText;
+            rpm_chart_lbl.BorderStyle = BorderStyle.Fixed3D;
+            rpm_chart_lbl.Dock = DockStyle.Top;
+            rpm_chart_lbl.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            rpm_chart_lbl.ForeColor = SystemColors.Control;
+            rpm_chart_lbl.Location = new Point(0, 0);
+            rpm_chart_lbl.Name = "rpm_chart_lbl";
+            rpm_chart_lbl.Size = new Size(1481, 41);
+            rpm_chart_lbl.TabIndex = 1;
+            rpm_chart_lbl.Text = "RPM 변화";
+            rpm_chart_lbl.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // info_panel
             // 
             info_panel.BackColor = SystemColors.ActiveCaptionText;
             info_panel.Dock = DockStyle.Fill;
             info_panel.Location = new Point(0, 250);
             info_panel.Name = "info_panel";
-            info_panel.Size = new Size(419, 691);
+            info_panel.Size = new Size(419, 709);
             info_panel.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = SystemColors.ControlDarkDark;
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1373, 651);
-            flowLayoutPanel1.TabIndex = 0;
-            flowLayoutPanel1.WrapContents = false;
             // 
             // Form1
             // 
@@ -1125,6 +1181,7 @@
             ((System.ComponentModel.ISupportInitialize)logout_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_pt_info).EndInit();
             roll_panel.ResumeLayout(false);
             roll_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
@@ -1135,15 +1192,14 @@
             ((System.ComponentModel.ISupportInitialize)screencap_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)run_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)runstop_btn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ampare_btn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)temp_btn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)record_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic9).EndInit();
             plate_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pic_pt_info).EndInit();
-            ((System.ComponentModel.ISupportInitialize)record_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ampare_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic7).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)temp_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic5).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic4).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic3).EndInit();
@@ -1154,7 +1210,8 @@
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             chart_panel.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            chart_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             sen_stat_pan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pic_sen10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen9).EndInit();
@@ -1166,6 +1223,7 @@
             ((System.ComponentModel.ISupportInitialize)pic_sen3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1197,7 +1255,7 @@
         private PictureBox pic_position2;
         private PictureBox pic_position1;
         private PictureBox p_info_pic9;
-        private Label info_lbl9;
+        private Label p_info9;
         private Label position3_lbl;
         private Label position2_lbl;
         private Label position1_lbl;
@@ -1230,7 +1288,7 @@
         private Panel info_panel;
         private NumericUpDown numericUpDown1;
         private Label info_lbl1;
-        private Label label8;
+        private Label info_lbl9;
         private Label info_lbl7;
         private Label info_lbl6;
         private Label info_lbl5;
@@ -1238,8 +1296,11 @@
         private Label info_lbl3;
         private Label info_lbl8;
         private Label info_lbl2;
-        private ScottPlot.FormsPlot avg_plot;
         private Panel chart_panel;
+        private Panel panel1;
+        private Panel panel2;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private ComboBox comboBox1;
         private Label rpm_chart_lbl;
         private Panel sen_stat_pan;
         private Label sen_num_lbl10;
@@ -1264,7 +1325,8 @@
         private PictureBox pic_sen3;
         private PictureBox pic_sen2;
         private PictureBox pic_sen1;
-        private Panel panel1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Label label1;
+        private Label dog_lbl;
+        private NumericUpDown numericUpDown2;
     }
 }

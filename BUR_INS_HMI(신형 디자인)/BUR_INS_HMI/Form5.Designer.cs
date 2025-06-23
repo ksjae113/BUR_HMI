@@ -28,30 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DB_panel = new Panel();
             SuspendLayout();
-            // 
-            // DB_panel
-            // 
-            DB_panel.BackColor = SystemColors.ActiveCaptionText;
-            DB_panel.Location = new Point(1034, 12);
-            DB_panel.Name = "DB_panel";
-            DB_panel.Size = new Size(77, 97);
-            DB_panel.TabIndex = 0;
             // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1124, 672);
-            Controls.Add(DB_panel);
             Name = "Form5";
             Text = "Form5";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel DB_panel;
     }
 }

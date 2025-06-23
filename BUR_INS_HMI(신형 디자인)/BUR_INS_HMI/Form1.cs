@@ -31,8 +31,7 @@ namespace BUR_INS_HMI
 
         private Form3 f3;
         internal InfoPanel roll_pan;
-
-        //  private Label[] roll;
+        FormsPlot avg_plot;
         private Panel[] roll;
         private Label[] roll_rpm;
         private PictureBox[] sensor;
@@ -48,6 +47,7 @@ namespace BUR_INS_HMI
         ushort startAddress = 0x0000;   // 30001
         ushort numInputs = 27;
 
+        int dog;
         int target_rpm;
 
         public decimal[] amp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5 }; //index[10]:err_range
@@ -60,20 +60,19 @@ namespace BUR_INS_HMI
         /*   DateTime measureStartTime;
            List<double> elapsedTimeList = new List<double>();*/
 
-        /*    List<List<double>> valueLists = new();     // Y값들 (10개)
-           List<List<double>> indexLists = new();     // X값들 (10개)
-         List<List<List<double>>> valueGroups = new();  // [group][plot][values]
-         List<FormsPlot> plots = new();             // 10개의 그래프*/
+        List<FormsPlot> plots = new();             // 10개의 그래프
 
         List<List<List<double>>> ys = new();  // [plot][line][values]
         List<List<List<double>>> xs = new();  // [plot][line][indices]
-        List<FormsPlot> plots = new();
+
+
         int sampleCounter = 0;
         bool isMeasuring = false;
         private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
 
+        bool prevTrigger = false;  // 직전 DI 상태
 
-
+        private int tickInterval = 30;
 
         private ushort[] prevDI = new ushort[4]; // 이전 DI1, DI2 값 저장
 
@@ -81,7 +80,7 @@ namespace BUR_INS_HMI
         public Form1()
         {
             InitializeComponent();
-
+            //   ShowBarChartWithAverages();
             InitializeGraphs();
 
             f3 = new Form3(amp, temp);
@@ -101,8 +100,11 @@ namespace BUR_INS_HMI
             this.Bounds = Screen.PrimaryScreen.Bounds;
             this.StartPosition = FormStartPosition.Manual;
 
+            avg_plot = new FormsPlot();
+            avg_plot.Dock = DockStyle.Fill;
 
-
+            this.panel2.Controls.Add(avg_plot);
+            avg_plot.BringToFront();
 
             roll_pan = new InfoPanel();
             roll_pan.Dock = DockStyle.Fill;
@@ -118,6 +120,8 @@ namespace BUR_INS_HMI
 
             sensor = new PictureBox[] { pic_sen1, pic_sen2, pic_sen3, pic_sen4, pic_sen5, pic_sen6,
              pic_sen7, pic_sen8, pic_sen9, pic_sen10 };
+
+            dog = Convert.ToInt32(numericUpDown2.Value);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -131,6 +135,9 @@ namespace BUR_INS_HMI
             }
         }
 
+
+
+
         private void InitializeGraphs()
         {
 
@@ -139,71 +146,64 @@ namespace BUR_INS_HMI
             plots.Clear();
             flowLayoutPanel1.Controls.Clear();
 
+            int plotWidth = 650;
+            int plotHeight = 150;
+            int margin = 0;
 
-
-            for (int i = 0; i < 10; i++)
+           //  for (int i = 0; i< 10; i ++)
+           for (int i = 0; i < 10; i++)
             {
+                int groupIndex = i;
+
                 ys.Add(new List<List<double>>());
                 xs.Add(new List<List<double>>());
 
                 var fp = new FormsPlot();
-                fp.Height = 100;
-                fp.Dock = DockStyle.Top;
-                fp.Margin = new Padding(2);
-                fp.Plot.SetAxisLimits(yMin: 0, yMax: 25);
-                fp.Plot.Title($"Line {i + 1}", size: 12);
+                {
+                    fp.Size = new Size(plotWidth, plotHeight);
+                    fp.Margin = new Padding(margin);
+                }
+             //   fp.Size = new Size(plotWidth, plotHeight);
+              //  fp.Margin = new Padding(margin);
+
+
+                fp.Plot.SetAxisLimits(xMin: 0, xMax: layout[groupIndex], yMin: -1, yMax: 30);
+                fp.Plot.Title($"Line {(i + 1).ToString("D2")}", size: 12);
                 fp.Plot.Layout(left: 20, right: 5, top: 5, bottom: 20);
                 fp.Plot.XAxis.TickLabelStyle(fontSize: 10);
                 fp.Plot.YAxis.TickLabelStyle(fontSize: 10);
 
-                for (int j = 0; j < layout[i]; j++)
+                for (int j = 0; j < layout[groupIndex]; j++)
                 {
                     ys[i].Add(new List<double>());
                     xs[i].Add(new List<double>());
                 }
 
+                fp.Plot.XLabel("시간(s)");
+                fp.Plot.YLabel("RPM");
+
                 plots.Add(fp);
-                flowLayoutPanel1.Controls.Add(fp);
+
+                 this.flowLayoutPanel1.Controls.Add(fp);
+              //  fp.BringToFront();
             }
-
-            /*       valueLists.Clear();
-                 indexLists.Clear();
-                 plots.Clear();
-                 tableLayoutPanel1.Controls.Clear();
-
-                 tableLayoutPanel1.RowCount = 5;
-                 tableLayoutPanel1.ColumnCount = 2;
-                 tableLayoutPanel1.RowStyles.Clear();
-                 for (int i = 0; i < 5; i++)
-                     tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-
-                 for (int i = 0; i < 10; i++)
-                 {
-                     var fp = new FormsPlot();
-                     fp.Dock = DockStyle.Fill;
-
-                     plots.Add(fp);
-                     valueLists.Add(new List<double>());
-                     indexLists.Add(new List<double>());
-
-                     int row = i / 2;
-                     int col = i % 2;
-                     tableLayoutPanel1.Controls.Add(fp, col, row);
-                 }*/
-
         }
 
         private void OnNewData(ushort[] data)
         {
             if (data == null || data.Length < 27) return;
 
-            if (data[0] == 1 || data[1] == 1)  // 측정 중일 때
+            // 현재 트리거 상태
+            bool currentTrigger = (data[0] == 1 || data[1] == 1);
+            // 측정 시작 (DI 1 또는 2가 1)
+            if (currentTrigger)
             {
                 if (!isMeasuring)
                 {
                     isMeasuring = true;
                     sampleCounter = 0;
 
+                    // 데이터 초기화
                     foreach (var group in ys)
                         foreach (var line in group)
                             line.Clear();
@@ -211,8 +211,16 @@ namespace BUR_INS_HMI
                     foreach (var group in xs)
                         foreach (var line in group)
                             line.Clear();
+
+                    // 평균 Plot이 아직 없으면 초기 생성
+                    if (avg_plot == null)
+                    {
+                        avg_plot = new FormsPlot();
+                        this.Controls.Add(avg_plot);
+                    }
                 }
 
+                // 데이터 누적
                 int dataIndex = 0;
                 for (int i = 0; i < layout.Length; i++)
                 {
@@ -225,95 +233,63 @@ namespace BUR_INS_HMI
                         dataIndex++;
                     }
                 }
+
                 sampleCounter++;
 
-                UpdateAllPlots();
+                // 시각화 갱신
+                UpdateAllPlots();    // 선 그래프
+                UpdateBarChart();    // 평균 막대그래프
             }
-            else if (data[0] == 0 && isMeasuring)
+
+            // 측정 종료 시
+            else if ((data[0] == 0 && data[1] == 0) && isMeasuring)
             {
                 isMeasuring = false;
-                // 측정 종료 시 추가 처리 가능
+                // 필요 시 avgPlot.Visible = false;
             }
-
-            /*  if (data[0] == 1)
-              {
-                  if (!isMeasuring)
-                  {
-                      isMeasuring = true;
-                      sampleCounter = 0;
-
-                      foreach (var group in ys)
-                          foreach (var line in group)
-                              line.Clear();
-                      foreach (var group in xs)
-                          foreach (var line in group)
-                              line.Clear();
-                  }
-
-                  int dataIndex = 0;
-
-                  for (int i = 0; i < layout.Length; i++)
-                  {
-                      for (int j = 0; j < layout[i]; j++)
-                      {
-                          if (dataIndex >= data.Length) break;
-
-                          ys[i][j].Add(data[dataIndex]);
-                          xs[i][j].Add(sampleCounter);
-                          dataIndex++;
-                      }
-                  }
-
-                  sampleCounter++;
-                  UpdateAllPlots();
-              }
-              else if (isMeasuring && data[0] == 0)
-              {
-                  isMeasuring = false;
-              }*/
-
-            /*    int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };  //10개로 나누어 값 출력 되지만 그룹별 그래프 개수 1개
-
-                 if (data[0] == 1)
-                 {
-                     if (!isMeasuring)
-                     {
-                         isMeasuring = true;
-                         sampleCounter = 0;
-
-                         for (int i = 0; i < 10; i++)
-                         {
-                             valueLists[i].Clear();
-                             indexLists[i].Clear();
-                         }
-                     }
-
-                     int dataIndex = 0;
-
-                     for (int i = 0; i < 10; i++)
-                     {
-                         int count = layout[i];
-                         for (int j = 0; j < count; j++)
-                         {
-                             valueLists[i].Add(data[dataIndex]);
-                             indexLists[i].Add(sampleCounter);
-                             dataIndex++;
-                         }
-                     }
-
-                     sampleCounter++;
-
-                     UpdateAllPlots(); // 측정 중 실시간 업데이트
-                 }
-                 else if (isMeasuring && data[0] == 0)
-                 {
-                     isMeasuring = false;
-                     // 측정 종료 후 그래프는 고정됨
-                 }*/
         }
 
-        private void UpdateAllPlots()
+        private void UpdateBarChart()   //평균값 그래프
         {
+
+
+
+            if (avg_plot == null) return;
+
+            double[] groupAverages = new double[layout.Length];
+            for (int i = 0; i < layout.Length; i++)
+            {
+                var allValues = ys[i].SelectMany(line => line).ToList();
+                groupAverages[i] = allValues.Count > 0 ? allValues.Average() : 0.0;
+            }
+
+            string[] groupLabels = Enumerable.Range(1, layout.Length).Select(n => $"G{n}").ToArray();
+
+            var plt = avg_plot.Plot;
+            plt.Clear();
+
+            var bar = plt.AddBar(groupAverages);
+            bar.FillColor = Color.CornflowerBlue;
+
+            plt.XTicks(Enumerable.Range(0, groupLabels.Length).Select(i => (double)i).ToArray(), groupLabels);
+            plt.SetAxisLimits(xMin: -0.5, xMax: layout.Length - 0.5, yMin: -1, yMax: 30);
+
+            // 기준선 (Level)
+            double level = Convert.ToDouble(info_lbl9.Text);
+            var levelLine = plt.AddHorizontalLine(level);
+            levelLine.LineStyle = LineStyle.Dash;
+            levelLine.Color = Color.Red;
+            levelLine.Label = $"Level {level}";
+            plt.Legend();
+
+            plt.Title("평균값 (실시간)");
+            avg_plot.Render();
+        }
+
+
+        private void UpdateAllPlots()   //꺾은선 차트
+        {
+            int roll_cnt = 0;
             for (int i = 0; i < plots.Count; i++)
             {
                 var plot = plots[i];
@@ -325,88 +301,46 @@ namespace BUR_INS_HMI
                     var y = ys[i][j].ToArray();
                     var color = GetColor(j);
 
-                    plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"L{j + 1}");
+                    if (x.Length == 0 || y.Length == 0)
+                        continue;
+                       plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"R{ roll_cnt++ + 1}");
+
                 }
 
-                plot.Plot.Title($"Line {i + 1}");
-                //   plot.Plot.XLabel("Time (s)");
-                //   plot.Plot.YLabel("RPM");
-                plot.Plot.SetAxisLimits(xMin: 0, yMin: 0, yMax: 25);
-                plot.Plot.XAxis.ManualTickSpacing(1);  // X축 눈금 간격 1초
+                plot.Plot.Title($"Line {(i + 1).ToString("D2")}");
+                plot.Plot.XLabel("시간(s)");
+                plot.Plot.YLabel("RPM");
 
-                //   plot.Plot.Legend.IsVisible = true;
-                //   plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
+                //  double xMin = Math.Max(0, sampleCounter - 50);
+                double xMin = 0;
+                double xMax = sampleCounter;
+
+                if (xMax <= xMin)
+                    xMax = xMin + 1;
+
+                var ticks = Enumerable.Range(0, (int)((xMax - xMin) / tickInterval) + 1)
+                                      .Select(idx => xMin + idx * tickInterval)
+                                      .ToArray();
+
+                var labels = ticks.Select(t => $"{t:F0}s").ToArray();
+
+                plot.Plot.XTicks(ticks, labels);
+
+                plot.Plot.Legend(location: Alignment.UpperRight);
+
+                plot.Plot.SetAxisLimits(xMin: xMin, xMax: xMax, yMin: -1, yMax: 30);
 
                 plot.Render();
             }
+            roll_cnt = 0;
 
-            /*  for (int i = 0; i < plots.Count; i++) //버전차이없이 일단 되는거
-              {
-                  var plot = plots[i];
-                  plot.Plot.Clear();
-
-                  for (int j = 0; j < ys[i].Count; j++)
-                  {
-                      var x = xs[i][j].ToArray();
-                      var y = ys[i][j].ToArray();
-                      var color = GetColor(j); // 구분용 색상
-
-                      plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label : $"L{j + 1}");
-                  }
-
-                  var scatter = plot.Plot.Add.Scatter(xs, ys);
-                  scatter.Label = "센서 A";
-
-                  plot.Plot.Legend.IsVisible = true;
-                  plot.Plot.Legend.Location = ScottPlot.Alignment.UpperRight;
-
-                  plot.Render();
-              } */
-
-            /*    for (int i = 0; i < plots.Count; i++)  //크기,Label,Legend 문제빼고는 ok인거 2222
-                {
-                    var plot = plots[i];
-                    plot.Plot.Clear();
-
-                    for (int j = 0; j < ys[i].Count; j++)
-                    {
-                        var x = xs[i][j].ToArray();
-                        var y = ys[i][j].ToArray();
-                        var color = GetColor(j);
-
-                        plot.Plot.AddScatter(x, y, color: color, markerSize: 0, label: $"L{j + 1}");
-                    }
-
-                    plot.Plot.Title($"Group {i + 1}");
-                    plot.Plot.XLabel("Frame");
-                    plot.Plot.YLabel("Value");
-                    plot.Plot.Layout(left: 30, bottom: 20);
-                    plot.Plot.SetAxisLimitsY(0, 25); // 필요 시 조절
-
-                    plot.Render();
-                }*/
-
-            /*  for (int i = 0; i < 10; i++)
-           {
-               var xs = indexLists[i].ToArray();
-               var ys = valueLists[i].ToArray();
-
-               plots[i].Plot.Clear();
-               plots[i].Plot.AddScatter(xs, ys, color: Color.Blue);
-               plots[i].Plot.Title($"Group {i + 1}");
-               plots[i].Plot.XLabel("Frame");
-               plots[i].Plot.SetAxisLimitsY(0, 25); // 필요 시 조절
-               plots[i].Render();
-           }*/
         }
+
         private Color GetColor(int index)
         {
             Color[] colors = { Color.Blue, Color.Red, Color.Green, Color.Orange, Color.Purple };
             return colors[index % colors.Length];
         }
-
-
-
 
 
         private void Init_port()
@@ -546,6 +480,8 @@ namespace BUR_INS_HMI
             {
             }
         }
+
+
 
         private void set_amp_temp(ushort[] data)
         {
@@ -878,6 +814,8 @@ namespace BUR_INS_HMI
                 MessageBox.Show("관리자 모드를 종료합니다.", "관리자 로그아웃");
                 logout_btn.Visible = false;
                 login_btn.Visible = true;
+                dog_lbl.Visible = false;
+                numericUpDown2.Visible = false;
                 login = -1;
                 if (f3 != null)
                 {
@@ -895,27 +833,12 @@ namespace BUR_INS_HMI
         {
             if ("TRUE".Equals(sender.ToString()))
             {
-
-                /*  if (f3 != null)
-                  {
-                      f3.err_set_btn.Visible = true;
-                      for (int i = 0; i < 10; i++)
-                      {
-                          f3.set_btn[i].Visible = true;
-                      }
-                      f3.amp_set_btn.Visible = true;
-                  }*/
-
-                /* 여기만 잠궈보면?
-                for (int i = 0; i < 10; i ++)
-                {
-                    f3.set_btn[i].Visible = true;
-                }
-                f3.err_set_btn.Visible = true;
-                f3.amp_set_btn.Visible = true;*/
                 login_btn.Visible = false;  //기능도 변경 되어야 하므로 2개를 Visible로 변경
                 logout_btn.Visible = true;
+                dog_lbl.Visible = true;
+                numericUpDown2.Visible = true;
                 login = 1;
+                
                 //    login_btn.Image = BUR_INS_HMI.Properties.Resources.admin_logout_btn; //이미지만 변경되는 것이므로 X.
             }
 
@@ -1043,5 +966,21 @@ namespace BUR_INS_HMI
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+
+            f5.Show();
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(comboBox1.SelectedItem.ToString(), out int val))
+            {
+                tickInterval = val;
+                
+                UpdateAllPlots();  // 변경 즉시 그래프 갱신
+            }
+        }
     }
 }

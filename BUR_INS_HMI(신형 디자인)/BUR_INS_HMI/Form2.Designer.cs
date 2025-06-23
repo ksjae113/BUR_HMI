@@ -33,6 +33,8 @@
             password_lbl = new Label();
             close_btn = new PictureBox();
             password_panel = new Panel();
+            new_pass_lbl = new Label();
+            new_pass_name = new Label();
             numpad_panel = new Panel();
             numpad_check = new Button();
             numpad_clear = new Button();
@@ -47,8 +49,6 @@
             numpad3 = new Button();
             numpad2 = new Button();
             numpad1 = new Button();
-            new_pass_lbl = new Label();
-            new_pass_name = new Label();
             ((System.ComponentModel.ISupportInitialize)close_btn).BeginInit();
             password_panel.SuspendLayout();
             numpad_panel.SuspendLayout();
@@ -112,6 +112,30 @@
             password_panel.Name = "password_panel";
             password_panel.Size = new Size(1184, 83);
             password_panel.TabIndex = 4;
+            // 
+            // new_pass_lbl
+            // 
+            new_pass_lbl.BackColor = SystemColors.Control;
+            new_pass_lbl.Font = new Font("맑은 고딕", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            new_pass_lbl.Location = new Point(561, 12);
+            new_pass_lbl.Name = "new_pass_lbl";
+            new_pass_lbl.Size = new Size(314, 60);
+            new_pass_lbl.TabIndex = 13;
+            new_pass_lbl.Visible = false;
+            // 
+            // new_pass_name
+            // 
+            new_pass_name.BackColor = SystemColors.ControlDark;
+            new_pass_name.BorderStyle = BorderStyle.Fixed3D;
+            new_pass_name.Font = new Font("맑은 고딕", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            new_pass_name.ForeColor = SystemColors.ActiveCaptionText;
+            new_pass_name.Location = new Point(275, 12);
+            new_pass_name.Name = "new_pass_name";
+            new_pass_name.Size = new Size(280, 60);
+            new_pass_name.TabIndex = 14;
+            new_pass_name.Text = "새 관리번호";
+            new_pass_name.TextAlign = ContentAlignment.MiddleCenter;
+            new_pass_name.Visible = false;
             // 
             // numpad_panel
             // 
@@ -276,30 +300,6 @@
             numpad1.Text = "1";
             numpad1.UseVisualStyleBackColor = true;
             numpad1.Click += numpad1_Click;
-            // 
-            // new_pass_lbl
-            // 
-            new_pass_lbl.BackColor = SystemColors.Control;
-            new_pass_lbl.Font = new Font("맑은 고딕", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            new_pass_lbl.Location = new Point(561, 12);
-            new_pass_lbl.Name = "new_pass_lbl";
-            new_pass_lbl.Size = new Size(314, 60);
-            new_pass_lbl.TabIndex = 13;
-            new_pass_lbl.Visible = false;
-            // 
-            // new_pass_name
-            // 
-            new_pass_name.BackColor = SystemColors.ControlDark;
-            new_pass_name.BorderStyle = BorderStyle.Fixed3D;
-            new_pass_name.Font = new Font("맑은 고딕", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            new_pass_name.ForeColor = SystemColors.ActiveCaptionText;
-            new_pass_name.Location = new Point(275, 12);
-            new_pass_name.Name = "new_pass_name";
-            new_pass_name.Size = new Size(280, 60);
-            new_pass_name.TabIndex = 14;
-            new_pass_name.Text = "변경할 관리번호";
-            new_pass_name.TextAlign = ContentAlignment.MiddleCenter;
-            new_pass_name.Visible = false;
             // 
             // Form2
             // 
