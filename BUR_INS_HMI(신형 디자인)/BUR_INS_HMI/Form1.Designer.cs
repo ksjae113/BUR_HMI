@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             project_name_lbl = new Label();
             subject_panel = new Panel();
             exit_btn = new PictureBox();
@@ -41,6 +40,7 @@
             RPM_timer = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
             roll_panel = new Panel();
+            ampare_btn = new PictureBox();
             numericUpDown1 = new NumericUpDown();
             pic_position3 = new PictureBox();
             pic_position2 = new PictureBox();
@@ -52,7 +52,6 @@
             screencap_btn = new PictureBox();
             run_btn = new PictureBox();
             runstop_btn = new PictureBox();
-            ampare_btn = new PictureBox();
             temp_btn = new PictureBox();
             record_btn = new PictureBox();
             p_info_pic9 = new PictureBox();
@@ -124,6 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)rist_logo_pic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_pt_info).BeginInit();
             roll_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ampare_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_position3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_position2).BeginInit();
@@ -132,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)screencap_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)run_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)runstop_btn).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ampare_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)temp_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)record_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic9).BeginInit();
@@ -269,6 +268,7 @@
             // roll_panel
             // 
             roll_panel.BackColor = SystemColors.ActiveCaptionText;
+            roll_panel.Controls.Add(ampare_btn);
             roll_panel.Controls.Add(numericUpDown1);
             roll_panel.Controls.Add(pic_position3);
             roll_panel.Controls.Add(pic_position2);
@@ -277,11 +277,24 @@
             roll_panel.Controls.Add(position2_lbl);
             roll_panel.Controls.Add(position1_lbl);
             roll_panel.Controls.Add(runstop_cap_panel);
+            roll_panel.Controls.Add(temp_btn);
+            roll_panel.Controls.Add(record_btn);
             roll_panel.Dock = DockStyle.Top;
             roll_panel.Location = new Point(0, 0);
             roll_panel.Name = "roll_panel";
             roll_panel.Size = new Size(419, 250);
             roll_panel.TabIndex = 0;
+            // 
+            // ampare_btn
+            // 
+            ampare_btn.Image = Properties.Resources.ampare_btn_black2;
+            ampare_btn.Location = new Point(243, 73);
+            ampare_btn.Name = "ampare_btn";
+            ampare_btn.Size = new Size(145, 60);
+            ampare_btn.SizeMode = PictureBoxSizeMode.StretchImage;
+            ampare_btn.TabIndex = 4;
+            ampare_btn.TabStop = false;
+            ampare_btn.Click += ampare_btn_Click;
             // 
             // numericUpDown1
             // 
@@ -339,7 +352,7 @@
             position2_lbl.AutoSize = true;
             position2_lbl.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             position2_lbl.ForeColor = SystemColors.Control;
-            position2_lbl.Location = new Point(3, 141);
+            position2_lbl.Location = new Point(-3, 141);
             position2_lbl.Name = "position2_lbl";
             position2_lbl.Size = new Size(107, 37);
             position2_lbl.TabIndex = 28;
@@ -372,7 +385,7 @@
             screencap_btn.Image = Properties.Resources.screencapture_btn;
             screencap_btn.Location = new Point(281, 3);
             screencap_btn.Name = "screencap_btn";
-            screencap_btn.Size = new Size(135, 70);
+            screencap_btn.Size = new Size(135, 65);
             screencap_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             screencap_btn.TabIndex = 3;
             screencap_btn.TabStop = false;
@@ -383,7 +396,7 @@
             run_btn.Image = Properties.Resources.run_btn;
             run_btn.Location = new Point(4, 3);
             run_btn.Name = "run_btn";
-            run_btn.Size = new Size(135, 70);
+            run_btn.Size = new Size(135, 65);
             run_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             run_btn.TabIndex = 2;
             run_btn.TabStop = false;
@@ -394,29 +407,18 @@
             runstop_btn.Image = Properties.Resources.runstop_btn;
             runstop_btn.Location = new Point(142, 3);
             runstop_btn.Name = "runstop_btn";
-            runstop_btn.Size = new Size(135, 70);
+            runstop_btn.Size = new Size(135, 65);
             runstop_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             runstop_btn.TabIndex = 1;
             runstop_btn.TabStop = false;
             runstop_btn.Click += runstop_btn_Click;
             // 
-            // ampare_btn
-            // 
-            ampare_btn.Image = Properties.Resources.ampare_btn3;
-            ampare_btn.Location = new Point(183, 3);
-            ampare_btn.Name = "ampare_btn";
-            ampare_btn.Size = new Size(175, 50);
-            ampare_btn.SizeMode = PictureBoxSizeMode.StretchImage;
-            ampare_btn.TabIndex = 4;
-            ampare_btn.TabStop = false;
-            ampare_btn.Click += ampare_btn_Click;
-            // 
             // temp_btn
             // 
-            temp_btn.Image = Properties.Resources.temp_btn3PNG;
-            temp_btn.Location = new Point(364, 3);
+            temp_btn.Image = Properties.Resources.sensor_btn_black;
+            temp_btn.Location = new Point(243, 129);
             temp_btn.Name = "temp_btn";
-            temp_btn.Size = new Size(175, 50);
+            temp_btn.Size = new Size(145, 60);
             temp_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             temp_btn.TabIndex = 2;
             temp_btn.TabStop = false;
@@ -424,10 +426,10 @@
             // 
             // record_btn
             // 
-            record_btn.Image = (Image)resources.GetObject("record_btn.Image");
-            record_btn.Location = new Point(545, 3);
+            record_btn.Image = Properties.Resources.record_btn_black;
+            record_btn.Location = new Point(243, 188);
             record_btn.Name = "record_btn";
-            record_btn.Size = new Size(175, 50);
+            record_btn.Size = new Size(145, 60);
             record_btn.SizeMode = PictureBoxSizeMode.StretchImage;
             record_btn.TabIndex = 5;
             record_btn.TabStop = false;
@@ -457,7 +459,6 @@
             // plate_panel
             // 
             plate_panel.BackColor = SystemColors.ActiveCaptionText;
-            plate_panel.Controls.Add(ampare_btn);
             plate_panel.Controls.Add(pic_pt_info);
             plate_panel.Controls.Add(panel2);
             plate_panel.Controls.Add(info_lbl9);
@@ -465,8 +466,6 @@
             plate_panel.Controls.Add(info_lbl6);
             plate_panel.Controls.Add(info_lbl5);
             plate_panel.Controls.Add(info_lbl4);
-            plate_panel.Controls.Add(record_btn);
-            plate_panel.Controls.Add(temp_btn);
             plate_panel.Controls.Add(info_lbl3);
             plate_panel.Controls.Add(info_lbl8);
             plate_panel.Controls.Add(info_lbl2);
@@ -498,7 +497,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.BackColor = Color.FromArgb(64, 64, 64);
             panel2.ForeColor = SystemColors.ActiveCaptionText;
             panel2.Location = new Point(994, 61);
             panel2.Margin = new Padding(0);
@@ -1133,7 +1132,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.BackColor = SystemColors.ControlDarkDark;
+            flowLayoutPanel1.BackColor = Color.FromArgb(64, 64, 64);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -1184,6 +1183,7 @@
             ((System.ComponentModel.ISupportInitialize)pic_pt_info).EndInit();
             roll_panel.ResumeLayout(false);
             roll_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ampare_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_position3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_position2).EndInit();
@@ -1192,7 +1192,6 @@
             ((System.ComponentModel.ISupportInitialize)screencap_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)run_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)runstop_btn).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ampare_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)temp_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)record_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)p_info_pic9).EndInit();

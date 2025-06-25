@@ -113,6 +113,36 @@ namespace BUR_INS_HMI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap ampare_btn_black {
+            get {
+                object obj = ResourceManager.GetObject("ampare_btn_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap ampare_btn_black1 {
+            get {
+                object obj = ResourceManager.GetObject("ampare_btn_black1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap ampare_btn_black2 {
+            get {
+                object obj = ResourceManager.GetObject("ampare_btn_black2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap ampare_btn1 {
             get {
                 object obj = ResourceManager.GetObject("ampare_btn1", resourceCulture);
@@ -253,6 +283,16 @@ namespace BUR_INS_HMI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap record_btn_black {
+            get {
+                object obj = ResourceManager.GetObject("record_btn_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap record_btn2 {
             get {
                 object obj = ResourceManager.GetObject("record_btn2", resourceCulture);
@@ -366,6 +406,16 @@ namespace BUR_INS_HMI.Properties {
         internal static System.Drawing.Bitmap sensor_btn {
             get {
                 object obj = ResourceManager.GetObject("sensor_btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap sensor_btn_black {
+            get {
+                object obj = ResourceManager.GetObject("sensor_btn_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

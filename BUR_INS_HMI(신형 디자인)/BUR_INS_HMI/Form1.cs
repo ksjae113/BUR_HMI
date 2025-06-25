@@ -397,7 +397,8 @@ namespace BUR_INS_HMI
 
                 Random rand = new Random();
                 int randnum = rand.Next(4, numInputs);
-                /*  if (randnum != 8 && randnum != 11 && randnum != 14)
+
+                  if (randnum != 8 && randnum != 11 && randnum != 14)
                   {
 
                       for (int i = 4; i < numInputs; i++)
@@ -406,9 +407,9 @@ namespace BUR_INS_HMI
                           data[randnum] = 0x0B;
 
                       }
-                  }*/
+                  }
 
-                for (int i = 4; i < numInputs; i++)
+            /*    for (int i = 4; i < numInputs; i++)
                 {
                     data[i] = 0x15;
                     if (data[0] == 1)
@@ -421,7 +422,7 @@ namespace BUR_INS_HMI
                     {
                         data[i] = (ushort)i;
                     }
-                }
+                }*/
 
 
                 rpm_check(data);
