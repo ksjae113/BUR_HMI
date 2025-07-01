@@ -51,7 +51,7 @@ namespace BUR_INS_HMI
         int dog;
         int target_rpm;
 
-        public decimal[] amp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5 }; //index[10]:err_range
+        public decimal[] amp = new decimal[] { 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 5 }; //index[10]:err_range
         public decimal[] temp = new decimal[] { 30.5M, 30.5M, 30.5M, 30.5M, 30.5M, 30.5M,
             30.5M, 30.5M, 30.5M, 30.5M };
 
@@ -406,13 +406,13 @@ namespace BUR_INS_HMI
         {
             try
             {
-                //  ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
-                ushort[] data = await Task.Run(() =>
+                  ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
+               /* ushort[] data = await Task.Run(() =>
                 {
                     return _modbusMaster.ReadHoldingRegisters(slaveId, startAddress, numInputs);
                     //Holding으로 바꿈
                 });
-
+               */
 
                 Random rand = new Random();
                 int randnum = rand.Next(4, numInputs);
@@ -426,14 +426,14 @@ namespace BUR_INS_HMI
                         data[randnum] = 0x0B;
 
                     }
-                }
+                }*/
 
-                if (data[3] == 1)
+                if (data[0] == 1)
                 {
                     for (int i = 4; i < numInputs; i++)
-                        data[i] = 0;
+                        data[i] = 20;
                 }
-             */
+             
            
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/lXzmSZKBA=",
+  "dgSpecHash": "Enp6S3cvK3s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(신형 스레드작업해보기)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+  "projectFilePath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(신형 ReadHolding)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tjlee\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\tjlee\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

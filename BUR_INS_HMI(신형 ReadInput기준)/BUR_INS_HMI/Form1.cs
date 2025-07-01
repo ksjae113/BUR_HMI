@@ -409,7 +409,8 @@ namespace BUR_INS_HMI
                 //  ushort[] data = _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
                 ushort[] data = await Task.Run(() =>
                 {
-                    return _modbusMaster.ReadHoldingRegisters(slaveId, startAddress, numInputs);
+                      return _modbusMaster.ReadHoldingRegisters(slaveId, startAddress, numInputs);
+                 //   return _modbusMaster.ReadInputRegisters(slaveId, startAddress, numInputs);
                 });
 
 

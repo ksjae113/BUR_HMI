@@ -88,7 +88,7 @@ namespace BUR_INS_HMI
             //    MessageBox.Show("ERR_RANGE : " + err_set.Text);
             for (int i = 0; i < 10; i++)
             {
-                amp_set[i].Text = "---";
+                amp_set[i].Text = amp[i].ToString("F1");
                 tar_amp[i].Text = (amp[i] * channels[i]).ToString("F1");
                 real_amp[i].Text = amp[i].ToString("F1");
                 //    MessageBox.Show($"amp[{i}] = {amp_set[i].Text} mA\ntar_amp[{i}] = {tar_amp[i].Text}");

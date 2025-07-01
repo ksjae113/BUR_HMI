@@ -1,73 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\",
+  "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\infopanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\infopanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\infopanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\infopanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 \uB514\uC790\uC778)\\bur_ins_hmi\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(\uC2E0\uD615 readinput\uAE30\uC900)\\bur_ins_hmi\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -84,9 +84,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T08:04:45.479Z",
@@ -97,11 +97,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form1.cs",
-              "ViewState": "AgIAAH8BAAAAAAAAAAAAAJsBAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAI8BAAAAAAAAAAAAAJkBAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T04:39:08.012Z",
               "IsPinned": true,
@@ -111,9 +111,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form1.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form1.Designer.cs",
               "ViewState": "AgIAABQAAAAAAAAAAABDwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -125,10 +125,10 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Form2.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form2.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T00:03:25.081Z",
               "IsPinned": true
@@ -137,9 +137,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form2.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form2.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form2.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -150,9 +150,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Form2.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.Designer.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form2.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form2.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -163,10 +163,10 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Form3.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form3.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T07:41:43.066Z",
               "IsPinned": true
@@ -175,9 +175,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form3.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form3.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form3.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -188,9 +188,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Form3.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.Designer.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form3.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form3.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form3.Designer.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvxsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -201,22 +201,21 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Form4.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form4.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T08:16:47.643Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Form4.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form4.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form4.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form4.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAjwCAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -227,24 +226,23 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Form4.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form4.Designer.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.Designer.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form4.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form4.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form4.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T04:42:31.476Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Form5.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form5.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form5.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form5.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form5.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\Form5.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form5.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T04:54:30.919Z",
               "IsPinned": true
@@ -253,9 +251,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form5.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form5.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form5.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form5.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\Form5.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\Form5.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form5.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -266,9 +264,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "InfoPanel.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\InfoPanel.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\InfoPanel.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\InfoPanel.cs",
               "RelativeToolTip": "BUR_INS_HMI\\InfoPanel.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -280,9 +278,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "InfoPanel.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\InfoPanel.Designer.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\InfoPanel.Designer.cs",
-              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\InfoPanel.Designer.cs",
               "RelativeToolTip": "BUR_INS_HMI\\InfoPanel.Designer.cs",
               "ViewState": "AgIAAJQEAAAAAAAAAAAmwJ4EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -293,10 +291,10 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "InfoPanel.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 ReadInput\uAE30\uC900)\\BUR_INS_HMI\\InfoPanel.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\InfoPanel.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "BUR_INS_HMI\\InfoPanel.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI(\uC2E0\uD615 \uB514\uC790\uC778)\\BUR_INS_HMI\\InfoPanel.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T01:46:52.071Z"
             }
