@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Iq/FRzAMV18=",
+  "dgSpecHash": "Kq1F9N5FSOo=",
   "success": true,
   "projectFilePath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\Console1\\Console1\\Console1.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,11 @@
     "C:\\Users\\tjlee\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.5\\runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\tjlee\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\tjlee\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-x64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
-    "C:\\Users\\tjlee\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512"
+    "C:\\Users\\tjlee\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.17\\microsoft.windowsdesktop.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.17\\microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.17\\microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tjlee\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.17\\microsoft.netcore.app.host.win-x64.8.0.17.nupkg.sha512"
   ],
   "logs": [
     {
