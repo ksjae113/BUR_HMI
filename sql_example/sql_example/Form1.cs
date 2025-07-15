@@ -11,7 +11,7 @@ namespace sql_example
         public Form1()
         {
             InitializeComponent();
-        //    mMssqlLib.connect();
+         //   mMssqlLib.connect();
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -12,7 +12,7 @@ namespace sql_example
     internal class MssqlLib
     {
         // DB 접속 정보 설정  //연결은 성공
-    /*    private static string DbSource = "DESKTOP-4J780GL\\MSSQLSERVER_22";// your DB address
+      /*  private static string DbSource = "DESKTOP-4J780GL\\MSSQLSERVER_22";// your DB address
         private static string DbName = "sampledb";// your DB database name
     private static string DbUser = "sa";// your DB user name
         private static string DbPassword = "0000";// your DB user password
@@ -51,7 +51,7 @@ namespace sql_example
             }
         }*/
 
-
+        
         // 접속테스트
         public bool ConnectionTest()
         {
