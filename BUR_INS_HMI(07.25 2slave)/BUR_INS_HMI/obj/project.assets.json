@@ -3830,11 +3830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.24) - 복사본\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+      "projectUniqueName": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.25 2slave)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
       "projectName": "BUR_INS_HMI",
-      "projectPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.24) - 복사본\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+      "projectPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.25 2slave)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
       "packagesPath": "C:\\Users\\tjlee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.24) - 복사본\\BUR_INS_HMI\\obj\\",
+      "outputPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.25 2slave)\\BUR_INS_HMI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

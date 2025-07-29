@@ -963,8 +963,10 @@ namespace BUR_INS_HMI
                 roll_rpm[i].Text = data[i].ToString();
 
                 roll_rpm[i].Visible = (avg >= target_rpm[0]) ? true : false;  // 조건에 따라 true 또는 false
+
             }
-            if (roll_rpm[8].Visible == true && roll_rpm[11].Visible == true &&
+
+            if (roll_rpm[8].Visible == true && roll_rpm[11].Visible == true &&  //교정중
                 roll_rpm[14].Visible == true)
 
                 pic_position2.Image = BUR_INS_HMI.Properties.Resources.sen_stat_realred_darkdark;
