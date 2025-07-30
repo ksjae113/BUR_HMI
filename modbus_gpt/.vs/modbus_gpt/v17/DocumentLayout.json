@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "modbus_gpt\\Form1.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\Form1.cs",
               "RelativeToolTip": "modbus_gpt\\Form1.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAAwIkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T04:07:51.211Z",
               "EditorCaption": ""
@@ -42,7 +46,8 @@
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\Form1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "modbus_gpt\\Form1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T04:04:09.745Z"
+              "WhenOpened": "2025-05-30T04:04:09.745Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             }
           ]
         }

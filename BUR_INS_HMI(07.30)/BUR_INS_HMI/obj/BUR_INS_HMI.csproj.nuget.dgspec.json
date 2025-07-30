@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\modbus_gpt.csproj": {}
+    "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.30 작업중)\\BUR_INS_HMI\\BUR_INS_HMI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\modbus_gpt.csproj": {
+    "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.30 작업중)\\BUR_INS_HMI\\BUR_INS_HMI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\modbus_gpt.csproj",
-        "projectName": "modbus_gpt",
-        "projectPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\modbus_gpt.csproj",
+        "projectUniqueName": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.30 작업중)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+        "projectName": "BUR_INS_HMI",
+        "projectPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.30 작업중)\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
         "packagesPath": "C:\\Users\\tjlee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\modbus_gpt\\modbus_gpt\\obj\\",
+        "outputPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(07.30 작업중)\\BUR_INS_HMI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "NModbus": {
               "target": "Package",
               "version": "[3.0.81, )"
@@ -58,6 +62,18 @@
             "NModbus4": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[4.1.69, )"
+            },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[4.1.69, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             },
             "System.IO.Ports": {
               "target": "Package",
