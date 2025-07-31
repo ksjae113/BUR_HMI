@@ -528,7 +528,7 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(data1);
-            panel1.Location = new Point(1284, 24);
+            panel1.Location = new Point(5, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(620, 536);
             panel1.TabIndex = 0;
