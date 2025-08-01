@@ -358,13 +358,14 @@ namespace BUR_INS_HMI
          //   {
                 try
                 {
-                    serialPort = new SerialPort("COM103")
+                    serialPort = new SerialPort("COM3")
                     {
-                        BaudRate = 115200,
+                        BaudRate = 9600,
                         DataBits = 8,
                         Parity = Parity.None,
                         StopBits = StopBits.One,
-                        ReadTimeout = 100
+                        ReadTimeout = 100,
+                        WriteTimeout = 100
                     };
 
                     serialPort.Open();
