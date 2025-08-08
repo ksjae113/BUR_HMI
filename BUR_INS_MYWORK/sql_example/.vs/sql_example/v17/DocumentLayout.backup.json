@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\sql_example\\sql_example\\mssqllib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|solutionrelative:sql_example\\mssqllib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\sql_example\\sql_example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|solutionrelative:sql_example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\sql_example\\sql_example\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|solutionrelative:sql_example\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|solutionrelative:sql_example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\sql_example\\sql_example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8572DF2-E40D-41E0-A6FD-508304989F07}|sql_example\\sql_example.csproj|solutionrelative:sql_example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "sql_example\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.Designer.cs",
+              "RelativeToolTip": "sql_example\\Form1.Designer.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAlwEIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T01:06:27.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Program.cs",
+              "RelativeDocumentMoniker": "sql_example\\Program.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Program.cs",
+              "RelativeToolTip": "sql_example\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T01:04:07.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.cs",
+              "RelativeDocumentMoniker": "sql_example\\Form1.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.cs",
+              "RelativeToolTip": "sql_example\\Form1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T00:34:34.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MssqlLib.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\MssqlLib.cs",
+              "RelativeDocumentMoniker": "sql_example\\MssqlLib.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\MssqlLib.cs*",
+              "RelativeToolTip": "sql_example\\MssqlLib.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T00:21:51.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.cs",
+              "RelativeDocumentMoniker": "sql_example\\Form1.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\sql_example\\sql_example\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "sql_example\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T00:20:23.433Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

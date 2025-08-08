@@ -1,0 +1,349 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\mssqllib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\mssqllib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\bur_ins_hmi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\bur_ins_hmi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\bur_ins_hmi\\form6.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form6.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "BUR_INS_HMI\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:04:45.479Z",
+              "IsPinned": true,
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form1.cs",
+              "ViewState": "AgIAAJMBAAAAAAAAAAD4v6MBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T04:15:54.978Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form1.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:08:09.079Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form2.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911\\BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911\\BUR_INS_HMI\\Form2.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T00:03:25.081Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form2.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form2.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form2.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:38:57.103Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form2.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form2.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:04:24.622Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form3.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:41:43.066Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form3.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAiwKIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:43:01.761Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form3.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form3.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form3.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T04:33:31.74Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form4.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:16:47.643Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form4.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowKgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T23:43:23.84Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form4.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form4.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form4.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form4.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:42:31.476Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BUR_INS_HMI",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\BUR_INS_HMI.csproj",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\BUR_INS_HMI.csproj",
+              "RelativeToolTip": "BUR_INS_HMI\\BUR_INS_HMI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-04T01:40:31.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "test.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\test.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\test.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\test.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\test.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T00:26:30.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "test.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\test.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\test.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\test.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\test.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T00:26:26.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Form6.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.Designer.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form6.Designer.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.Designer.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form6.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T06:31:38.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form6.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form6.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Form6.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T05:56:53.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Program.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Program.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Program.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T23:50:40.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MssqlLib.cs",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\MssqlLib.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\MssqlLib.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\MssqlLib.cs",
+              "RelativeToolTip": "BUR_INS_HMI\\MssqlLib.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T23:44:38.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form6.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08(2\uC791\uC5C5\uC911 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.cs",
+              "RelativeDocumentMoniker": "BUR_INS_HMI\\Form6.cs",
+              "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\BUR_INS_HMI_08.08 - \uBCF5\uC0AC\uBCF8\\BUR_INS_HMI\\Form6.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T04:36:12.93Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
