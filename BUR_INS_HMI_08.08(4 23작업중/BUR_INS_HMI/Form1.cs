@@ -85,11 +85,6 @@ namespace BUR_INS_HMI
 
         bool estop = false;
 
-        decimal avg = 0;
-
-        /*   DateTime measureStartTime;
-           List<double> elapsedTimeList = new List<double>();*/
-
         List<FormsPlot> plots = new();             // 10개의 그래프
 
         List<List<List<double>>> ys = new();  // [plot][line][values]
@@ -124,6 +119,8 @@ namespace BUR_INS_HMI
         private byte[] deviceAddress = { 1, 2, 3 };
 
         private ushort[] prevData = new ushort[80];
+
+        private FormsPlot[] fp_array = new FormsPlot[10];
 
         public Form1()
         {
@@ -201,7 +198,10 @@ namespace BUR_INS_HMI
                 label83, label84, label85, label86, label87, label88, label89,
             label90, label91, label92, label93, label94, label95, label96};
             //data 43~82
+
             
+
+
         }
 
         private async Task ModbusPollingLoop(CancellationToken token)
@@ -1802,6 +1802,8 @@ namespace BUR_INS_HMI
                 if (!estop)
                 {
                     _modbusMaster.WriteSingleRegister(deviceAddress[2], 10, 1); //D3 ON
+                 //   _modbusMaster.WriteSingleRegister(deviceAddress[2], 2, 1);
+
                     pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_off3;
                     pic_pc_estop.Image = BUR_INS_HMI.Properties.Resources.pc_red;
                     estop = true;
@@ -1814,6 +1816,7 @@ namespace BUR_INS_HMI
                         //   pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.local_e_stop_off;
                         //   pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_off3;
                               _modbusMaster.WriteSingleRegister(deviceAddress[2], 10, 0); //D3 OFF
+                      //  _modbusMaster.WriteSingleRegister(deviceAddress[2], 2, 0);
                         pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_on;
                         pic_pc_estop.Image = BUR_INS_HMI.Properties.Resources.pc_green;
                        estop = false;

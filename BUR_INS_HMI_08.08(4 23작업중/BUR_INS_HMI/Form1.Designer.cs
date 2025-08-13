@@ -300,6 +300,16 @@
             textBox1 = new TextBox();
             label1 = new Label();
             rpm_chart_lbl = new Label();
+            formsPlot1 = new ScottPlot.FormsPlot();
+            formsPlot2 = new ScottPlot.FormsPlot();
+            formsPlot3 = new ScottPlot.FormsPlot();
+            formsPlot4 = new ScottPlot.FormsPlot();
+            formsPlot5 = new ScottPlot.FormsPlot();
+            formsPlot6 = new ScottPlot.FormsPlot();
+            formsPlot7 = new ScottPlot.FormsPlot();
+            formsPlot8 = new ScottPlot.FormsPlot();
+            formsPlot9 = new ScottPlot.FormsPlot();
+            formsPlot10 = new ScottPlot.FormsPlot();
             subject_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_lc_estop).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_pc_estop).BeginInit();
@@ -331,6 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)pic_position2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ampare_btn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)record_btn).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             sen_stat_pan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_sen1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_sen10).BeginInit();
@@ -565,7 +576,7 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(data1);
-            panel1.Location = new Point(3, 8);
+            panel1.Location = new Point(1007, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(620, 782);
             panel1.TabIndex = 0;
@@ -2211,6 +2222,16 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.Silver;
+            flowLayoutPanel1.Controls.Add(formsPlot1);
+            flowLayoutPanel1.Controls.Add(formsPlot2);
+            flowLayoutPanel1.Controls.Add(formsPlot3);
+            flowLayoutPanel1.Controls.Add(formsPlot4);
+            flowLayoutPanel1.Controls.Add(formsPlot5);
+            flowLayoutPanel1.Controls.Add(formsPlot6);
+            flowLayoutPanel1.Controls.Add(formsPlot7);
+            flowLayoutPanel1.Controls.Add(formsPlot8);
+            flowLayoutPanel1.Controls.Add(formsPlot9);
+            flowLayoutPanel1.Controls.Add(formsPlot10);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 35);
@@ -3559,6 +3580,86 @@
             rpm_chart_lbl.Text = "BUR 회전속도 (RPM)";
             rpm_chart_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // formsPlot1
+            // 
+            formsPlot1.Location = new Point(4, 3);
+            formsPlot1.Margin = new Padding(4, 3, 4, 3);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(467, 120);
+            formsPlot1.TabIndex = 0;
+            // 
+            // formsPlot2
+            // 
+            formsPlot2.Location = new Point(4, 129);
+            formsPlot2.Margin = new Padding(4, 3, 4, 3);
+            formsPlot2.Name = "formsPlot2";
+            formsPlot2.Size = new Size(467, 126);
+            formsPlot2.TabIndex = 1;
+            // 
+            // formsPlot3
+            // 
+            formsPlot3.Location = new Point(4, 261);
+            formsPlot3.Margin = new Padding(4, 3, 4, 3);
+            formsPlot3.Name = "formsPlot3";
+            formsPlot3.Size = new Size(467, 117);
+            formsPlot3.TabIndex = 2;
+            // 
+            // formsPlot4
+            // 
+            formsPlot4.Location = new Point(4, 384);
+            formsPlot4.Margin = new Padding(4, 3, 4, 3);
+            formsPlot4.Name = "formsPlot4";
+            formsPlot4.Size = new Size(467, 162);
+            formsPlot4.TabIndex = 3;
+            // 
+            // formsPlot5
+            // 
+            formsPlot5.Location = new Point(4, 552);
+            formsPlot5.Margin = new Padding(4, 3, 4, 3);
+            formsPlot5.Name = "formsPlot5";
+            formsPlot5.Size = new Size(467, 142);
+            formsPlot5.TabIndex = 4;
+            // 
+            // formsPlot6
+            // 
+            formsPlot6.Location = new Point(479, 3);
+            formsPlot6.Margin = new Padding(4, 3, 4, 3);
+            formsPlot6.Name = "formsPlot6";
+            formsPlot6.Size = new Size(467, 120);
+            formsPlot6.TabIndex = 5;
+            // 
+            // formsPlot7
+            // 
+            formsPlot7.Location = new Point(479, 129);
+            formsPlot7.Margin = new Padding(4, 3, 4, 3);
+            formsPlot7.Name = "formsPlot7";
+            formsPlot7.Size = new Size(467, 106);
+            formsPlot7.TabIndex = 6;
+            // 
+            // formsPlot8
+            // 
+            formsPlot8.Location = new Point(479, 241);
+            formsPlot8.Margin = new Padding(4, 3, 4, 3);
+            formsPlot8.Name = "formsPlot8";
+            formsPlot8.Size = new Size(467, 114);
+            formsPlot8.TabIndex = 7;
+            // 
+            // formsPlot9
+            // 
+            formsPlot9.Location = new Point(479, 361);
+            formsPlot9.Margin = new Padding(4, 3, 4, 3);
+            formsPlot9.Name = "formsPlot9";
+            formsPlot9.Size = new Size(467, 159);
+            formsPlot9.TabIndex = 8;
+            // 
+            // formsPlot10
+            // 
+            formsPlot10.Location = new Point(479, 526);
+            formsPlot10.Margin = new Padding(4, 3, 4, 3);
+            formsPlot10.Name = "formsPlot10";
+            formsPlot10.Size = new Size(467, 162);
+            formsPlot10.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -3608,6 +3709,7 @@
             ((System.ComponentModel.ISupportInitialize)pic_position2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ampare_btn).EndInit();
             ((System.ComponentModel.ISupportInitialize)record_btn).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
             sen_stat_pan.ResumeLayout(false);
             sen_stat_pan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic_sen1).EndInit();
@@ -3938,5 +4040,15 @@
         private Label label89;
         private PictureBox pic_lc_estop;
         private PictureBox pic_pc_estop;
+        private ScottPlot.FormsPlot formsPlot1;
+        private ScottPlot.FormsPlot formsPlot2;
+        private ScottPlot.FormsPlot formsPlot3;
+        private ScottPlot.FormsPlot formsPlot4;
+        private ScottPlot.FormsPlot formsPlot5;
+        private ScottPlot.FormsPlot formsPlot6;
+        private ScottPlot.FormsPlot formsPlot7;
+        private ScottPlot.FormsPlot formsPlot8;
+        private ScottPlot.FormsPlot formsPlot9;
+        private ScottPlot.FormsPlot formsPlot10;
     }
 }
