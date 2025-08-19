@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(08.01)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(08.01)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|solutionrelative:bur_ins_hmi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB8FA9E-CB85-46CE-80A4-069ED8B1CD83}|BUR_INS_HMI\\BUR_INS_HMI.csproj|c:\\users\\tjlee\\desktop\\ksj\\git-workspace\\bur_ins_hmi(08.01)\\bur_ins_hmi\\mssqllib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(08.01)\\BUR_INS_HMI\\Form1.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form1.cs",
@@ -182,13 +182,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(08.01)\\BUR_INS_HMI\\Form3.cs",
               "RelativeDocumentMoniker": "BUR_INS_HMI\\Form3.cs",
               "ToolTip": "C:\\Users\\tjlee\\Desktop\\ksj\\git-workspace\\BUR_INS_HMI(08.01)\\BUR_INS_HMI\\Form3.cs",
               "RelativeToolTip": "BUR_INS_HMI\\Form3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMBAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAAAMBAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T07:43:01.761Z",
               "IsPinned": true,
@@ -245,10 +245,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T04:42:31.476Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
