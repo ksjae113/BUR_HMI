@@ -44,45 +44,43 @@ namespace BUR_INS_HMI
 
         //사무실
         //MssqlLib.cs에서 db 경로는 바꿔줘야함
-        private string settingfilePath = @"C:\Users\tjlee\Desktop\ksj\settings.txt";
-        public string capturePath = @"C:\Users\tjlee\Desktop\ksj\captured";
-        string csvPath = @"C:\Users\tjlee\Desktop\ksj\storage";
+        private string settingfilePath = @"C:\Users\tjlee\Desktop\ksj\settings.txt";    //설정값 메모장 경로
+        public string capturePath = @"C:\Users\tjlee\Desktop\ksj\captured"; //스크린샷 경로
+        string csvPath = @"C:\Users\tjlee\Desktop\ksj\storage"; //csv 파일 경로
 
         /*
         //RIST
         //MssqlLib.cs에서 db 경로는 바꿔줘야함
         
-        private string settingfilePath = capturePath = @"C:\Users\User\Desktop\settings.txt";
-        public string capturePath = @"C:\Users\User\Desktop\storage";
-        string csvPath = @"C:\Users\User\Desktop\ScreenCaptured";
+        private string settingfilePath = capturePath = @"C:\Users\User\Desktop\settings.txt";   //설정값 메모장 경로
+        public string capturePath = @"C:\Users\User\Desktop\storage";   //스크린샷 경로
+        string csvPath = @"C:\Users\User\Desktop\ScreenCaptured";   //csv 파일 경로
         */
 
         private Label[] test_data;
 
         private Form3 f3;
-        public Label[] roll_num;
+        private Label[] roll_num;
         FormsPlot avg_plot;
-        private Panel[] roll;
         private Label[] roll_rpm;
         private PictureBox[] sensor;
         private Label[] info_lbl;
         private byte latestDOByte = 0x00;   //가장 최근의 DO raw 값 저장
 
-
-
         private bool isWarning = false;
 
         private string password = "0000";
 
-        public SerialPort serialPort;
+        private SerialPort serialPort;
 
         public ModbusSerialMaster _modbusMaster;
         public Func<byte> GetDOByte;
 
         private Stopwatch stopwatch = Stopwatch.StartNew();
 
-        ushort[] startAddress = {0x0000, 0x0000, 0x0000, 0x0000 };   // 30001
-        ushort[] numInputs = { 9 , 40, 40, 16 };
+        private ushort[] startAddress = {0x0000, 0x0000, 0x0000, 0x0000 };   // 30001
+        private ushort[] numInputs = { 9 , 40, 40, 16 };
+        private byte[] deviceAddress = { 4, 1, 2, 3 };  //Slave Number
 
         private ushort[] tempData = { 0,0,0,0,0, 0,0,0,0,0,
                                         0,0,0,0,0, 0,0,0,0,0,
@@ -97,28 +95,28 @@ namespace BUR_INS_HMI
         private bool isBlink = true;
 
         internal decimal[] target_rpm = new decimal[] { 20, 1000 };  //[ 구동 판정 속도 | 구동 속도 주기 ]
-        public decimal[] amp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5 }; //index[10]:err_range
-        public decimal[] temp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public decimal[] amp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    5 }; //전류값//index[10]:err_range(오차 범위)
+        public decimal[] temp = new decimal[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //온도값
 
-        public decimal[] difference = new decimal[] { 0.5M };   //{ 0.5M };
+        public decimal[] difference = new decimal[] { 0.5M };   //UI 반영 기준 수치값 차이
 
-        public decimal[] std_amp = new decimal[] { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+        public decimal[] std_amp = new decimal[] { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };  //기준 전류
 
         public ushort[] MeasureData = new ushort[80];
 
         bool estop = false;
 
-        List<FormsPlot> plots = new();             // 10개의 그래프
+        List<FormsPlot> plots = new();             // Plot (10개의 그래프 생성할 곳)
 
         List<List<List<double>>> ys = new();  // [plot][line][values]
         List<List<List<double>>> xs = new();  // [plot][line][indices]
 
         bool isMeasuring = false;
-        private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };
+        private int[] layout = { 3, 2, 3, 3, 2, 3, 3, 2, 3, 3 };    //각 라인별 채널 개수
 
         public bool isRunning = false;
 
-        private double xRangeSeconds = 300;
+        private double xRangeSeconds = 300; //꺾은선 그래프 기본 측정 시간값 5분(300초)
 
         private CancellationTokenSource cancellationTokenSourceForModbus;
         private Task _modbusPollingTask;
@@ -130,13 +128,15 @@ namespace BUR_INS_HMI
 
         private bool ExitFlag = false;
 
-        MssqlLib mssql = new MssqlLib();
+        MssqlLib mssql = new MssqlLib();    //sql용 cs파일 생성
 
         private bool shouldUpdateRpm = false;
-
-        private byte[] deviceAddress = { 4, 1, 2, 3 };
-
         private ushort[] prevData = new ushort[80];
+
+        private ScottPlot.Plottable.BarPlot avgBar; // 평균 막대 1개로 10라인 표현
+        private double[] groupAverages = new double[10];    //각 라인별 평균값
+        private string[] groupLabels = Enumerable.Range(1, 10).Select(n => $"L{n}").ToArray();  //라인 넘버
+        private ScottPlot.Plottable.HLine levelLine;    //지시 레벨링 속도값 표시선
 
 
         public Form1()
@@ -154,7 +154,8 @@ namespace BUR_INS_HMI
         {
             //전체화면 작업표시줄은 존재
             /*   this.FormBorderStyle = FormBorderStyle.None;    //테두리x
-               this.WindowState = FormWindowState.Maximized;   //화면 가득 채우기*/
+               this.WindowState = FormWindowState.Maximized;   //화면 가득 채우기
+            */
 
             //전체화면 작업표시줄 X
             this.FormBorderStyle = FormBorderStyle.None;
@@ -168,7 +169,7 @@ namespace BUR_INS_HMI
             this.panel2.Controls.Add(avg_plot);
             avg_plot.BringToFront();
 
-            InitializeGraphs();
+            InitializeGraphs(); //꺾은선, 막대 그래프 초기화
 
 
 
@@ -198,10 +199,10 @@ namespace BUR_INS_HMI
             label81, label82,
                 label83, label84, label85, label86, label87, label88, label89,
             label90, label91, label92, label93, label94, label95, label96, label97, label98};
-            //data 43~82
+            //data 43~82   
 
 
-            if (!File.Exists(settingfilePath))
+            if (!File.Exists(settingfilePath))  //파일 실행시 메모장에서 설정값 읽어오기
             {
               //  MessageBox.Show("설정 파일이 존재하지 않습니다: " + settingfilePath);
                 MessageBox.Show("읽어올 설정 파일이 존재하지 않습니다. 임의 초기값으로 설정됩니다.");
@@ -341,19 +342,25 @@ namespace BUR_INS_HMI
         {
             try
             {
-                if (data == null || data.Length < 89)
+                if (data == null || data.Length < 89)   //판 정보 포함시 89, 미포함시 80
                     return; // 데이터 부족 시 저장 안 함
 
 
-                //   int[] keepIndexes = { 7, 15, 23, 31, 39, 47, 55, 63, 71, 79 }; 판정보 포함시 인덱스 +9 
-                int[] keepIndexes = { 16,24,32,40,48,
-                                        56,64,72,80,88};
+                //   int[] keepIndexes = { 7, 15, 23, 31, 39, 47, 55, 63, 71, 79 }; 판정보 미포함
+                int[] keepIndexes = new int[10];
+                for (int i = 0; i < 10; i++)
+                {
+                    //     keepIndexes[i] = ((i + 1) * 8) - 1;   //7, 15, 23, 31, 39, 47, 55, 63, 71, 79  판정보 미포함시 RPM 주기 인덱스
+                    keepIndexes[i] = ((i + 1) * 8) + 8;    //16, 24, 32, 40, 48, 56, 64, 72, 80, 88 판정보 포함시 기존 인덱스 +9
+                }
 
                 // ushort[] → string[] 변환
-                //   string[] strData = data.Take(80).Select(x => x.ToString()).ToArray(); 단위 처리 전 기존
 
-                string[] strData = data.Take(89).Select((x, idx) => keepIndexes.Contains(idx) ? //주기 제외 단위 처리
-                x.ToString() : (x * 0.1m).ToString("F1")).ToArray();
+            //    string[] strData = data.Take(80).Select((x, idx) => keepIndexes.Contains(idx) ?   //판정보 미포함
+            //    x.ToString() : (x * 0.1m).ToString("F1")).ToArray();        //RPM 주기 제외 모두 단위 처리 ( x 0.1 )
+
+                string[] strData = data.Take(89).Select((x, idx) => keepIndexes.Contains(idx) ?     //판정보 포함
+                x.ToString() : (x * 0.1m).ToString("F1")).ToArray();        //RPM 주기 제외 모두 단위 처리 ( x 0.1 )
 
                   // DB 저장
                   mssql.InsertDB(strData);
@@ -365,10 +372,7 @@ namespace BUR_INS_HMI
         }
 
 
-        private ScottPlot.Plottable.BarPlot avgBar; // 평균 막대 1개로 10라인 표현
-        private double[] groupAverages = new double[10];
-        private string[] groupLabels = Enumerable.Range(1, 10).Select(n => $"L{n}").ToArray();
-        private ScottPlot.Plottable.HLine levelLine;
+  
 
 
 
@@ -388,7 +392,7 @@ namespace BUR_INS_HMI
 
             //막대
             avg_plot.Plot.Clear();
-            // 초기 평균값 0
+            // 초기 라인별 평균값 0
             groupAverages = new double[10];
             avgBar = avg_plot.Plot.AddBar(groupAverages);
             avgBar.FillColor = Color.CornflowerBlue;
@@ -972,10 +976,7 @@ namespace BUR_INS_HMI
                         }
                         plate[8] = (ushort)(rnd.Next(0, 301));
 
-
-                        //  _modbusMaster.WriteSingleRegister(deviceAddress[0], 7, (ushort)target_rpm[1]); //10, 1000 갈려서
-
-                        int index = (i == 1) ? 0 : 40;  //SLAVE 1 or 2
+                        int index = (i == 1) ? 0 : 40;  //SLAVE 1(0) or 2(40)
                         if (i == 3) //SLAVE 3
                             index = 80;
                         //아래 UI 관련 작업은 UI 스레드에서 안전하게 실행
@@ -1673,16 +1674,11 @@ namespace BUR_INS_HMI
             panel3.Visible = true;
             isBlink = true;
             isWarning = false;
-            //    pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.local_e_stop_off;
-            //   pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_off3;
-            //    pic_stop_btn.Image = BUR_INS_HMI.Properties.Resources.estop_on;
         }
         private void sens_check(ushort[] data, int index)
         {
-            //   if (this.InvokeRequired)
             if (InvokeRequired)
             {
-                //   this.Invoke(new Action(() => sens_check(data)));
                 BeginInvoke(new Action(() => sens_check(data, index)));
                 return;
             }
@@ -1696,7 +1692,7 @@ namespace BUR_INS_HMI
                 return;
             }
 
-            if (!serialPort.IsOpen)   //센서는 전류따라니까 필요 x
+            if (!serialPort.IsOpen) //추후 위와 합쳐도 O
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -1716,21 +1712,18 @@ namespace BUR_INS_HMI
                     else
                         sensor[i].Image = BUR_INS_HMI.Properties.Resources.sen_stat_realred_control;
                 }
-
-                //   sen_img(sen); //sen_img 따로 쓰지 않고 sens_check에서 바로 img 수정
-
             }
         }
 
         private void sen_img(int[] stat)    //Red,Yellow,Green 기준은 추후 수정
         {
 
-            /*    if (InvokeRequired)
+                if (InvokeRequired)
                 {
-                    Invoke(new Action(() => sen_img(stat)));
+                    BeginInvoke(new Action(() => sen_img(stat)));
                     return;
                 }
-            */
+            
 
             for (int i = 0; i < 10; i++)
             {
@@ -1821,10 +1814,8 @@ namespace BUR_INS_HMI
 
         private void DiseaseUpdateEventMethodF2toF1(object sender)
         {
-            if ("TRUE".Equals(sender.ToString()))
+            if ("TRUE".Equals(sender.ToString()))   //입력된 string값이 기존 패스워드와 동일한 경우 (로그인) 
             {
-                //  dog_lbl.Visible = true;
-                //  numericUpDown2.Visible = true;
                 f3.login_stat = 1;
 
                 if (f3 == null || f3.IsDisposed)    //Ver1
@@ -1833,8 +1824,8 @@ namespace BUR_INS_HMI
                     f3.FormSendEvent += new Form3.FormSendDataHandler(DiseaseUpdateEventMethodF2toF1);
                 }
 
-                f3.pipe_panel.Visible = false;
-                //  f3.ampare_panel.Visible = false;
+                //Form3의 좌측 (모듈 관측 패널은 보이지 않고, 모듈 설정 패널만 Visible)
+                f3.pipe_panel.Visible = false;     
                 f3.setting_panel.Visible = true;
                 f3.amp_set10.Visible = true;
                 f3.err_set.Visible = true;
@@ -1844,17 +1835,15 @@ namespace BUR_INS_HMI
                 f3.tar_period.Visible = true;
                 f3.tar_period_lbl.Visible = true;
 
-                //f3.Size = new Size(570, 950);
                 f3.Size = new Size(570, 1000);
                 f3.edit_pan.Size = new Size(570, 150);
 
                 f3.Show();
                 f3.BringToFront();
-                //    login_btn.Image = BUR_INS_HMI.Properties.Resources.admin_logout_btn; //이미지만 변경되는 것이므로 X.
             }
-            else if (!("FALSE".Equals(sender.ToString())))  //비밀번호 변경
+            else if (!("FALSE".Equals(sender.ToString())))  // 변경 모드
             {
-                password = sender.ToString();
+                password = sender.ToString();   //입력된 새로운 string으로 패스워드 변경
             }
 
         }
